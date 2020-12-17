@@ -3,12 +3,22 @@
         <center><div class="logo-wrapper">
             <img src="@/assets/suslogo.png">
         </div></center>
-        <div class="footer-menu">
+        <center><div class="footer-menu">
             <a href="#">Home</a>
-        </div>
+            <a href="#">Startups</a>
+            <a href="#">About</a>
+            <a href="#">Partners</a>
+            <a href="#">FAQs</a>
+        </div></center>
         <div class="register-btn">
             <button>Register</button>
         </div>
+        <center><div class="icon-links">
+            <a href="#"><img src="@/assets/u_facebook.png"></a>
+            <a href="#"><img src="@/assets/u_linkedin.png"></a>
+            <a href="#"><img src="@/assets/u_twitter.png"></a>
+            <a href="#"><img src="@/assets/u_instagram-alt.png"></a>
+        </div></center>
     </div>
 </template>
 
@@ -56,6 +66,9 @@ export default {
 }
 .footer-menu{
     padding-top: 32px;
+    width: 675px;
+    display: flex;
+    justify-content: space-evenly;
 }
 .footer-menu a{
     text-decoration: none;
@@ -76,7 +89,13 @@ export default {
     box-shadow: black!important;
     box-shadow: 50px black;
     cursor: pointer;
-    box-shadow: 0px 0px 20px rgba(244,110,38, 0.8);
+    box-shadow: 0px 0px 15px rgba(255,151,79, 0.8);
     font-family: 'Inter-SemiBold';
+}
+.icon-links{
+    padding-top: 48px;
+    width: 195px;
+    display: flex;
+    justify-content: space-evenly;
 }
 </style>
