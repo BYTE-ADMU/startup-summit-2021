@@ -1,14 +1,14 @@
 <template>
-  <Opportunities />
+  <Partners />
 </template>
 
 <script>
-import Opportunities from './components/Opportunities'
+import Partners from './components/Partners'
 
 export default {
   name: 'App',
   components: {
-    Opportunities
+    Partners
   }
 }
 </script>
