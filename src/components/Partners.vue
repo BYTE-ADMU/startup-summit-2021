@@ -36,6 +36,7 @@ export default {
 }
 .page-container{
     padding-top: 10%;
+    padding-bottom: 13%;
 }
 .text p{
     font-size: 28px;
