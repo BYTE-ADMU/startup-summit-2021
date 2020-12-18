@@ -40,6 +40,10 @@ export default {
   font-family: "Inter-Bold";
   src: url('./../fonts/Inter-Bold.ttf') format("truetype");
 }
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url('./../fonts/Inter-SemiBold.ttf') format("truetype");
+}
 *{
     background-color: #fcfcfc;
     margin: 0px;
@@ -79,7 +83,7 @@ export default {
     line-height: 40px;
 }
 .text-wrapper #date{
-    font-family: "Inter-Bold";
+    font-family: "Inter-SemiBold";
     color: #A3A3A3;
     padding-top: 8px;
     font-size: 16px;
@@ -98,7 +102,7 @@ export default {
     border-radius:4px!important;
     cursor: pointer;
     box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: 'Inter-Bold';
+    font-family: 'Inter-SemiBold';
 }
 .messenger-btn[data-v-9d9a21ac] {
     transform: translate(270%,70%);
