@@ -33,147 +33,152 @@ export default {
 </script>
 
 <style scoped>
+/*Fonts*/
 @font-face {
     font-family: "objectivity";
     src: url(../assets/fonts/objectivity.extra-bold.otf);
 }
-
 @font-face {
     font-family: "inter";
     src: url(../assets/fonts/Inter-Regular.ttf);
 }
 
+/*Universal css styles*/
 p {
     font-size: 16px;
     font-family: "inter";
     line-height: 26px;
     font-weight: 400px;
     color: rgba(0, 0, 0, 1);
+    text-shadow: 0 3px 3px rgb(145, 143, 143) ;
 }
-
 h1 {
     font-size: 28px;
     font-family: "objectivity";
-    color: rgba(0, 0, 0, 1);;
+    color: rgba(0, 0, 0, 1);
     line-height: 40px;
+    font-weight: 800px;
+    text-shadow: 0 3px 3px rgb(145, 143, 143) ;
 }
 
+/*Applying flex box to the different parts of the website*/
+.about-page {
+    display: flex;
+    flex-direction: column;
+}
+.about_startup-summit {
+    display: flex;
+    flex-direction: row;
+}
+.about_byte {
+    display: flex;
+    flex-direction: row;
+    margin: 200px 0px 230px 130px;
+    padding: 0px;
+}
+
+/*Video element*/
 .about_video {
     border-color: black;
     border-style: solid;
-    position: absolute;
-    width: 960px;
+    width: 70vw;
     height: 100vh;
-    top: 160px;
-    left: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
+/*About startup summit portion*/
 .about_startup-summit .design{
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 681px;
     height: 959.9px;
-    left: 0px;
-    top: 1100px;
     background-image: url(../assets/desktop/about_design.png);
     background-repeat: no-repeat;
+    margin-left: -8px;
 }
-
 .about_startup-summit .text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-
-    position: absolute;
-    width: 663px;
-    height: 639px;
-    left: 650px;
-    top: 1193px;
+    margin: 100px 0px 0px -10px;
+    width: 45vw;
 }
-
 .about_startup-summit .text p{
     margin-bottom: 30px;
     margin-top: 0px;
 }
 
+/*About byte portion*/
 .about_byte .text{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 45vw;
     padding: 0px;
-
-    position: absolute;
-    width: 640px;
-    height: 337px;
-    left: 144px;
-    top: 2237px;
+    margin-right: 55px;
 }
-
 .about_byte .text p {
     margin-top: 7px;
 }
-
 .about_byte .text h1 {
     margin-bottom: 10px;
 }
-
 .about_byte .byte_picture {
-    position: absolute;
-    width: 632px;
-    height: 360px;
-    left: 810px;
-    top: 2240px;
+    margin-right: -8px;
+    padding-right: 0px;
+    width: 45vw;
+    height: 26vw;
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    .about_video {
-        position: absolute;
-        width: 688px;
-        height: 384px;
-        left: 40px;
-        top: 152px;
-        z-index: 5;
+
+/*Tablet size and Mobile size*/
+@media (max-width: 1024px){
+    /*Changing flexbox elements due to rearrangement*/
+    .about_byte {
+        flex-direction: column-reverse;
+        margin: 90px 0 200px -9px;
+        padding: 0;
     }
 
+    /*Video element*/
+    .about_video {
+        z-index: 5;
+        margin-bottom: 20px;
+        width: 90vw;
+    }
+    
+    /*About start up summit portion*/
+    /*hard coded positioning of the design element*/
     .about_startup-summit .design {
         position: absolute;
-        width: 760px;
-        height: 759px;
+        width: 91vw;
+        height: 80vw;
         left: -5px;
         top: 0;
         z-index: 3;
-        background-image: url(../assets/tablet/about_design.svg)
+        background-image: url(../assets/tablet/about_design.svg);
+        background-size: 91vw 80vw;
     }
-
+    .about_startup-summit {
+        margin-left: 30px;
+        width: 85vw;
+    }
     .about_startup-summit .text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
-
-        position: absolute;
-        width: 664px;
-        height: 639px;
-        left: 32px;
-        top: 656px;
+        width: 85vw;
     }
 
+    /*About byte portion*/
     .about_byte .byte_picture {
-        position: absolute;
-        width: 768px;
-        height: 436px;
-        left: 0px;
-        top: 1446px;
+        width: 100vw;
+        height: 55vw;
     }
-
     .about_byte .text {
-        position: absolute;
-        width: 640px;
-        height: 337px;
-        left: 40px;
-        top: 1972px;
+        margin: 90px 0 0 30px;
+        width: 85vw;
     }
 }
-
-
 </style>
