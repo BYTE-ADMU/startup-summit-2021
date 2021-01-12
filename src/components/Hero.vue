@@ -46,22 +46,27 @@ export default {
 }
 *{
     background-color: #fcfcfc;
-    margin: 0px;
-    overflow: hidden;
+    margin: 0px!important;
 }
 .page-container{
     display: flex;
     flex-direction: row;
+    width: 100vw;
+    overflow: hidden;
+}
+.img-wrapper{
+    width: 954px!important;
+    height: 953px!important;
+    transform: translate(-30%,-8%);
 }
 .img-wrapper img{
     width: 100%;
     height: 100%;
-    transform: translate(-1%,-9%);
 }
 .first-container{
     display: flex;
     flex-direction: column;
-    transform: translate(35%,20%);
+    transform: translate(-20%,25%);
 }
 .logo-wrapper{
     width: 448px;
@@ -104,8 +109,8 @@ export default {
     box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
     font-family: 'Inter-SemiBold';
 }
-.messenger-btn[data-v-9d9a21ac] {
-    transform: translate(270%,70%);
+.messenger-btn{
+    transform: translate(-60%,70%);
 }
 .messenger-btn button{
     background-color: #ffffff;
@@ -122,5 +127,35 @@ export default {
 .mssngr-icon img{
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 768px){
+.page-container{
+    display: flex;
+    flex-direction: column;
+}
+.img-wrapper{
+    width: 825.64px;
+    height: 824.78px;
+    transform: translate(-32%,-20%);
+}
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    transform: rotate(82deg);
+}
+.first-container{
+    transform: translate(38%,-85%);
+}
+.messenger-btn{
+    transform: translate(0%,0%);
+    visibility: hidden;
+}
+.messenger-btn button{
+    width: 0px!important;
+    height: 0px!important;
+    visibility: hidden;
+}
 }
 </style>
