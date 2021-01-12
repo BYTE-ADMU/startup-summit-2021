@@ -44,16 +44,18 @@ export default {
 }
 *{
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    overflow: hidden;
 }
 .footer-wrapper{
-    background-color: #f8f8f8;
     color: black;
     width: 100%;
     height: 400px;
-    overflow: hidden;
-    z-index: 10;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    margin: 0;
 }
 .logo-wrapper{
     padding-top: 5%;
@@ -66,7 +68,7 @@ export default {
 }
 .footer-menu{
     padding-top: 32px;
-    width: 675px;
+    width: 577px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -74,6 +76,8 @@ export default {
     text-decoration: none;
     color: #333333!important;
     font-family: 'Inter-Bold';
+    font-size: 16px;
+    line-height: 26px;
 }
 .register-btn{
     padding-top: 32px;
@@ -94,8 +98,111 @@ export default {
 }
 .icon-links{
     padding-top: 48px;
-    width: 195px;
+    width: 176px;
     display: flex;
     justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px){
+.logo-wrapper{
+    padding-top: 7%;
+    width: 234px;
+    height: 59px;
+}
+.footer-wrapper{
+    width: 100%;
+    height: 350px;
+}
+.footer-menu{
+    padding-top: 24px;
+}
+.register-btn{
+    padding-top: 24px;
+}
+.icon-links{
+    padding-top: 40px;
+}
+}
+
+@media screen and (max-width: 577px){
+.logo-wrapper{
+    padding-top: 10%;
+    width: 234px;
+    height: 59px;
+}
+.footer-wrapper{
+    width: 100%;
+    height: 350px;
+}
+.footer-menu{
+    padding-top: 24px;
+    width: 500px;
+}
+.register-btn{
+    padding-top: 24px;
+}
+.icon-links{
+    padding-top: 40px;
+}
+}
+
+@media screen and (max-width: 500px){
+    .footer-menu{
+    padding-top: 24px;
+    width: 450px;
+}
+}
+
+@media screen and (max-width: 450px){
+.logo-wrapper{
+    padding-top: 13%;
+}
+.footer-wrapper{
+    width: 100%;
+    height: 334px;
+}
+.footer-menu{
+    padding-top: 24px;
+    width: 450px;
+}
+.footer-menu{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding-top: 0px;
+}
+.footer-menu a{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding-top: 0px;
+}
+.register-btn{
+    padding-top: 48px;
+}
+}
+
+@media screen and (max-width: 380px){
+.logo-wrapper{
+    padding-top: 15%;
+}
+}
+
+@media screen and (max-width: 350px){
+.logo-wrapper{
+    padding-top: 17%;
+}
+}
+
+@media screen and (max-width: 320px){
+.footer-wrapper{
+    width: 100%;
+    height: 320px;
+}
+.logo-wrapper{
+    padding-top: 17%;
+    width: 198px;
+    height: 49px;
+}
 }
 </style>
