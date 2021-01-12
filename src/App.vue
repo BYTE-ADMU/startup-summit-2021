@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <PrimaryBtn>Register</PrimaryBtn>
+  <a href="www.google.com"><PrimaryBtn>Primary</PrimaryBtn></a>
 </template>
 
 <script>
