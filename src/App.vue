@@ -1,18 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
   <a href="www.google.com"><PrimaryBtn>Primary</PrimaryBtn></a>
+  <br>
+  <a href="www.google.com"><SecondaryBtn>Secondary</SecondaryBtn></a>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import PrimaryBtn from './components/PrimaryBtn.vue'
+import SecondaryBtn from './components/SecondaryBtn.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    PrimaryBtn
+    PrimaryBtn,
+    SecondaryBtn
   }
 }
 </script>
