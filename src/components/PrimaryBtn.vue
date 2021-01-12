@@ -45,6 +45,7 @@ export default {
 #primary:disabled{
     background: #DCDCDC;
     box-shadow: none;
+    cursor: not-allowed;
 }
 
 </style>

@@ -1,18 +1,22 @@
 <template>
   <a href="www.google.com"><PrimaryBtn>Primary</PrimaryBtn></a>
   <br>
-  <a href="www.google.com"><SecondaryBtn>Secondary</SecondaryBtn></a>
+  <a href="www.google.com"><SecondaryBtn>></SecondaryBtn></a>
+  <br>
+  <a href="www.google.com"><TertiaryBtn disabled>Tertiary</TertiaryBtn></a>
 </template>
 
 <script>
 import PrimaryBtn from './components/PrimaryBtn.vue'
 import SecondaryBtn from './components/SecondaryBtn.vue'
+import TertiaryBtn from './components/TertiaryBtn.vue'
 
 export default {
   name: 'App',
   components: {
     PrimaryBtn,
-    SecondaryBtn
+    SecondaryBtn,
+    TertiaryBtn
   }
 }
 </script>
