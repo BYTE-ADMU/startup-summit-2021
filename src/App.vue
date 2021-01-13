@@ -1,5 +1,5 @@
 <template>
-  <a href="www.google.com"><PrimaryBtn>Primary</PrimaryBtn></a>
+  <a href="www.google.com" id="primary"><PrimaryBtn>Primary</PrimaryBtn></a>
   <br>
   <a href="www.google.com"><SecondaryBtn>></SecondaryBtn></a>
   <br>
@@ -29,5 +29,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#primary{
+  font-size: 16px;
+  line-height: 26px;
 }
 </style>

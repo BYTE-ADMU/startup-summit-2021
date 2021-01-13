@@ -17,8 +17,6 @@ export default {
 }
 *{
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 26px;
     padding: 8px 24px;
     border: 0px;
     border-radius: 4px!important;
