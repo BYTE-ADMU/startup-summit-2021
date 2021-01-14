@@ -151,12 +151,36 @@ export default {
     width: 100%;
     height: 100%;
 }
+@media screen and (max-width: 1920px){
+.first-container{
+    transform: translate(23%,19%);
+}
+.img-wrapper{
+    transform: translate(22%,0%);
+}
+}
+@media screen and (max-width: 1550px){
+.first-container{
+    transform: translate(20%,19%);
+}
+.img-wrapper{
+    transform: translate(22%,0%);
+}
+}
+@media screen and (max-width: 1550px){
+.first-container{
+    transform: translate(15%,19%);
+}
+}
 @media screen and (max-width: 1388px){
 .first-container{
     transform: translate(10%,19%);
 }
 .and-more{
     transform: translate(89%,0%);
+}
+.img-wrapper{
+    transform: translate(22%,0%);
 }
 }
 @media screen and (max-width: 1225px){
