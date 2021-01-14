@@ -25,25 +25,26 @@ export default {
     cursor: pointer;
     background-color: white;
 }
+
 #tertiary{
-  background: #F46E26;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #F46E26;
+  background-color: white;
 }
-#tertiary:hover{
+#tertiary:hover:not([disabled]){
   background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #F2B430;
 }
-#tertiary:active{
+#tertiary:active:not([disabled]){
   background: #E75E25;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #E75E25;
 }
 #tertiary:disabled{
-  background: #dcdcdc;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  box-sizing: border-box;
+  color: #DCDCDC;
   cursor: not-allowed;
 }
 </style>

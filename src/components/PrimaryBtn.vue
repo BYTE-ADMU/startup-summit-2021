@@ -31,13 +31,13 @@ export default {
     box-shadow: 50px black;
     box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);   
 }
-#primary:hover{
+#primary:hover:not([disabled]){
     background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
     box-shadow: black!important;
     box-shadow: 50px black;
     box-shadow: 0px 4px 4px rgba(244, 110, 38, 0.25);
 }
-#primary:active{
+#primary:active:not([disabled]){
     background: #E75E25;
 }
 #primary:disabled{

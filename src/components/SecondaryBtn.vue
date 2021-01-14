@@ -30,14 +30,15 @@ export default {
     color: #F46E26;
     background: white;
 }
-#secondary:hover{
+#secondary:hover:not([disabled]){
     background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
     color: white;
 }
-#secondary:active{
+#secondary:active:not([disabled]){
     border: 1px solid #E75E25;
-    box-sizing: border-box;
     color: #E75E25;
+    box-sizing: border-box;
+    background: white;
 }
 #secondary:disabled{
     border: 1px solid #DCDCDC;
