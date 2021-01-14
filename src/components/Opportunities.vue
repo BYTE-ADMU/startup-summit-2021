@@ -31,7 +31,7 @@
                 <p>...AND MORE!</p>
             </div>
             <div class="view-btn">
-                <button id="tablet-btn">View startups ></button>
+                <button>View featured startups ></button>
             </div>
         </div>
         <div class="img-wrapper">
@@ -250,10 +250,32 @@ export default {
 .and-more{
     transform: translate(69.7%,0%);
 }
+.view-btn button {
+  visibility: hidden;
+  padding-top: 0px;
+  transform: translate(-54.5%,-20%);
+}
+.view-btn button:after{
+  content:'View startups >';
+  visibility: visible;
+    background-color: #F46E26;
+    color: white;
+    padding: 8px 24px;
+    font-size: 16px;
+    line-height: 26px;
+    border: 0px;
+    border-radius:4px!important;
+    cursor: pointer;
+    box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
+    font-family: 'Inter-SemiBold';
+}
 }
 @media screen and (max-width: 653px){
 .first-container{
     transform: translate(3.2%,15%);
+}
+.view-btn button {
+  transform: translate(-52.5%,-20%);
 }
 }
 @media screen and (max-width: 650px){
