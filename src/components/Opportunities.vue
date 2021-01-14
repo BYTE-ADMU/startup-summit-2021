@@ -12,9 +12,9 @@
                     <img src="#">
                     <img src="#">
                     <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
+                    <img class="sixth-img" src="#">
+                    <img class="seventh-img" src="#">
+                    <img class="eight-img" src="#">
                 </div>
                 <div class="img-row" id="second-imgrow">
                     <img src="#">
@@ -22,16 +22,16 @@
                     <img src="#">
                     <img src="#">
                     <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
+                    <img class="sixth-img" src="#">
+                    <img class="seventh-img" src="#">
+                    <img class="eight-img" src="#">
                 </div>
             </div>
             <div class="and-more">
                 <p>...AND MORE!</p>
             </div>
             <div class="view-btn">
-                <button>View featured startups ></button>
+                <button id="tablet-btn">View startups ></button>
             </div>
         </div>
         <div class="img-wrapper">
@@ -65,12 +65,16 @@ export default {
 }
 *{
     background-color: #fcfcfc;
-    margin: 0px;
-    overflow: hidden;
+    margin: 0px!important;
 }
 .page-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 0px!important;
+    height: 100vh;
+    overflow-x: hidden;
 }
 .first-container{
     display: flex;
@@ -141,10 +145,252 @@ export default {
 .img-wrapper{
     width: 642.96px;
     height: 925px;
-    transform: translate(34%,0%);
+    transform: translate(28%,0%);
 }
 .img-wrapper img{
     width: 100%;
     height: 100%;
+}
+@media screen and (max-width: 1388px){
+.first-container{
+    transform: translate(10%,19%);
+}
+.and-more{
+    transform: translate(89%,0%);
+}
+}
+@media screen and (max-width: 1225px){
+.first-container{
+    transform: translate(7.5%,19%);
+}
+.img-wrapper{
+    transform: translate(28%,0%);
+}
+}
+@media screen and (max-width: 1024px){
+.page-container{
+    justify-content: flex-start;
+}
+.img-wrapper img{
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+}
+.first-container{
+    transform: translate(10%,15%);
+}
+.eight-img{
+    width: 0%!important;
+    height: 0%!important;
+    visibility: hidden;
+}
+.and-more{
+    transform: translate(85.5%,0%);
+}
+}
+@media screen and (max-width: 924px){
+.first-container{
+    transform: translate(5%,15%);
+}
+}
+@media screen and (max-width: 790px){
+.first-container{
+    transform: translate(4%,15%);
+}
+}
+@media screen and (max-width: 768px){
+.first-container{
+    transform: translate(6.5%,15%);
+}
+.img-row{
+    width: 656px;
+}
+.and-more{
+    transform: translate(74.5%,0%);
+}
+}
+@media screen and (max-width: 736px){
+.first-container{
+    transform: translate(4%,15%);
+}
+}
+@media screen and (max-width: 720px){
+.first-container{
+    transform: translate(3%,15%);
+}
+}
+@media screen and (max-width: 700px){
+.first-container{
+    transform: translate(1.5%,15%);
+}
+}
+@media screen and (max-width: 690px){
+.first-container{
+    transform: translate(0.8%,15%);
+}
+}
+@media screen and (max-width: 680px){
+.page-container{
+    justify-self: center;
+}
+.first-container{
+    transform: translate(4%,15%);
+}
+.text-wrapper #header{
+    width: 50%;
+}
+.text-wrapper #content{
+    width: 75%;
+}
+.seventh-img{
+    width: 0%!important;
+    height: 0%!important;
+    visibility: hidden;
+}
+.and-more{
+    transform: translate(69.7%,0%);
+}
+}
+@media screen and (max-width: 653px){
+.first-container{
+    transform: translate(3.2%,15%);
+}
+}
+@media screen and (max-width: 650px){
+.first-container{
+    transform: translate(3%,15%);
+}
+}
+@media screen and (max-width: 640px){
+.first-container{
+    transform: translate(5.4%,15%);
+}
+.sixth-img{
+    visibility: hidden;
+}
+.and-more{
+    transform: translate(56%,0%);
+}
+}
+@media screen and (max-width: 600px){
+    .first-container{
+        transform: translate(4%,10%);
+    }
+}
+@media screen and (max-width: 580px){
+    .first-container{
+        transform: translate(2.5%,10%);
+    }
+}
+@media screen and (max-width: 568px){
+    .first-container{
+        transform: translate(6.5%,10%);
+    }
+    .text-wrapper #header{
+        font-size: 20px;
+        line-height: 32px;
+        width: 100%;
+    }
+    .text-wrapper #content{
+        font-size: 16px;
+        line-height: 26px;
+        width: 67%
+    }
+.sixth-img{
+    width: 0%!important;
+    height: 0%!important;
+    visibility: hidden;
+}
+.img-row img{
+    width: 60px;
+    height: 60px;
+}
+.img-row{
+    width: 508px;
+}
+.and-more{
+    transform: translate(20.7%,0%);
+    width: 0%!important;
+    height: 0%!important;
+    visibility: hidden;
+}
+.view-btn{
+    padding-top: 25px;
+}
+}
+@media screen and (max-width: 540px){
+    .first-container{
+        transform: translate(4%,10%);
+    }
+}
+@media screen and (max-width: 520px){
+    .first-container{
+        transform: translate(3%,10%);
+    }
+}
+@media screen and (max-width: 514px){
+    .first-container{
+        transform: translate(2%,10%);
+    }
+}
+@media screen and (max-width: 500px){
+    .text-wrapper #header{
+        width: 39%;
+    }
+    .text-wrapper #content{
+        width: 57%;
+    }
+.img-row img{
+    width: 40px;
+    height: 40px;
+}
+.img-row{
+    width: 264px;
+}
+}
+@media screen and (max-width: 480px){
+.first-container{
+    transform: translate(4%,10%);
+}
+}
+@media screen and (max-width: 450px){
+.text-wrapper #content{
+    width: 49%;
+}
+}
+@media screen and (max-width: 414px){
+.first-container{
+    transform: translate(4%,10%);
+}
+}
+@media screen and (max-width: 380px){
+.text-wrapper #content{
+    width: 41%;
+}
+}
+@media screen and (max-width: 375px){
+.first-container{
+    transform: translate(5%,10%);
+}
+}
+@media screen and (max-width: 380px){
+.first-container{
+    transform: translate(4%,10%);
+}
+}
+@media screen and (max-width: 380px){
+.first-container{
+    transform: translate(2.5%,10%);
+}
+}
+@media screen and (max-width: 320px){
+.text-wrapper #content{
+    width: 35%;
+}
+}
+@media screen and (max-width: 280px){
+.first-container{
+    transform: translate(1%,10%);
+}
 }
 </style>
