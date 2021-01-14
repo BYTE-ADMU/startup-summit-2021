@@ -57,7 +57,7 @@ export default {
     width: 100vw;
     height: 100vh;
     margin: 0px!important;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .img-wrapper{
     width: 954px;
@@ -285,6 +285,12 @@ export default {
 @media screen and (max-width: 480px){
 .first-container{
     transform: translate(4%,-75%);
+}
+}
+@media screen and (max-width: 470px){
+.logo-wrapper img{
+    width: 80%;
+    height: 80%;
 }
 }
 @media screen and (max-width: 440px){
