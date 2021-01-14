@@ -37,6 +37,10 @@ export default {
 .page-container{
     padding-top: 10%;
     padding-bottom: 13%;
+    width: 100vw;
+    margin: 0px!important;
+    height: 100vh;
+    overflow-x: hidden;
 }
 .text p{
     font-size: 28px;
@@ -60,5 +64,61 @@ export default {
 }
 #second-imgrow{
     padding-top: 48px;
+}
+@media screen and (max-width: 700px){
+.text p{
+font-size: 24px;
+line-height: 40px;
+}
+.img-row img{
+    background-color: #C4C4C4;
+    width: 127px;
+    height: 127px;
+}
+.img-rows{
+    width: 466.5px;
+}
+}
+@media screen and (max-width: 500px){
+.text p{
+font-size: 22px;
+line-height: 40px;
+}
+.img-row img{
+    background-color: #C4C4C4;
+    width: 103.5px;
+    height: 103.5px;
+}
+.img-rows{
+    width: 377.25px;
+}
+}
+@media screen and (max-width: 400px){
+.text p{
+font-size: 20px;
+line-height: 40px;
+}
+.img-row img{
+    background-color: #C4C4C4;
+    width: 80px;
+    height: 80px;
+}
+.img-rows{
+    width: 288px;
+}
+}
+@media screen and (max-width: 300px){
+.text p{
+font-size: 18px;
+line-height: 40px;
+}
+.img-row img{
+    background-color: #C4C4C4;
+    width: 60px;
+    height: 60px;
+}
+.img-rows{
+    width: 216px;
+}
 }
 </style>
