@@ -13,7 +13,7 @@
                 <p id="date">April 16-18, 2020</p>
             </div>
             <div class="register-btn">
-                <button>Register ></button><button id="secondary-btn">View Schedule</button>
+                <button>Register Now</button><button id="secondary-btn">View Schedule</button>
             </div>
             <div class="messenger-btn">
             <button>
