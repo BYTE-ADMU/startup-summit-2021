@@ -73,7 +73,7 @@ h1 {
 .about_byte {
     display: flex;
     flex-direction: row;
-    margin: 200px 0px 230px 130px;
+    margin: 150px 0px 230px 130px;
     padding: 0px;
 }
 
@@ -93,10 +93,11 @@ h1 {
 .about_startup-summit .design{
     display: flex;
     flex-direction: column;
-    width: 681px;
-    height: 959.9px;
+    width: 48vw;
+    height: 72vw;
     background-image: url(../assets/desktop/about_design.png);
     background-repeat: no-repeat;
+    background-size: contain;
     margin-left: -8px;
 }
 .about_startup-summit .text {
@@ -134,6 +135,31 @@ h1 {
     height: 26vw;
 }
 
+/*wide screen*/
+@media (min-width: 1920px) {
+    /*about start up summit portion*/
+    .about_startup-summit .text {
+        margin: auto;
+        width: 33vw;
+    }
+    .about_startup-summit {
+        margin-bottom: 100px;
+    }
+    .about_startup-summit .design {
+        margin-right: -60px;
+    }
+
+    /*about byte portion*/
+    .about_byte {
+        margin-left: auto;
+        margin-right: auto;
+        width: 65vw;
+    }
+    .about_byte .byte_picture {
+        width: 55vw;
+        height: 20vw;
+    }
+}
 
 /*Tablet size and Mobile size*/
 @media (max-width: 1024px){
