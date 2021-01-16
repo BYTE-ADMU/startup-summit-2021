@@ -3,19 +3,78 @@
         <h1 class="title">Event Schedule</h1>
         <div class="day_buttons">
             <!--The div was made to center the button yusing flex wrap-->
-            <div class="container1"><button class="day1">Day 1</button></div>
-            <div class="container2"><button class="day2">Day 2</button></div>
-            <div class="container3"><button class="day3">Day 3</button></div>
+            <div class="container1"><button class="day1" v-on:click="click = 1, clicked()">Day 1</button></div>
+            <div class="container2"><button class="day2" v-on:click="click = 2, clicked()">Day 2</button></div>
+            <div class="container3"><button class="day3" v-on:click="click = 3, clicked()">Day 3</button></div>
         </div>
-        <div class="day_output"><!--Var here-->Day 1</div>
-        <div class="date"><!--Var here-->April 16, 2020</div>
+        <div class="day_output">{{ day.daynum }}</div>
+        <div class="date">{{ day.date }}</div>
         <div><!--This div is a place holder for the cards component--></div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "EventSchedule"
+    name: "EventSchedule",
+    data() {
+        return {
+            click: 1,
+            day: {
+                daynum: "Day 1",
+                date: "April 16, 2020"
+            }
+        }
+    },
+    methods: {
+        clicked() {
+            var first = document.getElementsByClassName("day1");
+            var second = document.getElementsByClassName("day2");
+            var third = document.getElementsByClassName("day3");
+
+            if (this.click === 1) {
+                this.day.daynum = "Day 1";
+                this.day.date = "April 16, 2020";
+
+                //click styling for button
+                first[0].style.backgroundColor = "#F46E26";
+                first[0].style.color = "white";
+
+                //unclick styling for unclicked buttons
+                second[0].style.backgroundColor = "white";
+                second[0].style.color = "#F46E26";
+                third[0].style.backgroundColor = "white";
+                third[0].style.color = "#F46E26";
+            }
+            else if (this.click === 2) {
+                this.day.daynum = "Day 2";
+                this.day.date = "April 17, 2020";
+
+                //click styling for button
+                second[0].style.backgroundColor = "#F46E26";
+                second[0].style.color = "white";
+
+                //unclick styling for unclicked buttons
+                first[0].style.backgroundColor = "white";
+                first[0].style.color = "#F46E26";
+                third[0].style.backgroundColor = "white";
+                third[0].style.color = "#F46E26";
+            }
+            else if (this.click === 3) {
+                this.day.daynum = "Day 3";
+                this.day.date = "April 18, 2020";
+
+                //click styling for button
+                third[0].style.backgroundColor = "#F46E26";
+                third[0].style.color = "white";
+
+                //unclick styling for unclicked buttons
+                first[0].style.backgroundColor = "white";
+                first[0].style.color = "#F46E26";
+                second[0].style.backgroundColor = "white";
+                second[0].style.color = "#F46E26";
+            }
+        }
+    }
 }
 </script>
 
@@ -36,6 +95,12 @@ export default {
 @font-face {
     font-family: "inter_bold";
     src: url(../assets/fonts/Inter/Inter-Bold.ttf)
+}
+
+/*When buttons are clicked/unclicked*/
+.clicked {
+    color: #F46E26;
+    background-color: white;
 }
 
 /*Event section*/
@@ -65,7 +130,22 @@ export default {
     padding: 0;
     margin: 0;
 }
-.event_schedule .day_buttons .day1, .day2 {
+.event_schedule .day_buttons .day1 {
+    font-family: "inter_bold";
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #F46E26;
+    border: 1.5px solid #F46E26;
+    border-radius: 4px;
+    padding: 8px 24px;
+    margin: 0 16px 0 16px;
+    width: 96px;
+    height: 42px;
+    outline: none;
+    cursor: pointer;
+}
+.event_schedule .day_buttons .day2{
     font-family: "inter_bold";
     font-size: 16px;
     font-weight: bold;
@@ -77,6 +157,23 @@ export default {
     border-radius: 4px;
     width: 96px;
     height: 42px;
+    outline: none;
+    cursor: pointer;
+}
+.event_schedule .day_buttons .day3 {
+    font-family: "inter_bold";
+    font-size: 16px;
+    font-weight: bold;
+    color:  #F46E26;
+    background-color: white;
+    border: 1.5px solid #F46E26;
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 96px;
+    margin: 0;
+    height: 42px;
+    outline: none;
+    cursor: pointer;
 }
 .event_schedule .day_buttons div {
     border: none;
@@ -84,19 +181,6 @@ export default {
     background-color: white;
     margin: 0 16px 0 16px;
     border-radius: 4px;
-}
-.event_schedule .day_buttons .day3 {
-    font-family: "inter_bold";
-    font-size: 16px;
-    font-weight: bold;
-    color: rgba(244, 110, 38, 1);
-    background-color: white;
-    border: 1.5px solid #F46E26;
-    border-radius: 4px;
-    margin: 0;
-    padding: 8px 24px;
-    width: 96px;
-    height: 42px;
 }
 .event_schedule .day_output {
     margin-bottom: 8px;
