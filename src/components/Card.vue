@@ -2,7 +2,7 @@
     <div class="card">
         <div class="time">
             <h1><!--var here-->00:00</h1>
-            <p><strong><!--var here???-->GMT+8</strong></p>
+            <p><strong><!--var here-->GMT+8</strong></p>
         </div>
         <div class="talk_details">
             <h3 class="talk_name"><!--var here-->Name of Talk</h3>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: "Cards"
+    name: "Card"
 }
 </script>
 
@@ -122,6 +122,8 @@ export default {
     border-radius: 4px;
     color: #F46E26;
     background-color: white;
+    cursor: pointer;
+    outline: none;
 }
 
 @media (max-width: 426px) {
