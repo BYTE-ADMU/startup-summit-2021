@@ -55,7 +55,7 @@ export default {
 .card3 {
     display: flex;
     flex-direction: row;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 100px auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border: 0.5px solid;
     border-radius: 3px;
@@ -143,7 +143,7 @@ export default {
     box-shadow: none;
     cursor: pointer;
     outline: none;
-    margin: 0 -20px 0 0;
+    margin: -10px -40px 0 0;
 }
 .card3 .talk_details .talk_title {
     font-family: "objectivity";

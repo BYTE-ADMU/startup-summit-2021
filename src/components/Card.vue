@@ -44,7 +44,7 @@ export default {
     display: flex;
     flex-direction: row;
     width: 568px;
-    margin: auto;
+    margin: 0 auto 200px auto;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 0;
