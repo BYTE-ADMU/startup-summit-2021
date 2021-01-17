@@ -65,12 +65,28 @@ export default {
     line-height: 26px;
     font-style: normal;
     margin-top: 32px;
+    cursor: pointer;
+    outline: none;
 }
 .what-is-sus .picture {
-    width: 30vw;
-    height: 40vw;
+    width: 24.167vw;
+    height: 31.667vw;
     border-radius: 0px;
     background-color: #C4C4C4;
+}
+
+/*wide screen*/
+@media (min-width: 1920px) {
+    /*What is sus section*/
+    .what-is-sus .text {
+        margin: 200px 169px 200px 200px;
+    }
+    .what-is-sus .text p {
+        width: 29.583vw;
+    }
+    .what-is-sus .picture {
+        margin-right: 311px;
+    }
 }
 
 /*Tablet view*/
