@@ -6,6 +6,7 @@
             </div>
         </div>
         <div class="talk_details">
+            <button class="exit"></button>
             <h1 class="talk_title">Talk title</h1>
             <p class="date">March 20, 5-6pm GMT+8</p>
             <p class="speaker_name">Speaker Name</p>
@@ -63,6 +64,7 @@ export default {
 }
 
 /*General styling*/
+/*Picture*/
 .card2 .container1 {
     margin-right: -70px;
 }
@@ -81,6 +83,19 @@ export default {
     left: 10.417vw;
     top: 13.194vw;
     width: 14.583vw;
+}
+
+/*Talk details*/
+.card2 .talk_details .exit {
+    align-self: flex-end;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: url(../assets/icons/exit.svg);
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0 -20px 0 0;
 }
 .card2 .talk_details .talk_title {
     font-family: "objectivity";
@@ -168,6 +183,9 @@ export default {
     }
     .card2 .talk_details {
         margin: 33px 20px 33px 21px;
+    }
+    .card2 .talk_details .exit {
+        margin-right: 0;
     }
 }
 </style>

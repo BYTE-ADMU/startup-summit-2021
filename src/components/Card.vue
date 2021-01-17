@@ -73,6 +73,7 @@ export default {
 }
 
 /*general styling*/
+/*time section*/
 .time h1{
     font-family: "objectivity";
     color: rgba(244, 110, 38, 1);
@@ -84,6 +85,8 @@ export default {
     font-weight: bold;
     margin: 0 72px 122px 60px;
 }
+
+/*talk details*/
 .talk_details .talk_name {
     font-family: "inter_bold";
     color: rgba(244, 110, 38, 1);
