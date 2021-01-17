@@ -181,10 +181,10 @@ h1 {
     /*hard coded positioning of the design element*/
     .about_startup-summit .design {
         position: absolute;
-        width: 91vw;
-        height: 80vw;
+        width: 98.958vw;
+        height: 99.868vw;
         left: -5px;
-        top: 0;
+        top: -300px;
         z-index: 3;
         background-image: url(../assets/tablet/about_design.svg);
         background-size: 91vw 80vw;
