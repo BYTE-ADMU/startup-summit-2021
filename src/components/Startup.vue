@@ -54,7 +54,7 @@ export default {
     computed: {
       filteredList: function(){
         return this.startupList.filter((startup) => {
-            return startup.name.toLowerCase().includes(this.search.toLowerCase())
+            return startup.name.toLowerCase().includes(this.search.toLowerCase()) || startup.industry.toLowerCase().includes(this.search.toLowerCase())
         })
       }
   }
