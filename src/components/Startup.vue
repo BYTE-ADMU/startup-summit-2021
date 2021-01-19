@@ -19,22 +19,37 @@
 </svg>Filter</button>
             </div>
             <div class="startups-wrapper">
-            </div>
-            <div class="startup-card">
+            <div class="startup-card" v-for="startup in startupList" :key="startup">
                 <div class="cover">
-                        <img src="@/assets/cover1.png">
-                    </div>
-                    <div class="icon">
-                        <img src="@/assets/icon1.png">
-                    </div>
+                    <img :src="startup.cover">
                 </div>
+                <div class="icon">
+                    <img :src="startup.icon">
+                </div>
+                <div class="startup-content">
+                    <p class="startup-name">{{startup.name}}</p>
+                    <p class="startup-industry">{{startup.industry}}</p>
+                    <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
+                </div>
+            </div>
+            </div>
     </div></center>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Start-Up'
+    name: 'Start-Up',
+    data() {
+  return {
+    startupList: [
+      {name: 'Kumu', industry: 'Entertainment', icon: require('../assets/icons/kumu.png'), cover: require('../assets/covers/kumu.png'), opportunity: true},
+      {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), cover: require('../assets/covers/nextpay.png'), opportunity: false},
+      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), cover: require('../assets/covers/edukasyon.png'), opportunity: true},
+      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), cover: require('../assets/covers/edukasyon.png'), opportunity: false}
+    ]
+  }
+}
 }
 </script>
 
@@ -52,6 +67,10 @@ export default {
   src: url('./../fonts/Inter-SemiBold.ttf') format("truetype");
 }
 @font-face {
+  font-family: "Inter-Regular";
+  src: url('./../fonts/Inter-Regular.ttf') format("truetype");
+}
+@font-face {
   font-family: "Inter-Light";
   src: url('./../fonts/Inter-Light.ttf') format("truetype");
 }
@@ -64,7 +83,7 @@ export default {
     flex-direction: column;
     width: 100vw;
     margin: 0px!important;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .first-container{
     height: 100vh;
@@ -162,6 +181,8 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
 }
 .startup-card{
     width: 368px;
@@ -169,6 +190,10 @@ export default {
     background-color: #F8F8F8;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border-radius: 3px;
+    margin-top: 40px!important;
+}
+.startup-card p{
+    background-color: #F8F8F8;
 }
 .startup-card .cover{
     height: 88px;
@@ -188,5 +213,40 @@ export default {
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     transform: translate(0px,-65px);
+
+}
+.startup-content{
+    transform: translate(0px,-44px);
+    background-color: #F8F8F8;
+}
+.startup-name{
+    font-size: 24px;
+    line-height: 25px;
+    color: #000;
+    font-family: "Objectivity-ExtraBold";
+}
+.startup-industry{
+    font-size: 16px;
+    line-height: 26px;
+    color: #000;
+    font-family: "Inter-Regular";
+    padding-top: 8px;
+}
+.opportunities{
+    color: #F8F8F8;
+    background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
+    border-radius: 4px;
+    padding: 8px;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    line-height: 16px;
+    font-family: "Inter-Bold";
+    width: fit-content;
+    margin-top: 8px!important;
+}
+@media screen and (max-width: 1440px){
+    .startups-wrapper{
+        max-width: 1152px;
+    }
 }
 </style>
