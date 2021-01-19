@@ -184,11 +184,11 @@ export default {
     fill: black;
 }
 .startups-wrapper{
-    width: 1152px;
+    width: 1212px;
     height: 288px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding-top: 30px;
 }
@@ -199,6 +199,8 @@ export default {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border-radius: 3px;
     margin-top: 40px!important;
+    margin-left: 24px!important;
+    margin-right: 12px!important;
 }
 .startup-card p{
     background-color: #F8F8F8;
@@ -209,6 +211,7 @@ export default {
 .cover img{
     height: 100%;
     width: 100%;
+    border-radius: 3px 3px 0px 0px;
 }
 .icon{
     width: 112px;
@@ -251,10 +254,5 @@ export default {
     font-family: "Inter-Bold";
     width: fit-content;
     margin-top: 8px!important;
-}
-@media screen and (max-width: 1440px){
-    .startups-wrapper{
-        max-width: 1152px;
-    }
 }
 </style>
