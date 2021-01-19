@@ -19,7 +19,7 @@
 </svg>Filter</button>
             </div>
             <div class="startups-wrapper">
-            <div class="startup-card" v-for="startup in startupList" :key="startup">
+            <div class="startup-card" v-for="startup in filteredList" :key="startup">
                 <div class="cover">
                     <img :src="startup.cover">
                 </div>
@@ -47,9 +47,17 @@ export default {
       {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), cover: require('../assets/covers/nextpay.png'), opportunity: false},
       {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), cover: require('../assets/covers/edukasyon.png'), opportunity: true},
       {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), cover: require('../assets/covers/edukasyon.png'), opportunity: false}
-    ]
+    ],
+    search: ''
   }
-}
+},
+    computed: {
+      filteredList: function(){
+        return this.startupList.filter((startup) => {
+            return startup.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+      }
+  }
 }
 </script>
 
