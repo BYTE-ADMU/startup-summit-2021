@@ -23,7 +23,18 @@
             <div id="filter-modal" class="modal" v-if="modalShow">
                 <div class="modal-content">
                     <div class="first-modal">
-                        <p>Opportunities Available<input type="checkbox"><span class="slider"></span></p>
+                        <p class="modal-header">Opportunities Available</p>
+                    </div>
+                    <div class="second-modal">
+                        <p class="modal-header">Industry</p>
+                        <div class="industry-wrapper">
+                            <div class="industry">
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>E-commerce
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -293,13 +304,50 @@ height: 472.56px;
 .modal-content p{
 background-color: #F8F8F8;
 }
+.modal-header{
+    font-size: 16px;
+line-height: 26px;
+    color: #2C2C2C;
+    font-family: 'Inter-Bold';
+}
 .first-modal{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     background-color: #F8F8F8;
+    padding-right: 16px;
+}
+.container{
+    display: block;
+  position: relative;
+  padding-right: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.industry-wrapper{
+    padding-top: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 466px;
+    background-color: #f8f8f8;
+}
+.second-modal{
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding-top: 32px;
+}
+.industry{
+    font-family: 'Inter-Regular';
     color: #2C2C2C;
-    font-family: 'Inter-Bold';
 }
 @media screen and (max-width: 1194px){
     .startups-wrapper{
