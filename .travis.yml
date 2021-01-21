@@ -15,4 +15,4 @@ deploy:
   token: 
     secure: $FIREBASE_TOKEN
   on:
-    branch: gio/feature/travisCI
+    branch: gio/feature/travis
