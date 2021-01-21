@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 15.3.0
+cache: yarn
+
+install: 
+  - yarn install
+
+script:
+  - yarn test
+  - yarn run build
+
+deploy: 
+  provider: firebase
+  token: 
+    secure: $FIREBASE_TOKEN
+  on:
+    branch: gio/feature/travisCI
