@@ -266,9 +266,10 @@ export default {
     display: flex;
     flex-direction: column;
 }
-.btn-wrapper #primary-btn{
+.btn-wrapper #primary-btn button{
     font-size: 14px;
     line-height: 22px;
+    padding: 8px 29.5px;
 }
 #secondary-btn{
     margin-left: 0px!important;
