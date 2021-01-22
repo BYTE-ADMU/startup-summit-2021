@@ -1,16 +1,20 @@
 <template>
   <Partners />
   <EventSchedule/>
+  <WhatIsSus/>
 </template>
 
 <script>
 import Partners from './components/Partners'
 import EventSchedule from './components/EventSchedule.vue'
+import WhatIsSus from './components/Home/WhatIsSus.vue';
 
 export default {
   name: 'App',
   components: {
-    EventSchedule
+    EventSchedule,
+    WhatIsSus,
+    Partners
   }
 }
 </script>
