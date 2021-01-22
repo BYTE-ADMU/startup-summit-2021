@@ -1,7 +1,9 @@
 <template>
+<Hero />
+  <WhatIsSus/>
+  <Opportunities />
   <Partners />
   <EventSchedule/>
-  <WhatIsSus/>
   <Card/>
   <Card2/>
   <Card3/>
@@ -9,7 +11,9 @@
 </template>
 
 <script>
-import Partners from './components/Partners'
+import Hero from './components/Hero.vue'
+import Opportunities from './components/Opportunities.vue'
+import Partners from './components/Partners.vue'
 import EventSchedule from './components/EventSchedule.vue'
 import WhatIsSus from './components/Home/WhatIsSus.vue'
 import Card from './components/Card.vue'
@@ -26,7 +30,9 @@ export default {
     Card,
     Card2,
     Card3,
-    Card4
+    Card4,
+    Hero,
+    Opportunities
   }
 }
 </script>
