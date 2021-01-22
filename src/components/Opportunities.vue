@@ -74,7 +74,6 @@ export default {
     width: 100vw;
     margin: 0px!important;
     height: 100vh;
-    overflow-x: hidden;
 }
 .first-container{
     display: flex;

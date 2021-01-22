@@ -32,10 +32,9 @@ export default {
 *{
     background-color: #fcfcfc;
     margin: 0px;
-    overflow: hidden;
 }
 .page-container{
-    padding-top: 10%;
+    padding-top: 30%;
     padding-bottom: 13%;
     width: 100vw;
     margin: 0px!important;

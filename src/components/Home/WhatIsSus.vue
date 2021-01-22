@@ -31,6 +31,7 @@ export default {
     display: flex;
     flex-direction: row;
     margin: 50px 0 10px 144px;
+    background-color: #fcfcfc;
 }
 
 /*What is sus section*/
