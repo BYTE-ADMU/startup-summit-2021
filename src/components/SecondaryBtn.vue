@@ -1,0 +1,49 @@
+<template>
+<button id="secondary">
+  <slot>Button</slot>
+</button>
+</template>
+
+<script>
+export default {
+    name: 'Secondary-Button'
+}
+</script>
+
+<style scoped>
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url('./../fonts/Inter-SemiBold.ttf') format("truetype");
+}
+*{
+    font-family: 'Inter', sans-serif;
+    padding: 8px 24px;
+    border: 0px;
+    border-radius: 4px!important;
+    font-family: 'Inter-SemiBold';
+    text-decoration: none!important;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#secondary{
+    border: 1px solid #F46E26;
+    color: #F46E26;
+    background: white;
+}
+#secondary:hover:not([disabled]){
+    background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
+    color: white;
+}
+#secondary:active:not([disabled]){
+    border: 1px solid #E75E25;
+    color: #E75E25;
+    box-sizing: border-box;
+    background: white;
+}
+#secondary:disabled{
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    color: #DCDCDC;
+    cursor: not-allowed;
+}
+</style>
