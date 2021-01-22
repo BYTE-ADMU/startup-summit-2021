@@ -12,8 +12,8 @@
                 <p id="text">Stepping up for the Future</p>
                 <p id="date">April 16-18, 2020</p>
             </div>
-            <div class="register-btn">
-                <button>Register Now</button><button id="secondary-btn">View Schedule</button>
+            <div class="btn-wrapper">
+                <PrimaryBtn id="primary-btn"><Chevron />Register Now</PrimaryBtn><SecondaryBtn id="secondary-btn"><Chevron />View Schedule</SecondaryBtn>
             </div>
             <div class="messenger-btn">
             <button>
@@ -28,8 +28,16 @@
 </template>
 
 <script>
+import Chevron from './Chevron'
+import PrimaryBtn from './components/PrimaryBtn'
+import SecondaryBtn from './components/SecondaryBtn'
 export default {
-    name: 'Hero'
+    name: 'Hero',
+    components:{
+    PrimaryBtn,
+    SecondaryBtn,
+    Chevron
+    }
 }
 </script>
 
@@ -99,20 +107,12 @@ export default {
     font-size: 16px;
     line-height: 26px;
 }
-.register-btn{
+.btn-wrapper{
     padding-top: 32px;
 }
-.register-btn button{
-    background-color: #F46E26;
-    color: white;
-    padding: 8px 24px;
+.btn-wrapper #primary-btn{
     font-size: 16px;
     line-height: 26px;
-    border: 0px;
-    border-radius:4px!important;
-    cursor: pointer;
-    box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: 'Inter-SemiBold';
 }
 .messenger-btn{
     transform: translate(105%,160%);
@@ -263,12 +263,12 @@ export default {
 .first-container{
     transform: translate(6%,-75%);
 }
-.register-btn{
+.btn-wrapper{
     width: 151px;
     display: flex;
     flex-direction: column;
 }
-.register-btn button{
+.btn-wrapper #primary-btn{
     font-size: 14px;
     line-height: 22px;
 }
@@ -322,12 +322,12 @@ export default {
 .first-container{
     transform: translate(6%,-58%);
 }
-.register-btn{
+.btn-wrapper{
     width: 151px;
     display: flex;
     flex-direction: column;
 }
-.register-btn button{
+.btn-wrapper #primary-btn{
     font-size: 14px;
     line-height: 22px;
 } 
