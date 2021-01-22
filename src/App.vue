@@ -46,5 +46,6 @@ export default {
 }
 *{
   background-color:#fcfcfc;
+  /* margin: 0px!important */
 }
 </style>
