@@ -1,4 +1,5 @@
 <template>
+<div class="page-container">
     <div class="what-is-sus">
         <div class="text">
             <h1>What is Startup Summit?</h1>
@@ -7,6 +8,7 @@
         </div>
         <div class="picture"></div>
     </div>
+</div>
 </template>
 
 <script>
@@ -26,11 +28,19 @@ export default {
     src: url("../../assets/fonts/objectivity.extra-bold.otf");
 }
 
+.page-container{
+    background-color: #fcfcfc;
+    width: 100%;
+    height: 100%;
+}
+
 /*Applying flex box*/
 .what-is-sus {
     display: flex;
     flex-direction: row;
     margin: 50px 0 10px 144px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     background-color: #fcfcfc;
 }
 
