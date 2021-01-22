@@ -1,14 +1,14 @@
 <template>
-  <Hero />
+  <Opportunities />
 </template>
 
 <script>
-import Hero from './components/Hero'
+import Opportunities from './components/Opportunities'
 
 export default {
   name: 'App',
   components: {
-    Hero
+    Opportunities
   }
 }
 </script>
