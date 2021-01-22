@@ -442,6 +442,7 @@ height: 472.56px;
     height: 100%;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    padding-top: 10%;
 }
 .modal-content {
   background-color: #F8F8F8!important;
