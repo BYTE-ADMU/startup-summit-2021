@@ -55,6 +55,33 @@
                                 <div class="input-title">FinTech</div>
                                 </div>
                             </div>
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">EdTech</div>
+                                </div>
+                            </div>
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Entertainment</div>
+                                </div>
+                            </div>
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">FoodTech</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -340,10 +367,10 @@ line-height: 26px;
 }
 .industry-wrapper{
     padding-top: 12px;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 466px;
+    justify-content: flex-start;
     background-color: #f8f8f8;
 }
 .second-modal{
