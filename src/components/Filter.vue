@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'Chevron-Icon'
+    name: 'Filter-Icon'
 }
 </script>
 
