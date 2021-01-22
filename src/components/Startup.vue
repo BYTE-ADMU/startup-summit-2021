@@ -28,7 +28,8 @@
                     <div class="second-modal">
                         <p class="modal-header">Industry</p>
                         <div class="industry-wrapper">
-                            <div class="industry" id="first-i">
+                        <div class="industry2 first-i">
+                            <div class="industry">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -37,25 +38,7 @@
                                 <div class="input-title">E-commerce</div>
                                 </div>
                             </div>
-                            <div class="industry" id="second-i">
-                                <div class="checkbox-container">
-                                <label class="checkbox-label">
-                                    <input type="checkbox">
-                                    <span class="checkbox-custom"></span>
-                                </label>
-                                <div class="input-title">Energy</div>
-                                </div>
-                            </div>
-                            <div class="industry" id="third-i">
-                                <div class="checkbox-container">
-                                <label class="checkbox-label">
-                                    <input type="checkbox">
-                                    <span class="checkbox-custom"></span>
-                                </label>
-                                <div class="input-title">FinTech</div>
-                                </div>
-                            </div>
-                            <div class="industry second-row" id="first-i">
+                            <div class="industry second-row">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -64,7 +47,18 @@
                                 <div class="input-title">EdTech</div>
                                 </div>
                             </div>
-                            <div class="industry second-row" id="second-i">
+                        </div>
+                        <div class="industry2 second-i">
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Energy</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -73,7 +67,18 @@
                                 <div class="input-title">Entertainment</div>
                                 </div>
                             </div>
-                            <div class="industry second-row" id="third-i">
+                        </div>
+                        <div class="industry2 third-i">
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">FinTech</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -83,6 +88,102 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
+                    </div>
+        <div class="second-modal">
+                        <p class="modal-header">Field of Work</p>
+                        <div class="industry-wrapper">
+                        <div class="industry2 first-i">
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Design</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Development</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Engineering</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industry2 second-i">
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Finance</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Human Resources</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Management</div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="industry2 third-i">
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Marketing</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Retail</div>
+                                </div>
+                            </div>
+                            <div class="industry second-row">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Sales</div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="fourth-modal">
+                        <button>Save Filters</button>
                     </div>
                 </div>
             </div>
@@ -370,7 +471,8 @@ line-height: 26px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 100%;
     background-color: #f8f8f8;
 }
 .second-modal{
@@ -386,6 +488,20 @@ line-height: 26px;
     color: #2C2C2C;
     background-color: #F8F8F8;
     clear: both;
+}
+.industry2{
+    display: flex;
+    flex-direction: column;
+}
+.second-row{
+    padding-top: 16px;
+}
+.fourth-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #F8F8F8;
+    padding-top: 32px;
 }
 .industry::after{
     clear: both;
@@ -456,20 +572,6 @@ line-height: 26px;
   border-width: 0 2px 2px 0;
   background-color: transparent;
   border-radius: 0;
-}
-#first-i{
-    width: 141px;
-}
-#second-i{
-    width: 151px;
-    margin-left: 32px!important;
-}
-#third-i{
-    width: 119px;
-    margin-left: 32px!important;
-}
-.second-row{
-    padding-top: 16px;
 }
 @media screen and (max-width: 1194px){
     .startups-wrapper{
