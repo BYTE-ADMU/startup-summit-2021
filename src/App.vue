@@ -1,20 +1,24 @@
 <template>
   <Partners />
+  <EventSchedule/>
 </template>
 
 <script>
 import Partners from './components/Partners'
+import EventSchedule from './components/EventSchedule.vue'
 
 export default {
   name: 'App',
   components: {
-    Partners
+    EventSchedule
   }
 }
 </script>
 
 <style>
-*{
-  margin: 0px!important;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>
