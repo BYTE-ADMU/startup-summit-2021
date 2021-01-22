@@ -13,7 +13,7 @@
                 <p id="date">April 16-18, 2020</p>
             </div>
             <div class="btn-wrapper">
-                <span id="primary-btn"><PrimaryBtn><Chevron id="chevron"/>Register Now</PrimaryBtn></span><SecondaryBtn id="secondary-btn"><Chevron />View Schedule</SecondaryBtn>
+                <span id="primary-btn"><PrimaryBtn>Register Now</PrimaryBtn></span><span id="secondary-btn"><SecondaryBtn>View Schedule</SecondaryBtn></span>
             </div>
             <div class="messenger-btn">
             <button>
@@ -28,15 +28,13 @@
 </template>
 
 <script>
-import Chevron from './Chevron'
 import PrimaryBtn from './PrimaryBtn'
 import SecondaryBtn from './SecondaryBtn'
 export default {
     name: 'Hero',
     components:{
     PrimaryBtn,
-    SecondaryBtn,
-    Chevron
+    SecondaryBtn
     }
 }
 </script>
@@ -113,12 +111,6 @@ export default {
 .btn-wrapper #primary-btn{
     font-size: 16px;
     line-height: 26px;
-}
-#chevron{
-  width: 16px;
-  height: 16px;
-  padding-right: 8px!important;
-  transform: translate(0%, 10%);
 }
 .messenger-btn{
     transform: translate(105%,160%);
