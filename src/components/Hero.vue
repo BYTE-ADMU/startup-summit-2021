@@ -13,7 +13,7 @@
                 <p id="date">April 16-18, 2020</p>
             </div>
             <div class="btn-wrapper">
-                <PrimaryBtn id="primary-btn"><Chevron />Register Now</PrimaryBtn><SecondaryBtn id="secondary-btn"><Chevron />View Schedule</SecondaryBtn>
+                <span id="primary-btn"><PrimaryBtn><Chevron id="chevron"/>Register Now</PrimaryBtn></span><SecondaryBtn id="secondary-btn"><Chevron />View Schedule</SecondaryBtn>
             </div>
             <div class="messenger-btn">
             <button>
@@ -113,6 +113,12 @@ export default {
 .btn-wrapper #primary-btn{
     font-size: 16px;
     line-height: 26px;
+}
+#chevron{
+  width: 16px;
+  height: 16px;
+  padding-right: 8px!important;
+  transform: translate(0%, 10%);
 }
 .messenger-btn{
     transform: translate(105%,160%);
