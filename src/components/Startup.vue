@@ -29,10 +29,31 @@
                         <p class="modal-header">Industry</p>
                         <div class="industry-wrapper">
                             <div class="industry">
-                                <label class="container">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
                                     <input type="checkbox">
-                                    <span class="checkmark"></span>E-commerce
+                                    <span class="checkbox-custom"></span>
                                 </label>
+                                <div class="input-title">E-commerce</div>
+                                </div>
+                            </div>
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">Energy</div>
+                                </div>
+                            </div>
+                            <div class="industry">
+                                <div class="checkbox-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="input-title">FinTech</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -317,18 +338,6 @@ line-height: 26px;
     background-color: #F8F8F8;
     padding-right: 16px;
 }
-.container{
-    display: block;
-  position: relative;
-  padding-right: 16px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
 .industry-wrapper{
     padding-top: 12px;
     flex-direction: row;
@@ -348,6 +357,78 @@ line-height: 26px;
 .industry{
     font-family: 'Inter-Regular';
     color: #2C2C2C;
+    background-color: #F8F8F8;
+    clear: both;
+}
+.industry::after{
+    clear: both;
+    display: block;
+    content: "";
+}
+.checkbox-container {
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+}
+.input-title {
+    clear: both;
+    font-size: 16px;
+    background-color: #F8F8F8;
+    color: #2C2C2C;
+    display: inline-block;
+    transform: translate(0%,-20%);
+    margin-left: 20px!important;
+}
+.checkbox-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    clear: both;
+}
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox-label .checkbox-custom {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: 2px solid #f3b33c;
+}
+.checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #f3b33c;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity:1;
+    border: 2px solid #f3b33c;
+}
+.checkbox-label .checkbox-custom::after {
+    position: absolute;
+    content: "";
+    border: solid #f3b33c;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity:1;
+}
+.checkbox-label input:checked ~ .checkbox-custom::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity:1;
+  left: 8px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
 }
 @media screen and (max-width: 1194px){
     .startups-wrapper{
