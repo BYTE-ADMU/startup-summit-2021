@@ -28,7 +28,7 @@
                     <div class="second-modal">
                         <p class="modal-header">Industry</p>
                         <div class="industry-wrapper">
-                            <div class="industry">
+                            <div class="industry" id="first-i">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -37,7 +37,7 @@
                                 <div class="input-title">E-commerce</div>
                                 </div>
                             </div>
-                            <div class="industry">
+                            <div class="industry" id="second-i">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -46,7 +46,7 @@
                                 <div class="input-title">Energy</div>
                                 </div>
                             </div>
-                            <div class="industry">
+                            <div class="industry" id="third-i">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -55,7 +55,7 @@
                                 <div class="input-title">FinTech</div>
                                 </div>
                             </div>
-                            <div class="industry">
+                            <div class="industry second-row" id="first-i">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -64,7 +64,7 @@
                                 <div class="input-title">EdTech</div>
                                 </div>
                             </div>
-                            <div class="industry">
+                            <div class="industry second-row" id="second-i">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -73,7 +73,7 @@
                                 <div class="input-title">Entertainment</div>
                                 </div>
                             </div>
-                            <div class="industry">
+                            <div class="industry second-row" id="third-i">
                                 <div class="checkbox-container">
                                 <label class="checkbox-label">
                                     <input type="checkbox">
@@ -456,6 +456,20 @@ line-height: 26px;
   border-width: 0 2px 2px 0;
   background-color: transparent;
   border-radius: 0;
+}
+#first-i{
+    width: 141px;
+}
+#second-i{
+    width: 151px;
+    margin-left: 32px!important;
+}
+#third-i{
+    width: 119px;
+    margin-left: 32px!important;
+}
+.second-row{
+    padding-top: 16px;
 }
 @media screen and (max-width: 1194px){
     .startups-wrapper{
