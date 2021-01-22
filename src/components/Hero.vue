@@ -29,8 +29,8 @@
 
 <script>
 import Chevron from './Chevron'
-import PrimaryBtn from './components/PrimaryBtn'
-import SecondaryBtn from './components/SecondaryBtn'
+import PrimaryBtn from './PrimaryBtn'
+import SecondaryBtn from './SecondaryBtn'
 export default {
     name: 'Hero',
     components:{
