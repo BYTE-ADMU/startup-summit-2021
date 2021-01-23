@@ -185,7 +185,7 @@
                         </div>
                     </div>
                     <div class="fourth-modal">
-                        <button>Save Filters</button>
+                        <PrimaryBtn disabled>Save Filters</PrimaryBtn>
                     </div>
                 </div>
             </div>
@@ -229,18 +229,10 @@ export default {
     modalShow: false
   }
 },
-methods: {
-    showPopup() {
-      this.modalShow = true;
-    },
-    hidePopup() {
-      this.modalShow = false;
-    }
-  },
     computed: {
       filteredList: function(){
         return this.startupList.filter((startup) => {
-            return startup.name.toLowerCase().includes(this.search.toLowerCase()) || startup.industry.toLowerCase().includes(this.search.toLowerCase())
+            return startup.name.toLowerCase().startsWith(this.search.toLowerCase()) || startup.industry.toLowerCase().startsWith(this.search.toLowerCase())
         })
       }
   }
