@@ -63,7 +63,6 @@ export default {
     width: 100vw;
     height: 100vh;
     margin: 0px!important;
-    overflow-x: hidden;
 }
 .img-wrapper{
     width: 954px;
@@ -77,6 +76,7 @@ export default {
 .first-container{
     display: flex;
     flex-direction: column;
+    z-index: 0;
     transform: translate(-35%,26%);
 }
 .logo-wrapper{

@@ -1,13 +1,10 @@
 <template>
 <Hero />
-  <WhatIsSus/>
-  <Opportunities />
-  <Partners />
-  <EventSchedule/>
-  <Card/>
-  <Card2/>
-  <Card3/>
-  <Card4/>
+<WhatIsSus />
+<EventSchedule />
+<Card />
+<Opportunities />
+<Partners />
 </template>
 
 <script>
@@ -17,9 +14,6 @@ import Partners from './components/Partners.vue'
 import EventSchedule from './components/EventSchedule.vue'
 import WhatIsSus from './components/Home/WhatIsSus.vue'
 import Card from './components/Card.vue'
-import Card2 from './components/Card2.vue'
-import Card3 from './components/Card3.vue'
-import Card4 from './components/Card4.vue'
 
 export default {
   name: 'App',
@@ -28,9 +22,6 @@ export default {
     WhatIsSus,
     Partners,
     Card,
-    Card2,
-    Card3,
-    Card4,
     Hero,
     Opportunities
   }
@@ -46,6 +37,6 @@ export default {
 }
 *{
   background-color:#fcfcfc;
-  /* margin: 0px!important */
+  margin: 0;
 }
 </style>

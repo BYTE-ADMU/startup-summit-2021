@@ -4,16 +4,23 @@
         <div class="text">
             <h1>What is Startup Summit?</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            <button class="learn-more" type="button">Learn more</button>
+            <a href="" class="learn-more"><PrimaryBtn>Learn more<Chevron/></PrimaryBtn></a>
         </div>
-        <div class="picture"></div>
+        <img src="../../assets/what_is_sus_poster.svg" class="picture" alt="start up summit poster">
     </div>
 </div>
 </template>
 
 <script>
+import PrimaryBtn from "../PrimaryBtn.vue"
+import Chevron from "../Chevron.vue"
+
 export default {
-    name: "WhatIsSus"
+    name: "WhatIsSus",
+    components: {
+        PrimaryBtn,
+        Chevron
+    }
 }
 </script>
 
@@ -38,9 +45,7 @@ export default {
 .what-is-sus {
     display: flex;
     flex-direction: row;
-    margin: 50px 0 10px 144px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 50px 0 120px 144px;
     background-color: #fcfcfc;
 }
 
@@ -50,7 +55,8 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    margin: 120px 120px 0 0;
+    margin: 140px 120px 0 0;
+    line-height: 26px;
 }
 .what-is-sus .text h1 {
     color: #2C2C2C;
@@ -64,26 +70,18 @@ export default {
     margin: 16px 0 0 0;
 }
 .what-is-sus .text .learn-more {
-    background-color: rgba(244, 110, 38, 1);
-    border-color: rgba(244, 110, 38, 1);
-    color: white;
-    border-radius: 4px;
-    border: none;
-    box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: "Inter";
-    padding: 8px 24px;
-    font-weight: 700;
-    line-height: 26px;
-    font-style: normal;
     margin-top: 32px;
-    cursor: pointer;
-    outline: none;
+    font-family: "Inter";
+}
+.what-is-sus .text .learn-more #test {
+    font-size: 50px;
 }
 .what-is-sus .picture {
-    width: 24.167vw;
-    height: 31.667vw;
+    width: 32.222vw;
+    height: 42.222vw;
     border-radius: 0px;
     background-color: #C4C4C4;
+    z-index: 2;
 }
 
 /*wide screen*/
@@ -104,7 +102,7 @@ export default {
 @media (min-width: 768px) and (max-width: 1024px) {
     /*What is sus section*/
     .what-is-sus {
-        margin: 251.35px 104px 120px 40px;
+        margin: 0 104px 100px 40px;
         padding: 0;
     }
     .what-is-sus .picture {
@@ -122,13 +120,16 @@ export default {
 @media (max-width: 767px) {
     /*what is sus section*/
     .what-is-sus {
-        margin: 109.95px 16px 88px 10px;
+        margin: 0 16px 88px 10px;
     }
     .what-is-sus .picture {
         display: none;
     }
+    .what-is-sus .text {
+        margin-top: 0;
+    }
     .what-is-sus .text p{
-        margin: 8 0 32 0;
+        margin: 8px 0 32px 0;
         width: 90vw;
         font-size: 16px;
     }
