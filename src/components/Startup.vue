@@ -16,12 +16,16 @@
                     <input type="text" v-model="search" placeholder="Looking for anything specific? (Startups, jobs)" class="search-txt" />
                     <input type="text" v-model="search" placeholder="Looking for anything specific?" class="search-txt2" />
                 </div>
-                <span class="primary"><PrimaryBtn @click.stop="openPopup()"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
+                <span class="primary"><PrimaryBtn @click="modalShow = true"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
             </div>
-            <div id="filter-modal" class="modal" v-if="modalShow" v-click-outside="hidePopup()">
+            <div id="filter-modal" class="modal" v-if="modalShow">
                 <div class="modal-content">
                     <div class="first-modal">
                         <p class="modal-header">Opportunities Available</p>
+                        <svg @click="modalShow = false" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6L6 18" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6L18 18" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
                     </div>
                     <div class="second-modal">
                         <p class="modal-header">Industry</p>
@@ -482,6 +486,10 @@ line-height: 26px;
     justify-content: flex-start;
     background-color: #F8F8F8;
     padding-right: 16px;
+}
+.first-modal svg{
+    transform: translate(345px,-16px);
+  background-color: #F8F8F8!important;
 }
 .industry-wrapper{
     padding-top: 12px;
