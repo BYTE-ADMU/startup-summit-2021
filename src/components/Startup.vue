@@ -16,9 +16,9 @@
                     <input type="text" v-model="search" placeholder="Looking for anything specific? (Startups, jobs)" class="search-txt" />
                     <input type="text" v-model="search" placeholder="Looking for anything specific?" class="search-txt2" />
                 </div>
-                <span class="primary"><PrimaryBtn @click="modalShow = true"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
+                <span class="primary"><PrimaryBtn @click.stop="openPopup()"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
             </div>
-            <div id="filter-modal" class="modal" v-if="modalShow">
+            <div id="filter-modal" class="modal" v-if="modalShow" v-click-outside="hidePopup()">
                 <div class="modal-content">
                     <div class="first-modal">
                         <p class="modal-header">Opportunities Available</p>
@@ -225,6 +225,14 @@ export default {
     modalShow: false
   }
 },
+methods: {
+    showPopup() {
+      this.modalShow = true;
+    },
+    hidePopup() {
+      this.modalShow = false;
+    }
+  },
     computed: {
       filteredList: function(){
         return this.startupList.filter((startup) => {
@@ -450,7 +458,7 @@ height: 472.56px;
     height: 100%;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
-    padding-top: 10%;
+    padding-top: 7%;
 }
 .modal-content {
   background-color: #F8F8F8!important;
