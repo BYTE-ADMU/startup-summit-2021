@@ -1,7 +1,8 @@
 <template>
   <StartupTemplate
-  :name="Edukasyon.ph"
-  :cover="template_cover.png"
+  name="Edukasyon.ph"
+  cover="@/assets/template_cover.png"
+  icon="@/assets/template_icon.png"
   />
 </template>
 
