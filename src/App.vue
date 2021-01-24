@@ -1,5 +1,8 @@
 <template>
-  <StartupTemplate/>
+  <StartupTemplate
+  :name="Edukasyon.ph"
+  :cover="template_cover.png"
+  />
 </template>
 
 <script>

@@ -1,12 +1,34 @@
 <template>
     <div class="page-container">
-        <div class="cover-wrapper"><img src="@/assets/template_cover.png"></div>
+        <div class="cover-wrapper"><img :src="cover"></div>
+        <center><div class="header-container">
+            <div class="icon-wrapper"><img :src="icon"></div>
+            <div class="header-content">
+                <div class="header">
+                    <p>{{name}}</p>
+                </div>
+            </div>
+    </div></center>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Startup-Template'
+    name: 'Startup-Template',
+    props: {
+        cover:{
+            required: true,
+            type: String
+        },
+        icon:{
+            required: true,
+            type: String
+        },
+        name:{
+            required: true,
+            type: String
+        }
+    }
 }
 </script>
 
@@ -52,5 +74,21 @@ height: 120px;
 .cover-wrapper img{
 width: 100%;
 height: 100%;
+}
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1014px;
+}
+.icon-wrapper{
+width: 160px;
+height: 160px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+border-radius: 5px;
+}
+.icon-wrapper img{
+    width: 100%;
+    height: 100%;
 }
 </style>
