@@ -4,7 +4,7 @@
         <div class="text">
             <h1>What is Startup Summit?</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            <a href="" class="learn-more"><PrimaryBtn>Learn more<Chevron/></PrimaryBtn></a>
+            <a href="" class="learn-more"><PrimaryBtn>Learn more<Chevron id="primary-svg"/></PrimaryBtn></a>
         </div>
         <img src="../../assets/what_is_sus_poster.svg" class="picture" alt="start up summit poster">
     </div>
@@ -82,6 +82,10 @@ export default {
     border-radius: 0px;
     background-color: #C4C4C4;
     z-index: 2;
+}
+#primary-svg{
+    background: transparent;
+    margin-left: 8px!important;
 }
 
 /*wide screen*/
