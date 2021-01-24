@@ -1,8 +1,9 @@
 <template>
   <StartupTemplate
   name="Edukasyon.ph"
-  cover="@/assets/template_cover.png"
-  icon="@/assets/template_icon.png"
+  :cover=cover
+  :icon=icon
+  website="www.nextpay.ph"
   />
 </template>
 
@@ -13,6 +14,12 @@ export default {
   name: 'App',
   components: {
     StartupTemplate
+  },
+  data: function(){
+    return{
+      cover: require('@/assets/template_cover.png'),
+      icon: require('@/assets/template_icon.png')
+    }
   }
 }
 </script>
@@ -20,5 +27,6 @@ export default {
 <style>
 *{
   margin: 0px!important;
+  background-color: #fcfcfc;
 }
 </style>
