@@ -31,7 +31,8 @@
                 <p>...AND MORE!</p>
             </div>
             <div class="view-btn">
-                <button>View featured startups ></button>
+                <span class="primary-btn"><PrimaryBtn>View featured startups<Chevron id="chevron"/></PrimaryBtn></span>
+                <span class="primary-btn2"><PrimaryBtn>View startups<Chevron id="chevron"/></PrimaryBtn></span>
             </div>
         </div>
         <div class="img-wrapper">
@@ -41,8 +42,15 @@
 </template>
 
 <script>
+import PrimaryBtn from "./PrimaryBtn.vue"
+import Chevron from "./Chevron.vue"
+
 export default {
-    name: 'Opportunities'
+    name: 'Opportunities',
+    components: {
+        PrimaryBtn,
+        Chevron
+    }
 }
 </script>
 
@@ -129,17 +137,14 @@ export default {
 .view-btn{
     padding-top: 32px;
 }
-.view-btn button{
-    background-color: #F46E26;
-    color: white;
-    padding: 8px 24px;
+.view-btn .primary-btn{
     font-size: 16px;
     line-height: 26px;
-    border: 0px;
-    border-radius:4px!important;
-    cursor: pointer;
-    box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: 'Inter-SemiBold';
+}
+.view-btn .primary-btn2{
+    font-size: 16px;
+    line-height: 26px;
+    display: none;
 }
 .img-wrapper{
     width: 642.96px;
@@ -149,6 +154,10 @@ export default {
 .img-wrapper img{
     width: 100%;
     height: 100%;
+}
+#chevron{
+    background: transparent;
+    margin-left: 8px!important;
 }
 @media screen and (max-width: 1920px){
 .first-container{
@@ -273,32 +282,23 @@ export default {
 .and-more{
     transform: translate(69.7%,0%);
 }
-.view-btn button {
-  visibility: hidden;
+.view-btn .primary-btn {
+  display: none;
   padding-top: 0px;
   transform: translate(-54.5%,-20%);
 }
-.view-btn button:after{
-  content:'View startups >';
-  visibility: visible;
-    background-color: #F46E26;
-    color: white;
-    padding: 8px 24px;
-    font-size: 16px;
-    line-height: 26px;
-    border: 0px;
-    border-radius:4px!important;
-    cursor: pointer;
-    box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: 'Inter-SemiBold';
+.view-btn .primary-btn2{
+display: inline-block;
+  padding-top: 0px;
+  transform: translate(0%,-20%);
 }
 }
 @media screen and (max-width: 653px){
 .first-container{
     transform: translate(3.2%,15%);
 }
-.view-btn button {
-  transform: translate(-52.5%,-20%);
+.view-btn .primary-btn2 {
+  transform: translate(0%,-20%);
 }
 }
 @media screen and (max-width: 650px){
