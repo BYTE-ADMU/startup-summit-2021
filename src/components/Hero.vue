@@ -61,7 +61,6 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
-    height: 100vh;
     margin: 0px!important;
 }
 .img-wrapper{
