@@ -54,44 +54,43 @@ export default {
                 this.day.daynum = "Day 1";
                 this.day.date = "April 16, 2020";
 
-                //click styling for button
-                first_clicked[0].style.display = "block";
-                second_unclicked[0].style.display = "block";
-                third_unclicked[0].style.dispay = "block";
-
                 //unclick styling for unclicked buttons
                 first_unclicked[0].style.display = "none";
                 second_clicked[0].style.display = "none";
                 third_clicked[0].style.display = "none";
+
+                //click styling for button
+                first_clicked[0].style.display = "block";
+                second_unclicked[0].style.display = "block";
+                third_unclicked[0].style.display = "block";
             }
             else if (this.click === 2) {
                 this.day.daynum = "Day 2";
                 this.day.date = "April 17, 2020";
 
-                //click styling for button
-                second_clicked[0].style.display = "block";
-                first_unclicked[0].style.display = "block";
-                third_unclicked[0].style.display = "block";
-
                 //unclick styling for unclicked buttons
                 second_unclicked[0].style.display = "none";
                 first_clicked[0].style.display = "none";
                 third_clicked[0].style.display = "none";
+
+                //click styling for button
+                second_clicked[0].style.display = "block";
+                first_unclicked[0].style.display = "block";
+                third_unclicked[0].style.display = "block";
             }
             else if (this.click === 3) {
                 this.day.daynum = "Day 3";
                 this.day.date = "April 18, 2020";
 
-                //click styling for button
-                third_clicked[0].style.display = "block";
-                first_unclicked[0].style.display = "block";
-                second_unclicked[0].style.display = "block";
-
                 //unclick styling for unclicked buttons
                 third_unclicked[0].style.display = "none";
                 first_clicked[0].style.display = "none"
                 second_clicked[0].style.display = "none"
-                
+
+                //click styling for button
+                third_clicked[0].style.display = "block";
+                first_unclicked[0].style.display = "block";
+                second_unclicked[0].style.display = "block";
             }
         }
     }
