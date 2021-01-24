@@ -17,6 +17,7 @@ svg{
   stroke-linecap: round;
   stroke-linejoin: round;
   padding: 0px!important;
+  background: transparent;
 }
 svg:hover{
   fill: none;
