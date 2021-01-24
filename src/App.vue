@@ -37,15 +37,8 @@ export default {
   line-height: 26px;
 }
 #chevron{
-  width: 16px;
-  height: 16px;
+  /* customize the margin/padding to which direction but the placement and size should alr be good
+  so no need for transform translate and width and height! but if it doesnt seem to be perfect u can customize it nalang din */
   padding-right: 8px!important;
-  transform: translate(0%, 10%);
-}
-#chevron2{
-  width: 16px;
-  height: 16px;
-  padding-right: 8px!important;
-  transform: translate(0%, 10%);
 }
 </style>
