@@ -4,6 +4,10 @@
   :cover=cover
   :icon=icon
   website="www.nextpay.ph"
+  linkedin="username"
+  facebook="facebookhandle"
+  ig="ighandle"
+  twitter="twitterhandle"
   />
 </template>
 
