@@ -80,7 +80,7 @@ export default {
     width: 32.222vw;
     height: 42.222vw;
     border-radius: 0px;
-    background-color: #C4C4C4;
+    background-color: #fcfcfc;
     z-index: 2;
 }
 #primary-svg{
@@ -101,6 +101,14 @@ export default {
         margin-right: 311px;
     }
 }
+@media (max-width: 1100px) {
+    .what-is-sus .text {
+        transform: translate(-10%,0%);
+    }
+    .what-is-sus .picture{
+        transform: translate(-5%,0%);
+    }
+}
 
 /*Tablet view*/
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -114,6 +122,7 @@ export default {
     }
     .what-is-sus .text {
         margin: 58px 56px 74px 0;
+        transform: translate(-0%,0%);
     }
     .what-is-sus .text p {
         width: 74vw;
@@ -131,6 +140,7 @@ export default {
     }
     .what-is-sus .text {
         margin-top: 0;
+        transform: translate(-0%,0%);
     }
     .what-is-sus .text p{
         margin: 8px 0 32px 0;
