@@ -60,13 +60,13 @@
             <p>{{jobclass}}</p>
             <div class="jobs-container">
                 <div class="job-card">
-                    <p id="job-position">{{job}}</p>
+                    <p id="job-position">{{jobposition}}</p>
                     <div v-if="jobtype == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
                     <div v-if="jobtype == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
                     <div v-if="jobtype == 'full-time'" class="job-type" id="full-time"><p>FULL-TIME</p></div>
                 </div>
                 <div class="job-card">
-                    <p id="job-position">{{job}}</p>
+                    <p id="job-position">{{jobposition}}</p>
                     <div v-if="jobtype == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
                     <div v-if="jobtype == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
                     <div v-if="jobtype == 'full-time'" class="job-type" id="full-time"><p>FULL-TIME</p></div>
@@ -169,7 +169,7 @@ export default {
             required: true,
             type: String
         },
-        job:{
+        jobposition:{
             required: true,
             type: String
         },
