@@ -15,10 +15,10 @@
   jobclass="Social Development"
   jobposition="Partnerships-Manager"
   jobtype="internship"
-  :gallery1=gallery1
-  :gallery2=gallery2
-  :gallery3=gallery3
-  :gallery4=gallery4
+  :gallery1=startup.gallery1
+  :gallery2=startup.gallery2
+  :gallery3=startup.gallery3
+  :gallery4=startup.gallery4
   />
 </template>
 
