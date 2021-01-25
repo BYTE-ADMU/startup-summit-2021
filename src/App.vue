@@ -110,7 +110,7 @@ export default {
   background-color: transparent;
   z-index: 0;
 }
-@media (max-width: 1152px) {
+@media (max-width: 1140px) {
   .ellipse1, .ellipse2, .ellipse3, .ellipse4 {
     display: none;
   }
