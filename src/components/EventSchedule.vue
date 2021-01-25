@@ -223,7 +223,6 @@ export default {
     margin-bottom: 24px;
     font-family: "objectivity_bold";
 }
-
 /*I made the mobile with 464px because the day output moves down at this width*/
 /*I have to start styling here because the 3rd day button goes the to the 1st column*/
 @media (max-width: 464px) {
