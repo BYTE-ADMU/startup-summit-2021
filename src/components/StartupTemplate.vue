@@ -56,7 +56,42 @@
     </div>
     <center><div class="third-container">
         <p>Opportunities</p>
-    </div></center>
+        <div class="job-class">
+            <p>{{jobclass}}</p>
+            <div class="jobs-container">
+                <div class="job-card">
+                    <p id="job-position">{{job}}</p>
+                    <div v-if="jobtype == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
+                    <div v-if="jobtype == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
+                    <div v-if="jobtype == 'full-time'" class="job-type" id="full-time"><p>FULL-TIME</p></div>
+                </div>
+                <div class="job-card">
+                    <p id="job-position">{{job}}</p>
+                    <div v-if="jobtype == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
+                    <div v-if="jobtype == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
+                    <div v-if="jobtype == 'full-time'" class="job-type" id="full-time"><p>FULL-TIME</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fourth-container">
+        <p>Gallery</p>
+        <div class="gallery-wrapper">
+            <div class="gallery-img-wrapper">
+                <img :src="gallery1">
+            </div>
+            <div class="gallery-img-wrapper">
+                <img :src="gallery2">
+            </div>
+            <div class="gallery-img-wrapper second-row">
+                <img :src="gallery3">
+            </div>
+            <div class="gallery-img-wrapper second-row">
+                <img :src="gallery4">
+            </div>
+        </div>
+    </div>
+    </center>
 </div>
 </template>
 
@@ -125,6 +160,34 @@ export default {
             type: String
         },
         ourproduct:{
+            required: true,
+            type: String
+        },
+        jobclass:{
+            required: true,
+            type: String
+        },
+        job:{
+            required: true,
+            type: String
+        },
+        jobtype:{
+            required: true,
+            type: String
+        },
+        gallery1:{
+            required: true,
+            type: String
+        },
+        gallery2:{
+            required: true,
+            type: String
+        },
+        gallery3:{
+            required: true,
+            type: String
+        },
+        gallery4:{
             required: true,
             type: String
         }
@@ -301,7 +364,102 @@ height: 160px;
     color: #000;
     text-align: left;
 }
-@media screen and (min-width: 1314px){
+.jobs-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1152px;
+    justify-content: space-between;
+}
+.job-card{
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 2px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 560px;
+    height: 72px;
+}
+.job-card #job-position{
+    color: #2C2C2C;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Inter-Bold';
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+}
+.job-class{
+    padding-top: 40px;
+}
+.job-class p{
+    font-size: 20px;
+    line-height: 28px;
+    color: #000;
+    font-family: 'Inter-SemiBold';
+}
+.job-type{
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+    border-radius: 4px;
+    background-color: pink;
+}
+.job-type p{
+    letter-spacing: 1.5px;
+    margin: 8px!important;
+    color: #F8F8F8;
+    font-size: 10px;
+    line-height: 16px;
+    font-family: 'Inter-SemiBold';
+    background: transparent;
+}
+.jobs-container{
+    padding-top: 24px;
+}
+#internship{
+    background: linear-gradient(93.62deg, #F46E26 0%, #F2B430 99.35%);
+}
+#part-time{
+    background: linear-gradient(93.62deg, #F2B430 0%, #1EACB5 99.35%);
+}
+#full-time{
+    background: linear-gradient(93.62deg, #F46E26 0%, #1EACB5 99.35%);
+}
+.fourth-container{
+    max-width: 1152px;
+    padding-top: 132px;
+}
+.fourth-container p{
+    font-family: 'Objectivity-ExtraBold';
+    font-size: 28px;
+    line-height: 40px;
+    color: #000;
+    text-align: left;
+}
+.gallery-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1152px;
+    justify-content: space-between;
+}
+.second-row{
+    padding-top: 32px;
+}
+.gallery-img-wrapper{
+    width: 560px;
+    height: 320px;
+}
+.gallery-img-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+.gallery-wrapper{
+    padding-top: 43px;
+}
+@media sc\reen and (min-width: 1314px){
     .header-container{
         width: 1296px;
         margin-left: auto!important;
