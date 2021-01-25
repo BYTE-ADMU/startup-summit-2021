@@ -12,15 +12,22 @@
                     <div class="picture"></div>
                     <div class="name">Bea Baker</div>
                 </div>
-                <button class="button"><!--add clarz's button here-->></button>
+                <SecondaryBtn class="button"><Chevron/></SecondaryBtn>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import SecondaryBtn from "./SecondaryBtn.vue"
+import Chevron from "./Chevron.vue"
+
 export default {
-    name: "Card"
+    name: "Card",
+    components: {
+        SecondaryBtn,
+        Chevron
+    }
 }
 </script>
 
@@ -40,14 +47,18 @@ export default {
 }
 
 /*apply flexbox*/
+* {
+    background-color: transparent;
+}
 .card {
     display: flex;
     flex-direction: row;
     width: 568px;
-    margin: 0 auto 200px auto;
+    margin: 0 8px 0 8px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 0;
+    background-color: #f8f8f8;
 }
 .card .time {
     display: flex;
@@ -91,6 +102,7 @@ export default {
     font-family: "inter_bold";
     color: rgba(244, 110, 38, 1);
     margin: 0 0 8px 0;
+    font-size: 20px;
 }
 .talk_details .talk_description {
     font-family: "inter";
@@ -114,18 +126,13 @@ export default {
     margin: 15px 130px 34px 0;
 }
 .talk_details .speaker .button {
-    font-family: "inter";
     margin: 9px -10px 0 0;
     height: 32px;
     width: 64px;
-    border-radius: 4px;
     padding: 8px, 24px, 8px, 24px;
-    border: 1px solid #F46E26;
-    box-sizing: border-box;
     border-radius: 4px;
-    color: #F46E26;
-    background-color: white;
     cursor: pointer;
+    background: transparent;
     outline: none;
 }
 

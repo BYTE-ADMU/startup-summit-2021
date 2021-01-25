@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="day_output">{{ day.daynum }}</div>
-        <div class="date">{{ day.date }}</div>
+        <h2 class="date">{{ day.date }}</h2>
         <div><!--This div is a place holder for the cards component--></div>
     </div>
 </template>
@@ -250,14 +250,24 @@ export default {
         margin-left: auto;
         margin-right: -10px;
     }
+    .event_schedule .day_buttons .day1_unclicked {
+        margin-left: auto;
+        margin-right: -10px;
+    }
     .event_schedule .day_buttons .day2_clicked {
         margin-right: auto;
+        margin-left: 2px;
+    }
+    .event_schedule .day_buttons .day2_unclicked {
+        margin-left: auto;
         margin-left: 2px;
     }
     .event_schedule .day_buttons .day3_clicked {
         margin: 24px auto 0 auto;
     }
-
+    .event_schedule .day_buttons .day3_unclicked {
+        margin: 24px auto 0 auto;
+    }
     /*Fix font*/
     .event_schedule .date {
         font-size: 24px;
