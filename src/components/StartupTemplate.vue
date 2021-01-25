@@ -36,7 +36,16 @@
                 </div>
             </div>
     </div></center>
+    <div class="first-container">
+        <div class="firstpic-wrapper">
+        <img :src="firstpic">
+        </div>
+        <div class="first-content">
+            <p>About Us</p>
+            <p id="about-us">{{aboutus}}</p>
+        </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -89,6 +98,18 @@ export default {
         },
         twitterlink:{
             required: false,
+            type: String
+        },
+        firstpic:{
+            required: true,
+            type: String
+        },
+        secondpic:{
+            required: true,
+            type: String
+        },
+        aboutus:{
+            required: true,
             type: String
         }
     }
@@ -207,5 +228,40 @@ height: 160px;
 }
 .padded-wrapper{
     padding-right: 32px;
+}
+.first-container{
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 0;
+    padding-top: 11px;
+}
+.firstpic-wrapper{
+    width: 608px;
+    height: 280px;
+}
+.firstpic-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+.first-content{
+    display: flex;
+    flex-direction: column;
+    max-height: 608px;
+    width: 664px;
+    padding-right: 24px;
+}
+.first-content p{
+    font-family: 'Objectivity-ExtraBold';
+    font-size: 28px;
+    line-height: 40px;
+    color: #000;
+}
+#about-us{
+    font-size: 16px;
+    font-family: 'Inter-Regular';
+    line-height: 26px;
+    color: #333;
+    text-align: left;
+    padding-top: 16px;
 }
 </style>
