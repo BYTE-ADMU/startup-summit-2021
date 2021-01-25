@@ -1,7 +1,7 @@
 <template>
     <div class="page-container">
-        <div class="cover-wrapper"><img :src="cover"></div>
-        <center><div class="header-container">
+        <center><div class="cover-wrapper"><img :src="cover"></div></center>
+        <div class="header-container">
             <div class="icon-wrapper"><img :src="icon"></div>
             <div class="header-content">
                 <div class="header">
@@ -23,7 +23,7 @@
 <path d="M18.9 0H1.1C0.808262 0 0.528473 0.115893 0.322183 0.322183C0.115893 0.528473 0 0.808262 0 1.1V18.9C0 19.0445 0.0284524 19.1875 0.0837326 19.321C0.139013 19.4544 0.220038 19.5757 0.322183 19.6778C0.424327 19.78 0.54559 19.861 0.679048 19.9163C0.812506 19.9715 0.955546 20 1.1 20H10.68V12.25H8.08V9.25H10.68V7C10.6261 6.47176 10.6885 5.93813 10.8627 5.43654C11.0369 4.93495 11.3188 4.47755 11.6885 4.09641C12.0582 3.71528 12.5068 3.41964 13.0028 3.23024C13.4989 3.04083 14.0304 2.96225 14.56 3C15.3383 2.99521 16.1163 3.03528 16.89 3.12V5.82H15.3C14.04 5.82 13.8 6.42 13.8 7.29V9.22H16.8L16.41 12.22H13.8V20H18.9C19.0445 20 19.1875 19.9715 19.321 19.9163C19.4544 19.861 19.5757 19.78 19.6778 19.6778C19.78 19.5757 19.861 19.4544 19.9163 19.321C19.9715 19.1875 20 19.0445 20 18.9V1.1C20 0.955546 19.9715 0.812506 19.9163 0.679048C19.861 0.54559 19.78 0.424327 19.6778 0.322183C19.5757 0.220038 19.4544 0.139013 19.321 0.0837326C19.1875 0.0284524 19.0445 0 18.9 0Z" fill="#757575"/>
 </svg>/{{facebook}}</p></a>
                     </div>
-                    <div class="padded-wrapper link-wrapper"><a :href="iglink">
+                    <div class="padded-wrapper link-wrapper" id="ig-link"><a :href="iglink">
 <p><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 7.52C9.5095 7.52 9.03002 7.66545 8.62219 7.93795C8.21435 8.21046 7.89648 8.59778 7.70878 9.05095C7.52107 9.50411 7.47196 10.0028 7.56765 10.4838C7.66334 10.9649 7.89954 11.4068 8.24638 11.7536C8.59321 12.1005 9.0351 12.3367 9.51618 12.4323C9.99725 12.528 10.4959 12.4789 10.9491 12.2912C11.4022 12.1035 11.7895 11.7856 12.062 11.3778C12.3346 10.97 12.48 10.4905 12.48 10C12.48 9.67432 12.4159 9.35183 12.2912 9.05095C12.1666 8.75006 11.9839 8.47666 11.7536 8.24638C11.5233 8.01609 11.2499 7.83341 10.9491 7.70878C10.6482 7.58415 10.3257 7.52 10 7.52ZM19.93 5.07C19.9247 4.29776 19.7825 3.53257 19.51 2.81C19.3093 2.28126 18.9987 1.80109 18.5988 1.40119C18.1989 1.00128 17.7187 0.690718 17.19 0.49C16.4674 0.217464 15.7022 0.0752609 14.93 0.0699999C13.64 -6.70552e-08 13.26 0 10 0C6.74 0 6.36 -6.70552e-08 5.07 0.0699999C4.29776 0.0752609 3.53257 0.217464 2.81 0.49C2.28126 0.690718 1.80109 1.00128 1.40119 1.40119C1.00128 1.80109 0.690718 2.28126 0.49 2.81C0.217464 3.53257 0.0752609 4.29776 0.0699999 5.07C-6.70552e-08 6.36 0 6.74 0 10C0 13.26 -6.70552e-08 13.64 0.0699999 14.93C0.0807639 15.705 0.222774 16.4725 0.49 17.2C0.689828 17.7263 1.00013 18.2037 1.4 18.6C1.79819 19.0023 2.27939 19.3129 2.81 19.51C3.53257 19.7825 4.29776 19.9247 5.07 19.93C6.36 20 6.74 20 10 20C13.26 20 13.64 20 14.93 19.93C15.7022 19.9247 16.4674 19.7825 17.19 19.51C17.7206 19.3129 18.2018 19.0023 18.6 18.6C18.9999 18.2037 19.3102 17.7263 19.51 17.2C19.7823 16.4739 19.9244 15.7055 19.93 14.93C20 13.64 20 13.26 20 10C20 6.74 20 6.36 19.93 5.07ZM17.39 13.07C17.3579 13.6871 17.2262 14.295 17 14.87C16.8059 15.3497 16.5173 15.7854 16.1514 16.1514C15.7854 16.5173 15.3497 16.8059 14.87 17C14.2895 17.2136 13.6783 17.3318 13.06 17.35C12.27 17.35 12.06 17.35 10 17.35C7.94 17.35 7.73 17.35 6.94 17.35C6.32173 17.3318 5.71049 17.2136 5.13 17C4.6341 16.8157 4.18628 16.5217 3.82 16.14C3.45767 15.7813 3.17784 15.3479 3 14.87C2.78556 14.2901 2.67061 13.6782 2.66 13.06C2.66 12.27 2.66 12.06 2.66 10C2.66 7.94 2.66 7.73 2.66 6.94C2.67061 6.32183 2.78556 5.70988 3 5.13C3.18428 4.6341 3.47827 4.18628 3.86 3.82C4.22033 3.45962 4.65326 3.18009 5.13 3C5.71049 2.78641 6.32173 2.66821 6.94 2.65C7.73 2.65 7.94 2.65 10 2.65C12.06 2.65 12.27 2.65 13.06 2.65C13.6783 2.66821 14.2895 2.78641 14.87 3C15.3659 3.18428 15.8137 3.47827 16.18 3.86C16.5423 4.21875 16.8222 4.65213 17 5.13C17.2136 5.71049 17.3318 6.32173 17.35 6.94C17.35 7.73 17.35 7.94 17.35 10C17.35 12.06 17.42 12.27 17.39 13.06V13.07ZM15.79 5.63C15.6709 5.30698 15.4832 5.01364 15.2398 4.77021C14.9964 4.52678 14.703 4.33906 14.38 4.22C13.9365 4.06626 13.4693 3.99179 13 4C12.22 4 12 4 10 4C8 4 7.78 4 7 4C6.52827 4.00461 6.06107 4.09263 5.62 4.26C5.30193 4.37366 5.01169 4.55371 4.76858 4.7882C4.52547 5.02269 4.33506 5.30624 4.21 5.62C4.06478 6.06537 3.99383 6.5316 4 7C4 7.78 4 8 4 10C4 12 4 12.22 4 13C4.00991 13.4712 4.09777 13.9375 4.26 14.38C4.37906 14.703 4.56678 14.9964 4.81021 15.2398C5.05364 15.4832 5.34698 15.6709 5.67 15.79C6.09667 15.9469 6.54565 16.0347 7 16.05C7.78 16.05 8 16.05 10 16.05C12 16.05 12.22 16.05 13 16.05C13.4717 16.0454 13.9389 15.9574 14.38 15.79C14.703 15.6709 14.9964 15.4832 15.2398 15.2398C15.4832 14.9964 15.6709 14.703 15.79 14.38C15.9574 13.9389 16.0454 13.4717 16.05 13C16.05 12.22 16.05 12 16.05 10C16.05 8 16.05 7.78 16.05 7C16.0503 6.5278 15.9621 6.05972 15.79 5.62V5.63ZM10 13.82C9.49882 13.82 9.00257 13.7211 8.53966 13.529C8.07676 13.3369 7.6563 13.0554 7.30238 12.7005C6.94846 12.3457 6.66803 11.9245 6.47714 11.4611C6.28626 10.9977 6.18868 10.5012 6.19 10C6.19 9.24405 6.4143 8.5051 6.83449 7.87669C7.25468 7.24828 7.85187 6.75866 8.55047 6.46983C9.24907 6.181 10.0177 6.10594 10.7589 6.25415C11.5002 6.40236 12.1808 6.76717 12.7147 7.30241C13.2485 7.83764 13.6116 8.51924 13.7578 9.2609C13.9041 10.0026 13.827 10.771 13.5363 11.4688C13.2457 12.1666 12.7545 12.7625 12.125 13.1811C11.4955 13.5996 10.7559 13.822 10 13.82ZM14 6.93C13.7789 6.9066 13.5744 6.80222 13.4257 6.63697C13.277 6.47172 13.1947 6.25729 13.1947 6.035C13.1947 5.81271 13.277 5.59828 13.4257 5.43303C13.5744 5.26778 13.7789 5.1634 14 5.14C14.2211 5.1634 14.4256 5.26778 14.5743 5.43303C14.723 5.59828 14.8053 5.81271 14.8053 6.035C14.8053 6.25729 14.723 6.47172 14.5743 6.63697C14.4256 6.80222 14.2211 6.9066 14 6.93Z" fill="#757575"/>
 </svg>@{{ig}}</p></a>
@@ -35,16 +35,28 @@
                     </div>
                 </div>
             </div>
-    </div></center>
-    <div class="first-container">
-        <div class="firstpic-wrapper">
+    </div>
+    <div class="container">
+        <div class="pic-wrapper">
         <img :src="firstpic">
         </div>
-        <div class="first-content">
+        <div class="content">
             <p>About Us</p>
-            <p id="about-us">{{aboutus}}</p>
+            <p id="content-header">{{aboutus}}</p>
         </div>
     </div>
+    <div class="container" id="second-container">
+        <div class="pic-wrapper">
+        <img :src="secondpic">
+        </div>
+        <div class="content">
+            <p>Our Product</p>
+            <p id="content-header">{{ourproduct}}</p>
+        </div>
+    </div>
+    <center><div class="third-container">
+        <p>Opportunities</p>
+    </div></center>
 </div>
 </template>
 
@@ -111,6 +123,10 @@ export default {
         aboutus:{
             required: true,
             type: String
+        },
+        ourproduct:{
+            required: true,
+            type: String
         }
     }
 }
@@ -152,7 +168,7 @@ export default {
     overflow-x: hidden;
 }
 .cover-wrapper{
-width: 100vw!important;
+min-width: 100vw!important;
 height: 120px;
 }
 .cover-wrapper img{
@@ -163,8 +179,10 @@ height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    max-width: 1014px;
     transform: translate(0px,13px);
+    width: 1152px;
+    margin-left: auto!important;
+    margin-right: auto!important;
 }
 .icon-wrapper{
 width: 160px;
@@ -229,39 +247,170 @@ height: 160px;
 .padded-wrapper{
     padding-right: 32px;
 }
-.first-container{
+.container{
     display: flex;
     flex-direction: row-reverse;
     z-index: 0;
     padding-top: 11px;
+    background-color: #fcfcfc
 }
-.firstpic-wrapper{
+.pic-wrapper{
     width: 608px;
     height: 280px;
 }
-.firstpic-wrapper img{
+.pic-wrapper img{
     width: 100%;
     height: 100%;
 }
-.first-content{
+.content{
     display: flex;
     flex-direction: column;
-    max-height: 608px;
+    margin-top: auto!important;
+    margin-bottom: auto!important;
     width: 664px;
     padding-right: 24px;
 }
-.first-content p{
+.content p{
     font-family: 'Objectivity-ExtraBold';
     font-size: 28px;
     line-height: 40px;
     color: #000;
+    text-align: left;
 }
-#about-us{
+#content-header{
     font-size: 16px;
     font-family: 'Inter-Regular';
     line-height: 26px;
     color: #333;
     text-align: left;
     padding-top: 16px;
+}
+#second-container{
+    padding-top: 160px;
+}
+.third-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 205px;
+    max-width: 1152px;
+}
+.third-container p{
+    font-family: 'Objectivity-ExtraBold';
+    font-size: 28px;
+    line-height: 40px;
+    color: #000;
+    text-align: left;
+}
+@media screen and (min-width: 1314px){
+    .header-container{
+        width: 1296px;
+        margin-left: auto!important;
+        margin-right: 0px!important;
+    }
+}
+@media screen and (min-width: 1441px){
+    .container{
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .header-container{
+        width: 1295px;
+        transform: translate(0px,13px);
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+}
+@media screen and (min-width: 1750px){
+    .content{
+        padding-right: 92px;
+    }
+    .header-container{
+        width: 1363px;
+    }
+}
+@media screen and (max-width: 1313px){
+    .header-container{
+        width: 970px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 0px;
+        margin-top: -7px!important;
+    }
+    #about-us{
+        padding-top: 8px;
+    }
+    .content{
+        margin-left: auto!important;
+        margin-right: auto!important;
+        width: 970px;
+        padding-right: 0px;
+    }
+    .container{
+        width: 100%;
+    }
+    .pic-wrapper{
+        height: 354px;
+        width: 768px;
+        margin-left: auto!important;
+        margin-right: auto!important;
+        padding-top: 58px;
+    }
+}
+@media screen and (max-width: 990px){
+    .cover-wrapper{
+        height: 176px;
+        min-width: 990px!important;
+    }
+    .header-container{
+        transform: translate(0px,0px);
+        padding-top: 36px;
+        width: fit-content;
+        margin-left: 40px!important;
+        margin-right: 0px!important;
+    }
+    .icon-wrapper img{
+        transform: translate(0px,0px);
+    }
+    .header-content{
+        padding-top: 24px;
+        padding-left: 13px;
+        width: 499px;
+    }
+    .container{
+        margin-top: 0px!important;
+        padding-top: 49px;
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+        flex-wrap: wrap;
+    }
+    .icon-wrapper{
+        width: 155px;
+        height: 155px;
+    }
+    .header{
+        padding-left: 11px;
+    }
+    .header-links{
+        transform: translate(0px, 0px);
+    }
+    .content{
+    margin-left: 40px!important;
+    margin-right: 0px!important;
+    width: 90%;
+    padding-right: 0px;
+    }
+    .pic-wrapper{
+    margin-left: auto!important;
+    margin-right: auto!important;
+    padding-top: 58px;
+    }
+    #ig-link{
+    padding-right: 73px;
+    }
+    #second-container{
+    padding-top: 33px;
+    }
 }
 </style>
