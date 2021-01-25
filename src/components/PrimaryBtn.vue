@@ -26,7 +26,7 @@ export default {
 }
 #primary{
     background-color: #F46E26;
-    color: white;
+    color: #f8f8f8;
     box-shadow: black!important;
     box-shadow: 50px black;
     box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);

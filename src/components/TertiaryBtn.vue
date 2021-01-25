@@ -23,12 +23,12 @@ export default {
     font-family: 'Inter-SemiBold';
     text-decoration: none!important;
     cursor: pointer;
-    background-color: white;
+    background-color: #fcfcfc;
 }
 
 #tertiary{
   color: #F46E26;
-  background-color: white;
+  background-color: #fcfcfc;
 }
 #tertiary:hover:not([disabled]){
   background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
@@ -37,9 +37,9 @@ export default {
   color: #F2B430;
 }
 #tertiary:active:not([disabled]){
-  background: #E75E25;
+  background-color: #fcfcfc;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #E75E25;
   color: #E75E25;
 }
 #tertiary:disabled{
