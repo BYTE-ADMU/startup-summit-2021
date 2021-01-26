@@ -33,7 +33,7 @@
 
 <script>
 export default {
-    name: "Card3"
+    name: "PanelModal"
 }
 </script>
 
@@ -60,6 +60,7 @@ export default {
     border: 0.5px solid;
     border-radius: 3px;
     width: 60vw;
+    overflow: hidden;
 }
 .card3 .talk_details {
     display: flex;
