@@ -11,7 +11,7 @@
             <a href="#">FAQs</a>
         </div></center>
         <div class="register-btn">
-            <button>Register</button>
+            <PrimaryBtn>Register</PrimaryBtn>
         </div>
         <center><div class="icon-links">
             <a href="#"><p><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,9 +31,13 @@
 </template>
 
 <script>
+import PrimaryBtn from './PrimaryBtn.vue'
 
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    components:{
+        PrimaryBtn
+    }
 }
 </script>
 
@@ -51,7 +55,6 @@ export default {
   src: url('./../fonts/Inter-SemiBold.ttf') format("truetype");
 }
 *{
-    font-family: 'Inter', sans-serif;
     margin: 0;
     background-color: #f8f8f8;
     overflow: hidden;
@@ -94,23 +97,9 @@ export default {
 }
 .register-btn{
     padding-top: 32px;
-}
-.register-btn button{
-    background-color: #F46E26;
-    color: white;
-    padding: 8px 24px;
-    font-size: 16px;
-    line-height: 26px;
-    border: 0px;
-    border-radius:4px!important;
-    box-shadow: black!important;
-    box-shadow: 50px black;
-    cursor: pointer;
-    box-shadow: 0px 0px 15px rgba(255,151,79, 0.8);
-    font-family: 'Inter-SemiBold';
+    padding-bottom: 48px;
 }
 .icon-links{
-    padding-top: 48px;
     width: 176px;
     display: flex;
     justify-content: space-evenly;
@@ -131,9 +120,7 @@ export default {
 }
 .register-btn{
     padding-top: 24px;
-}
-.icon-links{
-    padding-top: 40px;
+    padding-bottom: 40px;
 }
 }
 
@@ -153,9 +140,7 @@ export default {
 }
 .register-btn{
     padding-top: 24px;
-}
-.icon-links{
-    padding-top: 40px;
+    padding-bottom: 40px;
 }
 }
 
