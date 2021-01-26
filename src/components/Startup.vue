@@ -1,6 +1,6 @@
 <template>
     <div class="page-container">
-        <center><div class="first-container">
+        <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
                 <center><div class="vid"><video autoplay><source src="#" type="video/mp4"></video></div></center>
                 <div class="circle-design"><img id="big-circle" src="@/assets/circledesign.png"><img id="small-circle1" src="@/assets/circledesign.png"><img id="small-circle2" src="@/assets/circledesign.png">
@@ -11,12 +11,12 @@
         <center><div class="second-container">
             <div class="text-wrapper">
                 <p id="header">Exhibitorsʼ showcase</p>
-                <div class="search-wrapper">
+                <div class="search-wrapper" :style="focusedStyle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#F46E26" class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    <input type="text" v-model="search" placeholder="Looking for anything specific? (Startups, jobs)" class="search-txt" />
+                    <input @click="focused=true" type="text" v-model="search" placeholder="Looking for anything specific? (Startups, jobs)" class="search-txt" />
                     <input type="text" v-model="search" placeholder="Looking for anything specific?" class="search-txt2" />
                 </div>
-                <span class="primary"><PrimaryBtn @click="modalShow = true"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
+                <span class="primary" @click="focused=false"><PrimaryBtn @click="modalShow = true"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
             </div>
             <div id="filter-modal" class="modal" v-if="modalShow">
                 <div class="modal-content">
@@ -189,7 +189,7 @@
                     </div>
                 </div>
             </div>
-            <div class="startups-wrapper">
+            <div class="startups-wrapper" @click="focused=false">
             <div class="startup-card" v-for="startup in filteredList" :key="startup">
                 <div class="cover">
                     <img :src="startup.cover">
@@ -226,7 +226,8 @@ export default {
       {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), cover: require('../assets/covers/edukasyon.png'), opportunity: false}
     ],
     search: '',
-    modalShow: false
+    modalShow: false,
+    focused: false
   }
 },
     computed: {
@@ -234,7 +235,22 @@ export default {
         return this.startupList.filter((startup) => {
             return startup.name.toLowerCase().startsWith(this.search.toLowerCase()) || startup.industry.toLowerCase().startsWith(this.search.toLowerCase())
         })
-      }
+      },
+      focusedStyle() {
+    if (this.focused == true) {
+       return {
+           border: "1px solid #F46E26"
+       };
+    }
+    if (this.focused == false) {
+        return {
+           border: "none"
+       };
+    }
+    else {
+      return '';
+    }
+  }
   }
 }
 </script>
@@ -325,6 +341,10 @@ height: 472.56px;
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 35px!important;
+    border-radius: 4px;
+}
+.search-wrapper input{
+    border-radius: 4px;
 }
 .search-txt::-webkit-input-placeholder{
     color: #A3A3A3;
@@ -332,9 +352,10 @@ height: 472.56px;
 .search-txt{
     font-size: 16px!important;
     line-height: 26px!important;
-    font-family: "Inter-Light";
+    font-family: "Inter-Regular";
     border: none!important;
     width: 100%;
+    color: #2c2c2c;
     vertical-align: middle;
     background-color: #f8f8f8;
     margin-left: 20px!important;
