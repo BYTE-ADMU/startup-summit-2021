@@ -17,13 +17,15 @@
     v-bind:talk="first_day[0].talk"
     v-bind:description="first_day[0].description"
     v-bind:speaker="first_day[0].speaker"
-    v-bind:pic_url="first_day[0].pic_url"/>
+    :pic_url=first_day[0].pic_url
+    />
     <Card class="card2"
     v-bind:time="first_day[1].time"
     v-bind:talk="first_day[1].talk"
     v-bind:description="first_day[1].description"
     v-bind:speaker="first_day[1].speaker"
-    v-bind:pic_url="first_day[1].pic_url"/>
+    :pic_url=first_day[1].pic_url
+    />
   </div>
   <div class="row2">
     <Card class="card3"
@@ -31,14 +33,16 @@
     v-bind:talk="first_day[2].talk"
     v-bind:description="first_day[2].description"
     v-bind:speaker="first_day[2].speaker"
-    v-bind:pic_url="first_day[2].pic_url"/>
+    :pic_url=first_day[2].pic_url
+    />
     <Card2 class="card4"
     v-bind:time="first_day[3].time" 
     v-bind:panel="first_day[3].panel" 
     v-bind:description="first_day[3].description" 
-    v-bind:pic_url1="first_day[3].pic_url1"
-    v-bind:pic_url2="first_day[3].pic_url2"
-    v-bind:pic_url3="first_day[3].pic_url3"/>
+    :pic_url1=first_day[3].pic_url1
+    :pic_url2=first_day[3].pic_url2
+    :pic_url3=first_day[3].pic_url3
+    />
   </div>
 </div>
 
@@ -56,13 +60,15 @@
     v-bind:talk="second_day[0].talk"
     v-bind:description="second_day[0].description"
     v-bind:speaker="second_day[0].speaker"
-    v-bind:pic_url="second_day[0].pic_url"/>
+    :pic_url=second_day[0].pic_url
+    />
     <Card class="card2"
     v-bind:time="second_day[1].time"
     v-bind:talk="second_day[1].talk"
     v-bind:description="second_day[1].description"
     v-bind:speaker="second_day[1].speaker"
-    v-bind:pic_url="second_day[1].pic_url"/>
+    :pic_url=second_day[1].pic_url
+    />
   </div>
   <div class="row2">
     <Card class="card3"
@@ -70,14 +76,16 @@
     v-bind:talk="second_day[2].talk"
     v-bind:description="second_day[2].description"
     v-bind:speaker="second_day[2].speaker"
-    v-bind:pic_url="second_day[2].pic_url"/>
+    :pic_url=second_day[2].pic_url
+    />
     <Card2 class="card4"
     v-bind:time="second_day[3].time" 
     v-bind:panel="second_day[3].panel" 
     v-bind:description="second_day[3].description" 
-    v-bind:pic_url1="second_day[3].pic_url1"
-    v-bind:pic_url2="second_day[3].pic_url2"
-    v-bind:pic_url3="second_day[3].pic_url3"/>
+    :pic_url1=second_day[3].pic_url1
+    :pic_url2=second_day[3].pic_url2
+    :pic_url3=second_day[3].pic_url3
+    />
   </div>
 </div>
 
@@ -95,13 +103,15 @@
     v-bind:talk="third_day[0].talk"
     v-bind:description="third_day[0].description"
     v-bind:speaker="third_day[0].speaker"
-    v-bind:pic_url="third_day[0].pic_url"/>
+    :pic_url=third_day[0].pic_url
+    />
     <Card class="card2"
     v-bind:time="third_day[1].time"
     v-bind:talk="third_day[1].talk"
     v-bind:description="third_day[1].description"
     v-bind:speaker="third_day[1].speaker"
-    v-bind:pic_url="third_day[1].pic_url"/>
+    :pic_url=third_day[1].pic_url
+    />
   </div>
   <div class="row2">
     <Card class="card3"
@@ -109,14 +119,15 @@
     v-bind:talk="third_day[2].talk"
     v-bind:description="third_day[2].description"
     v-bind:speaker="third_day[2].speaker"
-    v-bind:pic_url="third_day[2].pic_url"/>
+    :pic_url=third_day[2].pic_url
+    />
     <Card2 class="card4"
     v-bind:time="third_day[3].time" 
     v-bind:panel="third_day[3].panel" 
     v-bind:description="third_day[3].description" 
-    v-bind:pic_url1="third_day[3].pic_url1"
-    v-bind:pic_url2="third_day[3].pic_url2"
-    v-bind:pic_url3="third_day[3].pic_url3"/>
+    :pic_url1=third_day[3].pic_url1
+    :pic_url2=third_day[3].pic_url2
+    :pic_url3=third_day[3].pic_url3 />
   </div>
 </div>
 <Opportunities />
@@ -155,7 +166,7 @@ export default {
           talk: "1 Name of talk",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Giancarlo Divino",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         { 
           class: "card2",
@@ -163,7 +174,7 @@ export default {
           talk: "1 Name of talk",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         { 
           class: "card3",
@@ -171,16 +182,16 @@ export default {
           talk: "1 Name of talk",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         {
           class: "card4",
           time: "4:00",
           panel: "1 Name of panel",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          pic_url1: "../assets/logo.png",
-          pic_url2: "../assets/logo.png",
-          pic_url3: "../assets/logo.png"
+          pic_url1: require('@/assets/logo.png'),
+          pic_url2: require('@/assets/logo.png'),
+          pic_url3: require('@/assets/logo.png')
         }
       ],
       
@@ -192,7 +203,7 @@ export default {
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         {
           class: "card2",
@@ -200,7 +211,7 @@ export default {
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         {
           class: "card3",
@@ -208,16 +219,16 @@ export default {
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         {
           class: "card4",
           time: "8:00",
           panel: "2 Name of panel",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          pic_url1: "../assets/logo.png",
-          pic_url2: "../assets/logo.png",
-          pic_url3: "../assets/logo.png"
+          pic_url1: require('@/assets/logo.png'),
+          pic_url2: require('@/assets/logo.png'),
+          pic_url3: require('@/assets/logo.png')
         }
       ],
 
@@ -229,7 +240,7 @@ export default {
           talk: "3 Name of talk",
           description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         {
           class: "card2",
@@ -237,7 +248,7 @@ export default {
           talk: "3 Name of talk",
           description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         {
           class: "card3",
@@ -245,16 +256,16 @@ export default {
           talk: "3 Name of talk",
           description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "../assets/logo.png"
+          pic_url: require('@/assets/logo.png')
         },
         {
           class: "card4",
           time: "12:00",
           panel: "3 Name of panel",
           description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          pic_url1: "../assets/logo.png",
-          pic_url2: "../assets/logo.png",
-          pic_url3: "../assets/logo.png"
+          pic_url1: require('@/assets/logo.png'),
+          pic_url2: require('@/assets/logo.png'),
+          pic_url3: require('@/assets/logo.png')
         }
       ]
     }
