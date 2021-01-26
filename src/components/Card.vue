@@ -9,7 +9,7 @@
             <p class="talk_description">{{ description }}</p>
             <div class="speaker">
                 <div class="speaker_details">
-                    <img v-bind:src="img_src" class="picture" alt="speaker icon">
+                    <img v-bind:src="pic_url" alt="Speaker image" class="picture">
                     <div class="name">{{ speaker }}</div>
                 </div>
                 <SecondaryBtn class="button"><Chevron/></SecondaryBtn>
@@ -35,13 +35,6 @@ export default {
         talk: String,
         pic_url: String,
         time: String
-    },
-    computed: {
-        img_src: {
-            get: function() {
-                return "../assets/" + this.pic_url + ".png"
-            }
-        }
     }
 }
 </script>
@@ -131,6 +124,7 @@ export default {
     border: solid;
     border-radius: 25px;
     margin: 0 16px 0 0;
+    overflow: hidden;
 }
 .talk_details .speaker .name {
     font-family: "inter_bold";

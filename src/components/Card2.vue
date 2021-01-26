@@ -9,9 +9,9 @@
             <p class="talk_description">{{ description }}</p>
             <div class="speaker">
                 <div class="speaker_details">
-                    <img v-bind:src="img_src" class="picture1" alt="speaker img">
-                    <img v-bind:src="img_src" class="picture2" alt="speaker img">
-                    <img v-bind:src="img_src" class="picture3" alt="speaker img">
+                    <img v-bind:src="pic_url1" class="picture1" alt="speaker img">
+                    <img v-bind:src="pic_url2" class="picture2" alt="speaker img">
+                    <img v-bind:src="pic_url3" class="picture3" alt="speaker img">
                 </div>
                 <SecondaryBtn class="button"><Chevron/></SecondaryBtn>
             </div>
@@ -33,13 +33,10 @@ export default {
         click: Number,
         panel: String,
         description: String,
-        pic_url: String,
+        pic_url1: String,
+        pic_url2: String,
+        pic_url3: String,
         time: String
-    },
-    computed: {
-        img_src: function() {
-            return "../assets/" + this.pic_url + ".png";
-        }
     }
 }
 </script>
