@@ -56,20 +56,14 @@
     </div>
     <center><div class="third-container">
         <p>Opportunities</p>
-        <div class="job-class">
-            <p>{{jobclass}}</p>
+        <div class="job-class" v-for="job in job" :key="job">
+            <p>{{job.jobClass}}</p>
             <div class="jobs-container">
-                <div class="job-card">
-                    <p id="job-position">{{jobposition}}</p>
-                    <div v-if="jobtype == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
-                    <div v-if="jobtype == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
-                    <div v-if="jobtype == 'full-time'" class="job-type" id="full-time"><p>FULL-TIME</p></div>
-                </div>
-                <div class="job-card">
-                    <p id="job-position">{{jobposition}}</p>
-                    <div v-if="jobtype == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
-                    <div v-if="jobtype == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
-                    <div v-if="jobtype == 'full-time'" class="job-type" id="full-time"><p>FULL-TIME</p></div>
+                <div class="job-card" v-for="jobPosition in job.jobPosition" :key="jobPosition">
+                    <p id="job-position">{{jobPosition.jobName}}</p>
+                    <div v-if="jobPosition.jobType == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
+                    <div v-if="jobPosition.jobType == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
+                    <div v-if="jobPosition.jobType == 'full-time'" class="job-type" id="full-time"><p>FULL-TIME</p></div>
                 </div>
             </div>
         </div>
@@ -165,17 +159,9 @@ export default {
             required: true,
             type: String
         },
-        jobclass:{
+        job:{
             required: true,
-            type: String
-        },
-        jobposition:{
-            required: true,
-            type: String
-        },
-        jobtype:{
-            required: true,
-            type: String
+            default: []
         },
         gallery1:{
             required: true,
@@ -384,6 +370,7 @@ height: 160px;
     justify-content: space-between;
     width: 560px;
     height: 72px;
+    margin-top: 16px!important;
 }
 .job-card #job-position{
     color: #2C2C2C;
@@ -418,7 +405,7 @@ height: 160px;
     background: transparent;
 }
 .jobs-container{
-    padding-top: 24px;
+    padding-top: 8px;
 }
 #internship{
     background: linear-gradient(93.62deg, #F46E26 0%, #F2B430 99.35%);
