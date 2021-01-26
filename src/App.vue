@@ -13,7 +13,7 @@
   </div>
   <div class="row2">
     <Card class="card3"/>
-    <Card class="card4"/>
+    <Card2 class="card4"/>
   </div>
 </div>
 <Opportunities />
@@ -27,6 +27,7 @@ import Partners from './components/Partners.vue'
 import EventSchedule from './components/EventSchedule.vue'
 import WhatIsSus from './components/Home/WhatIsSus.vue'
 import Card from './components/Card.vue'
+import Card2 from './components/Card2.vue'
 
 export default {
   name: 'App',
@@ -35,6 +36,7 @@ export default {
     WhatIsSus,
     Partners,
     Card,
+    Card2,
     Hero,
     Opportunities
   }
