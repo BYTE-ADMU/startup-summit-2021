@@ -36,7 +36,7 @@
                 </div>
             </div>
     </div>
-    <div class="container">
+    <div class="container" id="first-container">
         <div class="pic-wrapper">
         <img :src="firstpic">
         </div>
@@ -55,7 +55,7 @@
         </div>
     </div>
     <center><div class="third-container">
-        <p>Opportunities</p>
+        <p id="opportunities">Opportunities</p>
         <div class="job-class" v-for="job in job" :key="job">
             <p>{{job.jobClass}}</p>
             <div class="jobs-container">
@@ -620,6 +620,9 @@ height: 191.71px;
         margin-left: auto!important;
     margin-right: auto!important;
     }
+    .icon-wrapper img{
+        transform: translate(0px,-24px);
+    }
     .header-container{
         flex-direction: column;
     justify-content: center;
@@ -634,6 +637,7 @@ height: 191.71px;
     padding-top: 24px;
     padding-left: 0px;
     width: 288px;
+    transform: translate(0px,-24px);
     }
     .header{
         padding-left: 0px;
@@ -649,10 +653,87 @@ height: 191.71px;
     #ig-link{
         padding-right: 24px;
     }
+    #first-container{
+        padding-top: 16px;
+    }
+    #second-container{
+        padding-top: 40px;
+    }
+    .pic-wrapper{
+        padding-top: 40px;
+    }
+    .content{
+        margin-left: auto!important;
+    margin-right: auto!important;
+    width: 95%;
+    }
+    .third-container{
+        padding-top: 80px;
+    }
+    .third-container p{
+        text-align: center;
+    }
+    .job-card{
+        width: 288px;
+    height: 134px;
+    flex-direction: column;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-top: 24px!important;
+    }
+    .job-card #job-position{
+        margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    font-size: 14px;
+    line-height: 22px;
+    }
+    .job-type{
+        margin-top: 16px!important;
+    margin-bottom: 0px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    width: 90px;
+    height: 32px;
+    }
+    .jobs-container{
+        margin-left: auto!important;
+    margin-right: auto!important;
+    max-width: 288px;
+    }
+    .job-class{
+        padding-top: 80px;
+    }
+    #opportunities{
+        display: block;
+        z-index: 1;
+        margin-bottom: -60px!important;
+    }
+    .fourth-container{
+        display: none;
+    }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 380px){
     .pic-wrapper{
         height: 174px;
     }
+    .header{
+    font-size: 20px;
+    line-height: 40px;
+    }
+    .content p{
+        font-size: 20px;
+    line-height: 40px;
+    }
+    #content-header{
+        padding-top: 8px;
+    }
+}
+@media screen and (max-width: 288px){
+        .job-card{
+        width: 280px;
+        }
+        .jobs-container{
+        max-width: 280px;
+        }
 }
 </style>
