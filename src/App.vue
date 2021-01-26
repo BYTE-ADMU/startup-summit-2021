@@ -2,18 +2,39 @@
 <Hero />
 <WhatIsSus />
 <EventSchedule />
-<div class="card_container">
+<div class="card_container" v-if="click === 1">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse1">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse2">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse3">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse4">
+
+  <!--1st day-->
   <div class="row1">
-    <Card class="card1"/>
-    <Card class="card2"/>
+    <Card class="card1"
+    v-bind:time="first_day[0].time"
+    v-bind:talk="first_day[0].talk"
+    v-bind:description="first_day[0].description"
+    v-bind:speaker="first_day[0].speaker"
+    v-bind:pic_url="first_day[0].pic_url"/>
+    <Card class="card2"
+    v-bind:time="first_day[1].time"
+    v-bind:talk="first_day[1].talk"
+    v-bind:description="first_day[1].description"
+    v-bind:speaker="first_day[1].speaker"
+    v-bind:pic_url="first_day[1].pic_url"/>
   </div>
   <div class="row2">
-    <Card class="card3"/>
-    <Card2 class="card4"/>
+    <Card class="card3"
+    v-bind:time="first_day[2].time"
+    v-bind:talk="first_day[2].talk"
+    v-bind:description="first_day[2].description"
+    v-bind:speaker="first_day[2].speaker"
+    v-bind:pic_url="first_day[2].pic_url"/>
+    <Card2 class="card4"
+    v-bind:time="first_day[3].time" 
+    v-bind:panel="first_day[3].panel" 
+    v-bind:description="first_day[3].description" 
+    v-bind:pic_url="first_day[3].pic_url"/>
   </div>
 </div>
 <Opportunities />
@@ -39,6 +60,46 @@ export default {
     Card2,
     Hero,
     Opportunities
+  },
+  props: {
+    click: Number
+  },
+  data() {
+    return {
+      first_day: [
+        {
+          class: "card1",
+          time: "12:00",
+          talk: "1 Name of talk",
+          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "logo"
+        },
+        {
+          class: "card2",
+          time: "3:00",
+          talk: "1 Name of talk",
+          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "./assets/logo.png"
+        },
+        {
+          class: "card3",
+          time: "00:00",
+          talk: "1 Name of talk",
+          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "./assets/logo.png"
+        },
+        {
+          class: "card4",
+          time: "10:00",
+          panel: "1 Name of panel",
+          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          pic_url: "logo"
+        }
+      ]
+    }
   }
 }
 </script>

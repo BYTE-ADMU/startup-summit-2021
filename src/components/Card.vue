@@ -1,16 +1,16 @@
 <template>
     <div class="card">
         <div class="time">
-            <h1><!--var here-->00:00</h1>
-            <p><strong><!--var here-->GMT+8</strong></p>
+            <h1>{{ time }}</h1>
+            <p><strong>GMT+8</strong></p>
         </div>
         <div class="talk_details">
-            <h3 class="talk_name"><!--var here-->Name of Talk</h3>
-            <p class="talk_description"><!--var here-->Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+            <h3 class="talk_name">{{ talk }}</h3>
+            <p class="talk_description">{{ description }}</p>
             <div class="speaker">
                 <div class="speaker_details">
-                    <div class="picture"></div>
-                    <div class="name">Bea Baker</div>
+                    <img v-bind:src="img_src" class="picture" alt="speaker icon">
+                    <div class="name">{{ speaker }}</div>
                 </div>
                 <SecondaryBtn class="button"><Chevron/></SecondaryBtn>
             </div>
@@ -27,6 +27,21 @@ export default {
     components: {
         SecondaryBtn,
         Chevron
+    },
+    props: {
+        click: Number,
+        speaker: String,
+        description: String,
+        talk: String,
+        pic_url: String,
+        time: String
+    },
+    computed: {
+        img_src: {
+            get: function() {
+                return "../assets/" + this.pic_url + ".png"
+            }
+        }
     }
 }
 </script>
@@ -63,14 +78,14 @@ export default {
 .card .time {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 0 0 33px;
     padding: 0;
 }
 .card .talk_details {
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 26px 39px 19px 0;
+    margin: 26px 39px 19px 37px;
 }
 .card .talk_details .speaker {
     display: flex;
@@ -88,13 +103,13 @@ export default {
 .time h1{
     font-family: "objectivity";
     color: rgba(244, 110, 38, 1);
-    margin: 105px 50px 0px 33px;
+    margin: 105px auto 0px auto;
 }
 .time p {
     font-family: "inter_bold";
     font-size: 14px;
     font-weight: bold;
-    margin: 0 72px 122px 60px;
+    margin: 0 auto 122px auto;
 }
 
 /*talk details*/
@@ -111,13 +126,10 @@ export default {
     margin: 0 0 19px 0;
 } 
 .talk_details .speaker .picture {
-    background-image: url(../assets/logo.png);
-    background-size: 100%;
     width: 48px;
     height: 48px;
     border: solid;
     border-radius: 25px;
-    background-repeat: no-repeat;
     margin: 0 16px 0 0;
 }
 .talk_details .speaker .name {

@@ -4,16 +4,16 @@
         <div class="day_buttons">
             <!--The div was made to center the button yusing flex wrap-->
             <div class="container1">
-                <PrimaryBtn class="day1_clicked" v-on:click="click = 1, clicked()">Day 1</PrimaryBtn>
-                <SecondaryBtn class="day1_unclicked" v-on:click="click = 1, clicked()">Day 1</SecondaryBtn>
+                <PrimaryBtn class="day1_clicked" v-on:click="click = 1, buttons()">Day 1</PrimaryBtn>
+                <SecondaryBtn class="day1_unclicked" v-on:click="click = 1, buttons()">Day 1</SecondaryBtn>
             </div>
             <div class="container2">
-                <SecondaryBtn class="day2_unclicked" v-on:click="click = 2, clicked()">Day 2</SecondaryBtn>
-                <PrimaryBtn class="day2_clicked" v-on:click="click = 2, clicked()">Day2</PrimaryBtn>
+                <SecondaryBtn class="day2_unclicked" v-on:click="click = 2, buttons()">Day 2</SecondaryBtn>
+                <PrimaryBtn class="day2_clicked" v-on:click="click = 2, buttons()">Day2</PrimaryBtn>
             </div>
             <div class="container3">
-                <SecondaryBtn class="day3_unclicked" v-on:click="click = 3, clicked()">Day 3</SecondaryBtn>
-                <PrimaryBtn class="day3_clicked" v-on:click="click = 3, clicked()">Day 3</PrimaryBtn>
+                <SecondaryBtn class="day3_unclicked" v-on:click="click = 3, buttons()">Day 3</SecondaryBtn>
+                <PrimaryBtn class="day3_clicked" v-on:click="click = 3, buttons()">Day 3</PrimaryBtn>
             </div>
         </div>
         <div class="day_output">{{ day.daynum }}</div>
@@ -42,7 +42,7 @@ export default {
         }
     },
     methods: {
-        clicked() {
+        buttons() {
             var first_clicked = document.getElementsByClassName("day1_clicked");
             var second_clicked = document.getElementsByClassName("day2_clicked");
             var third_clicked = document.getElementsByClassName("day3_clicked");
