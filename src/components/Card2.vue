@@ -142,10 +142,10 @@ export default {
     height: 48px;
     border: solid;
     border-radius: 25px;
-    margin: 0 90px 0 0;
+    margin: 0 0 0 0;
 }
 .talk_details .speaker .button {
-    margin: 9px -10px 0 0;
+    margin: 9px 36px 0 auto;
     height: 32px;
     width: 64px;
     border-radius: 4px;

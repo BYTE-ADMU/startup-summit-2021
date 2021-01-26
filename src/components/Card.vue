@@ -135,10 +135,10 @@ export default {
 .talk_details .speaker .name {
     font-family: "inter_bold";
     font-size: 16px;
-    margin: 15px 130px 34px 0;
+    margin: 15px 0 34px 0;
 }
 .talk_details .speaker .button {
-    margin: 9px -10px 0 0;
+    margin: 9px 36px 0 auto;
     height: 32px;
     width: 64px;
     padding: 8px, 24px, 8px, 24px;

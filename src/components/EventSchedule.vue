@@ -42,14 +42,15 @@ export default {
         }
     },
     methods: {
-        buttons() {
+        buttons(choice) {
             var first_clicked = document.getElementsByClassName("day1_clicked");
             var second_clicked = document.getElementsByClassName("day2_clicked");
             var third_clicked = document.getElementsByClassName("day3_clicked");
             var first_unclicked = document.getElementsByClassName("day1_unclicked");
             var second_unclicked = document.getElementsByClassName("day2_unclicked")
             var third_unclicked = document.getElementsByClassName("day3_unclicked");
-
+            choice = this.click
+            this.$emit("transfer-click", choice)
             if (this.click === 1) {
                 this.day.daynum = "Day 1";
                 this.day.date = "April 16, 2020";

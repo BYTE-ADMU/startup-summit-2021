@@ -1,13 +1,15 @@
 <template>
 <Hero />
 <WhatIsSus />
-<EventSchedule />
-<div class="card_container" v-if="click === 1">
+<EventSchedule @transfer-click="transferClickNum"/>
+
+<!--Cards for First day -->
+<div class="card_container" v-if="choice === 1">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse1">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse2">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse3">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse4">
-
+  
   <!--1st day-->
   <div class="row1">
     <Card class="card1"
@@ -37,6 +39,80 @@
     v-bind:pic_url="first_day[3].pic_url"/>
   </div>
 </div>
+
+<!--Cards for second day -->
+<div class="card_container" v-if="choice === 2">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse1">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse2">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse3">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse4">
+
+  <!--2nd day-->
+  <div class="row1">
+    <Card class="card1"
+    v-bind:time="second_day[0].time"
+    v-bind:talk="second_day[0].talk"
+    v-bind:description="second_day[0].description"
+    v-bind:speaker="second_day[0].speaker"
+    v-bind:pic_url="second_day[0].pic_url"/>
+    <Card class="card2"
+    v-bind:time="second_day[1].time"
+    v-bind:talk="second_day[1].talk"
+    v-bind:description="second_day[1].description"
+    v-bind:speaker="second_day[1].speaker"
+    v-bind:pic_url="second_day[1].pic_url"/>
+  </div>
+  <div class="row2">
+    <Card class="card3"
+    v-bind:time="second_day[2].time"
+    v-bind:talk="second_day[2].talk"
+    v-bind:description="second_day[2].description"
+    v-bind:speaker="second_day[2].speaker"
+    v-bind:pic_url="second_day[2].pic_url"/>
+    <Card2 class="card4"
+    v-bind:time="second_day[3].time" 
+    v-bind:panel="second_day[3].panel" 
+    v-bind:description="second_day[3].description" 
+    v-bind:pic_url="second_day[3].pic_url"/>
+  </div>
+</div>
+
+<!--Cards for third day -->
+<div class="card_container" v-if="choice === 3">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse1">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse2">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse3">
+  <img src="./assets/ellipse_design.svg" alt="design" class="ellipse4">
+
+  <!--3rd day-->
+  <div class="row1">
+    <Card class="card1"
+    v-bind:time="third_day[0].time"
+    v-bind:talk="third_day[0].talk"
+    v-bind:description="third_day[0].description"
+    v-bind:speaker="third_day[0].speaker"
+    v-bind:pic_url="third_day[0].pic_url"/>
+    <Card class="card2"
+    v-bind:time="third_day[1].time"
+    v-bind:talk="third_day[1].talk"
+    v-bind:description="third_day[1].description"
+    v-bind:speaker="third_day[1].speaker"
+    v-bind:pic_url="third_day[1].pic_url"/>
+  </div>
+  <div class="row2">
+    <Card class="card3"
+    v-bind:time="third_day[2].time"
+    v-bind:talk="third_day[2].talk"
+    v-bind:description="third_day[2].description"
+    v-bind:speaker="third_day[2].speaker"
+    v-bind:pic_url="third_day[2].pic_url"/>
+    <Card2 class="card4"
+    v-bind:time="third_day[3].time" 
+    v-bind:panel="third_day[3].panel" 
+    v-bind:description="third_day[3].description" 
+    v-bind:pic_url="third_day[3].pic_url"/>
+  </div>
+</div>
 <Opportunities />
 <Partners />
 </template>
@@ -61,22 +137,30 @@ export default {
     Hero,
     Opportunities
   },
-  props: {
-    click: Number
-  },
   data() {
     return {
+      choice: 1,
+
+      //All card info for first day
       first_day: [
         {
           class: "card1",
-          time: "12:00",
+          time: "1:00",
+          talk: "1 Name of talk",
+          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Giancarlo Divino",
+          pic_url: "logo"
+        },
+        { 
+          class: "card2",
+          time: "2:00",
           talk: "1 Name of talk",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Bea Baker",
-          pic_url: "logo"
+          pic_url: "./assets/logo.png"
         },
-        {
-          class: "card2",
+        { 
+          class: "card3",
           time: "3:00",
           talk: "1 Name of talk",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
@@ -84,21 +168,88 @@ export default {
           pic_url: "./assets/logo.png"
         },
         {
-          class: "card3",
-          time: "00:00",
-          talk: "1 Name of talk",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Bea Baker",
-          pic_url: "./assets/logo.png"
-        },
-        {
           class: "card4",
-          time: "10:00",
+          time: "4:00",
           panel: "1 Name of panel",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           pic_url: "logo"
         }
+      ],
+      
+      //All card info for second day
+      second_day: [
+        {
+          class: "card2",
+          time: "5:00",
+          talk: "2 Name of talk",
+          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "logo"
+        },
+        {
+          class: "card2",
+          time: "6:00",
+          talk: "2 Name of talk",
+          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "logo"
+        },
+        {
+          class: "card3",
+          time: "7:00",
+          talk: "2 Name of talk",
+          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "logo"
+        },
+        {
+          class: "card4",
+          time: "8:00",
+          panel: "2 Name of panel",
+          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          pic_url: "logo"
+        }
+      ],
+
+      //All card info for third day
+      third_day: [
+      {
+          class: "card1",
+          time: "9:00",
+          talk: "3 Name of talk",
+          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "logo"
+        },
+        {
+          class: "card2",
+          time: "10:00",
+          talk: "3 Name of talk",
+          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "logo"
+        },
+        {
+          class: "card3",
+          time: "11:00",
+          talk: "3 Name of talk",
+          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Bea Baker",
+          pic_url: "logo"
+        },
+        {
+          class: "card4",
+          time: "12:00",
+          panel: "3 Name of panel",
+          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          pic_url: "logo"
+        }
       ]
+    }
+  },
+  methods: {
+    transferClickNum(value) {
+      this.choice = value
     }
   }
 }
