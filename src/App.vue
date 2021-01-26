@@ -1,17 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
   <Footer />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Footer
   }
 }
@@ -25,6 +21,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: #fcfcfc;
+}
+#primary{
+  font-size: 16px;
+  line-height: 26px;
+}
+#chevron{
+  /* customize the margin/padding to which direction but the placement and size should alr be good
+  so no need for transform translate and width and height! but if it doesnt seem to be perfect u can customize it nalang din */
+  padding-right: 8px!important;
 }
 *{
   margin: 0;
