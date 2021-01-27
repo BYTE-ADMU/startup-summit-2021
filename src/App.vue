@@ -413,16 +413,23 @@ export default {
   background-color: transparent;
   z-index: 0;
 }
+<<<<<<< Updated upstream
 
 /*wide screen*/
+=======
+>>>>>>> Stashed changes
 @media (min-width: 1500px) {
   .ellipse1, .ellipse2, .ellipse3, .ellipse4 {
     display: none;
   }
 }
+<<<<<<< Updated upstream
 
 /*tablet and mobile*/
 @media (max-width: 1140px) {
+=======
+@media (max-width: 1153px) {
+>>>>>>> Stashed changes
   .ellipse1, .ellipse2, .ellipse3, .ellipse4 {
     display: none;
   }
