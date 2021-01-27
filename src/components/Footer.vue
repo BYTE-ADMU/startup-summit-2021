@@ -1,7 +1,7 @@
 <template>
     <div class="footer-wrapper">
         <center><div class="logo-wrapper">
-            <img src="@/assets/suslogo.png">
+            <img alt="Startup Summit Logo" src="@/assets/suslogo.png">
         </div></center>
         <center><div class="footer-menu">
             <a href="#">Home</a>
