@@ -2,7 +2,9 @@
     <div class="page-container">
         <center><div class="first-container">
             <p id="header">Got Questions?</p>
-            <div class="btn-wrapper"></div>
+            <div class="btn-wrapper">
+              <PrimaryBtn>General</PrimaryBtn>
+            </div>
         </div></center>
     </div>
 </template>
