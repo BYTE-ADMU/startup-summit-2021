@@ -1,8 +1,8 @@
 <template>
     <div class="page-container">
-        <center><div class="cover-wrapper"><img :src="cover"></div></center>
+        <center><div class="cover-wrapper"><img :alt="coverAlt" :src="cover"></div></center>
         <div class="header-container">
-            <div class="icon-wrapper"><img :src="icon"></div>
+            <div class="icon-wrapper"><img :alt="iconAlt" :src="icon"></div>
             <div class="header-content">
                 <div class="header">
                     <p>{{name}}</p>
@@ -38,7 +38,7 @@
     </div>
     <div class="container" id="first-container">
         <div class="pic-wrapper">
-        <img :src="firstpic">
+        <img :alt="firstpicAlt" :src="firstpic">
         </div>
         <div class="content">
             <p>About Us</p>
@@ -47,7 +47,7 @@
     </div>
     <div class="container" id="second-container">
         <div class="pic-wrapper">
-        <img :src="secondpic">
+        <img :alt="secondpicAlt" :src="secondpic">
         </div>
         <div class="content">
             <p>Our Product</p>
@@ -72,16 +72,16 @@
         <p>Gallery</p>
         <div class="gallery-wrapper">
             <div class="gallery-img-wrapper">
-                <img :src="gallery1">
+                <img :alt="gallery1Alt" :src="gallery1">
             </div>
             <div class="gallery-img-wrapper">
-                <img :src="gallery2">
+                <img :alt="gallery2Alt" :src="gallery2">
             </div>
             <div class="gallery-img-wrapper second-row">
-                <img :src="gallery3">
+                <img :alt="gallery3Alt" :src="gallery3">
             </div>
             <div class="gallery-img-wrapper second-row">
-                <img :src="gallery4">
+                <img :alt="gallery4Alt" :src="gallery4">
             </div>
         </div>
     </div>
@@ -178,6 +178,46 @@ export default {
         gallery4:{
             required: true,
             type: String
+        },
+        iconAlt:{
+            required: true,
+            type: String,
+            default: 'Startup logo'
+        },
+        coverAlt:{
+            required: true,
+            type: String,
+            default: 'Startup cover'
+        },
+        firstpicAlt:{
+            required: true,
+            type: String,
+            default: 'Startup picture'
+        },
+        secondpicAlt:{
+            required: true,
+            type: String,
+            default: 'Startup picture'
+        },
+        gallery1Alt:{
+            required: true,
+            type: String,
+            default: 'Startup picture'
+        },
+        gallery2Alt:{
+            required: true,
+            type: String,
+            default: 'Startup picture'
+        },
+        gallery3Alt:{
+            required: true,
+            type: String,
+            default: 'Startup picture'
+        },
+        gallery4Alt:{
+            required: true,
+            type: String,
+            default: 'Startup picture'
         }
     }
 }
