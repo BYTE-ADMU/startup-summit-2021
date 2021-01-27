@@ -2,7 +2,7 @@
     <div class="page-container">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
-                <center><div class="vid"><video autoplay><source src="#" type="video/mp4"></video></div></center>
+                <center><div class="vid"><video><source src="#" type="video/mp4"></video></div></center>
                 <div class="circle-design"><img id="big-circle" src="@/assets/circledesign.png"><img id="small-circle1" src="@/assets/circledesign.png"><img id="small-circle2" src="@/assets/circledesign.png">
                 <img id="weird-circle" src="@/assets/weirdcircle.png"></div>
             </div>
@@ -192,10 +192,10 @@
             <div class="startups-wrapper" @click="focused=false">
             <div class="startup-card" v-for="startup in filteredList" :key="startup">
                 <div class="cover">
-                    <img :src="startup.cover">
+                    <img :alt="startup.coverAlt" :src="startup.cover">
                 </div>
                 <div class="icon">
-                    <img :src="startup.icon">
+                    <img :alt="startup.iconAlt" :src="startup.icon">
                 </div>
                 <div class="startup-content">
                     <p class="startup-name">{{startup.name}}</p>
@@ -220,10 +220,10 @@ export default {
     data() {
   return {
     startupList: [
-      {name: 'Kumu', industry: 'Entertainment', icon: require('../assets/icons/kumu.png'), cover: require('../assets/covers/kumu.png'), opportunity: true},
-      {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), cover: require('../assets/covers/nextpay.png'), opportunity: false},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), cover: require('../assets/covers/edukasyon.png'), opportunity: true},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), cover: require('../assets/covers/edukasyon.png'), opportunity: false}
+      {name: 'Kumu', industry: 'Entertainment', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu icon', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay icon', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: false},
+      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph icon', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
+      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph icon', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false}
     ],
     search: '',
     modalShow: false,
