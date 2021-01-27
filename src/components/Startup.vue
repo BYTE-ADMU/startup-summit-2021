@@ -220,10 +220,10 @@ export default {
     data() {
   return {
     startupList: [
-      {name: 'Kumu', industry: 'Entertainment', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu icon', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
-      {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay icon', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: false},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph icon', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph icon', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false}
+      {name: 'Kumu', industry: 'Entertainment', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay logo', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: false},
+      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
+      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false}
     ],
     search: '',
     modalShow: false,
