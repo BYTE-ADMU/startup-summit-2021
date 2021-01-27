@@ -8,8 +8,15 @@
 </template>
 
 <script>
+import PrimaryBtn from './PrimaryBtn.vue'
+import SecondaryBtn from './SecondaryBtn.vue'
+
 export default {
-    name: 'FAQ'
+    name: 'FAQ',
+    components:{
+      PrimaryBtn,
+      SecondaryBtn
+    }
 }
 </script>
 
