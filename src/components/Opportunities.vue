@@ -7,24 +7,24 @@
             </div>
             <div class="img-rows">
                 <div class="img-row">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img class="sixth-img" src="#">
-                    <img class="seventh-img" src="#">
-                    <img class="eight-img" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" class="sixth-img" src="#">
+                    <img alt="Featured Startup logo" class="seventh-img" src="#">
+                    <img alt="Featured Startup logo" class="eight-img" src="#">
                 </div>
                 <div class="img-row" id="second-imgrow">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img class="sixth-img" src="#">
-                    <img class="seventh-img" src="#">
-                    <img class="eight-img" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" class="sixth-img" src="#">
+                    <img alt="Featured Startup logo" class="seventh-img" src="#">
+                    <img alt="Featured Startup logo" class="eight-img" src="#">
                 </div>
             </div>
             <div class="and-more">
