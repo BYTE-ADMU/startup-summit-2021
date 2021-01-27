@@ -65,11 +65,11 @@
               <SecondaryBtn v-if="plat_unclicked">Platform</SecondaryBtn></span>
             </div></center>
         </div></center>
-        <p v-if="general_clicked">hi</p>
+        <center><p v-if="general_clicked">hi</p>
         <p v-if="reg_clicked">hello</p>
         <p v-if="part_clicked">hey</p>
         <p v-if="speakers_clicked">hihi</p>
-        <p v-if="plat_clicked">hewwo</p>
+        <p v-if="plat_clicked">hewwo</p></center>
     </div>
 </template>
 
@@ -209,7 +209,7 @@ export default {
     max-width: 780px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 19px;
 }
 </style>
