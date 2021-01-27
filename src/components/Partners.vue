@@ -5,14 +5,14 @@
         </div>
         <div class="img-rows">
             <div class="img-row">
-                <img src="#">
-                <img src="#">
-                <img src="#">
+                <img alt="Major Partner logo" src="#">
+                <img alt="Major Partner logo" src="#">
+                <img alt="Major Partner logo" src="#">
             </div>
             <div class="img-row" id="second-imgrow">
-                <img src="#">
-                <img src="#">
-                <img src="#">
+                <img alt="Major Partner logo" src="#">
+                <img alt="Major Partner logo" src="#">
+                <img alt="Major Partner logo" src="#">
             </div>
         </div>
     </div></center>

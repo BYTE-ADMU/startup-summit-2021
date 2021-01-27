@@ -6,11 +6,11 @@
         </div>
         <div class="first-container">
             <div class="logo-wrapper">
-                <img src="@/assets/suslogo.png">
+                <img alt="Startup Summit Logo" src="@/assets/suslogo.png">
             </div>
             <div class="text-wrapper">
                 <p id="text">Stepping up for the Future</p>
-                <p id="date">April 16-18, 2020</p>
+                <p id="date">April 16-18, 2021</p>
             </div>
             <div class="btn-wrapper">
                 <span id="primary-btn"><PrimaryBtn>Register Now</PrimaryBtn></span><span id="secondary-btn"><SecondaryBtn>View Schedule</SecondaryBtn></span>
@@ -18,7 +18,7 @@
             <div class="messenger-btn">
             <button>
                 <center><div class="mssngr-icon">
-                        <img src="@/assets/mssngr.png">
+                        <img alt="Messenger icon" src="@/assets/mssngr.png">
                 </div></center>
             </button>
         </div>
