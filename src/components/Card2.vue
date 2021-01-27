@@ -13,7 +13,7 @@
                     <img v-bind:src="pic_url2" class="picture2" alt="speaker img">
                     <img v-bind:src="pic_url3" class="picture3" alt="speaker img">
                 </div>
-                <SecondaryBtn class="button"><Chevron/></SecondaryBtn>
+                <SecondaryBtn class="button" v-on:click="showModal()"><Chevron/></SecondaryBtn>
             </div>
         </div>
     </div>
@@ -37,6 +37,12 @@ export default {
         pic_url2: String,
         pic_url3: String,
         time: String
+    },
+    methods: {
+        showModal(toggle_modal) {
+            toggle_modal = 4;
+            this.$emit("toggle-modal4", toggle_modal);
+        }
     }
 }
 </script>

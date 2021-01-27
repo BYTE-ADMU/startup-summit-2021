@@ -2,10 +2,11 @@
     <div class="card2">
         <div class="container1">
             <div class="container2">
-                <img src="../assets/logo.png" alt="Speaker image" class="picture">
+                <img v-bind:src="image" alt="Speaker image" class="picture">
             </div>
         </div>
         <div class="talk_details">
+            <button class="exit" v-on:click="exitButton"></button>
             <h1 class="talk_title">{{ talk }}</h1>
             <p class="date">{{ date }}, {{ time }} GMT+8</p>
             <p class="speaker_name">{{ speaker }}</p>
@@ -19,7 +20,6 @@
             <p class="description">{{ description }}</p>
             <PrimaryBtn class="watch_now">Watch Now<Chevron/></PrimaryBtn>
         </div>
-        <button class="exit" v-on:click="exitButton"></button>
     </div>
 </template>
 
@@ -38,7 +38,9 @@ export default {
         description: String,
         time: String,
         date: String,
-        creds: String
+        creds: String,
+        speaker: String,
+        image: String
     },
     methods: {
         exitButton(exit) {
@@ -71,17 +73,14 @@ export default {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border: 0.5px solid;
     border-radius: 3px;
+    width: 60vw;
     overflow: hidden;
     z-index: 5!important;
-    height: 568px;
-    width: 864px;
 }
 .card2 .talk_details {
     display: flex;
     flex-direction: column;
-    width: 488px;
-    height: 478px;
-    padding-top: 30px;
+    margin: 30px 64px 60px 0;
 }
 .card2 .talk_details .icons {
     display: flex;
@@ -112,17 +111,18 @@ export default {
 }
 
 /*Talk details*/
-.card2 .exit {
-    align-self: flex-start;
+.card2 .talk_details .exit {
+    align-self: flex-end;
     width: 24px;
     height: 24px;
     border: none;
     background: url(../assets/icons/exit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     box-shadow: none;
     cursor: pointer;
     outline: none;
-    transform: translate(90px,16px);
-    display: inline-block;
+    margin: -10px -40px 0 0;
     z-index: 6!important;
 }
 .card2 .talk_details .talk_title {
@@ -194,37 +194,37 @@ export default {
     outline: none;
 }
 
+/*wide screen*/
+@media (min-width: 1450px) {
+    .card2 {
+        width: 864px;
+    }
+    .card2 .container1 .container2 {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 /*Tablet view*/
 @media (min-width: 768px) and (max-width: 1024px){
     .card2 {
-        max-width: 688px;
-        height: 673px;
-    }
-    .container2{
-        width: 384px;
-        height: 384px;
+        width: 89.58vw;
     }
 }
 
 /*Mobile view*/
 @media (max-width: 767px) {
     .card2 {
-        max-height: 673px;
-    max-width: 688px;
+        width: 82.5vw;
     }
     .card2 .container1 {
         display: none;
     }
     .card2 .talk_details {
-        padding: 33px 20px 33px 21px;
-        z-index: 0;
-    }
-    .card2 .talk_details .talk_title {
-        z-index: 0;
+        margin: 33px 20px 33px 21px;
     }
     .card2 .talk_details .exit {
         margin-right: 0;
-        z-index: 2;
     }
 }
 </style>

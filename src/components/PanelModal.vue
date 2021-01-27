@@ -2,38 +2,66 @@
     <div class="card3">
         <div class="speaker_img1">
             <div class="container">
-                <img src="../assets/logo.png" alt="Speaker image 1" class="picture">
+                <img v-bind:src="img1" alt="Speaker image 1" class="picture">
             </div>
         <div class="speaker_img2">
             <div class="container">
-                <img src="../assets/logo.png" alt="Speaker image 2" class="picture">
+                <img v-bind:src="img2" alt="Speaker image 2" class="picture">
             </div>
         </div>
         <div class="speaker_img3">
             <div class="container">
-                <img src="../assets/logo.png" alt="Speaker image 3" class="picture">
+                <img v-bind:src="img3" alt="Speaker image 3" class="picture">
             </div>
         </div>
         </div>
         <div class="talk_details">
-            <button class="exit"></button>
-            <h1 class="talk_title">Talk title</h1>
-            <p class="date">March 20, 5-6pm GMT+8</p>
-            <p class="speaker1">Speaker Name</p>
-            <p class="speaker_creds1">Credential</p>
-            <p class="speaker2">Speaker Name</p>
-            <p class="speaker_creds2">Credential</p>
-            <p class="speaker3">Speaker Name</p>
-            <p class="speaker_creds3">Credential</p>
-            <p class="description">Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            <button class="watch_now">Watch Now</button>
+            <button class="exit" v-on:click="exitButton"></button>
+            <h1 class="talk_title">{{ panel }}</h1>
+            <p class="date">{{ date }}, {{ time }} GMT+8</p>
+            <p class="speaker1">{{ speaker_1 }}</p>
+            <p class="speaker_creds1">{{ creds1 }}</p>
+            <p class="speaker2">{{ speaker_2 }}</p>
+            <p class="speaker_creds2">{{ creds2 }}</p>
+            <p class="speaker3">{{ speaker_3 }}</p>
+            <p class="speaker_creds3">{{ creds3 }}</p>
+            <p class="description">{{ description }}</p>
+            <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
         </div>
     </div>
 </template>
 
 <script>
+import PrimaryBtn from "./PrimaryBtn.vue"
+import Chevron from "./Chevron.vue"
+
 export default {
-    name: "PanelModal"
+    name: "PanelModal",
+    components: {
+        PrimaryBtn,
+        Chevron
+    },
+    props: {
+        img1: String,
+        img2: String,
+        img3: String,
+        panel: String,
+        date: String,
+        time: String,
+        speaker_1: String,
+        speaker_2: String,
+        speaker_3: String,
+        creds1: String,
+        creds2: String,
+        creds3: String,
+        description: String
+    },
+    methods: {
+        exitButton(exit) {
+            exit = false;
+            this.$emit("exit-button", exit)
+        }
+    }
 }
 </script>
 
@@ -83,6 +111,7 @@ export default {
     width: 205px;
     height: 205px;
     border-radius: 50%;
+    overflow: hidden;
     z-index: inherit;
 }
 .card3 .speaker_img1 .container .picture {
@@ -104,6 +133,7 @@ export default {
     width: 205px;
     height: 205px;
     border-radius: 50%;
+    overflow: hidden;
     z-index: inherit;
 }
 .card3 .speaker_img2 .container .picture {
@@ -124,6 +154,7 @@ export default {
     width: 205px;
     height: 205px;
     border-radius: 50%;
+    overflow: hidden;
     z-index: inherit;
 }
 .card3 .speaker_img3 .container .picture {
@@ -182,16 +213,10 @@ export default {
 .talk_details .watch_now {
     width: 162px;
     height: 42px;
-    background-color: rgba(244, 110, 38, 1);
-    border-color: rgba(244, 110, 38, 1);
-    color: white;
     border-radius: 4px;
     border: none;
     box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: "inter_bold";
     padding: 8px 24px;
-    font-weight: 700;
-    line-height: 26px;
     margin: 0;
     cursor: pointer;
     outline: none;

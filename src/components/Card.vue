@@ -12,7 +12,7 @@
                     <img v-bind:src="pic_url" alt="Speaker image" class="picture">
                     <div class="name">{{ speaker }}</div>
                 </div>
-                <SecondaryBtn class="button" v-on:click="toggleModal()"><Chevron/></SecondaryBtn>
+                <SecondaryBtn class="button" v-on:click="toggleModal1(), toggleModal2(), toggleModal3()"><Chevron/></SecondaryBtn>
             </div>
         </div>
     </div>
@@ -37,9 +37,17 @@ export default {
         time: String
     },
     methods: {
-        toggleModal(showModal) {
-            showModal = true;
-            this.$emit("toggle-modal", showModal)
+        toggleModal1(show_modal) {
+            show_modal = 1;
+            this.$emit("toggle-modal1", show_modal);
+        },
+        toggleModal2(show_modal) {
+            show_modal = 2;
+            this.$emit("toggle-modal2", show_modal);
+        },
+        toggleModal3(show_modal) {
+            show_modal = 3;
+            this.$emit("toggle-modal3", show_modal);
         }
     }
 }
