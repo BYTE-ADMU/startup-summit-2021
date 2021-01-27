@@ -648,8 +648,14 @@ height: 191.71px;
     padding-right: 3%;
     padding-left: 3%;
     }
+    .header-container{
+    width: 94%;
+    padding-right: 3%;
+    padding-left: 3%;
+        margin-left: 0px!important;
+    }
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 704px){
     .cover-wrapper{
         width: 320px;
     height: 112px;
@@ -678,6 +684,8 @@ height: 191.71px;
     padding-left: 0px;
     width: 288px;
     transform: translate(0px,-24px);
+            margin-left: auto!important;
+    margin-right: auto!important;
     }
     .header{
         padding-left: 0px;
