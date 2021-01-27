@@ -24,6 +24,8 @@ export default {
     text-decoration: none!important;
     cursor: pointer;
     background-color: #fcfcfc;
+    font-size: 16px;
+  line-height: 26px;
 }
 
 #tertiary{
