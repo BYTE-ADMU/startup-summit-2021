@@ -2,9 +2,12 @@
     <div class="page-container">
         <center><div class="first-container">
             <p id="header">Got Questions?</p>
-            <div class="btn-wrapper">
-              <PrimaryBtn>General</PrimaryBtn>
-            </div>
+            <center><div class="btn-wrapper">
+              <span class="general-btn" @click="general_clicked=true"><PrimaryBtn v-if="general_clicked" >General</PrimaryBtn>
+              <SecondaryBtn v-if="!general_clicked">General</SecondaryBtn></span>
+              <span class="general-btn" @click="reg_clicked=true"><PrimaryBtn v-if="reg_clicked" >Registration</PrimaryBtn>
+              <SecondaryBtn v-if="!reg_clicked">Registration</SecondaryBtn></span>
+            </div></center>
         </div></center>
     </div>
 </template>
@@ -18,6 +21,12 @@ export default {
     components:{
       PrimaryBtn,
       SecondaryBtn
+    },
+    data(){
+      return{
+        general_clicked: true,
+        reg_clicked: false
+      }
     }
 }
 </script>
