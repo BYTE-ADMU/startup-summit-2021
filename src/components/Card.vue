@@ -12,7 +12,7 @@
                     <img v-bind:src="pic_url" alt="Speaker image" class="picture">
                     <div class="name">{{ speaker }}</div>
                 </div>
-                <SecondaryBtn class="button"><Chevron/></SecondaryBtn>
+                <SecondaryBtn class="button" v-on:click="toggleModal()"><Chevron/></SecondaryBtn>
             </div>
         </div>
     </div>
@@ -35,6 +35,12 @@ export default {
         talk: String,
         pic_url: String,
         time: String
+    },
+    methods: {
+        toggleModal(showModal) {
+            showModal = true;
+            this.$emit("toggle-modal", showModal)
+        }
     }
 }
 </script>
@@ -67,6 +73,7 @@ export default {
     border-radius: 4px;
     padding: 0;
     background-color: #f8f8f8;
+    z-index: 1;
 }
 .card .time {
     display: flex;

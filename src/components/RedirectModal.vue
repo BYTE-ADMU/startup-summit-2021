@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: "Card4"
+    name: "RedirectModal"
 }
 </script>
 

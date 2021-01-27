@@ -37,6 +37,7 @@ export default {
 
 .page-container{
     background-color: #fcfcfc;
+    border: 1px solid #fcfcfc; 
     width: 100%;
     height: 100%;
 }
