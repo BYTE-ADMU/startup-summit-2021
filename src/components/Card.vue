@@ -12,7 +12,7 @@
                     <img v-bind:src="pic_url" alt="Speaker image" class="picture">
                     <div class="name">{{ speaker }}</div>
                 </div>
-                <SecondaryBtn class="button" v-on:click="toggleModal1(), toggleModal2(), toggleModal3()"><Chevron/></SecondaryBtn>
+                <SecondaryBtn class="button" v-on:click="toggleModal1(), toggleModal2(), toggleModal3()"><Chevron id="svg"/></SecondaryBtn>
             </div>
         </div>
     </div>
@@ -71,6 +71,9 @@ export default {
 /*apply flexbox*/
 * {
     background-color: transparent;
+}
+#svg{
+    transform: translate(0%,-65%);
 }
 .card {
     display: flex;
