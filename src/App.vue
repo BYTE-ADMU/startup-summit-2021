@@ -413,15 +413,11 @@ export default {
   background-color: transparent;
   z-index: 0;
 }
-
-/*wide screen*/
 @media (min-width: 1500px) {
   .ellipse1, .ellipse2, .ellipse3, .ellipse4 {
     display: none;
   }
 }
-
-/*tablet and mobile*/
 @media (max-width: 1153px) {
   .ellipse1, .ellipse2, .ellipse3, .ellipse4 {
     display: none;

@@ -6,26 +6,46 @@
             </div>
         </div>
         <div class="talk_details">
-            <button class="exit"></button>
-            <h1 class="talk_title">Talk title</h1>
-            <p class="date">March 20, 5-6pm GMT+8</p>
-            <p class="speaker_name">Speaker Name</p>
-            <p class="speaker_credentials">Credential</p>
+            <button class="exit" v-on:click="exitButton"></button>
+            <h1 class="talk_title">{{ talk }}</h1>
+            <p class="date">{{ date }}, {{ time }} GMT+8</p>
+            <p class="speaker_name">{{ speaker }}</p>
+            <p class="speaker_credentials">{{ creds }}</p>
             <div class="icons">
                 <div class="icon1"></div>
                 <div class="icon2"></div>
                 <div class="icon3"></div>
                 <div class="icon4"></div>
             </div>
-            <p class="description">Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            <button class="watch_now">Watch Now</button>
+            <p class="description">{{ description }}</p>
+            <PrimaryBtn class="watch_now">Watch Now<Chevron/></PrimaryBtn>
         </div>
     </div>
 </template>
 
 <script>
+import PrimaryBtn from "./PrimaryBtn.vue"
+import Chevron from "./Chevron.vue"
+
 export default {
-    name: "TalkModal"
+    name: "TalkModal",
+    components: {
+        PrimaryBtn,
+        Chevron
+    },
+    props: {
+        talk: String,
+        description: String,
+        time: String,
+        date: String,
+        creds: String
+    },
+    methods: {
+        exitButton(exit) {
+            exit = false;
+            this.$emit("exit-button", exit)
+        }
+    }
 }
 </script>
 
@@ -52,7 +72,7 @@ export default {
     border: 0.5px solid;
     border-radius: 3px;
     width: 60vw;
-    overflow: hidden;
+    overflow: auto;
 }
 .card2 .talk_details {
     display: flex;
@@ -78,6 +98,7 @@ export default {
     width: 27.78vw;
     height: 27.78vw;
     border-radius: 50%;
+    overflow: hidden;
 }
 .card2 .container1 .container2 .picture {
     position: absolute;
@@ -184,9 +205,14 @@ export default {
     }
     .card2 .talk_details {
         margin: 33px 20px 33px 21px;
+        z-index: 0;
+    }
+    .card2 .talk_details .talk_title {
+        z-index: 0;
     }
     .card2 .talk_details .exit {
         margin-right: 0;
+        z-index: 2;
     }
 }
 </style>
