@@ -24,6 +24,8 @@ export default {
     text-decoration: none!important;
     cursor: pointer;
     box-sizing: border-box;
+    font-size: 16px;
+    line-height: 26px;
 }
 #secondary{
     border: 1px solid #F46E26;
