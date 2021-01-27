@@ -65,11 +65,38 @@
               <SecondaryBtn v-if="plat_unclicked">Platform</SecondaryBtn></span>
             </div></center>
         </div></center>
-        <center><p v-if="general_clicked">hi</p>
-        <p v-if="reg_clicked">hello</p>
-        <p v-if="part_clicked">hey</p>
-        <p v-if="speakers_clicked">hihi</p>
-        <p v-if="plat_clicked">hewwo</p></center>
+        <center>
+          <div v-if="general_clicked" class="questions-container">
+            <div v-for="q in genQuestions" :key="q" class="q-container">
+              <p id="question">{{q.question}}</p>
+              <p id="answer">{{q.answer}}</p>
+            </div>
+          </div>
+          <div v-if="reg_clicked" class="questions-container">
+            <div v-for="q in regQuestions" :key="q" class="q-container">
+              <p id="question">{{q.question}}</p>
+              <p id="answer">{{q.answer}}</p>
+            </div>
+          </div>
+          <div v-if="part_clicked" class="questions-container">
+            <div v-for="q in partQuestions" :key="q" class="q-container">
+              <p id="question">{{q.question}}</p>
+              <p id="answer">{{q.answer}}</p>
+            </div>
+          </div>
+          <div v-if="speakers_clicked" class="questions-container">
+            <div v-for="q in speakQuestions" :key="q" class="q-container">
+              <p id="question">{{q.question}}</p>
+              <p id="answer">{{q.answer}}</p>
+            </div>
+          </div>
+          <div v-if="plat_clicked" class="questions-container">
+            <div v-for="q in platQuestions" :key="q" class="q-container">
+              <p id="question">{{q.question}}</p>
+              <p id="answer">{{q.answer}}</p>
+            </div>
+          </div>
+        </center>
     </div>
 </template>
 
@@ -94,7 +121,97 @@ export default {
         speakers_clicked: false,
         speakers_unclicked: true,
         plat_clicked: false,
-        plat_unclicked: true
+        plat_unclicked: true,
+        genQuestions: [
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          }
+        ],
+        regQuestions: [
+          {
+            question: 'Is there a registration fee?',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Do I have to be a member of BYTE to attend?',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Who can attend Startup Summit 2021?',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          }
+        ],
+        partQuestions: [
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          }
+        ],
+        speakQuestions: [
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          }
+        ],
+        platQuestions: [
+          {
+            question: 'Question about Platform',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question about Platform',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question about Platform',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          },
+          {
+            question: 'Question about Platform',
+            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          }
+        ]
       }
     },
     methods: {
@@ -189,7 +306,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0px!important;
     display: flex;
     flex-direction: column;
@@ -209,7 +326,42 @@ export default {
     max-width: 780px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 19px;
+    padding-bottom: 40px;
+}
+.questions-container{
+  width: 1126px;
+  height: 578px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 200px;
+}
+.q-container{
+  width: 484px;
+  height: 226px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  background: #F8F8F8;
+  text-align: left;
+}
+.q-container p{
+  background: #F8F8F8;
+}
+#question{
+  font-size: 20px;
+  line-height: 28px;
+  color: #F46E26;
+  font-family: 'Inter-Bold';
+}
+#answer{
+  padding-top: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2C2C2C;
+  font-family: 'Inter-Regular';
 }
 </style>
