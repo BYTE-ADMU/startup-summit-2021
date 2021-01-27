@@ -1,8 +1,10 @@
 <template>
     <div class="about-page">
+        <div class="vid_container">
         <video width="960px" height="536px" class="about_video">
             <source src="" type="">
         </video>
+        </div>
         <div class="about_startup-summit">
             <div class="design"></div>
             <div class="text">
@@ -43,7 +45,7 @@ export default {
     src: url(../assets/fonts/Inter-Regular.ttf);
 }
 
-/*Universal css styles*/
+/*Unviersal styling*/
 p {
     font-size: 16px;
     font-family: "inter";
@@ -78,15 +80,19 @@ h1 {
 }
 
 /*Video element*/
+.vid_container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
 .about_video {
+    align-self: center;
     border-color: black;
     border-style: solid;
-    width: 70vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    width: 66.667vw;
+    height: 37.222vw;
+    margin: 0 auto 0 auto;
 }
 
 /*About startup summit portion*/
@@ -175,6 +181,7 @@ h1 {
         z-index: 5;
         margin-bottom: 20px;
         width: 90vw;
+        height: 50vw;
     }
     
     /*About start up summit portion*/
