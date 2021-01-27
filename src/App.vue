@@ -1,7 +1,7 @@
 <template>
 <Hero />
 <WhatIsSus />
-<EventSchedule @transfer-click="transferClickNum"/>
+<EventSchedule @transfer-click="transferClickNum" @transfer-date="transferDate"/>
 
 <!--Cards for First day -->
 <div class="card_container" v-if="choice === 1">
@@ -9,10 +9,11 @@
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse2">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse3">
   <img src="./assets/ellipse_design.svg" alt="design" class="ellipse4">
-  
+
   <!--1st day-->
   <div class="row1">
     <Card class="card1"
+    @toggle-modal="showTalkModal"
     v-bind:time="first_day[0].time"
     v-bind:talk="first_day[0].talk"
     v-bind:description="first_day[0].description"
@@ -20,6 +21,7 @@
     :pic_url=first_day[0].pic_url
     />
     <Card class="card2"
+    @toggle-modal="showTalkModal"
     v-bind:time="first_day[1].time"
     v-bind:talk="first_day[1].talk"
     v-bind:description="first_day[1].description"
@@ -29,6 +31,7 @@
   </div>
   <div class="row2">
     <Card class="card3"
+    @toggle-modal="showTalkModal"
     v-bind:time="first_day[2].time"
     v-bind:talk="first_day[2].talk"
     v-bind:description="first_day[2].description"
@@ -36,6 +39,7 @@
     :pic_url=first_day[2].pic_url
     />
     <Card2 class="card4"
+    @toggle-modal="showPanelModal"
     v-bind:time="first_day[3].time" 
     v-bind:panel="first_day[3].panel" 
     v-bind:description="first_day[3].description" 
@@ -44,6 +48,21 @@
     :pic_url3=first_day[3].pic_url3
     />
   </div>
+
+  <!--Talk modals for day 1-->
+  <transition name="fade">
+    <TalkModal 
+    class="talk_modal1"
+    @exit-button="exitModal" 
+    v-if="show_talk_modal"
+    v-bind:talk="first_day[0].talk"
+    v-bind:date="modal_date"
+    v-bind:time="first_day[0].modal.time"
+    v-bind:speaker="first_day[0].speaker"
+    v-bind:creds="first_day[0].modal.creds"
+    v-bind:description="first_day[0].modal.description"
+    />
+  </transition>
 </div>
 
 <!--Cards for second day -->
@@ -127,7 +146,8 @@
     v-bind:description="third_day[3].description" 
     :pic_url1=third_day[3].pic_url1
     :pic_url2=third_day[3].pic_url2
-    :pic_url3=third_day[3].pic_url3 />
+    :pic_url3=third_day[3].pic_url3 
+    />
   </div>
 </div>
 <Opportunities />
@@ -142,6 +162,7 @@ import EventSchedule from './components/EventSchedule.vue'
 import WhatIsSus from './components/Home/WhatIsSus.vue'
 import Card from './components/Card.vue'
 import Card2 from './components/Card2.vue'
+import TalkModal from './components/TalkModal.vue'
 
 export default {
   name: 'App',
@@ -152,11 +173,15 @@ export default {
     Card,
     Card2,
     Hero,
-    Opportunities
+    Opportunities,
+    TalkModal
   },
   data() {
     return {
       choice: 1,
+      show_talk_modal: false,
+      show_panel_modal: false,
+      date: "April 16, 2020",
 
       //All card info for first day
       first_day: [
@@ -166,7 +191,12 @@ export default {
           talk: "1 Name of talk",
           description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Giancarlo Divino",
-          pic_url: require('@/assets/logo.png')
+          pic_url: require('@/assets/logo.png'),
+          modal: {
+            time: "5-6pm",
+            creds: "Credentials",
+            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          }
         },
         { 
           class: "card2",
@@ -272,7 +302,24 @@ export default {
   },
   methods: {
     transferClickNum(value) {
-      this.choice = value
+      this.choice = value;
+    },
+    transferDate(value) {
+      this.date = value;
+    },
+    exitModal(value) {
+      this.show_talk_modal = value;
+    },
+    showTalkModal(value) {
+      this.show_talk_modal = value;
+    },
+    showPanelModal(value) {
+      this.show_panel_modal = value;
+    }
+  },
+  computed: {
+    modal_date: function() {
+      return this.date.replace(", 2020", "")
     }
   }
 }
@@ -285,20 +332,39 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 }
+
+/*Universal styling*/
 *{
-  background-color: transparent;
+  background-color: #fcfcfc;
   margin: 0;
 }
-.card_container .card1 {
-  margin-left: auto;
-  z-index: 1;
+
+/*Modals*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
 }
-.card_container .card3 {
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.card_container .talk_modal1 {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/*Cards*/
+.card_container .card1 {
   margin-left: auto;
   z-index: 1;
 }
 .card_container .card2 {
   margin-right: auto;
+  z-index: 1;
+}
+.card_container .card3 {
+  margin-left: auto;
   z-index: 1;
 }
 .card_container .card4 {
@@ -347,11 +413,15 @@ export default {
   background-color: transparent;
   z-index: 0;
 }
-@media (min-width: 1500) {
+
+/*wide screen*/
+@media (min-width: 1500px) {
   .ellipse1, .ellipse2, .ellipse3, .ellipse4 {
     display: none;
   }
 }
+
+/*tablet and mobile*/
 @media (max-width: 1140px) {
   .ellipse1, .ellipse2, .ellipse3, .ellipse4 {
     display: none;

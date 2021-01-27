@@ -42,15 +42,15 @@ export default {
         }
     },
     methods: {
-        buttons(choice) {
+        buttons(choice, date) {
             var first_clicked = document.getElementsByClassName("day1_clicked");
             var second_clicked = document.getElementsByClassName("day2_clicked");
             var third_clicked = document.getElementsByClassName("day3_clicked");
             var first_unclicked = document.getElementsByClassName("day1_unclicked");
-            var second_unclicked = document.getElementsByClassName("day2_unclicked")
+            var second_unclicked = document.getElementsByClassName("day2_unclicked");
             var third_unclicked = document.getElementsByClassName("day3_unclicked");
-            choice = this.click
-            this.$emit("transfer-click", choice)
+            choice = this.click;
+            this.$emit("transfer-click", choice);
             if (this.click === 1) {
                 this.day.daynum = "Day 1";
                 this.day.date = "April 16, 2020";
@@ -93,6 +93,8 @@ export default {
                 first_unclicked[0].style.display = "block";
                 second_unclicked[0].style.display = "block";
             }
+            date = this.day.date;
+            this.$emit("transfer-date", date);
         }
     }
 }
@@ -117,14 +119,18 @@ export default {
     src: url(../assets/fonts/Inter/Inter-Bold.ttf)
 }
 
+* {
+    background-color: #fcfcfc;
+}
+
 /*Event section*/
 /*Setting flex box*/
 .event_schedule {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*already added margin bottom for what is sus sec so no need for this*/
-    margin: 0 16px 24px 24px;
+    border-color: #fcfcfc;
+    border-width: 0 16px 24px 24px;
 }
 .event_schedule .day_buttons {
     display: flex;

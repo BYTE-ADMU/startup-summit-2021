@@ -69,6 +69,7 @@ export default {
     border-radius: 4px;
     padding: 0;
     background-color: #f8f8f8;
+    z-index: 1;
 }
 .card .time {
     display: flex;
@@ -121,6 +122,7 @@ export default {
     margin: 0 0 19px 0;
 } 
 .talk_details .speaker .picture1 {
+    overflow: hidden;
     width: 48px;
     height: 48px;
     border: solid;
@@ -128,6 +130,7 @@ export default {
     margin: 0 16px 0 0;
 }
 .talk_details .speaker .picture2 {
+    overflow: hidden;
     width: 48px;
     height: 48px;
     border: solid;
@@ -135,6 +138,7 @@ export default {
     margin: 0 16px 0 0;
 }
 .talk_details .speaker .picture3 {
+    overflow: hidden;
     width: 48px;
     height: 48px;
     border: solid;
@@ -151,5 +155,38 @@ export default {
     border-radius: 4px;
     cursor: pointer;
     outline: none;
+}
+@media (max-width: 426px) {
+    /*reconfigure flex box to column*/
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .card .time {
+        margin: 30.64px 25px 16px 24px;
+    }
+    .card .talk_details {
+        margin: 0 25px 33.36px 24px; 
+    }
+    .card .talk_details .speaker {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*general styling*/
+    .card .time h1 {
+        margin: 0 176px 8px 0;
+    }
+    .card .time p {
+        margin: 0 219px 0 0;
+    }
+    .card .talk_details .speaker_details {
+        margin: 0 0 16px 0;
+    }
+    .card .talk_details .talk_description {
+        width: 80vw;
+        line-height: 22px;
+    }
 }
 </style>
