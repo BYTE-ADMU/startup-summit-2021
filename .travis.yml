@@ -5,14 +5,12 @@ cache: yarn
 
 install: 
   - yarn install
+  - yarn install -g firebase-tools
 
 script:
   - echo "skipping tests"
   - yarn run build
+  - echo "deploying"
 
-deploy: 
-  provider: firebase
-  token: 
-    secure: $FIREBASE_TOKEN
-  on:
-    branch: gio/feature/travis
+after_intall: 
+  - firebase deploy --token $FIREBASE_TOKEN
