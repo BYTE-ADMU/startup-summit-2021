@@ -4,8 +4,7 @@ node_js:
 cache: yarn
 
 install: 
-  - yarn install
-  - yarn install -g firebase-tools
+  - yarn global add firebase-tools
 
 script:
   - echo "skipping tests"
