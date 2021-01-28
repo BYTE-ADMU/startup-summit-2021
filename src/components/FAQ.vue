@@ -306,7 +306,6 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
     margin: 0px!important;
     display: flex;
     flex-direction: column;
@@ -367,10 +366,21 @@ margin-top: 30px!important;
   color: #2C2C2C;
   font-family: 'Inter-Regular';
 }
+button:active:not([disabled]){
+  background: #E75E25!important;
+  color: #f8f8f8!important;
+  box-shadow: 0px 0px 0px rgb(244 110 38 / 50%)!important;
+}
 @media screen and (max-width: 1150px) {
+  .first-container{
+    flex-direction: column-reverse;
+    padding-top: 128px;
+  }
   .btn-wrapper{
     flex-wrap: wrap;
     max-width: 478px;
+    padding-top: 0px;
+    padding-bottom: 56px;
   }
   .speakers-btn{
     margin-left: 100px!important;
@@ -381,7 +391,11 @@ margin-top: 30px!important;
     margin-top: 40px!important;
   }
   .questions-container{
-    width: 1126px;
+    width: 548px;
+    padding-top: 8px;
+  }
+  .q-container{
+    margin-top: 16px!important;
   }
 }
 </style>
