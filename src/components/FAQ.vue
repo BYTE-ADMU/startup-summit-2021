@@ -13,7 +13,7 @@
               speakers_unclicked=true,
               speakers_clicked=false,
               plat_unclicked=true,
-              plat_clicked=false"><PrimaryBtn active v-if="general_clicked">General</PrimaryBtn>
+              plat_clicked=false"><PrimaryBtn id="btn" active v-if="general_clicked">General</PrimaryBtn>
               <SecondaryBtn v-if="general_unclicked">General</SecondaryBtn></span>
               <span class="reg-btn" @click="
               general_clicked=false,
@@ -25,7 +25,7 @@
               speakers_unclicked=true,
               speakers_clicked=false,
               plat_unclicked=true,
-              plat_clicked=false"><PrimaryBtn v-if="reg_clicked">Registration</PrimaryBtn>
+              plat_clicked=false"><PrimaryBtn id="btn" v-if="reg_clicked">Registration</PrimaryBtn>
               <SecondaryBtn v-if="reg_unclicked">Registration</SecondaryBtn></span>
               <span class="part-btn" @click="
               general_clicked=false,
@@ -37,7 +37,7 @@
               speakers_unclicked=true,
               speakers_clicked=false,
               plat_unclicked=true,
-              plat_clicked=false"><PrimaryBtn v-if="part_clicked">Participants</PrimaryBtn>
+              plat_clicked=false"><PrimaryBtn id="btn" v-if="part_clicked">Participants</PrimaryBtn>
               <SecondaryBtn v-if="part_unclicked">Participants</SecondaryBtn></span>
               <span class="speakers-btn" @click="
               general_clicked=false,
@@ -49,7 +49,7 @@
               speakers_unclicked=false,
               speakers_clicked=true,
               plat_unclicked=true,
-              plat_clicked=false"><PrimaryBtn v-if="speakers_clicked">Speakers</PrimaryBtn>
+              plat_clicked=false"><PrimaryBtn id="btn" v-if="speakers_clicked">Speakers</PrimaryBtn>
               <SecondaryBtn v-if="speakers_unclicked">Speakers</SecondaryBtn></span>
               <span class="plat-btn" @click="
               general_clicked=false,
@@ -61,7 +61,7 @@
               speakers_unclicked=true,
               speakers_clicked=false,
               plat_unclicked=false,
-              plat_clicked=true"><PrimaryBtn v-if="plat_clicked">Platform</PrimaryBtn>
+              plat_clicked=true"><PrimaryBtn id="btn" v-if="plat_clicked">Platform</PrimaryBtn>
               <SecondaryBtn v-if="plat_unclicked">Platform</SecondaryBtn></span>
             </div></center>
         </div></center>
@@ -366,7 +366,12 @@ margin-top: 30px!important;
   color: #2C2C2C;
   font-family: 'Inter-Regular';
 }
-button:active:not([disabled]){
+.plat-btn #primary:active:not([disabled]){
+  background: #E75E25!important;
+  color: #f8f8f8!important;
+  box-shadow: 0px 0px 0px rgb(244 110 38 / 50%)!important;
+}
+#btn{
   background: #E75E25!important;
   color: #f8f8f8!important;
   box-shadow: 0px 0px 0px rgb(244 110 38 / 50%)!important;
@@ -396,6 +401,57 @@ button:active:not([disabled]){
   }
   .q-container{
     margin-top: 16px!important;
+  }
+}
+@media screen and (max-width: 568px) {
+  .questions-container{
+    width: auto;
+    margin-left: 16px!important;
+    margin-right: 16px!important;
+  }
+  .q-container{
+    width: auto;
+    height: auto;
+  }
+  .btn-wrapper{
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-bottom: 56px;
+    margin-left: 16px!important;
+    margin-right: 16px!important;
+    justify-content: space-evenly;
+  }
+  .speakers-btn{
+    margin-left: 40px!important;
+    margin-top: 24px!important;
+  }
+  .plat-btn{
+    margin-right: 40px!important;
+    margin-top: 24px!important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .part-btn{
+    margin-top: 24px!important;
+  }
+  .speakers-btn{
+    margin-left: 0px!important;
+    margin-top: 24px!important;
+  }
+  .plat-btn{
+    margin-right: 0px!important;
+    margin-top: 24px!important;
+  }
+  .btn-wrapper{
+    padding-bottom: 32px;
+  }
+  .questions-container{
+    margin-top: 24px!important;
+  }
+}
+@media screen and (max-width: 286px) {
+  .reg-btn{
+    margin-top: 24px!important;
   }
 }
 </style>
