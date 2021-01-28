@@ -13,7 +13,7 @@
               speakers_unclicked=true,
               speakers_clicked=false,
               plat_unclicked=true,
-              plat_clicked=false"><PrimaryBtn v-if="general_clicked">General</PrimaryBtn>
+              plat_clicked=false"><PrimaryBtn active v-if="general_clicked">General</PrimaryBtn>
               <SecondaryBtn v-if="general_unclicked">General</SecondaryBtn></span>
               <span class="reg-btn" @click="
               general_clicked=false,
@@ -328,7 +328,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 19px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 .questions-container{
   width: 1126px;
@@ -347,6 +347,9 @@ export default {
   flex-direction: column;
   background: #F8F8F8;
   text-align: left;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+margin-top: 30px!important;
 }
 .q-container p{
   background: #F8F8F8;
@@ -363,5 +366,22 @@ export default {
   line-height: 26px;
   color: #2C2C2C;
   font-family: 'Inter-Regular';
+}
+@media screen and (max-width: 1150px) {
+  .btn-wrapper{
+    flex-wrap: wrap;
+    max-width: 478px;
+  }
+  .speakers-btn{
+    margin-left: 100px!important;
+    margin-top: 40px!important;
+  }
+  .plat-btn{
+    margin-right: 100px!important;
+    margin-top: 40px!important;
+  }
+  .questions-container{
+    width: 1126px;
+  }
 }
 </style>
