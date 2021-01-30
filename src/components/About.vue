@@ -1,9 +1,9 @@
 <template>
     <div class="about-page">
         <div class="vid_container">
-        <video width="960px" height="536px" class="about_video">
-            <source src="" type="">
-        </video>
+            <video width="960px" height="536px" class="about_video">
+                <source src="" type="">
+            </video>
         </div>
         <div class="about_startup-summit">
             <div class="design"></div>
@@ -46,6 +46,10 @@ export default {
 }
 
 /*Unviersal styling*/
+* {
+    margin: 0;
+    padding: 0;
+}
 p {
     font-size: 16px;
     font-family: "inter";
@@ -84,14 +88,16 @@ h1 {
     display: flex;
     height: 100vh;
     width: 100vw;
+    border: none;
     margin: 0;
+    padding: 0;
 }
 .about_video {
     align-self: center;
     border-color: black;
     border-style: solid;
     width: 66.667vw;
-    height: 37.222vw;
+    min-height: 70%;
     margin: 0 auto 0 auto;
 }
 
@@ -100,9 +106,10 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 48vw;
-    height: 72vw;
+    height: 66.660vw;
     background-image: url(../assets/desktop/about_design.png);
     background-repeat: no-repeat;
+    background-position-x: 10px;
     background-size: contain;
     margin-left: -8px;
 }
@@ -111,7 +118,7 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    margin: 100px 0px 0px -10px;
+    margin: 100px 0px 0px -30px;
     width: 45vw;
 }
 .about_startup-summit .text p{
@@ -126,7 +133,7 @@ h1 {
     align-items: flex-start;
     width: 45vw;
     padding: 0px;
-    margin-right: 55px;
+    margin: 20px 55px 0 0;
 }
 .about_byte .text p {
     margin-top: 7px;
@@ -139,6 +146,13 @@ h1 {
     padding-right: 0px;
     width: 45vw;
     height: 26vw;
+}
+
+/*weird screen size*/
+@media (max-width: 1170px) {
+    .about_startup-summit .design {
+        height: 70vw;
+    }
 }
 
 /*wide screen*/
@@ -175,39 +189,44 @@ h1 {
         margin: 90px 0 200px -9px;
         padding: 0;
     }
-
     /*Video element*/
     .about_video {
         z-index: 5;
-        margin-bottom: 20px;
         width: 90vw;
         height: 50vw;
     }
     
     /*About start up summit portion*/
     /*hard coded positioning of the design element*/
+    .about_startup-summit .vid_container {
+        padding: 0;
+    }
     .about_startup-summit .design {
         position: absolute;
-        width: 98.958vw;
-        height: 99.868vw;
-        left: -5px;
-        top: -300px;
+        width: 100vw;
+        height: 1425.384px;
+        left: -2px;
+        top: -20.8333vw;
         z-index: 3;
         background-image: url(../assets/tablet/about_design.svg);
-        background-size: 91vw 80vw;
+        background-size: 100vw 80vw;
+        background-position: 0px 30px;
+        margin: 0;
     }
     .about_startup-summit {
-        margin-left: 30px;
+        margin-left: 15px;
         width: 85vw;
     }
     .about_startup-summit .text {
         width: 85vw;
+        margin-left: 5px;
     }
 
     /*About byte portion*/
     .about_byte .byte_picture {
         width: 100vw;
         height: 55vw;
+        margin-left: 9px; 
     }
     .about_byte .text {
         margin: 90px 0 0 30px;
