@@ -1,5 +1,11 @@
 <template>
-  <OpportunityTemplate/>
+  <OpportunityTemplate v-for="opportunity in opportunityList" :key="opportunity"
+  :name=opportunity.name
+  :cover=opportunity.cover
+  :coverAlt=opportunity.coverAlt
+  :icon=opportunity.icon
+  :iconAlt=opportunity.iconAlt
+  />
 </template>
 
 <script>
@@ -9,6 +15,15 @@ export default {
   name: 'App',
   components: {
     OpportunityTemplate
+  },
+  data: function(){
+    return{
+      opportunityList:[
+        {
+          name: 'Kumu'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -16,5 +31,6 @@ export default {
 <style>
 #app {
   margin: 0px!important;
+  background-color: #fcfcfc;
 }
 </style>
