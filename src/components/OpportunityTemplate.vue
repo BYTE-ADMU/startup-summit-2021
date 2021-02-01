@@ -258,6 +258,8 @@ height: 160px;
     flex-direction: row;
     padding-left: 292px;
     z-index: 1;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
 }
 .side-nav-wrapper{
     display: flex;
@@ -359,5 +361,12 @@ height: 160px;
 }
 #chevron{
     margin-left: 8px!important;
+}
+@media screen and (min-width: 1550px){
+    .first-container{
+        padding-left: 0px;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
 }
 </style>
