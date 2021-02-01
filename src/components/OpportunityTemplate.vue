@@ -113,12 +113,16 @@
                     </div>
                 </div>
             </div>
+            <span class="btn"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></span>
         </div>
     </div>
     </div>
 </template>
 
 <script>
+import PrimaryBtn from './PrimaryBtn.vue'
+import Chevron from './Chevron.vue'
+
 export default {
     name: 'Opportunity-Template',
     props:{
@@ -157,6 +161,10 @@ export default {
         appProcess:{
             required: true
         }
+    },
+    components:{
+        PrimaryBtn,
+        Chevron
     }
 }
 </script>
@@ -344,5 +352,12 @@ height: 160px;
 }
 #nav-addtl p{
     margin-top: 0px!important;
+}
+.btn{
+    margin-top: 48px!important;
+    padding-bottom: 200px;
+}
+#chevron{
+    margin-left: 8px!important;
 }
 </style>
