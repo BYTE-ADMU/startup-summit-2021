@@ -219,12 +219,18 @@ h1 {
     }
 
     /*About byte portion*/
+    .about_byte {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
     .about_byte .byte_picture {
         width: 100vw;
-        height: 55vw; 
+        margin-left: -8px;
+        height: 55vw;
     }
     .about_byte .text {
-        margin: 90px 0 0 30px;
+        margin: 90px 0 0 22px;
         width: 85vw;
     }
 }
