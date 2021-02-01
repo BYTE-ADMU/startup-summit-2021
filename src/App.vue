@@ -6,6 +6,7 @@
   :icon=opportunity.icon
   :iconAlt=opportunity.iconAlt
   :jobPosition=opportunity.jobPosition
+  :responsibilities=opportunity.responsibilities
   />
 </template>
 
@@ -26,11 +27,19 @@ export default {
           coverAlt: "Kumu cover",
           icon: require('@/assets/kumu/template_icon.png'),
           iconAlt: "Kumu logo",
-          job: [
+          jobPosition: "Graphic Design Intern",
+          responsibilities: [
             {
-              jobPosition: "Graphic Design Intern",
-              responsibilities: [
-              ]
+              responsibility: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+            },
+            {
+              responsibility: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
+            },
+            {
+              responsibility: "Edit and adjust existing online marketing materials"
+            },
+            {
+              responsibility: "Create and/or source additional graphical elements (illustrations or editing of existing icons/screenshots) as needed"
             }
           ]
         }
