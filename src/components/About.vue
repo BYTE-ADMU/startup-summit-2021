@@ -46,10 +46,6 @@ export default {
 }
 
 /*Unviersal styling*/
-* {
-    margin: 0;
-    padding: 0;
-}
 p {
     font-size: 16px;
     font-family: "inter";
@@ -87,7 +83,7 @@ h1 {
 .vid_container {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     border: none;
     margin: 0;
     padding: 0;
@@ -109,7 +105,7 @@ h1 {
     height: 66.660vw;
     background-image: url(../assets/desktop/about_design.png);
     background-repeat: no-repeat;
-    background-position-x: 10px;
+    background-position-x: 0px;
     background-size: contain;
     margin-left: -8px;
 }
@@ -225,8 +221,7 @@ h1 {
     /*About byte portion*/
     .about_byte .byte_picture {
         width: 100vw;
-        height: 55vw;
-        margin-left: 9px; 
+        height: 55vw; 
     }
     .about_byte .text {
         margin: 90px 0 0 30px;
