@@ -202,7 +202,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .cover-wrapper{
 min-width: 100vw!important;
