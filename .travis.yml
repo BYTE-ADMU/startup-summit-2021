@@ -5,8 +5,8 @@ cache: yarn
 
 install: 
   - yarn global add firebase-tools
-  - yarn global add vue
-  - yarn global add vue-cli
+  - yarn install vue
+  - yarn install vue-cli
 
 script:
   - echo "skipping tests"
