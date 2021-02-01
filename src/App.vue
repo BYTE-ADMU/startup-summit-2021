@@ -7,6 +7,9 @@
   :iconAlt=opportunity.iconAlt
   :jobPosition=opportunity.jobPosition
   :responsibilities=opportunity.responsibilities
+  :requirements=opportunity.requirements
+  :addtlInfo=opportunity.addtlInfo
+  :appProcess=opportunity.appProcess
   />
 </template>
 
@@ -40,6 +43,36 @@ export default {
             },
             {
               responsibility: "Create and/or source additional graphical elements (illustrations or editing of existing icons/screenshots) as needed"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+            },
+            {
+              requirement: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
+            },
+            {
+              requirement: "Edit and adjust existing online marketing materials"
+            },
+            {
+              requirement: "Create and/or source additional graphical elements (illustrations or editing of existing icons/screenshots) as needed"
+            }
+          ],
+          addtlInfo: [
+            {
+              info: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+            },
+            {
+              info: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
+            }
+          ],
+          appProcess: [
+            {
+              process: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+            },
+            {
+              process: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
             }
           ]
         }
