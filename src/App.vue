@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <OpportunityTemplate/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import OpportunityTemplate from './components/OpportunityTemplate.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    OpportunityTemplate
   }
 }
 </script>
