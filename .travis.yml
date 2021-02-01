@@ -5,7 +5,6 @@ cache: yarn
 
 install: 
   - yarn global add firebase-tools
-  - yarn add vue
   - yarn add vue-cli
 
 script:
