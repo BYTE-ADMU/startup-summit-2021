@@ -20,7 +20,15 @@ export default {
             required: true,
             type: String
         },
+        coverAlt:{
+            required: true,
+            type: String
+        },
         icon:{
+            required: true,
+            type: String
+        },
+        iconAlt:{
             required: true,
             type: String
         },
@@ -33,10 +41,31 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "Objectivity-ExtraBold";
+  src: url('./../fonts/Objectivity-ExtraBold.otf') format("opentype");
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url('./../fonts/Inter-Bold.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url('./../fonts/Inter-SemiBold.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url('./../fonts/Inter-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Inter-Light";
+  src: url('./../fonts/Inter-Light.ttf') format("truetype");
+}
 .page-container{
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
     margin: 0px!important;
     display: flex;
     flex-direction: column;

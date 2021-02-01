@@ -5,6 +5,7 @@
   :coverAlt=opportunity.coverAlt
   :icon=opportunity.icon
   :iconAlt=opportunity.iconAlt
+  :jobPosition=opportunity.jobPosition
   />
 </template>
 
@@ -20,7 +21,18 @@ export default {
     return{
       opportunityList:[
         {
-          name: 'Kumu'
+          name: 'Kumu',
+          cover: require('@/assets/kumu/template_cover.png'),
+          coverAlt: "Kumu cover",
+          icon: require('@/assets/kumu/template_icon.png'),
+          iconAlt: "Kumu logo",
+          job: [
+            {
+              jobPosition: "Graphic Design Intern",
+              responsibilities: [
+              ]
+            }
+          ]
         }
       ]
     }
@@ -29,7 +41,7 @@ export default {
 </script>
 
 <style>
-#app {
+*{
   margin: 0px!important;
   background-color: #fcfcfc;
 }
