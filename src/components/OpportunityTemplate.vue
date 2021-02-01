@@ -373,5 +373,11 @@ height: 160px;
         margin-left: auto!important;
         margin-right: auto!important;
     }
+    .side-nav-wrapper{
+        margin-left: auto!important;
+    }
+    .content-wrapper{
+        margin-right: auto!important;
+    }
 }
 </style>
