@@ -268,7 +268,8 @@ height: 160px;
     display: flex;
     flex-direction: column;
     width: 168px;
-    position: fixed;
+    position: sticky;
+    top:0;
 }
 .sidenav-container{
     display: flex;
@@ -299,7 +300,7 @@ height: 160px;
     z-index: 20!important;
 }
 .content-wrapper{
-    padding-left: 348px;
+    padding-left: 180px;
     width: 656px;
     height: 100vh;
     display: flex;
