@@ -202,6 +202,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow: hidden;
 }
 .cover-wrapper{
 min-width: 100vw!important;
@@ -260,11 +261,14 @@ height: 160px;
     z-index: 1;
     margin-left: 0px!important;
     margin-right: 0px!important;
+    overflow: auto;
+    width: 100%;
 }
 .side-nav-wrapper{
     display: flex;
     flex-direction: column;
     width: 168px;
+    position: fixed;
 }
 .sidenav-container{
     display: flex;
@@ -295,7 +299,7 @@ height: 160px;
     z-index: 20!important;
 }
 .content-wrapper{
-    padding-left: 180px;
+    padding-left: 348px;
     width: 656px;
     height: 100vh;
     display: flex;
