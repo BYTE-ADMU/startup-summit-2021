@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="first-container" @scroll="handleScroll()" id="first-container">
+        <div class="first-container" id="first-container">
             <div class="side-nav-wrapper">
                 <div class="sidenav-container">
                     <div class="nav-icon">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <span class="btn"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></span>
+            <span class="btn" id="btn"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></span>
         </div>
     </div>
     </div>
@@ -178,10 +178,11 @@ export default {
         svgStyle3: "",
     };
     },
-mounted () {
-  document.getElementById('first-container').addEventListener('scroll', this.handleScroll);
+    mounted: function(){
+        this.handleScroll()
+        document.getElementById('first-container').addEventListener('scroll', this.handleScroll);
   console.log('scrolling Injected');
-},
+    },
 beforeUnmount () {
   document.getElementById('first-container').removeEventListener('scroll', this.handleScroll);
   console.log('scrolling Destroyed');
@@ -189,15 +190,34 @@ beforeUnmount () {
 methods: {
     handleScroll () {
         this.scrolled = window.scrollY > 0;
-        var sh1 = document.getElementById('first-container').scrollHeight;
-        var st1 = document.getElementById('first-container').scrollTop;
-        var oh1 = document.getElementById('first-container').offsetHeight;
-        var sh2 = document.getElementById('responsibilities').scrollHeight;
-        var st2 = document.getElementById('responsibilities').scrollTop;
-        console.log('scrolling..'+(sh1)+".."+(st1)+".."+(oh1));
-        console.log('scrolling..'+(sh2)+".."+(st2)+"..");
-        if (oh1>=483){
-            if(sh2>st1){
+        var st = document.getElementById('first-container').scrollTop;
+        var sh = document.getElementById('first-container').scrollHeight;
+        var oh = document.getElementById('first-container').offsetHeight;
+        var sh1 = document.getElementById('responsibilities').scrollHeight;
+        var sh2 = document.getElementById('requirements').scrollHeight;
+        var sh3 = document.getElementById('addtl-info').scrollHeight;
+        var sh4 = document.getElementById('application').scrollHeight;
+        var sh5 = document.getElementById('btn').scrollHeight;
+        console.log('.'+(sh1)+'.'+(sh2)+'.'+(sh3)+'.'+(sh4)+'.'+(sh5)+'.'+(sh)+'.'+(st)+'.'+(sh-oh)+'.')
+        if (oh>=sh1+sh2+sh3){
+            /*
+            if(sh-oh<=st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+            else{
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            } */
+            if(sh1<=oh){
                 this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle1 = "background: #FFEBE1;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
@@ -205,7 +225,7 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            else if(sh2<=st1){
+            if(sh1+sh2<=oh){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
@@ -213,16 +233,25 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-        }/*
-            else if(sh-st<= 940 && sh-st>=615){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
+        }
+        else if (oh>=sh1){
+            if(sh1<=oh){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            else if(sh-st<615){
+            if(sh1+sh2<=oh){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if(sh-oh-st==0){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -231,7 +260,42 @@ methods: {
                 this.svgStyle3 = "background: #F46E26;"
             }
         }
-        
+        /*
+            basis:
+            if(sh1>st){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if(sh1<=st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if(sh2+sh1<=st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if(sh2+sh1+sh3<=st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+            */
+        /*
         else if (oh>=615 && oh<665){
             if(sh-st>1385){
                 this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
