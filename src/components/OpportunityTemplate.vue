@@ -407,6 +407,7 @@ height: 160px;
         transform: translate(0%,0%);
     padding-left: 180px;
     margin-top: 29px!important;
+    overflow: visible;
     }
     .content-wrapper{
         padding-left: 0px;
