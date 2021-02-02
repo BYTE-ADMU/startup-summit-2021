@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="content-wrapper">
-                <div class="responsibilities">
+                <div class="responsibilities" id="responsibilities">
                 <div class="content-header">
                     <p>Responsibilities</p>
                 </div>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-                <div class="other-containers">
+                <div class="other-containers" id="requirements">
                 <div class="content-header">
                     <p>Requirements</p>
                 </div>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-                <div class="other-containers">
+                <div class="other-containers" id="addtl-info">
                 <div class="content-header">
                     <p>Additional Information</p>
                 </div>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="other-containers">
+            <div class="other-containers" id="application">
                 <div class="content-header">
                     <p>Application Process</p>
                 </div>
@@ -189,15 +189,15 @@ beforeUnmount () {
 methods: {
     handleScroll () {
         this.scrolled = window.scrollY > 0;
-        var sh = document.getElementById('first-container').scrollHeight;
-        var st = document.getElementById('first-container').scrollTop;
-        var oh = document.getElementById('first-container').offsetHeight;
-        console.log('scrolling..'+(sh)+".."+(st)+".."+(oh));
-        if(sh-st-oh+1<1) {
-            var n = this.items.length+1;
-            this.items.push({value: n, description: "New loaded content #:"+n});
-            }
-            if(sh-st>1380){
+        var sh1 = document.getElementById('first-container').scrollHeight;
+        var st1 = document.getElementById('first-container').scrollTop;
+        var oh1 = document.getElementById('first-container').offsetHeight;
+        var sh2 = document.getElementById('responsibilities').scrollHeight;
+        var st2 = document.getElementById('responsibilities').scrollTop;
+        console.log('scrolling..'+(sh1)+".."+(st1)+".."+(oh1));
+        console.log('scrolling..'+(sh2)+".."+(st2)+"..");
+        if (oh1>=483){
+            if(sh2>st1){
                 this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle1 = "background: #FFEBE1;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
@@ -205,7 +205,7 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            else if(sh-st<= 1380 && sh-st>=930){
+            else if(sh2<=st1){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
@@ -213,7 +213,8 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            else if(oh<620 && sh-st<= 930 && sh-st>=620){
+        }/*
+            else if(sh-st<= 940 && sh-st>=615){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -221,7 +222,7 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            else if(oh<620 && sh-st<620){
+            else if(sh-st<615){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -229,7 +230,26 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #F46E26;";
                 this.svgStyle3 = "background: #F46E26;"
             }
-            else if (oh>620 && sh-st>= 675 && sh-st<= 981){
+        }
+        
+        else if (oh>=615 && oh<665){
+            if(sh-st>1385){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<= 1385 && sh-st>940){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<= 940 && sh-st>=618){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -237,7 +257,7 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            else if (oh>620 && sh-st<= 674){
+            else if(sh-st<618){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -245,6 +265,75 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #F46E26;";
                 this.svgStyle3 = "background: #F46E26;"
             }
+        }
+        else if (oh>=665 && oh<739){
+            if(sh-st>1385){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<= 1385 && sh-st>940){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<= 940 && sh-st>=685){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<685){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+        }
+        else if (oh>=739 && oh<795){
+            if(sh-st>1385){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<= 1385 && sh-st>940){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<= 940 && sh-st>=745){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            else if(sh-st<745){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+        } */
         }
     }
 }
