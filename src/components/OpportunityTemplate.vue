@@ -380,4 +380,9 @@ height: 160px;
         margin-right: auto!important;
     }
 }
+@media screen and (max-width: 1320px){
+    .header-container{
+        width: 970px;
+    }
+}
 </style>
