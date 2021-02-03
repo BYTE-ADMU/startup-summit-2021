@@ -65,11 +65,23 @@ export default {
             },
             {
               info: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
+            },
+            {
+              info: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+            },
+            {
+              info: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
             }
           ],
           appProcess: [
             {
               process: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+            },
+            {
+              process: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
+            },
+            {
+              process: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
             },
             {
               process: "Assist in creating internal and external graphical elements for pitch decks and internal reports"

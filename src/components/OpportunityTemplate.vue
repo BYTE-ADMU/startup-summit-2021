@@ -101,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="other-containers" id="application">
+            <div class="app_process" id="application">
                 <div class="content-header">
                     <p>Application Process</p>
                 </div>
@@ -195,13 +195,19 @@ methods: {
         var oh = document.getElementById('first-container').offsetHeight;
         var sh1 = document.getElementById('responsibilities').scrollHeight;
         var sh2 = document.getElementById('requirements').scrollHeight;
+        var shh = document.getElementById('requirements').scrollHeight;
         var sh3 = document.getElementById('addtl-info').scrollHeight;
         var sh4 = document.getElementById('application').scrollHeight;
         var sh5 = document.getElementById('btn').scrollHeight;
-        console.log('.'+(sh1)+'.'+(sh2)+'.'+(sh3)+'.'+(sh4)+'.'+(sh5)+'.'+(sh)+'.'+(st)+'.'+(sh-oh)+'.')
+        console.log('.'+(sh1)+'.'+(sh2)+'.'+(sh3)+'.'+(sh4)+'.'+(sh5)+'.'+(sh)+'.'+(st)+'.'+(oh)+'.'+(shh)+'.')
         if (oh>=sh1+sh2+sh3){
-            /*
-            if(sh-oh<=st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            if (sh-oh==st){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -209,14 +215,76 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #F46E26;";
                 this.svgStyle3 = "background: #F46E26;"
             }
-            else{
+        }
+        else if (oh>=sh1+sh2 && oh<sh1+sh2+sh3){
+            if (st<=sh1){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if (st>sh1){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if (st>sh1+sh2){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
                 this.svgStyle2 = "background: #F46E26;"
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
-            } */
+            }
+            if (sh-oh==st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+        }
+        else if (oh>=sh1 && oh<sh1+sh2){
+            if (st<=sh1){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if (st>sh1){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle2 = "background: #FFEBE1;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if (st>sh1+sh2){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if (sh-oh==st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+        }
+        /*
             if(sh1<=oh){
                 this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle1 = "background: #FFEBE1;"
@@ -259,7 +327,7 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #F46E26;";
                 this.svgStyle3 = "background: #F46E26;"
             }
-        }
+        } */
         /*
             basis:
             if(sh1>st){
@@ -566,11 +634,17 @@ height: 160px;
     margin-right: 12px!important;
 }
 .other-containers{
-    padding-top: 120px;
+    padding-bottom: 60px;
+    height: 100vh;
+    padding-top: 60px;
+}
+.app_process{
+    padding-top: 60px;
     height: 100vh;
 }
 .responsibilities{
     height: 100vh;
+    padding-bottom: 60px;
 }
 .vl{
     border-left: 4px solid #FFEBE1;
@@ -594,7 +668,7 @@ height: 160px;
 }
 .btn{
     margin-top: 48px!important;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 #chevron{
     margin-left: 8px!important;
