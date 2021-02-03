@@ -183,31 +183,41 @@ export default {
         document.getElementById('first-container').addEventListener('scroll', this.handleScroll);
   console.log('scrolling Injected');
     },
-beforeUnmount () {
-  document.getElementById('first-container').removeEventListener('scroll', this.handleScroll);
-  console.log('scrolling Destroyed');
-},
-methods: {
+    beforeUnmount () {
+    document.getElementById('first-container').removeEventListener('scroll', this.handleScroll);
+    console.log('scrolling Destroyed');
+    },
+    methods: {
     handleScroll () {
         this.scrolled = window.scrollY > 0;
         var st = document.getElementById('first-container').scrollTop;
         var sh = document.getElementById('first-container').scrollHeight;
         var oh = document.getElementById('first-container').offsetHeight;
         var sh1 = document.getElementById('responsibilities').scrollHeight;
-        var sh2 = document.getElementById('requirements').scrollHeight;
-        var shh = document.getElementById('requirements').scrollHeight;
+        var sh2 = document.getElementById('requirements').clientHeight;
+        var shh = document.getElementById('requirements').offsetHeight;
         var sh3 = document.getElementById('addtl-info').scrollHeight;
         var sh4 = document.getElementById('application').scrollHeight;
         var sh5 = document.getElementById('btn').scrollHeight;
         console.log('.'+(sh1)+'.'+(sh2)+'.'+(sh3)+'.'+(sh4)+'.'+(sh5)+'.'+(sh)+'.'+(st)+'.'+(oh)+'.'+(shh)+'.')
-        if (oh>=sh1+sh2+sh3){
+        if (oh>=sh1+sh2+sh3+sh4+sh5){
+            console.log('a')
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+        }
+        else if (oh<sh1+sh2+sh3+sh4+sh5 && oh>=sh1+sh2+sh3+sh4){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
                 this.svgStyle2 = "background: #F46E26;"
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
-            if (sh-oh==st){
+
+                if (sh-oh==st){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -216,58 +226,14 @@ methods: {
                 this.svgStyle3 = "background: #F46E26;"
             }
         }
-        else if (oh>=sh1+sh2 && oh<sh1+sh2+sh3){
-            if (st<=sh1){
-                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle1 = "background: #FFEBE1;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if (st>sh1){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if (st>sh1+sh2){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if (sh-oh==st){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #F46E26;";
-                this.svgStyle3 = "background: #F46E26;"
-            }
-        }
-        else if (oh>=sh1 && oh<sh1+sh2){
-            if (st<=sh1){
-                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle1 = "background: #FFEBE1;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if (st>sh1){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if (st>sh1+sh2){
+        else if (oh<sh1+sh2+sh3+sh4 && oh>=sh1+sh2+sh3){
+            this.vlStyle1 = "border-left: 4px solid #F46E26;";
+            this.svgStyle1 = "background: #F46E26;"
+            this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
+            this.svgStyle2 = "background: #FFEBE1;"
+            this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+            this.svgStyle3 = "background: #FFEBE1;"
+            if (st>(sh1/2)){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -284,34 +250,50 @@ methods: {
                 this.svgStyle3 = "background: #F46E26;"
             }
         }
-        /*
-            if(sh1<=oh){
-                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle1 = "background: #FFEBE1;"
+        else if (oh<sh1+sh2+sh3 && oh>=sh1+sh2){
+            if (st>=sh1){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle2 = "background: #FFEBE1;"
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            if(sh1+sh2<=oh){
+            if (st>=sh1+sh2){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if (st>=sh1+sh2+sh3){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+            if (sh-oh==st){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #F46E26;";
+                this.svgStyle3 = "background: #F46E26;"
+            }
+            else if (st<sh1){
+                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle1 = "background: #FFEBE1;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle2 = "background: #FFEBE1;"
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
         }
-        else if (oh>=sh1){
-            if(sh1<=oh){
-                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle1 = "background: #FFEBE1;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if(sh1+sh2<=oh){
+        else{
+            if (st>=sh1){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
@@ -319,7 +301,15 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
             }
-            if(sh-oh-st==0){
+            if (st>=sh1+sh2){
+                this.vlStyle1 = "border-left: 4px solid #F46E26;";
+                this.svgStyle1 = "background: #F46E26;"
+                this.vlStyle2 = "border-left: 4px solid #F46E26;";
+                this.svgStyle2 = "background: #F46E26;"
+                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
+                this.svgStyle3 = "background: #FFEBE1;"
+            }
+            if (st>=sh1+sh2+sh3){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -327,34 +317,7 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #F46E26;";
                 this.svgStyle3 = "background: #F46E26;"
             }
-        } */
-        /*
-            basis:
-            if(sh1>st){
-                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle1 = "background: #FFEBE1;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if(sh1<=st){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if(sh2+sh1<=st){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            if(sh2+sh1+sh3<=st){
+            if (sh-oh==st){
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -362,111 +325,16 @@ methods: {
                 this.vlStyle3 = "border-left: 4px solid #F46E26;";
                 this.svgStyle3 = "background: #F46E26;"
             }
-            */
-        /*
-        else if (oh>=615 && oh<665){
-            if(sh-st>1385){
+            else if (st<sh1){
                 this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle1 = "background: #FFEBE1;"
                 this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle2 = "background: #FFEBE1;"
                 this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
                 this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<= 1385 && sh-st>940){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<= 940 && sh-st>=618){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<618){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #F46E26;";
-                this.svgStyle3 = "background: #F46E26;"
             }
         }
-        else if (oh>=665 && oh<739){
-            if(sh-st>1385){
-                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle1 = "background: #FFEBE1;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<= 1385 && sh-st>940){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<= 940 && sh-st>=685){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<685){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #F46E26;";
-                this.svgStyle3 = "background: #F46E26;"
-            }
-        }
-        else if (oh>=739 && oh<795){
-            if(sh-st>1385){
-                this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle1 = "background: #FFEBE1;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<= 1385 && sh-st>940){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle2 = "background: #FFEBE1;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<= 940 && sh-st>=745){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
-                this.svgStyle3 = "background: #FFEBE1;"
-            }
-            else if(sh-st<745){
-                this.vlStyle1 = "border-left: 4px solid #F46E26;";
-                this.svgStyle1 = "background: #F46E26;"
-                this.vlStyle2 = "border-left: 4px solid #F46E26;";
-                this.svgStyle2 = "background: #F46E26;"
-                this.vlStyle3 = "border-left: 4px solid #F46E26;";
-                this.svgStyle3 = "background: #F46E26;"
-            }
-        } */
-        }
+    }
     }
 }
 </script>
