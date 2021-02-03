@@ -195,13 +195,10 @@ export default {
         var oh = document.getElementById('first-container').offsetHeight;
         var sh1 = document.getElementById('responsibilities').scrollHeight;
         var sh2 = document.getElementById('requirements').clientHeight;
-        var shh = document.getElementById('requirements').offsetHeight;
         var sh3 = document.getElementById('addtl-info').scrollHeight;
         var sh4 = document.getElementById('application').scrollHeight;
         var sh5 = document.getElementById('btn').scrollHeight;
-        console.log('.'+(sh1)+'.'+(sh2)+'.'+(sh3)+'.'+(sh4)+'.'+(sh5)+'.'+(sh)+'.'+(st)+'.'+(oh)+'.'+(shh)+'.')
         if (oh>=sh1+sh2+sh3+sh4+sh5){
-            console.log('a')
                 this.vlStyle1 = "border-left: 4px solid #F46E26;";
                 this.svgStyle1 = "background: #F46E26;"
                 this.vlStyle2 = "border-left: 4px solid #F46E26;";
@@ -227,8 +224,8 @@ export default {
             }
         }
         else if (oh<sh1+sh2+sh3+sh4 && oh>=sh1+sh2+sh3){
-            this.vlStyle1 = "border-left: 4px solid #F46E26;";
-            this.svgStyle1 = "background: #F46E26;"
+            this.vlStyle1 = "border-left: 4px solid #FFEBE1;";
+            this.svgStyle1 = "background: #FFEBE1;"
             this.vlStyle2 = "border-left: 4px solid #FFEBE1;";
             this.svgStyle2 = "background: #FFEBE1;"
             this.vlStyle3 = "border-left: 4px solid #FFEBE1;";
