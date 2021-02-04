@@ -516,9 +516,15 @@ height: 160px;
     height: 52px;
     margin-left: 22px!important;
     width: 20px;
+    transition-property: border-left;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
 }
 .light-orange{
     background: #FFEBE1;
+    transition-property: background;
+    transition-delay: 0s;
+    transition-duration: 1s;
 }
 #svg2{
     margin-top: 17.185px!important;
