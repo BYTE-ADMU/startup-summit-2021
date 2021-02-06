@@ -1,4 +1,5 @@
 <template>
+  <About />
   <Footer />
 </template>
 
@@ -9,6 +10,8 @@ export default {
   name: 'App',
   components: {
     Footer
+    About
+
   }
 }
 </script>
