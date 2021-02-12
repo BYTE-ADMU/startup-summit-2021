@@ -1,83 +1,98 @@
 <template>
 
-    <h1>Community Partners</h1>
+<!-- nav -->
 
-      <div class="container">
-          <div class="TeraByte">
-            <h2>TeraByte</h2>
-            <h3>We would like to thank:</h3>
 
-            <!-- partner logos 1-3-->
-            <div class="logo_column">
-              <div class="logos">
-              <img src="#" alt="">            
-              </div>
-              <div class="logos">
-                2
-              </div> 
-              <div class="logos">
-                3
-              </div>                                                         
-            </div>
+  <div class="bg-image">
+   <img src="../assets/partner-background.png">
+  </div>
 
-            <!-- partner logos 4-6-->
-            <div class="logo_column">            
-              <div class="logos">
-                4
-              </div>  
-              <div class="logos">
-                5
-              </div> 
-              <div class="logos">
-                6
-              </div>    
-            </div>                                                     
-          </div>
+  <div class="header">
+    <li class="title">Community Partners</li>
+  </div>
+
+<!--Terabyte -->
+  <div class="container">
+    <div class="container-items">
+      <li class="container-title">TeraByte</li>
+      <li class="title-body">We would like to thank:</li>
+      <div class="company-logo-block">
+        <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="terabyte-logo">
+          <img src="../assets/kumu-logo.png" id="terabyte-logo">
+          <img src="../assets/kumu-logo.png" id="terabyte-logo">
        </div>
+       <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="terabyte-logo">
+          <img src="../assets/kumu-logo.png" id="terabyte-logo">
+          <img src="../assets/kumu-logo.png" id="terabyte-logo">
+       </div> 
+     </div>
+    </div>  
+  </div>
 
+<!-- Gigabyte -->
+  <div class="container">
+    <div class="container-items">
+      <li class="container-title">GigaByte</li>
+      <li class="title-body">We would like to thank:</li>
+      <div class="company-logo-block">
+        <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+       </div>
+       <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+          <img src="../assets/kumu-logo.png" id="gigabyte-logo">
+       </div> 
+     </div>
+    </div>  
+  </div>
 
-      <div class="container">
-          <div class="GigaByte">
-            <h2>GigaByte</h2>
-            <h3>We would like to thank:</h3>
+<!-- Megabyte -->
+  <div class="container">
+    <div class="container-items">
+      <li class="container-title">MegaByte</li>
+      <li class="title-body">We would like to thank:</li>
+      <div class="company-logo-block">
+        <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+       </div>
+       <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+       </div> 
+       <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+       </div>    
+       <div class="company-logo-row">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+          <img src="../assets/kumu-logo.png" id="megabyte-logo">
+       </div>            
+     </div>
+    </div>  
+  </div>
 
-            <div class="partner_logos">
-              partners                                                                
-            </div>
-          </div>
-      </div>
-
-      <div class="container">
-          <div class="MegaByte">
-            <h2>MegaByte</h2>
-            <h3>We would like to thank:</h3>
-
-            <div class="partner_logos">
-              partners                                                        
-            </div>
-          </div>
-      </div>
-      <div class="background-design">
-        <img id="background" src="@/assets/partners-background.png">
-      </div>
-
-
-        <!--
-        <div class="background-design">
-        <img id="background" src="@/assets/PartnersBackground.png">
-
-      <div class="circle-design">
-        <img id="small-circle1" src="@/assets/small-circle.png">
-        <img id="small-circle2" src="@/assets/small-circle.png">     
-        <img id="vector1" src="@/assets/vector-1.png">       
-        <img id="vector-2" src="@/assets/circledesign.png">
-        <img id="vector-3" src="@/assets/circledesign.png">
-        <img id="vector-4" src="@/assets/circledesign.png"> 
-        -->       
-
-
+<!-- footer -->
 </template>
-
 
 <script>
 export default {
@@ -88,138 +103,138 @@ export default {
 }
 </script>
 
-
 <style scoped>
-.background-design img{
-    position: fixed;
-    z-index: 1!important;
+
+*{
+  margin: 0;
+  padding: 0;
 }
-#background {
+
+/* background div */
+.bg-image {
+  position: absolute;
+  width: 1240px;
+  height: 2892px;
+  margin: 0;
+  padding: 0;
+  top:0px;
+  left: 0px;
+  border: transparent;
+  z-index: -2;
+}
+
+/* divs */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   width: 100%;
-  height: 100%;
-  margin: 0px;
-}
-
-
-/*
-.background-design img{
-    position: relative;
-    z-index: 999!important;
-}
-#background {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-}
-body {
- min-height: 100%;
- min-width: 100%;
- background: url("../assets/partners-background.png") no-repeat center center fixed;
-}
-
-background:url("@assets/src/partners-background.png");
-
-
-.circle-design img{
-    position: relative;
-    z-index: -1!important;
-}
-
-#small-circle1{
-    width: 120px;
-    height: 120px;
-    transform: translate(-420%,-1250%);
-}
-
-#small-circle2{
-    width: 120px;
-    height: 120px;
-    transform: translate(360%,-1275%);
-}
-
-#vector1{
-    width: 500px;
-    height: 600px;
-    transform: translate(460%,-1375%);
-}
-*/
-
-h1 {
-font-family: Objectivity;
-font-style: normal;
-font-weight: 800;
-font-size: 28px;
-line-height: 40px;
-margin-top: 60px;
-margin-bottom: 60px;
-text-align: center;
-color: #000000;
-}
-
-h2 {
-font-family: Objectivity;
-font-style: normal;
-font-weight: 800;
-font-size: 24px;
-line-height: 24px;
-margin-top: 35px;
-text-align: center;
-color: #000000;
-}
-
-h3 {
-font-family: Inter;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-text-align: center;
-color: #000000;
+  width: 100vw;
 }
 
 .container {
-display: flex;
-min-height: 20%;
-width: 70%;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 140px;
-flex-direction: column;
-background-color: #F8F8F8;
-align-items: center;
-z-index: 2;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-}
-
-.container div {
-  padding: 2em;
-}
-
-.partner_logos {
-display: flex;
-margin: 0 5px;
-flex-direction: row;
-align-items: center;
-flex-wrap: wrap;
-background-color: #C4C4C4;
-}
-
-.logo_column {
-display: flex;
-flex-direction: row;
-background-color: #C4C4C4;
-margin-block-end: 30px;
-}
-
-.logos {
   display: flex;
-  margin: 1px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: #f8f8f8;
+  max-height: 760px;
+  min-height: 616px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 80px 120px 130px 120px;
 }
 
-.logos > * {
-  flex-basis: 100%;
+.container-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.company-logo-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  padding: 10px 80px 50px 80px;
+  width: 70vw;
+}
+/* texts */
+.title {
+  list-style: none;
+  font-family: Objectivity;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+  color: #000000;
+  margin-top: 120px;
 }
 
+.container-title {
+  list-style: none;
+  font-family: Objectivity;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 25px;
+  padding-top: 40px;
+  color: #000000;
+}
 
+.title-body {
+  list-style: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  color: #000000;
+}
+
+/*company logos */
+#terabyte-logo {
+  width: auto;
+  height: auto;
+  max-width: 160px;
+  max-height: 160px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+
+#gigabyte-logo {
+  width: auto;
+  height: auto;
+  max-width: 120px;
+  max-height: 120px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  margin: 0px 10px 0px 10px;
+}
+
+#megabyte-logo {
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  margin: 0px 10px 0px 10px;
+}
 </style>
+
