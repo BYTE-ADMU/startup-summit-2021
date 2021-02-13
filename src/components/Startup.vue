@@ -288,11 +288,7 @@ export default {
     overflow-x: hidden;
 }
 .first-container{
-    height: 100vh;
     padding-top: 5%;
-}
-.big-img-wrapper{
-    height: 100vh;
 }
 .vid video{
     position: relative;
@@ -611,6 +607,11 @@ line-height: 26px;
   background-color: transparent;
   border-radius: 0;
 }
+@media screen and (min-width: 1024px){
+    .big-img-wrapper{
+        height: 100vh;
+    }
+}
 @media screen and (max-width: 1194px){
     .startups-wrapper{
         max-width: 784px;
@@ -620,9 +621,6 @@ line-height: 26px;
 .vid video{
 width: 688px;
 height: 384px;
-}
-.first-container{
-    height: 100vh;
 }
 #small-circle2{
     transform: translate(-485%,-465%);
@@ -634,6 +632,11 @@ height: 384px;
     transform: translate(45%,-235%);
 }
 }
+@media screen and (max-width: 1023px){
+    .second-container{
+        margin-top: -208px!important;
+    }
+}
 @media screen and (max-width: 823px){
     .startup-card{
         width: 320px;
@@ -643,9 +646,11 @@ height: 384px;
 }
 }
 @media screen and (max-width: 740px){
+    .page-container{
+        height:100vh;
+    }
 .first-container{
     padding-top: 112px;
-    height: 80vh;
 }
 .text-wrapper #header{
     font-size: 20px;
@@ -687,8 +692,6 @@ height: 48px;
 .startup-card{
     width: 288px;
 }
-}
-@media screen and (max-width: 700px){
     #small-circle2{
     display: none;
 }
@@ -704,11 +707,24 @@ height: 48px;
 }
 .first-container{
     padding-top: 112px;
-    height: 45vh;
 }
 .vid video{
     width: 288px;
 height: 162px;
 }
+.second-container{
+    margin-top: -400px!important;
+}
+}
+@media screen and (max-width: 330px){
+    .search-wrapper{
+    width: auto;
+    margin-left: 16px!important;
+    margin-right: 16px!important;
+    }
+    .startups-wrapper{
+            margin-left: 4px!important;
+    margin-right: 4px!important;
+    }
 }
 </style>
