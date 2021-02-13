@@ -90,16 +90,19 @@ export default {
 }
 
 /*wide screen*/
-@media (min-width: 1920px) {
+@media (min-width: 1650px) {
     /*What is sus section*/
     .what-is-sus .text {
-        margin: 200px 169px 200px 200px;
+        margin: 200px 50px 200px auto;
     }
     .what-is-sus .text p {
-        width: 29.583vw;
+        width: 576px;
     }
     .what-is-sus .picture {
-        margin-right: 311px;
+        width: 463.9968;
+        height: 607.9968px;
+        margin-right: auto;
+        margin-left: 50px;
     }
 }
 @media (max-width: 1100px) {

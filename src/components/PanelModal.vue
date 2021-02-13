@@ -87,7 +87,7 @@ export default {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border: 0.5px solid;
     border-radius: 3px;
-    width: 60vw;
+    width: 864px;
     overflow: hidden;
 }
 .card3 .talk_details {
@@ -99,7 +99,7 @@ export default {
 /*General styling*/
 /*images*/
 .card3 .speaker_img1 {
-    margin-right: 9.3vw;
+    margin-right: 133.92px;
     z-index: 3;
 }
 .card3 .speaker_img1 .container{
