@@ -644,9 +644,9 @@ height: 191.71px;
     .content[data-v-eb25e6d2] {
     margin-left: 0px!important;
     margin-right: 0px!important;
-    width: 94%;
-    padding-right: 3%;
-    padding-left: 3%;
+    width: auto;
+    padding-right: 16px;
+    padding-left: 16px;
     }
     .header-container{
     width: 94%;
@@ -709,11 +709,6 @@ height: 191.71px;
     }
     .pic-wrapper{
         padding-top: 40px;
-    }
-    .content{
-        margin-left: auto!important;
-    margin-right: auto!important;
-    width: 95%;
     }
     .third-container{
         padding-top: 80px;
