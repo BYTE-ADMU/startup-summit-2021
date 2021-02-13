@@ -230,11 +230,6 @@ export default {
 }
 }
 @media screen and (max-width: 713px){
-.first-container{
-    transform: translate(36.5%,-73%);
-}
-}
-@media screen and (max-width: 700px){
 .img-wrapper{
     transform: translate(-34%,-20%);
 }
@@ -269,6 +264,10 @@ export default {
     font-size: 14px;
     line-height: 22px;
     padding: 8px 29.5px;
+}
+.btn-wrapper #secondary-btn button{
+    font-size: 14px;
+    line-height: 22px;
 }
 #secondary-btn{
     margin-left: 0px!important;

@@ -34,11 +34,10 @@ export default {
     margin: 0px;
 }
 .page-container{
-    padding-top: 30%;
-    padding-bottom: 13%;
+    padding-top: 15%;
+    padding-bottom: 184px;
     width: 100vw;
     margin: 0px!important;
-    height: 100vh;
     overflow-x: hidden;
 }
 .text p{
@@ -63,6 +62,15 @@ export default {
 }
 #second-imgrow{
     padding-top: 48px;
+}
+@media screen and (max-width: 1024px){
+.page-container{
+    position: relative;
+    z-index: 2;
+    padding-top: 0%;
+    transform: translate(0px,-98px);
+    padding-bottom: 106px;
+}
 }
 @media screen and (max-width: 700px){
 .text p{
@@ -93,6 +101,11 @@ line-height: 40px;
 }
 }
 @media screen and (max-width: 400px){
+    .page-container{
+        transform: translate(0px,-0px);
+        padding-top: 45px;
+        padding-bottom: 80px;
+    }
 .text p{
 font-size: 20px;
 line-height: 40px;
