@@ -125,7 +125,7 @@ export default {
         genQuestions: [
           {
             question: 'What is Startup Summit?',
-            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it here."
+            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>"
           },
           {
             question: 'How will I know which speaker/s will be present for what day?',
@@ -163,7 +163,7 @@ export default {
           },
           {
             question: 'When will I receive the second phase details after accomplishing the registration form?',
-            answer: "The Phase 2 registration link will be sent via email a few weeks before the event proper. You can like our Official Facebook Page to stay updated on announcements regarding the event."
+            answer: "The Phase 2 registration link will be sent via email a few weeks before the event proper. You can like our <a href='' style='text-decoration: none; color:#F46E26'>Official Facebook Page</a> to stay updated on announcements regarding the event."
           }
         ],
         partQuestions: [
@@ -309,7 +309,6 @@ export default {
     background-color: #fcfcfc;
     margin: 0px!important;
 }
-
 .page-container{
     display: flex;
     flex-direction: column;
