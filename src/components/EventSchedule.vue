@@ -278,5 +278,12 @@ export default {
     .event_schedule .date {
         font-size: 24px;
     }
+
+    .event_schedule .title {
+    font-family: "objectivity_ebold";
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 16px;
+}
 }
 </style>
