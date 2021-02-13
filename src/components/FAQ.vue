@@ -69,31 +69,31 @@
           <div v-if="general_clicked" class="questions-container">
             <div v-for="q in genQuestions" :key="q" class="q-container">
               <p id="question">{{q.question}}</p>
-              <p id="answer">{{q.answer}}</p>
+              <p id="answer" v-html="q.answer"></p>
             </div>
           </div>
           <div v-if="reg_clicked" class="questions-container">
             <div v-for="q in regQuestions" :key="q" class="q-container">
               <p id="question">{{q.question}}</p>
-              <p id="answer">{{q.answer}}</p>
+              <p id="answer" v-html="q.answer"></p>
             </div>
           </div>
           <div v-if="part_clicked" class="questions-container">
             <div v-for="q in partQuestions" :key="q" class="q-container">
               <p id="question">{{q.question}}</p>
-              <p id="answer">{{q.answer}}</p>
+              <p id="answer" v-html="q.answer"></p>
             </div>
           </div>
           <div v-if="speakers_clicked" class="questions-container">
             <div v-for="q in speakQuestions" :key="q" class="q-container">
               <p id="question">{{q.question}}</p>
-              <p id="answer">{{q.answer}}</p>
+              <p id="answer" v-html="q.answer"></p>
             </div>
           </div>
           <div v-if="plat_clicked" class="questions-container">
             <div v-for="q in platQuestions" :key="q" class="q-container">
               <p id="question">{{q.question}}</p>
-              <p id="answer">{{q.answer}}</p>
+              <p id="answer" v-html="q.answer"></p>
             </div>
           </div>
         </center>
@@ -124,92 +124,100 @@ export default {
         plat_unclicked: true,
         genQuestions: [
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'What is Startup Summit?',
+            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it here."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'How will I know which speaker/s will be present for what day?',
+            answer: "You may view the list of speakers for each day, as well as their schedule, on the home page found on the website."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'What does the theme Reimagining Possibilities with Tech entail?',
+            answer: "With today’s sensational new technology, the line dividing the possible and impossible is no longer rigid as it once was.  “Reimagining Possibilities with Tech” seeks to showcase startups that are at the forefront of this industry of groundbreaking technology – startups that have the potential to make colossal change in the way people live and the way society operates."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'What does the theme Breaking Barriers with Women in Startups entail?',
+            answer: "Considering the male-dominated nature of the tech and startup industry, “Breaking Barriers with Women in Startups” revolves around showcasing the work of remarkable women in the industry in leadership roles thus breaking the glass ceiling that holds many of them back."
+          },
+          {
+            question: 'What does the theme Social Entrepreneurship for a Better Tomorrow entail?',
+            answer: "With the rise of different environmental and social issues that continue to emerge in today’s society, “Social Entrepreneurship for a Better Tomorrow” seeks to showcase innovative solutions that create positive environmental and social impacts, highlighting the importance of understanding one’s role in solving social and environmental problems for a better tomorrow."
+          },
+          {
+            question: 'Who do I contact for further questions?',
+            answer: "If you have any questions, you may send them to byte.startupsummit2021@gmail.com"
           }
         ],
         regQuestions: [
           {
-            question: 'Is there a registration fee?',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Will there be any registration fees?',
+            answer: "No, the Startup Summit is a free event open to all high school and university students."
           },
           {
-            question: 'Do I have to be a member of BYTE to attend?',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'How do I register for this event?',
+            answer: "You can register through the registration form below and through our website. After that, you will receive details regarding the 2nd phase of registration on Hopin."
           },
           {
-            question: 'Who can attend Startup Summit 2021?',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Who can access my data when I register for the event?',
+            answer: "Your data will only be used by the Startup Summit Project team. Rest assured that your data will not be given out to any other participant or external partner."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'When will I receive the second phase details after accomplishing the registration form?',
+            answer: "The Phase 2 registration link will be sent via email a few weeks before the event proper. You can like our Official Facebook Page to stay updated on announcements regarding the event."
           }
         ],
         partQuestions: [
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Is this event only open to BYTE’s members?',
+            answer: "No, Startup Summit is open to not only BYTE members, but also open to anyone who has a passion for tech, innovation, business, and the budding startup scene."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'What do I need to attend the virtual conference?',
+            answer: "To attend the virtual conference, you will need a stable internet connection, your device or computer, and a Hopin account. You will also need to fill up a registration form on our website and on Hopin in order to get an event ticket."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Will I receive a certificate of attendance?',
+            answer: "A certificate of attendance is only given to participants who have attended all three days of Startup Summit 2021."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'I only want to attend one day of the conference, is that possible?',
+            answer: "Yes. It is up to the participants to attend certain talks they are interested in. However, to get the most out of this three-day event, we strongly encourage you to attend all conference days."
+          },
+          {
+            question: 'Are walk-ins allowed?',
+            answer: "Walk-ins are allowed on the first day of the conference, given that they go through the registration process. However, it will not be allowed on the succeeding days."
+          },
+          {
+            question: 'What can I get if I attend this event?',
+            answer: "In addition to the insightful talks from our roster of global startup leaders, participants will have the chance to network with like-minded participants of the event, building future partnerships and strategic relationships. SUS also offers internship and job opportunities, exclusively made available for its participants."
           }
         ],
         speakQuestions: [
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Can I apply for different jobs and internships on the Startup Summit website?',
+            answer: "You cannot apply to the different jobs and opportunities on the website. On each available position, there are specific instructions on how to apply to the different startups."
           },
           {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-          },
-          {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-          },
-          {
-            question: 'Question',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Do all of the startups have open job and internship positions?',
+            answer: "No, not all startups have job and opportunity offerings. On the startup page, there are tags that indicate which startups have open positions."
           }
         ],
         platQuestions: [
           {
-            question: 'Question about Platform',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'How will I watch the event?',
+            answer: "The event will be happening live on Hopin beginning at 10:00 am on April 16, 17, and 18."
           },
           {
-            question: 'Question about Platform',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Do I need a webcam for the event?',
+            answer: "You don’t need a webcam to attend this event. However, during networking sessions, we encourage you to turn on your cameras for a more engaging experience with other virtual attendees."
           },
           {
-            question: 'Question about Platform',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'What’s the difference between Phase 1 and Phase 2 Registration, and do I need to register for both?',
+            answer: "Yes. Phase 1 registration ensures your slot for the event since slots are limited, while Phase 2 registration ensures you have an account to access the actual Hopin event."
           },
           {
-            question: 'Question about Platform',
-            answer: "Answers will be here... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            question: 'Where do we receive updates and announcements about the event?',
+            answer: "The Slack channel will serve as the main source of updates on the event. You can join the official SUS 2021 Slack through the link that will be sent to you in the Phase 2 Registration email."
           }
         ]
       }
@@ -306,6 +314,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
     margin: 0px!important;
     display: flex;
     flex-direction: column;
@@ -340,7 +349,7 @@ export default {
 }
 .q-container{
   width: 484px;
-  height: 226px;
+  height: 252px;
   padding: 24px 32px;
   display: flex;
   flex-direction: column;
