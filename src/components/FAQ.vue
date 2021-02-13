@@ -145,7 +145,7 @@ export default {
           },
           {
             question: 'Who do I contact for further questions?',
-            answer: "If you have any questions, you may send them to byte.startupsummit2021@gmail.com"
+            answer: "If you have any questions, you may send them to our <a href='byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26'>email.</a>"
           }
         ],
         regQuestions: [
