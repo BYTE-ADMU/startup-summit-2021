@@ -168,6 +168,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
 }
 .img-wrapper{
     width: 825.64px;
