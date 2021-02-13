@@ -3,7 +3,7 @@
         <div class="first-container">
             <div class="text-wrapper">
                 <p id="header">Looking for opportunities to work in startups?</p>
-                <p id="content">Startup Summit aims to provide students with access to opportunities that... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p id="content">Startup Summit aims to provide students with access to several opportunities that would not only be a springboard for them to step up into various business functions, but also equip them with various knowledge and skills for their future. Start your journey into creating a positive impact in your community! Explore exciting and life-changing opportunities lined up for you in Startup Summit 2021!</p>
             </div>
             <div class="img-rows">
                 <div class="img-row">
@@ -82,6 +82,7 @@ export default {
     width: 100vw;
     margin: 0px!important;
     height: 100vh;
+    transform: translate(0%, 3%);
 }
 .first-container{
     display: flex;
