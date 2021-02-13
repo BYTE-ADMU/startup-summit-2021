@@ -70,6 +70,7 @@
             <div v-for="q in genQuestions" :key="q" class="q-container">
               <p id="question">{{q.question}}</p>
               <p id="answer" v-html="q.answer"></p>
+              <p id="answer2" v-html="q.answer2"></p>
             </div>
           </div>
           <div v-if="reg_clicked" class="questions-container">
@@ -125,27 +126,33 @@ export default {
         genQuestions: [
           {
             question: 'What is Startup Summit?',
-            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>"
+            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>",
+            answer2: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>"
           },
           {
             question: 'How will I know which speaker/s will be present for what day?',
-            answer: "You may view the list of speakers for each day, as well as their schedule, on the home page found on the website."
+            answer: "You may view the list of speakers for each day, as well as their schedule, on the home page found on the website.",
+            answer2: "You may view the list of speakers for each day, as well as their schedule, on the home page found on the website."
           },
           {
             question: 'What does the theme Reimagining Possibilities with Tech entail?',
-            answer: "With today’s sensational new technology, the line dividing the possible and impossible is no longer rigid as it once was.  “Reimagining Possibilities with Tech” seeks to showcase startups that are at the forefront of this industry of groundbreaking technology – startups that have the potential to make colossal change in the way people live and the way society operates."
+            answer: "With today’s sensational new technology, the line dividing the possible and impossible is no longer rigid as it once was.  “Reimagining Possibilities with Tech” seeks to showcase startups that are at the forefront of this industry of groundbreaking technology – startups that have the potential to make colossal change in the way people live and the way society operates.",
+            answer2: "With today’s sensational new technology, the line dividing the possible and impossible is no longer rigid as it once was.  “Reimagining Possibilities with Tech” seeks to showcase startups that are at the forefront of this industry of groundbreaking technology – startups that have the potential to make colossal change in the way people live and the way society operates."
           },
           {
             question: 'What does the theme Breaking Barriers with Women in Startups entail?',
-            answer: "Considering the male-dominated nature of the tech and startup industry, “Breaking Barriers with Women in Startups” revolves around showcasing the work of remarkable women in the industry in leadership roles thus breaking the glass ceiling that holds many of them back."
+            answer: "Considering the male-dominated nature of the tech and startup industry, “Breaking Barriers with Women in Startups” revolves around showcasing the work of remarkable women in the industry in leadership roles thus breaking the glass ceiling that holds many of them back.",
+            answer2: "Considering the male-dominated nature of the tech and startup industry, “Breaking Barriers with Women in Startups” revolves around showcasing the work of remarkable women in the industry in leadership roles thus breaking the glass ceiling that holds many of them back."
           },
           {
             question: 'What does the theme Social Entrepreneurship for a Better Tomorrow entail?',
-            answer: "With the rise of different environmental and social issues that continue to emerge in today’s society, “Social Entrepreneurship for a Better Tomorrow” seeks to showcase innovative solutions that create positive environmental and social impacts, highlighting the importance of understanding one’s role in solving social and environmental problems for a better tomorrow."
+            answer: "With the rise of different environmental and social issues that continue to emerge in today’s society, “Social Entrepreneurship for a Better Tomorrow” seeks to showcase innovative solutions that create positive environmental and social impacts, highlighting the importance of understanding one’s role in solving social and environmental problems for a better tomorrow.",
+            answer2: "With the rise of different environmental and social issues that continue to emerge in today’s society, “Social Entrepreneurship for a Better Tomorrow” seeks to showcase innovative solutions that create positive environmental and social impacts, highlighting the importance of understanding one’s role in solving social and environmental problems for a better tomorrow."
           },
           {
             question: 'Who do I contact for further questions?',
-            answer: "If you have any questions, you may send them to our <a href='byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26'>email.</a>"
+            answer: "If you have any questions, you may send them to byte.startupsummit2021@gmail.com.",
+            answer2: "If you have any questions, you may send them to our <a href='mailto:byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26'>email.</a>"
           }
         ],
         regQuestions: [
@@ -374,6 +381,14 @@ margin-top: 30px!important;
   color: #2C2C2C;
   font-family: 'Inter-Regular';
 }
+#answer2{
+  display: none;
+  padding-top: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2C2C2C;
+  font-family: 'Inter-Regular';
+}
 .plat-btn #primary:active:not([disabled]){
   background: #E75E25!important;
   color: #f8f8f8!important;
@@ -438,7 +453,7 @@ margin-top: 30px!important;
     margin-top: 24px!important;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 427px) {
   .part-btn{
     margin-top: 24px!important;
   }
@@ -455,6 +470,14 @@ margin-top: 30px!important;
   }
   .questions-container{
     margin-top: 24px!important;
+  }
+}
+@media screen and (max-width: 380px) {
+  #answer{
+    display: none;
+  }
+  #answer2{
+    display: inline-block;
   }
 }
 @media screen and (max-width: 286px) {
