@@ -4,11 +4,11 @@
             <img alt="Startup Summit Logo" src="@/assets/suslogo.png">
         </div></center>
         <center><div class="footer-menu">
-            <a href="#">Home</a>
-            <a href="#">Startups</a>
-            <a href="#">About</a>
-            <a href="#">Partners</a>
-            <a href="#">FAQs</a>
+            <a href="/">Home</a>
+            <a href="/startups">Startups</a>
+            <a href="/about">About</a>
+            <a href="/partners">Partners</a>
+            <a href="/faqs">FAQs</a>
         </div></center>
         <div class="register-btn">
             <PrimaryBtn>Register</PrimaryBtn>
@@ -63,11 +63,10 @@ export default {
     color: black;
     width: 100%;
     height: 400px;
-    display: flex;
+    display: block;
     flex-direction: column;
     overflow: hidden;
     margin: 0;
-    position: absolute;
     bottom: 0;
 }
 .logo-wrapper{

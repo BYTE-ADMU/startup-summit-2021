@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <!-- <Navbar /> -->
-    <router-view />
+    <router-view v-slot="slotProps">
+      <transition name="fade" mode="out-in">
+        <component :is="slotProps.Component" :key="$route.path"></component>
+      </transition>
+    </router-view>
     <Footer />
   </div>
 </template>
@@ -13,8 +17,6 @@ export default {
   name: 'App',
   components: {
     Footer
-    About
-
   }
 }
 </script>
