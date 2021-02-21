@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Startups from '../views/Startups.vue'
 import Partners from '../views/Partners.vue'
-import FAQs from '../views/FAQs.vue'
+import FAQs from '../views/FAQ.vue'
 import Register from '../views/Register.vue'
 
 const routes = [

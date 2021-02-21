@@ -102,8 +102,8 @@
 </template>
 
 <script>
-import PrimaryBtn from './PrimaryBtn.vue'
-import SecondaryBtn from './SecondaryBtn.vue'
+import PrimaryBtn from '../components/PrimaryBtn.vue'
+import SecondaryBtn from '../components/SecondaryBtn.vue'
 
 export default {
     name: 'FAQ',
@@ -320,7 +320,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0px!important;
     display: flex;
     flex-direction: column;
@@ -346,7 +346,7 @@ export default {
 }
 .questions-container{
   width: 1126px;
-  height: 578px;
+  /* height: 578px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
