@@ -52,7 +52,7 @@ p {
     line-height: 26px;
     font-weight: 400px;
     color: rgba(0, 0, 0, 1);
-    text-shadow: 0 3px 3px rgb(145, 143, 143) ;
+    /* text-shadow: 0 3px 3px rgb(145, 143, 143) ; */
 }
 h1 {
     font-size: 28px;
@@ -60,7 +60,7 @@ h1 {
     color: rgba(0, 0, 0, 1);
     line-height: 40px;
     font-weight: 800px;
-    text-shadow: 0 3px 3px rgb(145, 143, 143) ;
+    /* text-shadow: 0 3px 3px rgb(145, 143, 143) ; */
 }
 
 /*Applying flex box to the different parts of the website*/

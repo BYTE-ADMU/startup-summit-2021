@@ -1,9 +1,13 @@
 <template>
-  <About/>
+  <div id="app">
+    <!-- <Navbar /> -->
+    <router-view />
+    <!-- <Footer /> -->
+  </div>
 </template>
 
 <script>
-import About from './components/About.vue'
+import About from './views/About.vue'
 
 export default {
   name: 'App',
