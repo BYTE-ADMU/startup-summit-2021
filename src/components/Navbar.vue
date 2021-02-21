@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <div class="black-overlay"></div>
   <nav :style="navHome">
     <div class="nav-content">
       <div id="nav-brand">
         <router-link to="/">
           <img
-            alt="TAYO Logo"
-            id = "tayo-logo"
-            :src="require('@/assets/img/' + brand + '')"
+            alt="Start Up Summit Logo"
+            id = "sus-logo"
+            :src="require('@/assets/suslogo.png')"
           />
         </router-link>
       </div>
@@ -25,72 +23,93 @@
         id="desktop-nav"
       >
         <li>
-          <router-link :style="(isHome || isService)  ? navLink : {}" to="/"
-            >Home</router-link>
+            <router-link to="/">
+                Home
+            </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService)  ? navLink : {}" to="/services"
-            >Services</router-link>
+            <router-link to="/startups">
+                Startups
+            </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService) ? navLink : {}" to="/projects"
-            >Projects</router-link>
+            <router-link to="/about">
+                About
+            </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService) ? navLink : {}" to="/about"
-            >Who We Are</router-link>
+            <router-link to="/partners">
+                Partners
+            </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService) ? navLink : {}" to="/contactus"
-            >Contact Us</router-link>
+            <router-link to="/faqs">
+                FAQs
+            </router-link>
+        </li>
+        <li>
+            <router-link to="/register">
+                <PrimaryBtn>
+                    Register
+                </PrimaryBtn>
+            </router-link>
         </li>
       </ul>
     </div>
     <div v-if="!isDesktop" id="mobile-nav" class="slide">
       <ul class="d-flex f-even">
-        <li>
+        <!-- <li>
           <img
-            alt="TAYO Logo"
+            alt="Start Up Summit Logo"
             :src="require('@/assets/img/tayo-logo-black.png')"
           />
-        </li>
+        </li> -->
         <li>
-          <router-link :style="(isHome || isService) ? navLink : {}" to="/" v-on:click="showBurger(), handleScroll()">
+          <router-link :style="(isHome) ? navLink : {}" to="/" v-on:click="showBurger(), handleScroll()">
             <span>Home</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService) ? navLink : {}" to="/services" v-on:click="showBurger(), handleScroll()">
-            <span>Services</span>
+          <router-link :style="(isHome) ? navLink : {}" to="/services" v-on:click="showBurger(), handleScroll()">
+            <span>Startups</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService)  ? navLink : {}" to="/projects" v-on:click="showBurger(), handleScroll()">
-            <span>Projects</span>
+          <router-link :style="(isHome)  ? navLink : {}" to="/projects" v-on:click="showBurger(), handleScroll()">
+            <span>About</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService)  ? navLink : {}" to="/about" v-on:click="showBurger(), handleScroll()">
-            <span>Who We Are</span>
+          <router-link :style="(isHome)  ? navLink : {}" to="/about" v-on:click="showBurger(), handleScroll()">
+            <span>Partners</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome || isService)  ? navLink : {}" to="/contactus" v-on:click="showBurger(), handleScroll()">
-            <span>Contact Us</span>
+          <router-link :style="(isHome)  ? navLink : {}" to="/contactus" v-on:click="showBurger(), handleScroll()">
+            <span>FAQs</span>
           </router-link>
+        </li>
+        <li>
+           <router-link :style="(isHome)  ? navLink : {}" to="/contactus" v-on:click="showBurger(), handleScroll()">
+                <PrimaryBtn>Register</PrimaryBtn>
+            </router-link>
+            
         </li>
       </ul>
     </div>
   </nav>
-  </div>
 </template>
 
 <script>
+import PrimaryBtn from './PrimaryBtn.vue'
 export default {
+  name: 'Navbar',
+  components: {
+      PrimaryBtn
+  },
   created() {
     window.addEventListener("resize", this.handleResizeNav);
     window.addEventListener("scroll", this.handleScroll);
-    this.setColor("#333333");
   },
   unmounted() {
     window.removeEventListener("resize", this.handleResizeNav);
@@ -99,38 +118,21 @@ export default {
   data() {
     return {
       isHome: this.$route.path === "/" ? true : false,
-      isService: this.$route.path === "/services" ? true : false,
       isDesktop: window.innerWidth >= 768 ? true : false,
-      brand: "tayo-logo-black.png",
       navHome: {
         background: "transparent",
         boxShadow: "none"
       },
-      navLink: {
-        color: "#FAFAFA"
-      }
     };
   },
   watch: {
-    // eslint-disable-next-line
-    $route(to, from) {
-      // var target = document.querySelectorAll(".bar");
+    $route(to) {
       this.isHome = to.path === "/" ? true : false;
-      this.isService = to.path === "/services" ? true : false;
-      this.setColor("#333333");
-      (to.path === "/" || to.path === "/services") ? document.querySelector('#tayo-logo').style.visibility = 'hidden' : document.querySelector('#tayo-logo').style.visibility = 'visible';
-      // this.brand = this.isHome ? "tayo-logo-black.png" : "tayo-logo-black.png";
-      // to.path === "/services" || to.path === "/" ? this.setColor("#FAFAFA") : this.setColor("#333333"); 
-      (to.path === "/" || to.path === "/services") ? this.navLink = {color: "#FAFAFA", transition: "color 0.25s ease-in-out"} : this.navLink = {color: "#333333", transition: "color 0.25s ease-in-out"}
-      // to.path === "/" ? document.querySelector(".bar").style.backgroundColor = "#FAFAFA" : document.querySelector(".bar").style.backgroundColor = "#333333";   
+      (to.path === "/") ? document.querySelector('#sus-logo').style.visibility = 'hidden' : document.querySelector('#sus-logo').style.visibility = 'visible'
+    //   (to.path === "/") ? this.navLink = {color: "#FAFAFA", transition: "color 0.25s ease-in-out"} : this.navLink = {color: "#333333", transition: "color 0.25s ease-in-out"}
     }
   },
   methods: {
-    setColor(color) {
-      document.querySelectorAll('.bar').forEach((item) => {
-        item.style.backgroundColor = color;
-      })
-    },
     showBurger() {
       const mobileNav = document.querySelector("#mobile-nav");
       const burgerBtn = document.querySelector(".burger-button");
@@ -140,7 +142,6 @@ export default {
         document.querySelector(".black-overlay").style.display = "inline-block";
         document.querySelector("html").style.overflow = "hidden";
         document.querySelector("body").style.overflow = "hidden";
-        this.setColor("#333333");
       } 
       else {
         mobileNav.style.top = '-420px';
@@ -148,31 +149,24 @@ export default {
         document.querySelector(".black-overlay").style.display = "none";
         document.querySelector("html").style.overflow = "initial";
         document.querySelector("body").style.overflow = "initial";
-        this.setColor("#333333");
       }
     },
     handleResizeNav() {
       if (window.innerWidth < 768) {
         this.isDesktop = false;
-        this.setColor("#333333");
       } 
       else {
         this.isDesktop = true;
       }
     },
     handleScroll() {
-      if ((this.isHome || this.isService) & (this.isDesktop)) {
+      if ((this.isHome) & (this.isDesktop)) {
         if (window.scrollY > 20) {
           this.navHome = {
             background: "#FAFAFA",
             transition: "background 0.25s ease-in-out",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
           };
-          this.navLink = {
-            color: "#333333",
-            transition: "color 0.25s ease-in-out"
-          };
-          this.brand = "tayo-logo-black.png";
           document.querySelector('#tayo-logo').style.visibility = 'visible';
         } 
         else {
@@ -181,12 +175,6 @@ export default {
             transition: "background 0.25s ease-in-out",
             boxShadow: "none",
           };
-          this.navLink = {
-            color: "#FAFAFA",
-            transition: "color 0.25s ease-in-out"
-          };
-          this.brand = "tayo-logo-black.png";
-          document.querySelector('#tayo-logo').style.visibility = 'hidden';
         }
       }
       else if (this.isDesktop) {
@@ -202,17 +190,9 @@ export default {
             background: "transparent",
             transition: "background 0.25s ease-in-out",
             boxShadow: "none",
-          };  
-          this.navLink = {
-            color: "#333333",
-            transition: "color 0.25s ease-in-out"
-          };
-          
+          };    
         }
       }
-    if (!this.isDesktop) {
-      this.setColor("#333333");
-    }
     }
   }
 };
@@ -226,13 +206,13 @@ export default {
     position: fixed;
     z-index: 1000;
     background: #FAFAFA;
-    padding: 16px 32px;
+    padding: 16px 40px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     top: 0;
   }
   
   nav img {
-      width: 48px;
+      width: 158px;
   }
   .nav-content {
       display: flex;
@@ -243,25 +223,36 @@ export default {
   ul {
     list-style: none;
     letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
   }
   #desktop-nav li {
     margin-left: 30px;
     display: inline;
   }
   #desktop-nav li > a {
-    color: #333333;
-    font-size: 14px;
+    color: #2C2C2C;
+    font-size: 16px;
     font-weight: 700;
     text-decoration: none;
     font-family: "Karla";
   }
-  #desktop-nav li > a:hover,
-  #desktop-nav li > a.router-link-active {
-    padding-bottom: 4px;
+
+  #desktop-nav li > a > button {
+    color: #F8F8F8;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: "Karla";
   }
+
   #desktop-nav li > a:hover,
   #desktop-nav li > a.router-link-active {
-    border-bottom: 4px solid #EAA200;
+    color: #F46E26;
+  }
+
+  .nav-content {
+    width: 95%;
   }
 
   #burger-bg {
