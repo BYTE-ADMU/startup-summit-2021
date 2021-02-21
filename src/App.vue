@@ -1,5 +1,4 @@
 <template>
-  <div id="app">
     <Navbar />
     <router-view v-slot="slotProps">
       <transition name="fade" mode="out-in">
@@ -7,7 +6,6 @@
       </transition>
     </router-view>
     <Footer />
-  </div>
 </template>
 
 <script>

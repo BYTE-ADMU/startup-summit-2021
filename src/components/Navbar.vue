@@ -205,7 +205,7 @@ export default {
     width: 100%;
     position: fixed;
     z-index: 1000;
-    background: #FAFAFA;
+    background: #F8F8F8;
     padding: 16px 40px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     top: 0;
@@ -262,7 +262,7 @@ export default {
   /* Mobile Nav */
   .black-overlay {
     display: none;
-    background: #333333;
+    background: #2C2C2C;
     opacity: 0.4;
     position: absolute;
     height: 9999px;
@@ -277,7 +277,7 @@ export default {
     width: 100%;
     left: 0;
     height: 420px;
-    background: #FAFAFA;
+    background: #F8F8F8;
     transition: top 0.5s;
     /* transition: bottom 0.5s; */
   }
@@ -298,7 +298,7 @@ export default {
   }
   #mobile-nav a > i,
   #mobile-nav a > span {
-    color: #333333;
+    color: #2C2C2C;
   }
 
   #mobile-nav li > .router-link-active > span {
@@ -338,10 +338,6 @@ export default {
 
   #tayo-logo {
     display: none;
-  }
-
-  #mobile-nav {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   }
 
   #burger-bg {

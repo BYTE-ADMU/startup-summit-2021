@@ -138,7 +138,7 @@ h1 {
     margin-bottom: 10px;
 }
 .about_byte .byte_picture {
-    margin-right: -8px;
+    /* margin-right: -8px; */
     padding-right: 0px;
     width: 45vw;
     height: 26vw;
