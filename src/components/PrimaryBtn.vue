@@ -24,7 +24,7 @@ export default {
     text-decoration: none!important;
     cursor: pointer;
     font-size: 16px;
-  line-height: 26px;
+    line-height: 26px;
 }
 #primary{
     background-color: #F46E26;

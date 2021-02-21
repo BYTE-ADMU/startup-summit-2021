@@ -1,14 +1,22 @@
 <template>
-  <FAQ />
+  <div id="app">
+    <!-- <Navbar /> -->
+    <router-view v-slot="slotProps">
+      <transition name="fade" mode="out-in">
+        <component :is="slotProps.Component" :key="$route.path"></component>
+      </transition>
+    </router-view>
+    <Footer />
+  </div>
 </template>
 
 <script>
-import FAQ from './components/FAQ.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    FAQ
+    Footer
   }
 }
 </script>
@@ -17,5 +25,8 @@ export default {
 *{
   background-color: #fcfcfc;
   margin: 0px!important;
+}
+*{
+  margin: 0;
 }
 </style>
