@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <Navbar /> -->
+    <Navbar />
     <router-view v-slot="slotProps">
       <transition name="fade" mode="out-in">
         <component :is="slotProps.Component" :key="$route.path"></component>
@@ -11,11 +11,13 @@
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
+    Navbar,
     Footer
   }
 }
