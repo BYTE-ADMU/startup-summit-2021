@@ -14,7 +14,7 @@
                 <a href="/faqs">FAQs</a>
             </div>
             <div class="register-btn">
-                <a href="https://airtable.com/shrVSQ9HN8MwPq5ls">
+                <a href="https://airtable.com/shrVSQ9HN8MwPq5ls" target="_blank" rel="noreferrer noopenner">
                     <PrimaryBtn>Register</PrimaryBtn>
                 </a>
             </div>

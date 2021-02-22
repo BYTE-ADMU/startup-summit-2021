@@ -48,7 +48,7 @@
             </router-link>
         </li>
         <li>
-            <a href="https://airtable.com/shrVSQ9HN8MwPq5ls">
+            <a href="https://airtable.com/shrVSQ9HN8MwPq5ls" target="_blank" rel="noreferrer noopenner">
                 <PrimaryBtn>
                     Register
                 </PrimaryBtn>
