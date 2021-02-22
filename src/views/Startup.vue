@@ -209,8 +209,8 @@
 </template>
 
 <script>
-import PrimaryBtn from './PrimaryBtn.vue'
-import Filter from './Filter.vue'
+import PrimaryBtn from '../components/PrimaryBtn.vue'
+import Filter from '../components/Filter.vue'
 export default {
     name: 'Start-Up',
     components:{

@@ -48,11 +48,11 @@
             </router-link>
         </li>
         <li>
-            <router-link to="/register">
+            <a href="https://airtable.com/shrVSQ9HN8MwPq5ls">
                 <PrimaryBtn>
                     Register
                 </PrimaryBtn>
-            </router-link>
+            </a>
         </li>
       </ul>
     </div>
