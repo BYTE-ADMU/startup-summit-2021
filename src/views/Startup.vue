@@ -1,4 +1,5 @@
 <template>
+<div id="app">
     <div class="page-container">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
@@ -206,6 +207,7 @@
             </div>
     </div></center>
     </div>
+</div>
 </template>
 
 <script>

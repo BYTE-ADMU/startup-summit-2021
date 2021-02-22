@@ -1,4 +1,5 @@
 <template>
+<div id="app">
   <nav :style="navHome">
     <div class="nav-content">
       <div id="nav-brand">
@@ -98,6 +99,7 @@
       </ul>
     </div>
   </nav>
+</div>
 </template>
 
 <script>

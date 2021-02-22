@@ -1,4 +1,5 @@
 <template>
+<div id="app">
   <div class="bg-image">
    <img src="../assets/partner-background.png" class = "bg-image">
   </div>
@@ -88,6 +89,7 @@
   </div>
 
 <!-- footer -->
+</div>
 </template>
 
 <script>
@@ -135,6 +137,7 @@ export default {
   background: #f8f8f8;
   max-height: 760px;
   min-height: 616px;
+  /* width: 960px; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin: 80px 120px 130px 120px;

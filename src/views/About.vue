@@ -1,4 +1,5 @@
 <template>
+<div id="app">
     <div class="about-page">
         <div class="vid_container">
             <video width="960px" height="536px" class="about_video">
@@ -26,6 +27,7 @@
             <img src="../assets/about_picture.png" class=byte_picture img draggable="false">
         </div>
     </div>
+</div>
 </template>
 
 <script>
