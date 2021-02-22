@@ -107,7 +107,13 @@ export default {
     display: flex;
     justify-content: space-evenly;
 }
-
+.footer-menu a:hover {
+    color: #F46E26 !important;
+    
+}
+.icon-links path:hover {
+    fill: #F46E26 !important;
+}
 @media screen and (max-width: 768px){
 .logo-wrapper{
     padding-top: 7%;
