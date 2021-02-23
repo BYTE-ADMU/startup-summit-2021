@@ -1,4 +1,5 @@
 <template>
+<div data-aos="fade-up">
     <center><div class="page-container">
         <div class="text">
             <p>Our Major Partners</p>
@@ -16,6 +17,7 @@
             </div>
         </div>
     </div></center>
+</div>
 </template>
 
 <script>

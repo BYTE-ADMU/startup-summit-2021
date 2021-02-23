@@ -116,7 +116,6 @@
         />
       </div>
   </transition>
-</div>
 
 <!--Cards for second day -->
 <div class="card_container" v-if="choice === 2">
@@ -162,6 +161,7 @@
     :pic_url2=second_day[3].pic_url2
     :pic_url3=second_day[3].pic_url3
     />
+  </div>
   </div>
 
   <!--Modals for day 2-->

@@ -1,4 +1,5 @@
 <template>
+<div data-aos="fade-right">
     <div class="page-container">
         <div class="first-container">
             <div class="text-wrapper">
@@ -39,6 +40,7 @@
             <img src="@/assets/sus1.png">
         </div>
     </div>
+</div>
 </template>
 
 <script>

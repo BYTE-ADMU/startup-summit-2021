@@ -1,9 +1,11 @@
 <template>
     <div class="hero">
     <div class="page-container">
+        <div data-aos="fade-right">
         <div class="img-wrapper">
             <img src="@/assets/heroimg.png">
-        </div>
+        </div></div>
+        <div data-aos="fade-left">
         <div class="first-container">
             <div class="logo-wrapper">
                 <img alt="Startup Summit Logo" src="@/assets/suslogo.png">
@@ -15,12 +17,6 @@
             <div class="btn-wrapper">
                 <span id="primary-btn"><PrimaryBtn>Register Now</PrimaryBtn></span><span id="secondary-btn"><SecondaryBtn>View Schedule</SecondaryBtn></span>
             </div>
-            <div class="messenger-btn">
-            <button>
-                <center><div class="mssngr-icon">
-                        <img alt="Messenger icon" src="@/assets/mssngr.png">
-                </div></center>
-            </button>
         </div>
         </div>
     </div>
@@ -30,11 +26,17 @@
 <script>
 import PrimaryBtn from './PrimaryBtn'
 import SecondaryBtn from './SecondaryBtn'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
     name: 'Hero',
     components:{
     PrimaryBtn,
     SecondaryBtn
+    },
+    created(){
+        AOS.init()
     }
 }
 </script>
@@ -77,6 +79,7 @@ export default {
     flex-direction: column;
     z-index: 0;
     transform: translate(-35%,26%);
+    height: fit-content;
 }
 .logo-wrapper{
     width: 448px;
@@ -135,12 +138,12 @@ export default {
 }
 @media screen and (max-width: 1920px){
 .first-container{
-    transform: translate(-60%,26%);
+    transform: translate(-60%,76%);
 }
 }
 @media screen and (max-width: 1505px){
 .first-container{
-    transform: translate(-35%,26%);
+    transform: translate(-35%,76%);
 }
 }
 @media screen and (max-width: 1440px){
@@ -150,17 +153,24 @@ export default {
     transform: translate(-30%,-8%);
 }
 }
-@media screen and (max-width: 1225px) {
-.first-container{
-    transform: translate(-10%,26%);
-}
-.messenger-btn{
-    transform: translate(85%,160%);
-}
+@media screen and (max-width: 1250px){
 .img-wrapper{
     width: 954px;
     height: 953px;
-    transform: translate(-23%,-8%);
+    transform: translate(-40%,-8%);
+}
+.first-container{
+    transform: translate(-60%,76%);
+}
+}
+@media screen and (max-width: 1180px){
+.img-wrapper{
+    width: 954px;
+    height: 953px;
+    transform: translate(-50%,-8%);
+}
+.first-container{
+    transform: translate(-90%,76%);
 }
 }
 @media screen and (max-width: 1024px){
