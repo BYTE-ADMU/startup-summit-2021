@@ -2,14 +2,10 @@
 
 <!-- nav -->
 
-
-  <div class="bg-image">
-   <img src="../assets/partner-background.png">
-  </div>
-
+<div class="wrapper">
   <div class="header">
-    <li class="title">Community Partners</li>
-  </div>
+    <h2 class="title">Community Partners</h2>
+  </div> 
 
 <!--Terabyte -->
   <div class="container">
@@ -56,6 +52,8 @@
 <!-- Megabyte -->
   <div class="container">
     <div class="container-items">
+      <br>
+      <br>
       <li class="container-title">MegaByte</li>
       <li class="title-body">We would like to thank:</li>
       <div class="company-logo-block">
@@ -91,7 +89,24 @@
     </div>  
   </div>
 
+<!--bg-->
+  <div class="bg">
+    <img src="../assets/top-right-bg.jpg" id="top-right-bg">
+    <img src="../assets/top-left-bg.jpg" id="top-left-bg">
+    <img src="../assets/bottom-right-bg.jpg" id="bottom-right-bg">
+    <img src="../assets/bottom-left-bg.jpg" id="bottom-left-bg">
+
+<!--circles-->
+  <img src="../assets/circle1.jpg" id="circle1">
+  <img src="../assets/circle2.jpg" id="circle2">
+  <img src="../assets/circle3.jpg" id="circle3">
+  <img src="../assets/circle4.jpg" id="circle4">
+  <img src="../assets/circle5.jpg" id="circle5">
+
+  </div>
 <!-- footer -->
+
+</div>
 </template>
 
 <script>
@@ -109,21 +124,23 @@ export default {
   margin: 0;
   padding: 0;
 }
-
-/* background div */
-.bg-image {
-  position: absolute;
-  width: 1240px;
-  height: 2892px;
+html, body {
+  box-sizing:border-box;
   margin: 0;
   padding: 0;
-  top:0px;
-  left: 0px;
-  border: transparent;
-  z-index: -2;
+  width: 100vw;
 }
-
-/* divs */
+/* Big divs */
+.wrapper {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -131,9 +148,7 @@ export default {
   align-items: center;
   align-self: center;
   width: 100%;
-  width: 100vw;
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -142,16 +157,18 @@ export default {
   align-content: center;
   background: #f8f8f8;
   max-height: 760px;
-  min-height: 616px;
+  max-width: 1100px;
+  margin-top: 96px;
+  width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin: 80px 120px 130px 120px;
 }
 
 .container-items {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .company-logo-block {
@@ -159,6 +176,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0vh 10vw 4vh 10vw;
 }
 
 .company-logo-row {
@@ -166,12 +184,13 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 80px 50px 80px;
-  width: 70vw;
+  width: 100%;
+  padding: 3vh;
+
 }
+
 /* texts */
 .title {
-  list-style: none;
   font-family: Objectivity;
   font-style: normal;
   font-weight: 800;
@@ -180,7 +199,6 @@ export default {
   color: #000000;
   margin-top: 120px;
 }
-
 .container-title {
   list-style: none;
   font-family: Objectivity;
@@ -188,10 +206,9 @@ export default {
   font-weight: 800;
   font-size: 24px;
   line-height: 25px;
-  padding-top: 40px;
+  padding-top: 56px;
   color: #000000;
 }
-
 .title-body {
   list-style: none;
   font-family: Inter;
@@ -199,42 +216,85 @@ export default {
   font-weight: normal;
   font-size: 16px;
   line-height: 26px;
-  padding-top: 10px;
-  padding-bottom: 50px;
+  padding-top: 16px;
+  padding-bottom: 32px;
   color: #000000;
 }
-
 /*company logos */
 #terabyte-logo {
   width: auto;
   height: auto;
   max-width: 160px;
   max-height: 160px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 10px;
 }
-
 #gigabyte-logo {
   width: auto;
   height: auto;
   max-width: 120px;
   max-height: 120px;
-  padding-left: 40px;
-  padding-right: 40px;
   padding-bottom: 10px;
-  margin: 0px 10px 0px 10px;
 }
-
 #megabyte-logo {
   width: auto;
   height: auto;
   max-width: 80px;
   max-height: 80px;
-  padding-left: 40px;
-  padding-right: 40px;
   padding-bottom: 10px;
-  margin: 0px 10px 0px 10px;
+}
+
+/*bg*/
+#top-right-bg {
+  position: absolute;
+  left: 976px;
+  top: 359px;
+  z-index: -1;
+}
+#top-left-bg {
+  position: absolute;
+  left: 0px;
+  top: 908px;
+  z-index: -1;
+}
+#bottom-right-bg {
+  position: absolute;
+  left: 926px;
+  top: 2058px;
+  z-index: -1;
+}
+#bottom-left-bg {
+  position: absolute;
+  left: 0px;
+  top: 2363px;
+  z-index: -1;
+}
+#circle1 {
+  position: absolute;
+  left: 1105px;
+  top: 224px;
+  z-index: -1;
+}
+#circle2 {
+  position: absolute;
+  left: 164px;
+  top: 265px;
+  z-index: -1;
+}
+#circle3 {
+  position: absolute;
+  left: 1150px;
+  top: 1112px;
+  z-index: -1;
+}
+#circle4 {
+  position: absolute;
+  left: 88px;
+  top: 1832px;
+  z-index: -1;
+}
+#circle5 {
+  position: absolute;
+  left: 1368px;
+  top: 1592px;
+  z-index: -1;
 }
 </style>
-
