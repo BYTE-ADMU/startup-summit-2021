@@ -200,15 +200,8 @@ export default {
         width: 864px;
     }
     .card2 .container1 .container2 {
-        top: -200px;
         width: 400px;
         height: 400px;
-    }
-    .card2 .container1 .container2 .picture {
-        position: absolute;
-        left: 150px;
-        top: 189.994px;
-        width: 209.9952px;
     }
 }
 
