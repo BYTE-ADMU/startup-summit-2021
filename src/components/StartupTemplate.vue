@@ -36,6 +36,7 @@
                 </div>
             </div>
     </div>
+    <div data-aos="fade-left">
     <div class="container" id="first-container">
         <div class="pic-wrapper">
         <img :alt="firstpicAlt" :src="firstpic">
@@ -45,6 +46,8 @@
             <p id="content-header">{{aboutus}}</p>
         </div>
     </div>
+    </div>
+    <div data-aos="fade-left">
     <div class="container" id="second-container">
         <div class="pic-wrapper">
         <img :alt="secondpicAlt" :src="secondpic">
@@ -54,6 +57,8 @@
             <p id="content-header" v-html="ourproduct"></p>
         </div>
     </div>
+    </div>
+    <div data-aos="fade-up">
     <center><div class="third-container">
         <p id="opportunities">Opportunities</p>
         <div class="job-class" v-for="job in job" :key="job">
@@ -67,8 +72,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="fourth-container">
+    </div></center></div>
+    <div data-aos="fade-up"><center><div class="fourth-container">
         <p>Gallery</p>
         <div class="gallery-wrapper">
             <div class="gallery-img-wrapper">
@@ -85,11 +90,13 @@
             </div>
         </div>
     </div>
-    </center>
+    </center></div>
 </div>
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
     name: 'Startup-Template',
     props: {
@@ -219,6 +226,24 @@ export default {
             type: String,
             default: 'Startup picture'
         }
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     }
 }
 </script>
@@ -462,6 +487,7 @@ height: 160px;
 .fourth-container{
     max-width: 1152px;
     padding-top: 132px;
+    padding-bottom: 20%;
 }
 .fourth-container p{
     font-family: 'Objectivity-ExtraBold';
@@ -490,6 +516,11 @@ height: 160px;
 }
 .gallery-wrapper{
     padding-top: 43px;
+}
+@media screen and (min-width: 1025px){
+    .header-container{
+        margin-bottom: 15px!important;
+    }
 }
 @media screen and (min-width: 1314px){
     .header-container{
@@ -526,7 +557,6 @@ height: 160px;
         display: flex;
         flex-direction: column-reverse;
         padding-top: 0px;
-        margin-top: -7px!important;
     }
     #about-us{
         padding-top: 8px;
@@ -578,6 +608,11 @@ height: 191.71px;
 .second-row{
     padding-top: 18.81px;
 }
+}
+@media screen and (max-width: 1024px){
+    #first-container{
+        padding-top: 7px!important;
+    }
 }
 @media screen and (max-width: 990px){
     .cover-wrapper{
