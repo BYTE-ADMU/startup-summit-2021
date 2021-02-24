@@ -64,6 +64,7 @@
                     </div>
                 </div>
             </div>
+            <div data-aos="fade-up">
             <div class="content-wrapper">
                 <div class="responsibilities" id="responsibilities">
                 <div class="content-header">
@@ -115,6 +116,7 @@
             </div>
             <span class="btn" id="btn"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></span>
         </div>
+        </div>
     </div>
     </div>
 </template>
@@ -122,6 +124,8 @@
 <script>
 import PrimaryBtn from './PrimaryBtn.vue'
 import Chevron from './Chevron.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
     el: "#app",
@@ -166,6 +170,24 @@ export default {
     components:{
         PrimaryBtn,
         Chevron
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     },
     data () {
     return {
