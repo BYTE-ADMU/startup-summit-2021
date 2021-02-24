@@ -1,10 +1,13 @@
 <template>
     <div class="about-page">
+        <div data-aos="fade-up">
         <div class="vid_container">
             <video width="960px" height="536px" class="about_video">
                 <source src="" type="">
             </video>
         </div>
+        </div>
+        <div data-aos="fade-right">
         <div class="about_startup-summit">
             <div class="design"></div>
             <div class="text">
@@ -16,6 +19,8 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </div>
         </div>
+        </div>
+        <div data-aos="fade-left">
         <div class="about_byte">
             <div class="text">
                 <h1>About BYTE: Building Young Tech Entrepreneurs</h1>
@@ -25,12 +30,34 @@
             </div>
             <img src="../assets/about_picture.png" class=byte_picture img draggable="false">
         </div>
+        </div>
     </div>
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
-    name: "AboutPage"
+    name: "AboutPage",
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
+    }
 }
 </script>
 
