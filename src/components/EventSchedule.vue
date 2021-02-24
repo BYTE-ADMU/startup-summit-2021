@@ -9,7 +9,7 @@
             </div>
             <div class="container2">
                 <SecondaryBtn class="day2_unclicked" v-on:click="click = 2, buttons()">Day 2</SecondaryBtn>
-                <PrimaryBtn class="day2_clicked" v-on:click="click = 2, buttons()">Day2</PrimaryBtn>
+                <PrimaryBtn class="day2_clicked" v-on:click="click = 2, buttons()">Day 2</PrimaryBtn>
             </div>
             <div class="container3">
                 <SecondaryBtn class="day3_unclicked" v-on:click="click = 3, buttons()">Day 3</SecondaryBtn>

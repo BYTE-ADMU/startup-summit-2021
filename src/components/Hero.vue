@@ -26,17 +26,12 @@
 <script>
 import PrimaryBtn from './PrimaryBtn'
 import SecondaryBtn from './SecondaryBtn'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 export default {
     name: 'Hero',
     components:{
     PrimaryBtn,
     SecondaryBtn
-    },
-    created(){
-        AOS.init()
     }
 }
 </script>

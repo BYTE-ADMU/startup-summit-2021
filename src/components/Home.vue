@@ -116,6 +116,7 @@
         />
       </div>
   </transition>
+</div>
 
 <!--Cards for second day -->
 <div class="card_container" v-if="choice === 2">
@@ -161,7 +162,6 @@
     :pic_url2=second_day[3].pic_url2
     :pic_url3=second_day[3].pic_url3
     />
-  </div>
   </div>
 
   <!--Modals for day 2-->
@@ -211,25 +211,25 @@
     </div>
   </transition>
   <transition name="fade">
-      <div class="modal_container" v-if="show_talk_modal === 4">
-        <PanelModal
-        class="panel_modal"
-        @exit-button="exitModal"
-        v-bind:panel="second_day[3].panel"
-        v-bind:date="modal_date"
-        v-bind:time="second_day[3].modal.time"
-        v-bind:description="second_day[3].modal.description"
-        :speaker_1="second_day[0].speaker"
-        :speaker_2="second_day[1].speaker"
-        :speaker_3="second_day[2].speaker"
-        :creds1="second_day[0].modal.creds"
-        :creds2="second_day[1].modal.creds"
-        :creds3="second_day[2].modal.creds"
-        :img1=second_day[0].pic_url
-        :img2=second_day[1].pic_url
-        :img3=second_day[2].pic_url
-        />
-      </div>
+    <div class="modal_container" v-if="show_talk_modal === 4">
+      <PanelModal
+      class="panel_modal"
+      @exit-button="exitModal"
+      v-bind:panel="second_day[3].panel"
+      v-bind:date="modal_date"
+      v-bind:time="second_day[3].modal.time"
+      v-bind:description="second_day[3].modal.description"
+      :speaker_1="second_day[0].speaker"
+      :speaker_2="second_day[1].speaker"
+      :speaker_3="second_day[2].speaker"
+      :creds1="second_day[0].modal.creds"
+      :creds2="second_day[1].modal.creds"
+      :creds3="second_day[2].modal.creds"
+      :img1=second_day[0].pic_url
+      :img2=second_day[1].pic_url
+      :img3=second_day[2].pic_url
+      />
+    </div>
   </transition>
 </div>
 
@@ -440,7 +440,7 @@ export default {
       //All card info for second day
       second_day: [
         {
-          class: "card2",
+          class: "card1",
           time: "5:00",
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
