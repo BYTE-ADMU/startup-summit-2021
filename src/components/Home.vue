@@ -1,6 +1,4 @@
 <template>
-<Hero />
-<WhatIsSus />
 <EventSchedule @transfer-click="transferClickNum" @transfer-date="transferDate"/>
 
 <!--Cards for First day -->
@@ -347,16 +345,11 @@
       </div>
   </transition>
 </div>
-<Opportunities />
-<Partners />
 </template>
 
 <script>
-import Hero from './Hero.vue'
-import Opportunities from './Opportunities.vue'
-import Partners from './Partners.vue'
+
 import EventSchedule from './EventSchedule.vue'
-import WhatIsSus from './WhatIsSus.vue'
 import Card from './Card.vue'
 import Card2 from './Card2.vue'
 import TalkModal from './TalkModal.vue'
@@ -366,12 +359,8 @@ export default {
   name: 'App',
   components: {
     EventSchedule,
-    WhatIsSus,
-    Partners,
     Card,
     Card2,
-    Hero,
-    Opportunities,
     TalkModal,
     PanelModal
   },

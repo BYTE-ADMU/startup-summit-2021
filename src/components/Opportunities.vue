@@ -83,7 +83,6 @@ export default {
     justify-content: space-between;
     width: 100vw;
     margin: 0px!important;
-    height: 100vh;
     transform: translate(0%, 3%);
 }
 .first-container{
@@ -203,6 +202,11 @@ export default {
 .img-wrapper{
     transform: translate(28%,0%);
 }
+}
+@media screen and (min-width: 1025px){
+    .page-container{
+        margin-bottom: 15%!important;
+    }
 }
 @media screen and (max-width: 1024px){
 .page-container{

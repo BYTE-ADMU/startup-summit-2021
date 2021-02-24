@@ -36,7 +36,7 @@ export default {
     margin: 0px;
 }
 .page-container{
-    padding-top: 15%;
+    padding-top: 0%;
     padding-bottom: 184px;
     width: 100vw;
     margin: 0px!important;
@@ -70,8 +70,8 @@ export default {
     position: relative;
     z-index: 2;
     padding-top: 0%;
-    transform: translate(0px,-98px);
-    padding-bottom: 106px;
+    transform: translate(0px,144px);
+    padding-bottom: 35%;
 }
 }
 @media screen and (max-width: 700px){
@@ -87,6 +87,16 @@ line-height: 40px;
 .img-rows{
     width: 466.5px;
 }
+}
+@media screen and (max-width: 667px){
+    .page-container{
+        padding-bottom: 30%;
+    }
+}
+@media screen and (max-width: 600px){
+    .page-container{
+        padding-bottom: 50%;
+    }
 }
 @media screen and (max-width: 500px){
 .text p{
@@ -104,9 +114,9 @@ line-height: 40px;
 }
 @media screen and (max-width: 400px){
     .page-container{
-        transform: translate(0px,-0px);
-        padding-top: 45px;
-        padding-bottom: 80px;
+        transform: translate(0px,110px);
+        padding-top: 0px;
+        padding-bottom: 50%;
     }
 .text p{
 font-size: 20px;

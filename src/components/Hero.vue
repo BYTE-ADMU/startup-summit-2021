@@ -36,7 +36,22 @@ export default {
     SecondaryBtn
     },
     created(){
-        AOS.init()
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     }
 }
 </script>
@@ -179,6 +194,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    padding-bottom: 0px;
 }
 .img-wrapper{
     width: 825.64px;
@@ -213,7 +229,15 @@ export default {
         transform: translate(40%,-73%);
     }
 }
+@media screen and (max-width: 823px){
+    .page-container{
+        padding-bottom: 250px;
+    } 
+}
 @media screen and (max-width: 768px){
+    .page-container{
+        padding-bottom: 82px;
+    }
 .img-wrapper{
     transform: translate(-30%,-20%);
 }
@@ -238,6 +262,19 @@ export default {
 @media screen and (max-width: 736px){
 .first-container{
     transform: translate(37%,-73%);
+}
+.page-container{
+    padding-bottom: 300px;
+}
+}
+@media screen and (max-width: 720px){
+.page-container{
+    padding-bottom: 250px;
+}
+}
+@media screen and (max-width: 721px){
+.page-container{
+    padding-bottom: 250px;
 }
 }
 @media screen and (max-width: 713px){
@@ -285,12 +322,23 @@ export default {
     margin-top: 16px!important;
 }
 }
+@media screen and (max-width: 640px){
+    .page-container{
+        padding-bottom: 256px;
+    }
+}
 @media screen and (max-width: 540px){
 .img-wrapper{
     transform: translate(-31%,-45%);
 }
+    .page-container{
+        padding-bottom: 156px;
+    }
 }
 @media screen and (max-width: 480px){
+    .page-container{
+        padding-bottom: 276px;
+    }
 .first-container{
     transform: translate(4%,-75%);
 }
@@ -340,9 +388,27 @@ export default {
     line-height: 22px;
 } 
 }
+@media screen and (max-width: 414px){
+    .page-container{
+        padding-bottom: 0px;
+    }
+}
+@media screen and (max-width: 411px){
+    .page-container{
+        padding-bottom: 82px;
+    }
+}
+@media screen and (max-width: 375px){
+    .page-container{
+        padding-bottom: 0px;
+    }
+}
 @media screen and (max-width: 320px){
 .img-wrapper{
     transform: translate(-30%,-44%);
 }
+.page-container{
+        padding-bottom: 82px;
+    }
 }
 </style>
