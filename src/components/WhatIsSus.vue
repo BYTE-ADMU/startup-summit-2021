@@ -9,15 +9,15 @@
         </div>
         </div>
         <div data-aos="fade-left">
-        <img src="../../assets/what_is_sus_poster.svg" class="picture" alt="start up summit poster">
+        <img src="../assets/what_is_sus_poster.svg" class="picture" alt="start up summit poster">
         </div>
     </div>
 </div>
 </template>
 
 <script>
-import PrimaryBtn from "../PrimaryBtn.vue"
-import Chevron from "../Chevron.vue"
+import PrimaryBtn from "./PrimaryBtn.vue"
+import Chevron from "./Chevron.vue"
 
 export default {
     name: "WhatIsSus",
@@ -31,12 +31,12 @@ export default {
 <style scoped>
 @font-face {
     font-family: "Inter";
-    src: url("../../assets/fonts/Inter-Regular.ttf");
+    src: url("../assets/fonts/Inter-Regular.ttf");
 }
 
 @font-face {
     font-family: "Objectivity";
-    src: url("../../assets/fonts/objectivity.extra-bold.otf");
+    src: url("../assets/fonts/objectivity.extra-bold.otf");
 }
 
 .page-container{
