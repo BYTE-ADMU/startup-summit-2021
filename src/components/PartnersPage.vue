@@ -3,11 +3,11 @@
 <!-- nav -->
 
 <div class="wrapper">
-  <div class="header">
-    <h2 class="title">Community Partners</h2>
-  </div> 
-
-<!--Terabyte -->
+  <div class="whole-container">
+    <div class="header">
+      <h2 class="title">Community Partners</h2>
+    </div> 
+    <!--Terabyte -->
   <div class="container">
     <div class="container-items">
       <li class="container-title">TeraByte</li>
@@ -17,16 +17,15 @@
           <img src="../assets/kumu-logo.png" id="terabyte-logo">
           <img src="../assets/kumu-logo.png" id="terabyte-logo">
           <img src="../assets/kumu-logo.png" id="terabyte-logo">
-       </div>
-       <div class="company-logo-row">
+      </div>
+      <div class="company-logo-row">
           <img src="../assets/kumu-logo.png" id="terabyte-logo">
           <img src="../assets/kumu-logo.png" id="terabyte-logo">
           <img src="../assets/kumu-logo.png" id="terabyte-logo">
-       </div> 
-     </div>
-    </div>  
-  </div>
-
+      </div> 
+    </div>
+    </div> 
+  </div> 
 <!-- Gigabyte -->
   <div class="container">
     <div class="container-items">
@@ -48,7 +47,6 @@
      </div>
     </div>  
   </div>
-
 <!-- Megabyte -->
   <div class="container">
     <div class="container-items">
@@ -105,7 +103,7 @@
 
   </div>
 <!-- footer -->
-
+ </div>
 </div>
 </template>
 
@@ -139,7 +137,13 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+}
+.whole-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .header {
   display: flex;
