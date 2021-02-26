@@ -12,6 +12,7 @@
                     <img v-bind:src="pic_url1" class="picture1" alt="speaker img">
                     <img v-bind:src="pic_url2" class="picture2" alt="speaker img">
                     <img v-bind:src="pic_url3" class="picture3" alt="speaker img">
+                    <img v-bind:src="pic_url4" class="picture4" alt="speaker img">
                 </div>
                 <SecondaryBtn class="button" v-on:click="showModal()"><Chevron id="svg"/></SecondaryBtn>
             </div>
@@ -36,12 +37,13 @@ export default {
         pic_url1: String,
         pic_url2: String,
         pic_url3: String,
+        pic_url4: String,
         time: String
     },
     methods: {
         showModal(toggle_modal) {
-            toggle_modal = 4;
-            this.$emit("toggle-modal4", toggle_modal);
+            toggle_modal = 5;
+            this.$emit("toggle-modal5", toggle_modal);
         }
     }
 }
@@ -129,7 +131,7 @@ export default {
     font-size: 16px;
     margin: 0 0 19px 0;
 } 
-.talk_details .speaker .picture1 {
+.picture1, .picture2, .picture3 {
     overflow: hidden;
     width: 48px;
     height: 48px;
@@ -137,15 +139,7 @@ export default {
     border-radius: 25px;
     margin: 0 16px 0 0;
 }
-.talk_details .speaker .picture2 {
-    overflow: hidden;
-    width: 48px;
-    height: 48px;
-    border: solid;
-    border-radius: 25px;
-    margin: 0 16px 0 0;
-}
-.talk_details .speaker .picture3 {
+.talk_details .speaker .picture4 {
     overflow: hidden;
     width: 48px;
     height: 48px;
@@ -154,7 +148,7 @@ export default {
     margin: 0 0 0 0;
 }
 .talk_details .speaker .button {
-    margin: 9px 36px 0 auto;
+    margin: 9px 0 0 auto;
     height: 32px;
     width: 64px;
     border-radius: 4px;
@@ -164,7 +158,7 @@ export default {
     cursor: pointer;
     outline: none;
 }
-@media (max-width: 426px) {
+@media (max-width: 530px) {
     /*reconfigure flex box to column*/
     .card {
         display: flex;
@@ -195,6 +189,9 @@ export default {
     .card .talk_details .talk_description {
         width: 80vw;
         line-height: 22px;
+    }
+    .talk_details .speaker .button {
+        margin: 10px auto 0 0;
     }
 }
 </style>
