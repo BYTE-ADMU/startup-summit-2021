@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-* {
+*{
   background-color: #fcfcfc;
   margin: 0;
 }
