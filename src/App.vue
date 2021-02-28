@@ -1,20 +1,29 @@
 <template>
-  <Opportunities />
+    <Navbar />
+    <router-view v-slot="slotProps">
+      <transition name="fade" mode="out-in">
+        <component :is="slotProps.Component" :key="$route.path"></component>
+      </transition>
+    </router-view>
+    <Footer />
 </template>
 
 <script>
-import Opportunities from './components/Opportunities'
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Opportunities
+    Navbar,
+    Footer
   }
 }
 </script>
 
 <style>
 *{
-  margin: 0px;
+  background-color: #fcfcfc;
+  margin: 0;
 }
 </style>
