@@ -1,48 +1,58 @@
 <template>
+<div data-aos="fade-right">
     <div class="page-container">
         <div class="first-container">
             <div class="text-wrapper">
                 <p id="header">Looking for opportunities to work in startups?</p>
-                <p id="content">Startup Summit aims to provide students with access to opportunities that... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p id="content">Startup Summit aims to provide students with access to several opportunities that would not only be a springboard for them to step up into various business functions, but also equip them with various knowledge and skills for their future. Start your journey into creating a positive impact in your community! Explore exciting and life-changing opportunities lined up for you in Startup Summit 2021!</p>
             </div>
             <div class="img-rows">
                 <div class="img-row">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img class="sixth-img" src="#">
-                    <img class="seventh-img" src="#">
-                    <img class="eight-img" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" class="sixth-img" src="#">
+                    <img alt="Featured Startup logo" class="seventh-img" src="#">
+                    <img alt="Featured Startup logo" class="eight-img" src="#">
                 </div>
                 <div class="img-row" id="second-imgrow">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img src="#">
-                    <img class="sixth-img" src="#">
-                    <img class="seventh-img" src="#">
-                    <img class="eight-img" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" class="sixth-img" src="#">
+                    <img alt="Featured Startup logo" class="seventh-img" src="#">
+                    <img alt="Featured Startup logo" class="eight-img" src="#">
                 </div>
             </div>
             <div class="and-more">
                 <p>...AND MORE!</p>
             </div>
             <div class="view-btn">
-                <button>View featured startups ></button>
+                <span class="primary-btn"><PrimaryBtn>View featured startups<Chevron id="chevron"/></PrimaryBtn></span>
+                <span class="primary-btn2"><PrimaryBtn>View startups<Chevron id="chevron"/></PrimaryBtn></span>
             </div>
         </div>
         <div class="img-wrapper">
             <img src="@/assets/sus1.png">
         </div>
     </div>
+</div>
 </template>
 
 <script>
+import PrimaryBtn from "./PrimaryBtn.vue"
+import Chevron from "./Chevron.vue"
+
 export default {
-    name: 'Opportunities'
+    name: 'Opportunities',
+    components: {
+        PrimaryBtn,
+        Chevron
+    }
 }
 </script>
 
@@ -73,14 +83,15 @@ export default {
     justify-content: space-between;
     width: 100vw;
     margin: 0px!important;
-    height: 100vh;
-    overflow-x: hidden;
+    transform: translate(0%, 3%);
 }
 .first-container{
     display: flex;
     flex-direction: column;
     width: 760px;
-    transform: translate(15%,19%);
+    transform: translate(15%,0%);
+    height: fit-content;
+    padding-top: 200px;
 }
 .text-wrapper{
     display: flex;
@@ -130,17 +141,14 @@ export default {
 .view-btn{
     padding-top: 32px;
 }
-.view-btn button{
-    background-color: #F46E26;
-    color: white;
-    padding: 8px 24px;
+.view-btn .primary-btn{
     font-size: 16px;
     line-height: 26px;
-    border: 0px;
-    border-radius:4px!important;
-    cursor: pointer;
-    box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: 'Inter-SemiBold';
+}
+.view-btn .primary-btn2{
+    font-size: 16px;
+    line-height: 26px;
+    display: none;
 }
 .img-wrapper{
     width: 642.96px;
@@ -150,6 +158,10 @@ export default {
 .img-wrapper img{
     width: 100%;
     height: 100%;
+}
+#chevron{
+    background: transparent;
+    margin-left: 8px!important;
 }
 @media screen and (max-width: 1920px){
 .first-container{
@@ -161,7 +173,7 @@ export default {
 }
 @media screen and (max-width: 1550px){
 .first-container{
-    transform: translate(20%,19%);
+    transform: translate(20%,0%);
 }
 .img-wrapper{
     transform: translate(22%,0%);
@@ -191,6 +203,11 @@ export default {
     transform: translate(28%,0%);
 }
 }
+@media screen and (min-width: 1025px){
+    .page-container{
+        margin-bottom: 15%!important;
+    }
+}
 @media screen and (max-width: 1024px){
 .page-container{
     justify-content: flex-start;
@@ -198,10 +215,16 @@ export default {
 .img-wrapper img{
     width: 0%;
     height: 0%;
-    visibility: hidden;
+    display: none;
+}
+.img-wrapper{
+    width: 0%;
+    height: 0%;
+    display: none;
 }
 .first-container{
-    transform: translate(10%,15%);
+    transform: translate(10%,0%);
+    padding-top: 183px;
 }
 .eight-img{
     width: 0%!important;
@@ -214,17 +237,17 @@ export default {
 }
 @media screen and (max-width: 924px){
 .first-container{
-    transform: translate(5%,15%);
+    transform: translate(5%,0%);
 }
 }
 @media screen and (max-width: 790px){
 .first-container{
-    transform: translate(4%,15%);
+    transform: translate(4%,0%);
 }
 }
 @media screen and (max-width: 768px){
 .first-container{
-    transform: translate(6.5%,15%);
+    transform: translate(6.5%,0%);
 }
 .img-row{
     width: 656px;
@@ -235,36 +258,31 @@ export default {
 }
 @media screen and (max-width: 736px){
 .first-container{
-    transform: translate(4%,15%);
+    transform: translate(4%,0%);
 }
 }
 @media screen and (max-width: 720px){
 .first-container{
-    transform: translate(3%,15%);
+    transform: translate(0%,0%);
+    margin-left: 16px!important;
+    margin-right: 16px!important;
+    padding-top: 88px;
 }
 }
 @media screen and (max-width: 700px){
-.first-container{
-    transform: translate(1.5%,15%);
-}
-}
-@media screen and (max-width: 690px){
-.first-container{
-    transform: translate(0.8%,15%);
+.text-wrapper #header{
+    width: 50%;
 }
 }
 @media screen and (max-width: 680px){
 .page-container{
     justify-self: center;
 }
-.first-container{
-    transform: translate(4%,15%);
-}
 .text-wrapper #header{
     width: 50%;
 }
 .text-wrapper #content{
-    width: 75%;
+    width: 87%;
 }
 .seventh-img{
     width: 0%!important;
@@ -274,43 +292,23 @@ export default {
 .and-more{
     transform: translate(69.7%,0%);
 }
-.view-btn button {
-  visibility: hidden;
+.view-btn .primary-btn {
+  display: none;
   padding-top: 0px;
   transform: translate(-54.5%,-20%);
 }
-.view-btn button:after{
-  content:'View startups >';
-  visibility: visible;
-    background-color: #F46E26;
-    color: white;
-    padding: 8px 24px;
-    font-size: 16px;
-    line-height: 26px;
-    border: 0px;
-    border-radius:4px!important;
-    cursor: pointer;
-    box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
-    font-family: 'Inter-SemiBold';
+.view-btn .primary-btn2{
+display: inline-block;
+  padding-top: 0px;
+  transform: translate(0%,-20%);
 }
 }
 @media screen and (max-width: 653px){
-.first-container{
-    transform: translate(3.2%,15%);
-}
-.view-btn button {
-  transform: translate(-52.5%,-20%);
-}
-}
-@media screen and (max-width: 650px){
-.first-container{
-    transform: translate(3%,15%);
+.view-btn .primary-btn2 {
+  transform: translate(0%,-20%);
 }
 }
 @media screen and (max-width: 640px){
-.first-container{
-    transform: translate(5.4%,15%);
-}
 .sixth-img{
     visibility: hidden;
 }
@@ -318,20 +316,25 @@ export default {
     transform: translate(56%,0%);
 }
 }
+.text-wrapper #content{
+    width: 81%;
+}
+@media screen and (max-width: 620px){
+    .text-wrapper #content{
+    width: 77%;
+}
+}
 @media screen and (max-width: 600px){
-    .first-container{
-        transform: translate(4%,10%);
-    }
+    .text-wrapper #content{
+    width: 75%;
+}
 }
 @media screen and (max-width: 580px){
-    .first-container{
-        transform: translate(2.5%,10%);
-    }
+    .text-wrapper #content{
+    width: 74%;
+}
 }
 @media screen and (max-width: 568px){
-    .first-container{
-        transform: translate(6.5%,10%);
-    }
     .text-wrapper #header{
         font-size: 20px;
         line-height: 32px;
@@ -340,7 +343,7 @@ export default {
     .text-wrapper #content{
         font-size: 16px;
         line-height: 26px;
-        width: 67%
+        width: 69%;
     }
 .sixth-img{
     width: 0%!important;
@@ -365,18 +368,16 @@ export default {
 }
 }
 @media screen and (max-width: 540px){
-    .first-container{
-        transform: translate(4%,10%);
-    }
-}
-@media screen and (max-width: 520px){
-    .first-container{
-        transform: translate(3%,10%);
+    .text-wrapper #content{
+        width: 65%;
     }
 }
 @media screen and (max-width: 514px){
-    .first-container{
-        transform: translate(2%,10%);
+    .text-wrapper #header{
+        width: 39%;
+}
+    .text-wrapper #content{
+        width: 62%;
     }
 }
 @media screen and (max-width: 500px){
@@ -394,49 +395,42 @@ export default {
     width: 264px;
 }
 }
-@media screen and (max-width: 480px){
-.first-container{
-    transform: translate(4%,10%);
-}
-}
 @media screen and (max-width: 450px){
 .text-wrapper #content{
-    width: 49%;
+    width: 52%;
 }
 }
 @media screen and (max-width: 414px){
+.text-wrapper #content{
+    width: 49%;
+}
 .first-container{
-    transform: translate(4%,10%);
+    padding-top: 88px;
 }
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 386px){
+.text-wrapper #content{
+    width: 47%;
+}
+}
+@media screen and (max-width: 375px){
+.text-wrapper #content{
+    width: 44%;
+}
+}
+@media screen and (max-width: 350px){
 .text-wrapper #content{
     width: 41%;
 }
 }
-@media screen and (max-width: 375px){
-.first-container{
-    transform: translate(5%,10%);
+@media screen and (max-width: 330px){
+.text-wrapper #content{
+    width: 38%;
 }
 }
-@media screen and (max-width: 380px){
-.first-container{
-    transform: translate(4%,10%);
-}
-}
-@media screen and (max-width: 380px){
-.first-container{
-    transform: translate(2.5%,10%);
-}
-}
-@media screen and (max-width: 320px){
+@media screen and (max-width: 305px){
 .text-wrapper #content{
     width: 35%;
-}
-}
-@media screen and (max-width: 280px){
-.first-container{
-    transform: translate(1%,10%);
 }
 }
 </style>
