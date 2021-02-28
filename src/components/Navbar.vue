@@ -165,7 +165,7 @@ export default {
       if ((this.isHome) & (this.isDesktop)) {
         if (window.scrollY > 20) {
           this.navHome = {
-            background: "#FAFAFA",
+            background: "#FFFFFF",
             transition: "background 0.25s ease-in-out",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
           };
@@ -182,7 +182,7 @@ export default {
       else if (this.isDesktop) {
         if (window.scrollY > 20) {
           this.navHome = {
-              background: "#FAFAFA",
+              background: "#FFFFFF",
               transition: "background 0.25s ease-in-out",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
           };
@@ -207,7 +207,7 @@ export default {
     width: 100%;
     position: fixed;
     z-index: 1000;
-    background: #F8F8F8;
+    background: #FFFFFF;
     padding: 16px 40px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     top: 0;
@@ -218,6 +218,7 @@ export default {
   }
   .nav-content {
       display: flex;
+      background: #FFFFFF;
       justify-content: space-between;
       align-items: center;
   }
@@ -228,11 +229,15 @@ export default {
     margin: 0;
     padding: 0;
   }
+  #desktop-nav {
+      background: #FFFFFF;
+  }
   #desktop-nav li {
     margin-left: 30px;
     display: inline;
   }
   #desktop-nav li > a {
+    background: #FFFFFF;
     color: #2C2C2C;
     font-size: 16px;
     font-weight: 700;
@@ -241,7 +246,7 @@ export default {
   }
 
   #desktop-nav li > a > button {
-    color: #F8F8F8;
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
@@ -279,7 +284,7 @@ export default {
     width: 100%;
     left: 0;
     height: 420px;
-    background: #F8F8F8;
+    background: #FFFFFF;
     transition: top 0.5s;
     /* transition: bottom 0.5s; */
   }
@@ -316,7 +321,7 @@ export default {
     height: 48px;
     width: 48px;
     transform: translateX(-8px);
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 

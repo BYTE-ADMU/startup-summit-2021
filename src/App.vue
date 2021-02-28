@@ -23,7 +23,7 @@ export default {
 
 <style>
 * {
-  background-color: #fcfcfc;
+  background-color: #FFFFFF;
   margin: 0;
 }
 </style>
