@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Startups from '../views/Startup.vue'
-import Partners from '../views/Partners.vue'
+import Partners from '../views/PartnersPage.vue'
 import FAQs from '../views/FAQ.vue'
 // import Register from '../views/Register.vue'
 
@@ -35,6 +35,7 @@ const routes = [
 ]
 
 const router = createRouter({
+  mode: 'history',
   history: createWebHistory(),
   routes, 
   scrollBehavior() {
