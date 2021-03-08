@@ -305,7 +305,6 @@ html, body {
   z-index: -1;
 }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1067px) {
 /* Big divs */
 .wrapper {
