@@ -7,6 +7,7 @@
     </router-view> -->
     <router-view/>
     <Footer />
+
 </template>
 <script>
 import Navbar from './components/Navbar.vue'
