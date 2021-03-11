@@ -120,7 +120,7 @@ export default {
 }
 
 * {
-    background-color: #fcfcfc;
+    background-color: #fcfcfc!important;
 }
 
 /*Event section*/
@@ -274,6 +274,7 @@ export default {
         margin-left: auto;
         margin-left: 2px;
         font-size: 15px;
+        padding: 8px 23px;
         width: 95px;
     }
     .event_schedule .day_buttons .day3_clicked {
