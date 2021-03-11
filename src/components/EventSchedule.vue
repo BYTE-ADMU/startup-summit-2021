@@ -217,7 +217,7 @@ export default {
 .event_schedule .day_buttons div {
     border: none;
     padding: 0;
-    background-color: white;
+    background-color: #fcfcfc;
     margin: 0 16px 0 16px;
     border-radius: 4px;
 }
