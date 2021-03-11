@@ -255,31 +255,37 @@ export default {
     .event_schedule .day_buttons .day1_clicked {
         margin-left: auto;
         margin-right: -10px;
+        font-size: 15px;
         width: 95px;
     }
     .event_schedule .day_buttons .day1_unclicked {
         margin-left: auto;
         margin-right: -10px;
+        font-size: 15px;
         width: 95px;
     }
     .event_schedule .day_buttons .day2_clicked {
         margin-right: auto;
         margin-left: 2px;
+        font-size: 15px;
         width: 95px;
     }
     .event_schedule .day_buttons .day2_unclicked {
         margin-left: auto;
         margin-left: 2px;
+        font-size: 15px;
         width: 95px;
     }
     .event_schedule .day_buttons .day3_clicked {
         margin: 24px auto 0 auto;
         width: 95px;
+        font-size: 15px;
         padding: 7px 23px;
     }
     .event_schedule .day_buttons .day3_unclicked {
         margin: 24px auto 0 auto;
         width: 95px;
+        font-size: 15px;
         padding: 7px 23px;
     }
     /*Fix font*/
