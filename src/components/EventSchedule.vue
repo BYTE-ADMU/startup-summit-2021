@@ -120,7 +120,7 @@ export default {
 }
 
 * {
-    background-color: #fcfcfc!important;
+    background-color: #fcfcfc;
 }
 
 /*Event section*/
@@ -147,6 +147,7 @@ export default {
     margin-bottom: 24px;
 }
 .event_schedule .day_buttons .container1, .container2, .container3 {
+    background-color: #fcfcfc;
     padding: 0;
     margin: 0;
 }
