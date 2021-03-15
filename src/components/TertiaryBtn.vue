@@ -31,6 +31,9 @@ export default {
 #tertiary{
   color: #F46E26;
   background-color: #fcfcfc;
+  transition: background 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 #tertiary:hover:not([disabled]){
   background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
