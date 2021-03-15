@@ -2,7 +2,7 @@
     <div class="page-container">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
-                <center><div class="vid"><video><source src="#" type="video/mp4"></video></div></center>
+                <center><div class="vid"><video controls autoplay><source src="../assets/video/WhatAreStartups_[FINAL].mp4" type="video/mp4"></video></div></center>
                 <div class="circle-design"><img id="big-circle" src="@/assets/circledesign.png"><img id="small-circle1" src="@/assets/circledesign.png"><img id="small-circle2" src="@/assets/circledesign.png">
                 <img id="weird-circle" src="@/assets/weirdcircle.png"></div>
             </div>
@@ -710,7 +710,7 @@ height: 48px;
 }
 .vid video{
     width: 288px;
-height: 162px;
+    height: 162px;
 }
 .second-container{
     margin-top: -400px!important;

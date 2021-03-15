@@ -9,11 +9,11 @@
             <div class="design"></div>
             <div class="text">
                 <h1>What is Startup Summit 2021?</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Startup Summit is a 3-day tech conference, organized by BYTE, with a goal of empowering its attendees to step up for the future and create positive change. The event will feature talks from global professionals of the startup world, a diverse exposition that provides a glimpse into the Philippines’ budding startup scene, and internship opportunities from our innovative partners.</p>
                 <h1>Why Startup Summit?</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Startup Summit 2021 presents a unique and holistic experience that provides numerous learning opportunities enabling participants to gather new insights.\nThis all-in-one conference grants participants access to thought-provoking <strong>keynote sessions</strong>, personal <strong>interactions with global thought leaders</strong>, as well as <strong>internship and networking opportunities</strong> with our curated list of startups. </p>
                 <h1>Why Stepping up for the Future?</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>In a time of shifting paradigms, Startup Summit invites everyone to take part in building a brighter and bolder tomorrow by <strong>stepping up for the future.</strong> The event challenges participants to seek opportunities amidst adversity and gear up for a future that reflects the positive change we all vie to be a part of.</p>
             </div>
         </div>
         <div class="about_byte">
