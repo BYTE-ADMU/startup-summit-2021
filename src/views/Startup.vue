@@ -286,7 +286,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin: 0px!important;
+    margin: 0px 0px 200px 0px!important;
     overflow-x: hidden;
 }
 .first-container{
@@ -403,7 +403,8 @@ height: 472.56px;
 }
 .startup-card{
     width: 368px;
-    height: 100%;
+    /* height: 100%; */
+    height: 300px;
     background-color: #F8F8F8;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border-radius: 3px;
@@ -624,6 +625,9 @@ line-height: 26px;
 width: 688px;
 height: 384px;
 }
+.startup-card{
+    height: 290px;
+}
 #small-circle2{
     transform: translate(-485%,-465%);
 }
@@ -642,6 +646,7 @@ height: 384px;
 @media screen and (max-width: 823px){
     .startup-card{
         width: 320px;
+        height: 280px;
     }
 .startups-wrapper{
     max-width: 688px;

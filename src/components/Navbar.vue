@@ -369,6 +369,8 @@ export default {
 
   .burger-button {
     z-index: 4000;
+    position: absolute;
+    transform: translateY(2px);
   }
 
   .burger-button div {
@@ -398,7 +400,7 @@ export default {
     height: 2px;
     margin: 3px 0;
     opacity: 1;
-    background-color: #FAFAFA;
+    background-color: #333333;
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
