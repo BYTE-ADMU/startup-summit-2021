@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 * {
-  background-color: #fcfcfc;
+  /* background-color: #fcfcfc; */
   margin: 0;
 }
 </style>
