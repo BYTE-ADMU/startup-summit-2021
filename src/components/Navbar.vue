@@ -203,7 +203,26 @@ export default {
 
 <style scoped>
  /* Import Fonts */
-    @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+  @font-face {
+    font-family: "Objectivity-ExtraBold";
+    src: url('./../fonts/Objectivity-ExtraBold.otf') format("opentype");
+  }
+  @font-face {
+    font-family: "Inter-Bold";
+    src: url('./../fonts/Inter-Bold.ttf') format("truetype");
+  }
+  @font-face {
+    font-family: "Inter-SemiBold";
+    src: url('./../fonts/Inter-SemiBold.ttf') format("truetype");
+  }
+  @font-face {
+    font-family: "Inter-Regular";
+    src: url('./../fonts/Inter-Regular.ttf') format("truetype");
+  }
+  @font-face {
+    font-family: "Inter-Light";
+    src: url('./../fonts/Inter-Light.ttf') format("truetype");
+}
   nav {
     width: 100%;
     position: fixed;
@@ -245,7 +264,7 @@ export default {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    font-family: "Karla";
+    font-family: "Inter";
   }
 
   #desktop-nav li > a > button {
@@ -253,7 +272,7 @@ export default {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    font-family: "Karla";
+    font-family: "Inter";
   }
 
   #desktop-nav li > a:hover,
