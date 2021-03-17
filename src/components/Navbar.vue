@@ -169,7 +169,7 @@ export default {
             transition: "background 0.25s ease-in-out",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
           };
-          document.querySelector('#tayo-logo').style.visibility = 'visible';
+          document.querySelector('#sus-logo').style.visibility = 'visible';
         } 
         else {
           this.navHome = {
@@ -177,6 +177,7 @@ export default {
             transition: "background 0.25s ease-in-out",
             boxShadow: "none",
           };
+          document.querySelector('#sus-logo').style.visibility = 'hidden';
         }
       }
       else if (this.isDesktop) {
@@ -218,9 +219,14 @@ export default {
   }
   .nav-content {
       display: flex;
-      /* background: #fcfcfc; */
+      background-color: transparent;
       justify-content: space-between;
       align-items: center;
+  }
+  .nav-brand{
+    background-color: transparent !important;
+    background: transparent !important;
+    /* display: none; */
   }
   /* Desktop Nav */
   ul {
@@ -257,6 +263,7 @@ export default {
 
   .nav-content {
     width: 95%;
+    background-color: transparent;
   }
 
   #burger-bg {

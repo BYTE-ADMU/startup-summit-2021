@@ -279,7 +279,7 @@ export default {
   src: url('./../fonts/Inter-Light.ttf') format("truetype");
 }
 *{
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
     margin: 0px!important;
 }
 .page-container{
