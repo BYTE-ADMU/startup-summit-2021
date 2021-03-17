@@ -979,7 +979,7 @@ export default {
 
 /*Universal styling*/
 *{
-  background-color: #fcfcfc;
+  /* background-color: #fcfcfc; */
   margin: 0;
 }
 

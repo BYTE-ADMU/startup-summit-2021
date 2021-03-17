@@ -1,4 +1,5 @@
 <template>
+<div id="app">
     <div class="page-container">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
@@ -206,6 +207,7 @@
             </div>
     </div></center>
     </div>
+</div>
 </template>
 
 <script>
@@ -277,14 +279,14 @@ export default {
   src: url('./../fonts/Inter-Light.ttf') format("truetype");
 }
 *{
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
     margin: 0px!important;
 }
 .page-container{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin: 0px!important;
+    margin: 0px 0px 200px 0px!important;
     overflow-x: hidden;
 }
 .first-container{
@@ -330,7 +332,7 @@ height: 472.56px;
 .search-wrapper{
     position: relative;
     width: 624px;
-    height: 56px;
+    /* height: 56px; */
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     background-color: #f8f8f8;
     display: flex;
@@ -392,7 +394,7 @@ height: 472.56px;
 }
 .startups-wrapper{
     max-width: 1176px;
-    height: 288px;
+    /* height: 288px; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -401,7 +403,8 @@ height: 472.56px;
 }
 .startup-card{
     width: 368px;
-    height: 100%;
+    /* height: 100%; */
+    height: 300px;
     background-color: #F8F8F8;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border-radius: 3px;
@@ -622,6 +625,9 @@ line-height: 26px;
 width: 688px;
 height: 384px;
 }
+.startup-card{
+    height: 290px;
+}
 #small-circle2{
     transform: translate(-485%,-465%);
 }
@@ -640,6 +646,7 @@ height: 384px;
 @media screen and (max-width: 823px){
     .startup-card{
         width: 320px;
+        height: 280px;
     }
 .startups-wrapper{
     max-width: 688px;
