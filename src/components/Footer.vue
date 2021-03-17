@@ -76,6 +76,7 @@ export default {
     overflow: hidden;
     margin: 0;
     bottom: 0;
+    background-color: #f8f8f8;
 }
 .logo-wrapper{
     padding-top: 5%;
@@ -98,6 +99,7 @@ export default {
     font-family: 'Inter-Bold';
     font-size: 16px;
     line-height: 26px;
+    transition: color 200ms ease-in-out;
 }
 #twt-svg{
     transform: translate(0px, 2px);
@@ -114,6 +116,9 @@ export default {
 .footer-menu a:hover {
     color: #F46E26 !important;
     
+}
+.icon-links path{
+    transition: fill 200ms ease-in-out;
 }
 .icon-links path:hover {
     fill: #F46E26 !important;

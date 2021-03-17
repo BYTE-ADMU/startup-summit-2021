@@ -1,4 +1,5 @@
 <template>
+<div id="app">
     <div class="page-container">
         <center><div class="first-container">
             <p id="header">Got Questions?</p>
@@ -99,6 +100,7 @@
           </div>
         </center>
     </div>
+</div>
 </template>
 
 <script>
