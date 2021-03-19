@@ -19,7 +19,8 @@
                     <input @click="focused=true" type="text" v-model="search" placeholder="Looking for anything specific? (Startups, jobs)" class="search-txt" />
                     <input type="text" v-model="search" placeholder="Looking for anything specific?" class="search-txt2" />
                 </div>
-                <span class="primary" @click="focused=false"><PrimaryBtn @click="modalShow = true"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
+                <!-- Removed for now due to small number of cards, and vue error if not commented out, display="none" was having issues due to use of components -->
+                <!-- <span class="primary" @click="focused=false"><PrimaryBtn @click="modalShow = true" ><Filter id="primary-svg"/>Filter</PrimaryBtn></span> -->
             </div>
             <div id="filter-modal" class="modal" v-if="modalShow">
                 <div class="modal-content">
@@ -214,7 +215,8 @@
 
 <script>
 import PrimaryBtn from '../components/PrimaryBtn.vue'
-import Filter from '../components/Filter.vue'
+// Removed for now due to small number of cards, and vue error if not commented out
+// import Filter from '../components/Filter.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -222,7 +224,8 @@ export default {
     name: 'Start-Up',
     components:{
         PrimaryBtn,
-        Filter
+        // Removed for now due to small number of cards, and vue error if not commented out
+        // Filter
     },
     created(){
         AOS.init(
