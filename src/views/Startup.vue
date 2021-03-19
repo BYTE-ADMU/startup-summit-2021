@@ -1,6 +1,7 @@
 <template>
 <div id="app">
     <div class="page-container">
+        <div data-aos="fade-right">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
                 <center><div class="vid"><video controls><source src="../assets/videos/What_Are_Startups_[FINAL].mp4" type="video/mp4"></video></div></center>
@@ -8,7 +9,8 @@
                 <img id="weird-circle" src="@/assets/weirdcircle.png"></div>
             </div>
             </div>
-        </center>
+        </center></div>
+        <div data-aos="fade-right">
         <center><div class="second-container">
             <div class="text-wrapper">
                 <p id="header">Exhibitorsʼ showcase</p>
@@ -205,19 +207,40 @@
                 </div>
             </div>
             </div>
-    </div></center>
+    </div></center></div>
     </div>
 </div>
 </template>
 
 <script>
-import PrimaryBtn from '../components/PrimaryBtn.vue'
-import Filter from '../components/Filter.vue'
+import PrimaryBtn from './PrimaryBtn.vue'
+import Filter from '@/Filter.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
     name: 'Start-Up',
     components:{
         PrimaryBtn,
         Filter
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     },
     data() {
   return {
