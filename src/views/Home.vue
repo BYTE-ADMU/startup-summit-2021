@@ -85,6 +85,8 @@
       v-bind:speaker="first_day[0].speaker"
       v-bind:creds="first_day[0].modal.creds"
       v-bind:description="first_day[0].modal.description"
+      :linkedin1=true
+      :linked1=first_day[0].modal.linked1
       :image=first_day[0].pic_url
       />
     </div>
@@ -100,6 +102,12 @@
       v-bind:speaker="first_day[1].speaker"
       v-bind:creds="first_day[1].modal.creds"
       v-bind:description="first_day[1].modal.description"
+      :linkedin1=true
+      :linkedin2=true
+      :website1=true
+      :linked1=first_day[1].modal.linked1
+      :linked2=first_day[1].modal.linked2
+      :web1=first_day[1].modal.web1
       :image=first_day[1].pic_url
       />
     </div>
@@ -115,6 +123,12 @@
       v-bind:speaker="first_day[2].speaker"
       v-bind:creds="first_day[2].modal.creds"
       v-bind:description="first_day[2].modal.description"
+      :linkedin1=true
+      :facebook1=true
+      :website1=true
+      :linked1=first_day[2].modal.linked1
+      :face1=first_day[2].modal.face1
+      :web1=first_day[2].modal.web1
       :image=first_day[2].pic_url
       />
     </div>
@@ -130,6 +144,10 @@
       v-bind:speaker="first_day[3].speaker"
       v-bind:creds="first_day[3].modal.creds"
       v-bind:description="first_day[3].modal.description"
+      :linkedin1=true
+      :instagram1=true
+      :linked1=first_day[3].modal.linked1
+      :insta1=first_day[3].modal.insta1
       :image=first_day[3].pic_url
       />
     </div>
@@ -276,6 +294,16 @@
       v-bind:speaker="second_day[0].speaker"
       v-bind:creds="second_day[0].modal.creds"
       v-bind:description="second_day[0].modal.description"
+      :linkedin1=true
+      :facebook1=true
+      :website1=true
+      :website2=true
+      :website3=true
+      :linked1=second_day[0].modal.linked1
+      :face1=second_day[0].modal.face1
+      :web1=second_day[0].modal.web1
+      :web2=second_day[0].modal.web2
+      :web3=second_day[0].modal.web3
       :image=second_day[0].pic_url
       />
     </div>
@@ -291,6 +319,8 @@
       v-bind:speaker="second_day[1].speaker"
       v-bind:creds="second_day[1].modal.creds"
       v-bind:description="second_day[1].modal.description"
+      :website1=true
+      :web1=second_day[1].modal.web1
       :image=second_day[1].pic_url
       />
     </div>
@@ -306,6 +336,8 @@
       v-bind:speaker="second_day[2].speaker"
       v-bind:creds="second_day[2].modal.creds"
       v-bind:description="second_day[2].modal.description"
+      :twitter1=true
+      :twt1=second_day[2].modal.twt1
       :image=second_day[2].pic_url
       />
     </div>
@@ -321,6 +353,8 @@
       v-bind:speaker="second_day[3].speaker"
       v-bind:creds="second_day[3].modal.creds"
       v-bind:description="second_day[3].modal.description"
+      :facebook1=true
+      :face1=second_day[3].modal.face1
       :image=second_day[3].pic_url
       />
     </div>
@@ -467,6 +501,12 @@
       v-bind:speaker="third_day[0].speaker"
       v-bind:creds="third_day[0].modal.creds"
       v-bind:description="third_day[0].modal.description"
+      :linkedin1=true
+      :website1=true
+      :website2=true
+      :linked1=third_day[0].modal.linked1
+      :web1=third_day[0].modal.web1
+      :web2=third_day[1].modal.web2
       :image=third_day[0].pic_url
       />
     </div>
@@ -482,6 +522,8 @@
       v-bind:speaker="third_day[1].speaker"
       v-bind:creds="third_day[1].modal.creds"
       v-bind:description="third_day[1].modal.description"
+      :linkedin1=true
+      :linked1=third_day[1].modal.linked1
       :image=third_day[1].pic_url
       />
     </div>
@@ -497,6 +539,10 @@
       v-bind:speaker="third_day[2].speaker"
       v-bind:creds="third_day[2].modal.creds"
       v-bind:description="third_day[2].modal.description"
+      :linkedin1=true
+      :website1=true
+      :web1=third_day[2].modal.web1
+      :linked1=third_day[2].modal.linked1
       :image=third_day[2].pic_url
       />
     </div>
@@ -512,6 +558,24 @@
       v-bind:speaker="third_day[3].speaker"
       v-bind:creds="third_day[3].modal.creds"
       v-bind:description="third_day[3].modal.description"
+      :linkedin1=true
+      :linkedin2=true
+      :facebook1=true
+      :facebook2=true
+      :instagram1=true
+      :instagram2=true
+      :twitter1=true
+      :twitter2=true
+      :website1=true
+      :linked1=third_day[3].modal.linked1
+      :linked2=third_day[3].modal.linked2
+      :face1=third_day[3].modal.face1
+      :face2=third_day[3].modal.face2
+      :insta1=third_day[3].modal.insta1
+      :insta2=third_day[3].modal.insta2
+      :twit1=third_day[3].modal.twt1
+      :twit2=third_day[3].modal.twt2
+      :web1=third_day[3].modal.web1
       :image=third_day[3].pic_url
       />
     </div>
@@ -628,6 +692,7 @@ export default {
           modal: {
             time: "1-2pm",
             creds: "Co-founder and COO of Eyeware Tech",
+            linked1: "https://www.linkedin.com/in/mogos/?originalSubdomain=ch",
             description: "Serban is the Co-founder & COO of Eyeware, a Swiss startup that develops eye tracking solutions for consumer applications. With a background in computer science, his startup experience involves strategy, fundraising, and product management. Serban also founded two NGOs in Romania for promoting entrepreneurship education and obtained a PhD in Strategy & Entrepreneurship from Carnegie Mellon University."
           }
         },
@@ -635,12 +700,15 @@ export default {
           class: "card2",
           time: "2:00",
           talk: "Bots and Brains",
-          description: "No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          description: "No matter how high tech your bots are, you need to understand where the human aspect comes in.",
           speaker: "Gian dela Rama",
           pic_url: require('@/assets/speakers/GiandelaRama.jpeg'),
           modal: {
             time: "2-4pm",
             creds: "Co-founder and CEO of Aiah.Ai",
+            linked1: "https://www.linkedin.com/in/giandlr/",
+            linked2: "https://www.linkedin.com/company/aiah-automation/",
+            web1: "https://aiah.ai/",
             description: "Gian dela Rama is a serial entrepreneur, co-founder, and CEO of Aiah.Ai - making automation accessible for companies large and small using fit for purpose bots that can be deployed in minutes.\n\nGian is also an active contributor in the Philippine startup community, regularly speaking on entrepreneurship, automation and AI as well as mentoring current and aspiring startup founders.\n\nBefore Aiah.Ai, Gian started several companies in the systems integration, digital media delivery and software development industries and worked in enterprise IT for global giants such as Hewlett-Packard and Unilever."
           }
         },
@@ -654,6 +722,9 @@ export default {
           modal: {
             time: "5-6pm",
             creds: "Founder and Managing Director of SynPhNe",
+            linked1: "https://www.linkedin.com/in/subhasisbanerji/",
+            web1: "https://www.synphne.com",
+            face1: "https://www.facebook.com/synphne.sg",
             description: "Dr. Subhasis Banerji is the Inventor and Founder of SynPhNe Pte. Ltd. in Singapore.  SynPhNe is the world's first wearable, connected, home-use health solution that trains brain and muscle in ONE system. It has helped those disabled by stroke, brain injury, childhood disorders and aging recover cognitive function and use of paralyzed limbs. With three decades of experience in creating engineering and software solutions, Dr. Banerji specializes in technologies for physio-neuro rehabilitation, digital neurological therapeutics, fitness, and health enhancement."
           }
         },
@@ -667,6 +738,8 @@ export default {
           modal: {
             time: "5-6pm",
             creds: "Founder and CEO of Qlue",
+            linked1: "https://www.linkedin.com/in/rama-raditya-2039ba39/",
+            insta1: "https://www.instagram.com/ramaqlue/",
             description: "Raditya Maulana Rusdi, also known as Rama Raditya, is the Founder and CEO of Qlue, a Smart City Technology company which has a mission to accelerate positive changes worldwide. He initiates an invention connecting the Government and Citizens through technology innovation in smartphones.Rama earned Master of Science from Management Information Technology of Strayer University, Washington DC in 2007 before returning back to Jakarta in the same year. He then worked as IT auditor and advisor in various companies such as PWC (Pricewaterhouse Coopers), Ernst & Young, and PT Geoteq Integrasi Semesta.\n\nAfter staying in Jakarta for five years, he realized that some issues such as illegal parking, sanitation, violation, and others are never taken care of seriously. In 2014 he then came up with the idea of having a tool for the government to identify problems by empowering citizens to report issues. This idea led him to found Qlue with his Co-Founder, Andre Hutagalung. Both of them then started their mission by streamlining the problem handling process for government and private sectors, started from their hometown, Jakarta.\n\nThrough his innovation, Qlue managed to achieve National as well as International Acknowledgement and Awards including Google Playstore Nominated as Best Application in Indonesia, Grand Finalist Startup World Cup in South East Asia, Google Launchpad Accelerator Program, Sustainable Development Award 2017,  Best Mobility Project by The  World’s Smart Cities Organizations (WSCO), The Best m-Government Service Award by World Government Summit 2019. For Rama, those acknowledge become a motivation for him to develop more comprehensive innovation through AI, IoT, and Smart City Solutions."
           }
         },
@@ -730,10 +803,15 @@ export default {
           talk: "Inclusive Innovation: Upskilling Women for the Future of Work",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Gina Romero",
-          pic_url: require('@/assets/kumu-logo.png'),
+          pic_url: require('@/assets/speakers/GinaRomero.jpg'),
           modal: {
             time: "1-2pm",
             creds: "Co-founder and CEO of Connected Women",
+            linked1: "https://www.linkedin.com/in/iamginaromero",
+            web1: "https://www.connectedwomen.com/",
+            web2: "https://www.connectedwomen.co/",
+            web3: "https://www.ginaromero.com/",
+            face1: "https://www.facebook.com/weareconnectedwomen",
             description: "A finalist awardee of the prestigious “Asia CEO Awards” in the Shero of the Year category, Gina is an unconventional entrepreneur, community builder, and technology advocate. As part of her mission to better equip women entrepreneurs and professionals with the technology skills to scale their businesses and careers, she launched Connected Women, a social impact tech startup that matches talented Filipino women with meaningful remote work opportunities."
           }
         },
@@ -747,6 +825,7 @@ export default {
           modal: {
             time: "3-4pm",
             creds: "Co-founder and CEO for Shoplinks Singapore",
+            web1: "https://www.pageexecutive.com/asia-pacific/leading-women/a-journey-from-poverty-to-empowerment",
             description: "Teresa Condicion spent the last 20 years doing what she loves – building data capabilities and starting businesses and organisations across Asia, from her long tenure at P&G as head of ASEAN consumer and retail analytics to founding and building two data-driven tech startups. Teresa strongly advocates for bringing a broader economic impact towards even the smallest retailers out there, to have the capabilities of data and technology to compete in an increasingly digitised world."
           }
         },
@@ -760,6 +839,7 @@ export default {
           modal: {
             time: "5-6pm",
             creds: "Program Manager of Notion",
+            twt1: "https://twitter.com/andyrapista",
             description: "Andy is currently a Program Manager at Notion building Notion for Good - the corporate social justice program that is dedicated to inclusion, diversity, equity, and anti-racism (IDEA) and sustainability. Andy believes that we can create a more equitable world if we dedicate our time, energy, creativity, and talent towards eliminating barriers for people to thrive. She'd like to see a world where everyone is able to live with dignity and reach their fullest potential. Her hope is that her work is the highest expression of that belief."
           }
         },
@@ -773,6 +853,7 @@ export default {
           modal: {
             time: "6-7pm",
             creds: "Co-founder and CRO of Senti AI",
+            face1: "https://facebook.com/SentiPH",
             description: "Charibeth Cheng is Senti AI’s co-founder and Head of Research and an Associate Dean and Assistant Professor at De La Salle University, where she has received multiple awards as an outstanding teacher. Additionally, Chari is one of the pioneer researchers of the university’s Center for Language Technologies (DLSU-CELT). Having specialized in the area of Natural Language Processing and Machine Learning, she works with her students to develop computation models, tools, and electronic resources that help process, understand, and generate text written in local languages. She also received her Master’s Degree and Ph.D. in Computer Science and published numerous papers on AI, NLP, information systems, and related interdisciplinary venues. "
           }
         },
@@ -840,6 +921,9 @@ export default {
           modal: {
             time: "1-2pm",
             creds: "President of IdeaSpace Foundation, QBO Innovation Hub, and Philippine Disaster Resilience Foundation",
+            linked1: "https://www.linkedin.com/in/rene-butch-meily-7a87224/",
+            web1: "https://drive.google.com/file/d/18YXNdu9zk4ejbYTYuSOx5ZoWn1bJWxe6/view?usp=sharing",
+            web2: "https://www.philstar.com/lifestyle/business-life/2014/06/02/1329490/business-lessons-three-ceos",
             description: "Butch has made a massive impact on the local startup community through IdeaSpace Foundation, a technology accelerator for early-stage startups, and QBO Innovation Hub, a public-private partnership launched to mentor startups. Aside from carrying a presidential role in both of these organizations, Butch is also the President of the Philippine Disaster Resilience Foundation, a private sector disaster management organization that is dedicated to the sustainable development and general welfare of the Filipino people."
           }
         },
@@ -849,10 +933,11 @@ export default {
           talk: "Building a Fintech Company that is both Filipino and Global",
           description: "Mikko Perez, Founder & CEO of Ayannah will tell us about Ayannah's journey.  Why he started it and the roller coaster ride of starting a tech company in the Philippines and how Ayannah has grown from being a Filipino company to a global fintech company",
           speaker: "Miguel (Mikko) Perez",
-          pic_url: require('@/assets/kumu-logo.png'),
+          pic_url: require('@/assets/speakers/MikoPerez.jpg'),
           modal: {
             time: "3-4pm",
             creds: "Founder and CEO of Ayannah",
+            linked1: "https://www.linkedin.com/in/mperez5/?originalSubdomain=ph",
             description: "Mikko is the Founder & CEO of Ayannah, an award-winning fintech start up providing affordable and accessible digital financial services to the world's emerging middle class. Prior to this, Mikko was part of the founding team of Chikka, a mobile instant messaging start up where he helped in expanding to China, India, Japan and the US prior to Chikka's acquisition by PLDT (NYSE: PHI).  He has also worked as a private equity investment manager in Singapore and an investment banker at JP Morgan in San Francisco.\n\nHaving begun his career as a community organizer helping build social enterprises in rural Philippines, Mikko remains actively involved in initiatives that support social entrepreneurship and sustainable development. Mikko holds a BSc in Management (with Honors) and a BA in Development Studies (with Honors & Award for Excellence) from the Ateneo de Manila University, and an MBA from the Harvard Business School."
           }
         },
@@ -866,6 +951,8 @@ export default {
           modal: {
             time: "5-6pm",
             creds: "Founder and CEO of Cropital",
+            web1: "https://events.development.asia/author/ruel-amparo",
+            linked1: "https://ph.linkedin.com/in/ruelamparo",
             description: "Ruel Amparo is the Chief Executive Officer and Founder of Cropital, the largest peer to peer lending platform for smallholder farmers in the Philippines. He is an industrial engineer who previously worked for different companies in the oil and gas industry and an active volunteer who has led several socio civic project initiatives in the past. Recognized for student leadership, data analytics, and community development, Ruel also graduated Cum Laude and was awarded with Garrick Yao Student Excellence Award for Service."
           }
         },
@@ -879,6 +966,15 @@ export default {
           modal: {
             time: "5-6pm",
             creds: "Founder and President of Virtualahan",
+            linked1: "https://www.linkedin.com/in/rdgersava/",
+            linked2: "https://www.linkedin.com/company/virtualahan/",
+            face1: "https://www.facebook.com/rdgersava",
+            face2: "http://www.facebook.com/virtualahan",
+            twt1: "https://twitter.com/ryangersava",
+            twt2: "https://twitter.com/virtualahan",
+            insta1: "https://www.instagram.com/ryangersava/",
+            insta2: "https://www.instagram.com/virtualahan/",
+            web1: "https://businessmirror.com.ph/2020/04/15/how-ryan-gersavas-virtualahan-sprang-to-life/",
             description: "Ryan is the Founder and President of Virtualahan, a social enterprise that is breaking down employment barriers for Persons with Disabilities and other disadvantaged groups using the equalizing power of technology. The company was founded after he experienced employment discrimination because of his chronic disease. Ryan is also an Ashoka Fellow and the first Filipino to ever receive the Inspired Leadership Awards. He is an emerging leader in the fields of innovative education, diversity and inclusion, impact sourcing, and the future of work. Coming from a humble background in Sultan Kudarat province, he is committed to creating a change through Virtualahan to get people out of poverty using systemic empathy and technology."
           }
         },
@@ -995,13 +1091,13 @@ export default {
   overflow: auto;
 }
 .card_container .modal_container .talk_modal {
-  transform: translateY(13.333vh);
+  transform: translateY(25%);
 }
 .card_container .modal_container .panel_modal {
-  transform: translateY(6vh);
+  transform: translateY(25%);
 }
 .card_container .modal_container .exhibit_modal {
-  transform: translateY(6vh);
+  transform: translateY(25%);
 }
 
 /*Cards*/

@@ -105,10 +105,11 @@ export default {
 .card3 {
     display: flex;
     flex-direction: row;
-    margin: 0 auto 100px auto;
+    margin: 100px auto 100px auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border: 0.5px solid;
     border-radius: 3px;
+    background-color: #fcfcfc;
     width: 864px;
     overflow: hidden;
 }
