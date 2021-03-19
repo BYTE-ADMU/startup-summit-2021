@@ -41,9 +41,9 @@ export default {
       startupList:[
         {
         name: "",
-        cover: require('@/assets/startups/'),
+        cover: require('@/assets/startups/startapppp/cover'),
         coverAlt: "cover",
-        icon: require('@/assets/startups/'),
+        icon: require('@/assets/startups/logo'),
         iconAlt: "logo",
         website: "",
         linkedin: "",
@@ -54,10 +54,10 @@ export default {
         iglink: "",
         twitter: "",
         twitterlink: "",
-        firstpic: require('@/assets/startups/'),
+        firstpic: require('@/assets/startups/startappppp/firstpic'),
         firstpicAlt: "",
         aboutus: "",
-        secondpic: require('@/assets/startups/'),
+        secondpic: require('@/assets/startups/startappppp/secondpic'),
         secondpicAlt: "",
         ourproduct: "",
         job_check: ""
@@ -289,6 +289,48 @@ export default {
         gallery3: require('@/assets/startups/ideas/gallery3'),
         gallery3Alt: "",
         gallery4: require('@/assets/startups/ideas/gallery4'),
+        gallery4Alt: "",
+        },
+        {
+        name: "ClinkIT Solutions",
+        cover: require('@/assets/startups/clink/cover'),
+        coverAlt: "ClinkIT Solutions cover",
+        icon: require('@/assets/clink/logo'),
+        iconAlt: "ClinkIT Solutions logo",
+        website: "",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "",
+        facebooklink: "",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/clink/firstpic'),
+        firstpicAlt: "",
+        aboutus: "ClinkIT Solutions is a Software Consulting Services Company and Microsoft Solutions Partner that is in the business of delivering top-of-the-line I.T. solutions to businesses across the globe. We boast 20 years of experience in the I.T. industry, offering expertise on a wide range of implementations from simple web design to sophisticated software solutions.<br><br>Our company is a part of the Microsoft Partner Network. We have a stellar team of software engineers, developers and technical specialists who have solid years of experience and backed with impressive credentials and globally recognized certifications. With our competent and talented engineers, ClinkIT Solutions offers fresh and creative ideas that transcend mundane implementations and haphazardly designed I.T. solutions.",
+        secondpic: require('@/assets/startups/clink/secondpic'),
+        secondpicAlt: "",
+        ourproduct: "ClinkIT creates proven business solutions by providing software, hardware, and services to more than 100 startups and multinational clients worldwide.",
+        job_check: ""
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/clink/gallery1'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/clink/gallery2'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/clink/gallery3'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/clink/gallery4'),
         gallery4Alt: "",
         },
         {
