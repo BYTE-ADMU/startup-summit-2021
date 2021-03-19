@@ -286,7 +286,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin: 0px 0px 200px 0px!important;
+    margin: 80px 0px 200px 0px!important;
     overflow-x: hidden;
 }
 .first-container{
