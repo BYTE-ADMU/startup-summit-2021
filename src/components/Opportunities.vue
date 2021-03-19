@@ -46,12 +46,32 @@
 <script>
 import PrimaryBtn from "./PrimaryBtn.vue"
 import Chevron from "./Chevron.vue"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
     name: 'Opportunities',
     components: {
         PrimaryBtn,
         Chevron
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     }
 }
 </script>

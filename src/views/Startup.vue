@@ -1,14 +1,16 @@
 <template>
 <div id="app">
     <div class="page-container">
+        <div data-aos="fade-up">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
-                <center><div class="vid"><video controls autoplay><source src="https://r2---sn-oguelnsl.c.drive.google.com/videoplayback?expire=1616063868&ei=PPVSYNrPI8HHrvIPtfa0iAE&ip=2001:4451:4123:7400:7485:ce8a:9157:7072&cp=QVRGWEFfUlhUSVhPOjN0bm9LOEV5bzU1bnBWMnlXcmI0bEptRlVnQWVvNTVvd2lPTmtrY0ZnTVc&id=af497d9d0764499d&itag=37&source=webdrive&requiressl=yes&mh=Ip&mm=32&mn=sn-oguelnsl&ms=su&mv=m&mvi=2&pl=38&ttl=transient&susc=dr&driveid=13kqx_Inq086l1sdn0aYt1v0J3UzrKxAN&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=79.063&lmt=1613353770150330&mt=1616049142&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRgIhAImbsLv8_jY8zXqVWnPIBJ_Y4CpIpT13BIEk-18oFOeUAiEA5s2298Z7SMvLJ3Y__lY1xf-ziJopIkoM8GVUhsTxWOg=&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIgA0TcUd8EuIUvUmnAFLpnJgW5nwgjiiW0NcU-LxlTz3MCIQDoDU8eNPPrKEDUJ1ag9FfJvjiKPMaVqodX3Rl-M4e4Qg==&cpn=FRRgloBpYPiA7bSK&c=WEB_EMBEDDED_PLAYER&cver=1.20210315.1.1" type="video/mp4"></video></div></center>
+                <center><div class="vid"><video controls><source src="../assets/videos/What_Are_Startups_[FINAL].mp4" type="video/mp4"></video></div></center>
                 <div class="circle-design"><img id="big-circle" src="@/assets/circledesign.png"><img id="small-circle1" src="@/assets/circledesign.png"><img id="small-circle2" src="@/assets/circledesign.png">
                 <img id="weird-circle" src="@/assets/weirdcircle.png"></div>
             </div>
             </div>
-        </center>
+        </center></div>
+        <div data-aos="fade-up">
         <center><div class="second-container">
             <div class="text-wrapper">
                 <p id="header">Exhibitorsʼ showcase</p>
@@ -17,7 +19,8 @@
                     <input @click="focused=true" type="text" v-model="search" placeholder="Looking for anything specific? (Startups, jobs)" class="search-txt" />
                     <input type="text" v-model="search" placeholder="Looking for anything specific?" class="search-txt2" />
                 </div>
-                <span class="primary" @click="focused=false"><PrimaryBtn @click="modalShow = true"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
+                <!-- Removed for now due to small number of cards, and vue error if not commented out, display="none" was having issues due to use of components -->
+                <!-- <span class="primary" @click="focused=false"><PrimaryBtn @click="modalShow = true" ><Filter id="primary-svg"/>Filter</PrimaryBtn></span> -->
             </div>
             <div id="filter-modal" class="modal" v-if="modalShow">
                 <div class="modal-content">
@@ -199,33 +202,64 @@
                     <img :alt="startup.iconAlt" :src="startup.icon">
                 </div>
                 <div class="startup-content">
-                    <p class="startup-name">{{startup.name}}</p>
+                    <p class="startup-name" v-html="startup.name"></p>
                     <p class="startup-industry">{{startup.industry}}</p>
                     <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
                 </div>
             </div>
             </div>
-    </div></center>
+    </div></center></div>
     </div>
 </div>
 </template>
 
 <script>
 import PrimaryBtn from '../components/PrimaryBtn.vue'
-import Filter from '../components/Filter.vue'
+// Removed for now due to small number of cards, and vue error if not commented out
+// import Filter from '../components/Filter.vue'
+// import StartupTemplate from '../components/StartupTemplate.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
     name: 'Start-Up',
     components:{
         PrimaryBtn,
-        Filter
+        // StartupTemplate,
+        // Removed for now due to small number of cards, and vue error if not commented out
+        // Filter
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     },
     data() {
   return {
     startupList: [
-      {name: 'Kumu', industry: 'Entertainment', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
-      {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay logo', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: false},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false}
+      {name: 'StartUp Village', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
+      {name: 'Mosaic Solutions', industry: '', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay logo', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: true},
+      {name: 'QBO Innovation Hub', industry: '', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
+      {name: 'Technology Application</br>and Promotion Institute', industry: '', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false},
+      {name: 'Ideaspace Foundation Inc.', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
+      {name: 'ClinkIT Solutions', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'ARPACORP', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'XPERTO', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'maker academy', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
+      {name: 'Pick.A.Roo', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false}
     ],
     search: '',
     modalShow: false,
@@ -286,7 +320,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin: 0px 0px 200px 0px!important;
+    margin: 80px 0px 200px 0px!important;
     overflow-x: hidden;
 }
 .first-container{
@@ -296,7 +330,7 @@ export default {
     position: relative;
     z-index: 1!important;
     background-color: #C4C4C4;
-    width: 906px;
+    width: 680px;
     height: 510px;
 }
 .circle-design img{
@@ -332,7 +366,7 @@ height: 472.56px;
 .search-wrapper{
     position: relative;
     width: 624px;
-    /* height: 56px; */
+    height: 56px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     background-color: #f8f8f8;
     display: flex;
@@ -404,7 +438,7 @@ height: 472.56px;
 .startup-card{
     width: 368px;
     /* height: 100%; */
-    height: 300px;
+    height: 284px;
     background-color: #F8F8F8;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border-radius: 3px;

@@ -12,6 +12,7 @@
   :secondpic=startup.secondpic
   :aboutus=startup.aboutus
   :ourproduct=startup.ourproduct
+  :job_check=startup.job_check
   :job=startup.job
   :gallery1=startup.gallery1
   :gallery2=startup.gallery2
@@ -39,6 +40,274 @@ export default {
     return{
       startupList:[
         {
+        name: "",
+        cover: require('@/assets/startups/'),
+        coverAlt: "cover",
+        icon: require('@/assets/startups/'),
+        iconAlt: "logo",
+        website: "",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "",
+        facebooklink: "",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/'),
+        firstpicAlt: "",
+        aboutus: "",
+        secondpic: require('@/assets/startups/'),
+        secondpicAlt: "",
+        ourproduct: "",
+        job_check: ""
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:"internship"
+              },
+              {
+                jobName: '',
+                jobType: "full-time"
+              }
+            ],
+          },
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:"internship"
+              },
+              {
+                jobName: '',
+                jobType: "part-time"
+              },
+              {
+                jobName: '',
+                jobType: "full-time"
+              },
+              {
+                jobName: '',
+                jobType: "internship"
+              }
+            ],
+          }
+        ],
+        gallery1: require('@/assets/startups/'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/'),
+        gallery4Alt: "",
+        },
+        {
+        name: "StartUp Village",
+        cover: require('@/assets/startups/startupvillage/cover.png'),
+        coverAlt: "StartUp Villag cover",
+        icon: rrequire('@/assets/startups/startupvillage/icon.png'),
+        iconAlt: "StartUp Village logo",
+        website: "http://startupvillage.ph/",
+        linkedin: "startupvillageph",
+        linkedinlink: "https://www.linkedin.com/in/startupvillageph/",
+        facebook: "startupvillageph",
+        facebooklink: "https://www.facebook.com/startupvillageph",
+        ig: "startupvillageph",
+        iglink: "https://www.instagram.com/startupvillageph/",
+        twitter: "suv_ph",
+        twitterlink: "https://twitter.com/suv_ph",
+        firstpic: require('@/assets/startups/startupvillage/firstpic'),
+        firstpicAlt: "",
+        aboutus: "StartUp Village is a one-stop startup enabler that enables startups to bring their unique ideas to reality. Its desire is to bring a Filipino startup to the global stage. The goal of StartUp Village is to help start-ups build disruptive technology that displaces an established technology and shakes up the industry or introduces a groundbreaking product that creates a completely new industry.",
+        secondpic: require('@/assets/startups/startupvillage/secondpic'),
+        secondpicAlt: "",
+        ourproduct: "StartUp Village provides startups with all the support it needs to grow and succeed. We execute different programs including training and mentoring startups as they traverse this entrepreneurial path. We also provide other support activities including mentoring, shared services (HR, Accounting/Bookkeeping, Legal), linkage to customers and investors, actual working space, and more.",
+        job_check: ""
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              }
+            ],
+          },
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              }
+            ],
+          }
+        ],
+        gallery1: require('@/assets/startups/startupvillage/gallery1'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/startupvillage/gallery2'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/startupvillage/gallery3'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/startupvillage/gallery4'),
+        gallery4Alt: "",
+        },
+        {
+        name: "Mosaic Solutions",
+        cover: require('@/assets/startups/mosaic/'),
+        coverAlt: "Mosaic Solutions cover",
+        icon: require('@/assets/startups/mosaic/logo.png'),
+        iconAlt: "Mosaic Solutions logo",
+        website: "https://www.mosaic-solutions.com",
+        linkedin: "mosaicsolutions",
+        linkedinlink: "https://www.linkedin.com/company/mosaicsolutions/",
+        facebook: "mosaichospitalitysolutions",
+        facebooklink: "https://www.facebook.com/mosaichospitalitysolutions",
+        ig: "mosaichospitalitysolutions",
+        iglink: "https://www.instagram.com/mosaichospitalitysolutions",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/mosaic/firstpic.jpg'),
+        firstpicAlt: "Mosaic Solutions Summer Outing",
+        aboutus: "Founded in 2016, Mosaic is a leading provider of profit optimisation solutions— data analytics, inventory management, point of sale and purchasing — offered primarily to the food and beverage sector across SE Asia.  This includes multi-unit restaurant and bar groups, cloud kitchens, hotels and casinos, and now retailers, such as supermarkets and convenience stores. Mosaic’s cloud-based solutions work together seamlessly, as well as with complementary products, enabling a fully integrated restaurant management solution.<br><br>Mosaic services over 100 customers, representing approximately 1,000 outlets, across the Philippines, Singapore, Vietnam, India and UAE, with a primary focus on the Philippines.  Mosaic also provides specialized outsourced solutions to hospitality clients and service providers in the US, Canada, UK, New Zealand, Australia and South Africa.",
+        secondpic: require('@/assets/startups/mosaic/secondpic.png'),
+        secondpicAlt: "Mosaic Solutions Sales Report Enterprise",
+        ourproduct: "Find the best answer to every challenge.<br><br>Day-to-day F&B management is a constant opportunity to streamline and optimise.  Operators are presented with challenges based on dozens of moving factors.  Using Mosaics products will help you get a handle on which cash flow levers to pull to improve the bottom line.<br><br>You may need to analyse what changes you can make to your menus, your supply chain, your staff and your operations.  Or it may be time to reduce your inventory waste or over-spending on over-stocking.  Maybe your whole business model has changed as sales have shifted from dine-in to takeaway and delivery.<br><br>It’s all happening now and you need the accurate information to make informed decisions in real-time.  That’s where Mosaic Solutions come in.<br><br>You need all the information right at your fingertips. Our reports offer a combination of high-level insights and in-depth analysis at the outlet level. This provides a comprehensive and real-time view of your key cost and revenue drivers that help you make data-driven decisions to optimize profitability.<br><br>Our solution features an analytics dashboard with insights that help you confidently take action and make necessary changes to streamline operations. You will have remote access to sales trends, direct costs and inventory levels all in one place. You can engineer and optimise menus based on margin analysis.  You can create smarter targets using predictive analytics.  You can monitor performance versus targets at the outlet and brand level.<br><br>Our solutions are built specifically for today’s hospitality market by people who have real-life industry experience, this means our products are built to provide clarity and solve our clients’ challenges simply. Because we understand the needs of our clients, these cloud-based solutions allow remote monitoring of multiple units anytime and anywhere.  And you do not need to be a data geek to get simple but effective insights.",
+        job_check: "yes"
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              }
+            ],
+          },
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              }
+            ],
+          }
+        ],
+        gallery1: require('@/assets/startups/mosaic/gallery1.png'),
+        gallery1Alt: "Mosaic Solutions Menu Engineering",
+        gallery2: require('@/assets/startups/mosaic/gallery2.png'),
+        gallery2Alt: "Mosaic Solutions POS App",
+        gallery3: require('@/assets/startups/mosaic/gallery3.jpeg'),
+        gallery3Alt: "Mosaic Solutions MS Teams Halloween Party",
+        gallery4: require('@/assets/startups/mosaic/gallery4.png'),
+        gallery4Alt: "Mosaic Solutions Zoom Christmas Party",
+        },
+        {
+        name: "QBO Innovation Hub",
+        cover: require('@/assets/startups/'),
+        coverAlt: "cover",
+        icon: require('@/assets/startups/'),
+        iconAlt: "logo",
+        website: "",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "",
+        facebooklink: "",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/'),
+        firstpicAlt: "",
+        aboutus: "",
+        secondpic: require('@/assets/startups/'),
+        secondpicAlt: "",
+        ourproduct: "",
+        job_check: ""
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:"internship"
+              },
+              {
+                jobName: '',
+                jobType: "full-time"
+              }
+            ],
+          },
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:"internship"
+              },
+              {
+                jobName: '',
+                jobType: "part-time"
+              },
+              {
+                jobName: '',
+                jobType: "full-time"
+              },
+              {
+                jobName: '',
+                jobType: "internship"
+              }
+            ],
+          }
+        ],
+        gallery1: require('@/assets/startups/'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/'),
+        gallery4Alt: "",
+        },
+        {
         name: "Edukasyon.ph",
         cover: require('@/assets/edukasyon/template_cover.png'),
         coverAlt: "Edukasyon.ph cover",
@@ -59,6 +328,7 @@ export default {
         secondpic: require('@/assets/edukasyon/secondpic.png'),
         secondpicAlt: "Second Pic",
         ourproduct: "Students use our website to gain access to courses, schools, scholarships, online education, and other resources and opportunities that enable them to find and take the paths best suited to their own interests, skills and priorities.<br><br>We’ve worked with hundreds of partners - schools, corporations and foundations - to enable them to reach and engage with our student community along the journey from education to career.",
+        job_check: ""
         job: [
           {
             jobClass:"Social Development",

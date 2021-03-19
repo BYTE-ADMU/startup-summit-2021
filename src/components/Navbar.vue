@@ -366,7 +366,7 @@ export default {
     padding-top: 30px;
   }
 
-  #tayo-logo {
+  #sus-logo {
     display: none;
   }
 
@@ -390,7 +390,7 @@ export default {
   }
 
   li:first-child {
-    margin: 32px 0;
+    margin: 32px 0 0 0;
   }
 
   .burger-button {

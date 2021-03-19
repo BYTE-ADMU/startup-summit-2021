@@ -9,7 +9,7 @@
         </div>
         </div>
         <div data-aos="fade-left">
-        <img src="../assets/what_is_sus_poster.svg" class="picture" alt="start up summit poster">
+        <img src="../assets/what_is_sus_poster.png" class="picture" alt="start up summit poster">
         </div>
     </div>
 </div>

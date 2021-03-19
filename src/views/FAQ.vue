@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+  <div data-aos="fade-up">
     <div class="page-container">
         <center><div class="first-container">
             <p id="header">Got Questions?</p>
@@ -100,18 +101,39 @@
           </div>
         </center>
     </div>
+    </div>
 </div>
 </template>
 
 <script>
 import PrimaryBtn from '../components/PrimaryBtn.vue'
 import SecondaryBtn from '../components/SecondaryBtn.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
     name: 'FAQ',
     components:{
       PrimaryBtn,
       SecondaryBtn
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     },
     data(){
       return{
@@ -128,8 +150,8 @@ export default {
         genQuestions: [
           {
             question: 'What is Startup Summit?',
-            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>",
-            answer2: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>"
+            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>",
+            answer2: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>"
           },
           {
             question: 'How will I know which speaker/s will be present for what day?',

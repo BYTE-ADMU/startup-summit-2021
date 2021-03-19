@@ -1,6 +1,8 @@
 <template>
+<div class="page">
 <Hero />
 <WhatIsSus />
+<div data-aos="fade-up">
 <EventSchedule @transfer-click="transferClickNum" @transfer-date="transferDate"/>
 
 <!--Cards for First day -->
@@ -641,8 +643,10 @@
   </transition>
 
 </div>
+</div>
 <Opportunities />
 <Partners />
+</div>
 </template>
 
 <script>
@@ -654,10 +658,12 @@ import Card3 from '../components/Card3.vue'
 import TalkModal from '../components/TalkModal.vue'
 import PanelModal from '../components/PanelModal.vue'
 import ExhibitModal from '../components/ExhibitModal.vue'
-import Hero from "../components/Hero.vue"
-import Opportunities from "../components/Opportunities.vue"
-import Partners from "../components/Partners.vue"
-import WhatIsSus from "../components/WhatIsSus.vue"
+import Hero from '../components/Hero.vue'
+import Opportunities from '../components/Opportunities.vue'
+import Partners from '../components/Partners.vue'
+import WhatIsSus from '../components/WhatIsSus.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
   name: 'App',
@@ -1053,7 +1059,25 @@ export default {
     modal_date: function() {
       return this.date.replace(", 2020", "")
     }
-  }
+  },
+  created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
+    }
 }
 </script>
 
@@ -1064,7 +1088,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 }
-
+.page{
+  background-color: #fcfcfc;
+}
 /*Universal styling*/
 *{
   /* background-color: #fcfcfc; */
