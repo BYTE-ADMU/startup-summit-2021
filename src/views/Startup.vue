@@ -201,11 +201,14 @@
                 <div class="icon">
                     <img :alt="startup.iconAlt" :src="startup.icon">
                 </div>
-                <div class="startup-content">
-                    <p class="startup-name">{{startup.name}}</p>
-                    <p class="startup-industry">{{startup.industry}}</p>
-                    <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
-                </div>
+                <router-link :to="{name: 'StartupTemplate', params: {name: name}}">
+                    <div class="startup-content">
+                        <p class="startup-name">{{startup.name}}</p>
+                        <p class="startup-industry">{{startup.industry}}</p>
+                        <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
+                        <!-- <StartupTemplate /> -->
+                    </div>
+                </router-link>
             </div>
             </div>
     </div></center></div>
@@ -217,6 +220,7 @@
 import PrimaryBtn from '../components/PrimaryBtn.vue'
 // Removed for now due to small number of cards, and vue error if not commented out
 // import Filter from '../components/Filter.vue'
+// import StartupTemplate from '../components/StartupTemplate.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -224,6 +228,7 @@ export default {
     name: 'Start-Up',
     components:{
         PrimaryBtn,
+        // StartupTemplate,
         // Removed for now due to small number of cards, and vue error if not commented out
         // Filter
     },
@@ -322,7 +327,7 @@ export default {
     position: relative;
     z-index: 1!important;
     background-color: #C4C4C4;
-    width: 906px;
+    width: 680px;
     height: 510px;
 }
 .circle-design img{

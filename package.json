@@ -10,6 +10,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
+    "firebase-tools": "^9.6.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.4"
   },
