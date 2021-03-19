@@ -54,10 +54,10 @@
     v-bind:time="first_day[4].time" 
     v-bind:panel="first_day[4].panel" 
     v-bind:description="first_day[4].description" 
-    :pic_url1=first_day[4].pic_url1
-    :pic_url2=first_day[4].pic_url2
-    :pic_url3=first_day[4].pic_url3
-    :pic_url4=first_day[4].pic_url4
+    :pic_url1=first_day[0].pic_url
+    :pic_url2=first_day[1].pic_url
+    :pic_url3=first_day[2].pic_url
+    :pic_url4=first_day[3].pic_url
     />
     <Card3 class="card6"
     @toggle-modal6="showTalkModal"
@@ -245,10 +245,10 @@
     v-bind:time="second_day[4].time" 
     v-bind:panel="second_day[4].panel" 
     v-bind:description="second_day[4].description" 
-    :pic_url1=second_day[4].pic_url1
-    :pic_url2=second_day[4].pic_url2
-    :pic_url3=second_day[4].pic_url3
-    :pic_url4=second_day[4].pic_url4
+    :pic_url1=second_day[0].pic_url
+    :pic_url2=second_day[1].pic_url
+    :pic_url3=second_day[2].pic_url
+    :pic_url4=second_day[3].pic_url
     />
     <Card3 class="card6"
     @toggle-modal6="showTalkModal"
@@ -436,10 +436,10 @@
     v-bind:time="third_day[4].time" 
     v-bind:panel="third_day[4].panel" 
     v-bind:description="third_day[4].description" 
-    :pic_url1=third_day[4].pic_url1
-    :pic_url2=third_day[4].pic_url2
-    :pic_url3=third_day[4].pic_url3
-    :pic_url4=third_day[4].pic_url4
+    :pic_url1=third_day[0].pic_url
+    :pic_url2=third_day[1].pic_url
+    :pic_url3=third_day[2].pic_url
+    :pic_url4=third_day[3].pic_url
     />
     <Card3 class="card6"
     @toggle-modal6="showTalkModal"
@@ -614,7 +614,7 @@ export default {
     return {
       choice: 1,
       show_talk_modal: 0,
-      date: "April 16, 2020",
+      date: "April 16, 2021",
 
       //All card info for first day
       first_day: [
@@ -622,63 +622,59 @@ export default {
           class: "card1",
           time: "1:00",
           talk: "1 Name of talk",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Gio Divino",
-          pic_url: require('@/assets/kumu-logo.png'),
+          description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Serban Mogos",
+          pic_url: require('@/assets/speakers/SerbanMogos.jpeg'),
           modal: {
             time: "1-2pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Co-founder and COO of Eyeware Tech",
+            description: "Serban is the Co-founder & COO of Eyeware, a Swiss startup that develops eye tracking solutions for consumer applications. With a background in computer science, his startup experience involves strategy, fundraising, and product management. Serban also founded two NGOs in Romania for promoting entrepreneurship education and obtained a PhD in Strategy & Entrepreneurship from Carnegie Mellon University."
           }
         },
         { 
           class: "card2",
           time: "2:00",
-          talk: "1 Name of talk",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Franz Taborlupa",
-          pic_url: require('@/assets/kumu-logo.png'),
+          talk: "Bots and Brains",
+          description: "No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          speaker: "Gian dela Rama",
+          pic_url: require('@/assets/speakers/GiandelaRama.jpeg'),
           modal: {
             time: "2-4pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Co-founder and CEO of Aiah.Ai",
+            description: "Gian dela Rama is a serial entrepreneur, co-founder, and CEO of Aiah.Ai - making automation accessible for companies large and small using fit for purpose bots that can be deployed in minutes.\n\nGian is also an active contributor in the Philippine startup community, regularly speaking on entrepreneurship, automation and AI as well as mentoring current and aspiring startup founders.\n\nBefore Aiah.Ai, Gian started several companies in the systems integration, digital media delivery and software development industries and worked in enterprise IT for global giants such as Hewlett-Packard and Unilever."
           }
         },
         { 
           class: "card3",
           time: "3:00",
-          talk: "1 Name of talk",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Clarz Castillo",
-          pic_url: require('@/assets/kumu-logo.png'),
+          talk: "New Knowledge about the Brain and how it is Shaping Tech",
+          description: "New knowledge about the nature of the brain in the last two decades has turned many things on its head. This talk attempts to highlight how this is impacting the tech world. In particular, it speaks about the journey of SynPhNe, the world’s first wearable technology that re-integrates brain and body after brain damage, childhood disability and the challenges of aging.",
+          speaker: "Dr. Subhasis Banerji",
+          pic_url: require('@/assets/speakers/SubhasisBanerji.png'),
           modal: {
             time: "5-6pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Founder and Managing Director of SynPhNe",
+            description: "Dr. Subhasis Banerji is the Inventor and Founder of SynPhNe Pte. Ltd. in Singapore.  SynPhNe is the world's first wearable, connected, home-use health solution that trains brain and muscle in ONE system. It has helped those disabled by stroke, brain injury, childhood disorders and aging recover cognitive function and use of paralyzed limbs. With three decades of experience in creating engineering and software solutions, Dr. Banerji specializes in technologies for physio-neuro rehabilitation, digital neurological therapeutics, fitness, and health enhancement."
           }
         },
         { 
           class: "card4",
           time: "4:00",
           talk: "1 Name of talk",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Another person",
-          pic_url: require('@/assets/kumu-logo.png'),
+          description: "Rama earned Master of Science from Management Information Technology of Strayer University, Washington DC in 2007 before returning back to Jakarta in the same year. He then worked as IT auditor and advisor in various companies such as PWC (Pricewaterhouse Coopers), Ernst & Young, and PT Geoteq Integrasi Semesta.",
+          speaker: "Rama Raditya",
+          pic_url: require('@/assets/speakers/RamaRaditya.jpg'),
           modal: {
             time: "5-6pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Founder and CEO of Qlue",
+            description: "Raditya Maulana Rusdi, also known as Rama Raditya, is the Founder and CEO of Qlue, a Smart City Technology company which has a mission to accelerate positive changes worldwide. He initiates an invention connecting the Government and Citizens through technology innovation in smartphones.Rama earned Master of Science from Management Information Technology of Strayer University, Washington DC in 2007 before returning back to Jakarta in the same year. He then worked as IT auditor and advisor in various companies such as PWC (Pricewaterhouse Coopers), Ernst & Young, and PT Geoteq Integrasi Semesta.\n\nAfter staying in Jakarta for five years, he realized that some issues such as illegal parking, sanitation, violation, and others are never taken care of seriously. In 2014 he then came up with the idea of having a tool for the government to identify problems by empowering citizens to report issues. This idea led him to found Qlue with his Co-Founder, Andre Hutagalung. Both of them then started their mission by streamlining the problem handling process for government and private sectors, started from their hometown, Jakarta.\n\nThrough his innovation, Qlue managed to achieve National as well as International Acknowledgement and Awards including Google Playstore Nominated as Best Application in Indonesia, Grand Finalist Startup World Cup in South East Asia, Google Launchpad Accelerator Program, Sustainable Development Award 2017,  Best Mobility Project by The  World’s Smart Cities Organizations (WSCO), The Best m-Government Service Award by World Government Summit 2019. For Rama, those acknowledge become a motivation for him to develop more comprehensive innovation through AI, IoT, and Smart City Solutions."
           }
         },
         {
           class: "card5",
           time: "5:00",
           panel: "1 Name of panel",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          pic_url1: require('@/assets/kumu-logo.png'),
-          pic_url2: require('@/assets/kumu-logo.png'),
-          pic_url3: require('@/assets/kumu-logo.png'),
-          pic_url4: require('@/assets/kumu-logo.png'),
+          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of ",
           modal: {
             time: "7-8pm",
             description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
@@ -688,7 +684,7 @@ export default {
           class: "card6",
           time: "6:00",
           exhibit: "Startup Exhibitors' Showcase",
-          description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!",
+          description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
           pic_url1: require("@/assets/kumu-logo.png"),
           pic_url2: require("@/assets/kumu-logo.png"),
           pic_url3: require("@/assets/kumu-logo.png"),
@@ -731,14 +727,14 @@ export default {
         {
           class: "card1",
           time: "5:00",
-          talk: "2 Name of talk",
+          talk: "Inclusive Innovation: Upskilling Women for the Future of Work",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "M Lee",
+          speaker: "Gina Romero",
           pic_url: require('@/assets/kumu-logo.png'),
           modal: {
             time: "1-2pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Co-founder and CEO of Connected Women",
+            description: "A finalist awardee of the prestigious “Asia CEO Awards” in the Shero of the Year category, Gina is an unconventional entrepreneur, community builder, and technology advocate. As part of her mission to better equip women entrepreneurs and professionals with the technology skills to scale their businesses and careers, she launched Connected Women, a social impact tech startup that matches talented Filipino women with meaningful remote work opportunities."
           }
         },
         {
@@ -746,25 +742,25 @@ export default {
           time: "6:00",
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Ceej Atienza",
-          pic_url: require('@/assets/kumu-logo.png'),
+          speaker: "Teresa Condicion",
+          pic_url: require('@/assets/speakers/TeresaCondicion.jpg'),
           modal: {
             time: "3-4pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Co-founder and CEO for Shoplinks Singapore",
+            description: "Teresa Condicion spent the last 20 years doing what she loves – building data capabilities and starting businesses and organisations across Asia, from her long tenure at P&G as head of ASEAN consumer and retail analytics to founding and building two data-driven tech startups. Teresa strongly advocates for bringing a broader economic impact towards even the smallest retailers out there, to have the capabilities of data and technology to compete in an increasingly digitised world."
           }
         },
         {
           class: "card3",
           time: "7:00",
-          talk: "2 Name of talk",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Ces Ong",
-          pic_url: require('@/assets/kumu-logo.png'),
+          talk: "Tech for Social Impact",
+          description: "How Notion leverages its people, product, and community for good. How Notion leverages its people, product, and community for good. How Notion leverages its people, product, and community for good. 2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Andy Rapista",
+          pic_url: require('@/assets/speakers/AndyRapista.jpg'),
           modal: {
             time: "5-6pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Program Manager of Notion",
+            description: "Andy is currently a Program Manager at Notion building Notion for Good - the corporate social justice program that is dedicated to inclusion, diversity, equity, and anti-racism (IDEA) and sustainability. Andy believes that we can create a more equitable world if we dedicate our time, energy, creativity, and talent towards eliminating barriers for people to thrive. She'd like to see a world where everyone is able to live with dignity and reach their fullest potential. Her hope is that her work is the highest expression of that belief."
           }
         },
         {
@@ -772,12 +768,12 @@ export default {
           time: "7:00",
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Another person",
-          pic_url: require('@/assets/kumu-logo.png'),
+          speaker: "Dr. Chari",
+          pic_url: require('@/assets/speakers/DrChari.png'),
           modal: {
             time: "6-7pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Co-founder and CRO of Senti AI",
+            description: "Charibeth Cheng is Senti AI’s co-founder and Head of Research and an Associate Dean and Assistant Professor at De La Salle University, where she has received multiple awards as an outstanding teacher. Additionally, Chari is one of the pioneer researchers of the university’s Center for Language Technologies (DLSU-CELT). Having specialized in the area of Natural Language Processing and Machine Learning, she works with her students to develop computation models, tools, and electronic resources that help process, understand, and generate text written in local languages. She also received her Master’s Degree and Ph.D. in Computer Science and published numerous papers on AI, NLP, information systems, and related interdisciplinary venues. "
           }
         },
         {
@@ -785,10 +781,6 @@ export default {
           time: "8:00",
           panel: "2 Name of panel",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          pic_url1: require('@/assets/kumu-logo.png'),
-          pic_url2: require('@/assets/kumu-logo.png'),
-          pic_url3: require('@/assets/kumu-logo.png'),
-          pic_url4: require('@/assets/kumu-logo.png'),
           modal: {
             time: "7-8pm",
             description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
@@ -843,25 +835,25 @@ export default {
           time: "9:00",
           talk: "3 Name of talk",
           description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Bill Gates",
-          pic_url: require('@/assets/kumu-logo.png'),
+          speaker: "Rene “Butch” Meily",
+          pic_url: require('@/assets/speakers/ReneMeily.jpg'),
           modal: {
             time: "1-2pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "President of IdeaSpace Foundation, QBO Innovation Hub, and Philippine Disaster Resilience Foundation",
+            description: "Butch has made a massive impact on the local startup community through IdeaSpace Foundation, a technology accelerator for early-stage startups, and QBO Innovation Hub, a public-private partnership launched to mentor startups. Aside from carrying a presidential role in both of these organizations, Butch is also the President of the Philippine Disaster Resilience Foundation, a private sector disaster management organization that is dedicated to the sustainable development and general welfare of the Filipino people."
           }
         },
         {
           class: "card2",
           time: "10:00",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Elon Musk",
+          talk: "Building a Fintech Company that is both Filipino and Global",
+          description: "Mikko Perez, Founder & CEO of Ayannah will tell us about Ayannah's journey.  Why he started it and the roller coaster ride of starting a tech company in the Philippines and how Ayannah has grown from being a Filipino company to a global fintech company",
+          speaker: "Miguel (Mikko) Perez",
           pic_url: require('@/assets/kumu-logo.png'),
           modal: {
             time: "3-4pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Founder and CEO of Ayannah",
+            description: "Mikko is the Founder & CEO of Ayannah, an award-winning fintech start up providing affordable and accessible digital financial services to the world's emerging middle class. Prior to this, Mikko was part of the founding team of Chikka, a mobile instant messaging start up where he helped in expanding to China, India, Japan and the US prior to Chikka's acquisition by PLDT (NYSE: PHI).  He has also worked as a private equity investment manager in Singapore and an investment banker at JP Morgan in San Francisco.\n\nHaving begun his career as a community organizer helping build social enterprises in rural Philippines, Mikko remains actively involved in initiatives that support social entrepreneurship and sustainable development. Mikko holds a BSc in Management (with Honors) and a BA in Development Studies (with Honors & Award for Excellence) from the Ateneo de Manila University, and an MBA from the Harvard Business School."
           }
         },
         {
@@ -869,25 +861,25 @@ export default {
           time: "11:00",
           talk: "3 Name of talk",
           description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Mark Zuckerberg",
-          pic_url: require('@/assets/kumu-logo.png'),
+          speaker: "Ruel Amparo",
+          pic_url: require('@/assets/speakers/RuelAmparo.jpg'),
           modal: {
             time: "5-6pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Founder and CEO of Cropital",
+            description: "Ruel Amparo is the Chief Executive Officer and Founder of Cropital, the largest peer to peer lending platform for smallholder farmers in the Philippines. He is an industrial engineer who previously worked for different companies in the oil and gas industry and an active volunteer who has led several socio civic project initiatives in the past. Recognized for student leadership, data analytics, and community development, Ruel also graduated Cum Laude and was awarded with Garrick Yao Student Excellence Award for Service."
           }
         },
         {
           class: "card4",
           time: "11:00",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Another person",
-          pic_url: require('@/assets/kumu-logo.png'),
+          talk: "Systems Change in Diversity and Inclusion",
+          description: "Starting a business doesn’t just require wanting to help people and working in a silo. Solving a problem involves understanding the various underlying systems that surround the issue. ",
+          speaker: "Ryan Gersava",
+          pic_url: require('@/assets/speakers/RyanGersava.jpeg'),
           modal: {
             time: "5-6pm",
-            creds: "Credentials",
-            description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            creds: "Founder and President of Virtualahan",
+            description: "Ryan is the Founder and President of Virtualahan, a social enterprise that is breaking down employment barriers for Persons with Disabilities and other disadvantaged groups using the equalizing power of technology. The company was founded after he experienced employment discrimination because of his chronic disease. Ryan is also an Ashoka Fellow and the first Filipino to ever receive the Inspired Leadership Awards. He is an emerging leader in the fields of innovative education, diversity and inclusion, impact sourcing, and the future of work. Coming from a humble background in Sultan Kudarat province, he is committed to creating a change through Virtualahan to get people out of poverty using systemic empathy and technology."
           }
         },
         {

@@ -84,11 +84,12 @@ export default {
     padding: 0;
     background: rgba(255,235,225,1);
     z-index: 1;
+    height: 400px;
 }
 .card .time {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 33px;
+    margin: auto 0 auto 33px;
     padding: 0;
 }
 .card .talk_details {
@@ -100,12 +101,13 @@ export default {
 .card .talk_details .speaker {
     display: flex;
     flex-direction: row;
-    margin: 0 25px 23px 0 0;
+    margin: auto 25px auto 0;
     padding: 0;
 }
 .card .talk_details .speaker .speaker_details {
     display: flex;
     flex-direction: row;
+    margin: auto 20px auto 0;
 }
 
 /*general styling*/
@@ -133,7 +135,7 @@ export default {
     font-family: "inter";
     line-height: 26px;
     font-size: 16px;
-    margin: 0 0 19px 0;
+    margin: auto 0 19px 0;
 } 
 .picture1, .picture2, .picture3, .picture4, .picture5 {
     overflow: hidden;
@@ -169,6 +171,7 @@ export default {
         display: flex;
         flex-direction: column;
         width: 100vw;
+        height: auto;
     }
     .card .time {
         margin: 30.64px 25px 16px 24px;
@@ -188,7 +191,7 @@ export default {
     .card .time p {
         margin: 0 219px 0 0;
     }
-    .card .talk_details .speaker_details {
+    .card .talk_details .speaker .speaker_details {
         margin: 0 0 16px 0;
     }
     .card .talk_details .talk_description {

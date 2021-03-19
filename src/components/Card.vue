@@ -89,6 +89,7 @@ export default {
     padding: 0;
     background-color: #f8f8f8;
     z-index: 1;
+    height: 400px;
 }
 .card .time {
     display: flex;
@@ -105,7 +106,7 @@ export default {
 .card .talk_details .speaker {
     display: flex;
     flex-direction: row;
-    margin: 0 24px 23px 0 0;
+    margin: auto 24px 10px 0;
     padding: 0;
 }
 .card .talk_details .speaker .speaker_details {
@@ -118,13 +119,13 @@ export default {
 .time h1{
     font-family: "objectivity";
     color: rgba(244, 110, 38, 1);
-    margin: 105px auto 0px auto;
+    margin: auto auto 0px auto;
 }
 .time p {
     font-family: "inter_bold";
     font-size: 14px;
     font-weight: bold;
-    margin: 0 auto 122px auto;
+    margin: 0 auto auto auto;
 }
 
 /*talk details*/
@@ -138,13 +139,17 @@ export default {
     font-family: "inter";
     line-height: 26px;
     font-size: 16px;
-    margin: 0 0 19px 0;
+    margin: auto 0 15px 0;
+    white-space: pre-line;
 } 
 .talk_details .speaker .picture {
     width: 48px;
     height: 48px;
     border: solid;
-    border-radius: 25px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
     margin: 0 16px 0 0;
     overflow: hidden;
 }
@@ -170,6 +175,7 @@ export default {
         display: flex;
         flex-direction: column;
         width: 100vw;
+        height: auto;
     }
     .card .time {
         margin: 30.64px 25px 16px 24px;

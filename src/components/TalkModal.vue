@@ -18,7 +18,7 @@
                 <div class="icon4"></div>
             </div>
             <p class="description">{{ description }}</p>
-            <PrimaryBtn class="watch_now">Watch Now<Chevron/></PrimaryBtn>
+            <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
         </div>
     </div>
 </template>
@@ -94,7 +94,7 @@ export default {
 }
 .card2 .container1 .container2{
     position: relative;
-    top: -13.889vw;
+    top: -11.889vw;
     left: -100px;
     border: 5px solid;
     border-color: #F46E26;
@@ -105,9 +105,9 @@ export default {
 }
 .card2 .container1 .container2 .picture {
     position: absolute;
-    left: 10.417vw;
-    top: 13.194vw;
-    width: 14.583vw;
+    left: 43.2px;
+    top: 9.5vw;
+    width: 25vw;
 }
 
 /*Talk details*/
@@ -175,6 +175,7 @@ export default {
     font-size: 16px;
     line-height: 26px;
     margin: 0 0 40px 0;
+    white-space: pre-line;
 }
 .talk_details .watch_now {
     width: 162px;
@@ -200,8 +201,13 @@ export default {
         width: 864px;
     }
     .card2 .container1 .container2 {
+        top: -171.3456px;
         width: 400px;
         height: 400px;
+    }
+    .card2 .container1 .container2 .picture {
+        width: 360px;
+        top: 136.8px;
     }
 }
 

@@ -28,12 +28,18 @@
                 <div class="col">
                     <p class="speaker1">{{ speaker_1 }}</p>
                     <p class="speaker_creds1">{{ creds1 }}</p>
+                </div>
+                <div class="col">
                     <p class="speaker2">{{ speaker_2 }}</p>
                     <p class="speaker_creds2">{{ creds2 }}</p>
                 </div>
+            </div>
+            <div class="row2">    
                 <div class="col">
                     <p class="speaker3">{{ speaker_3 }}</p>
                     <p class="speaker_creds3">{{ creds3 }}</p>
+                </div>
+                <div class="col">
                     <p class="speaker4">{{ speaker_4 }}</p>
                     <p class="speaker_creds4">{{ creds4 }}</p>
                 </div>
@@ -104,7 +110,6 @@ export default {
     border: 0.5px solid;
     border-radius: 3px;
     width: 864px;
-    max-height: 650px;
     overflow: hidden;
 }
 .card3 .talk_details {
@@ -112,12 +117,13 @@ export default {
     flex-direction: column;
     margin: 30px 64px 60px 0;
 }
-.card3 .talk_details .row1, .row2 {
+.talk_details .row1, .talk_details .row2{
     display: flex;
     flex-direction: row;
     margin-left: 0;
 }
 .col {
+    width: 200px;
     display: flex;
     flex-direction: column;
 }
@@ -142,9 +148,9 @@ export default {
 }
 .card3 .speaker_img1 .container .picture {
     position: absolute;
-    left: 50px;
-    top: 40px;
-    width: 144px;
+    left: -50px;
+    top: -10px;
+    width: 340px;
     z-index: inherit;
 }
 .card3 .speaker_img2 {
@@ -164,8 +170,9 @@ export default {
 }
 .card3 .speaker_img2 .container .picture {
     position: absolute;
-    left: 29px;
-    width: 144px;
+    left: -80px;
+    top: -10px;
+    width: 360px;
     z-index: inherit;
 }
 .card3 .speaker_img3 {
@@ -185,12 +192,14 @@ export default {
 }
 .card3 .speaker_img3 .container .picture {
     position: absolute;
-    left: 29px;
-    width: 144px;
+    left: -75px;
+    top: -10px;
+    width: 360px;
     z-index: inherit;
 }
 .card3 .speaker_img4 {
     z-index: 2;
+    position: absolute;
 }
 .card3 .speaker_img4 .container {
     position: relative;
@@ -206,8 +215,8 @@ export default {
 }
 .card3 .speaker_img4 .container .picture {
     position: absolute;
-    left: 29px;
-    width: 144px;
+    left: -5px;
+    width: 215px;
     z-index: inherit;
 }
 

@@ -37,7 +37,7 @@ export default {
             click: 1,
             day: {
                 daynum: "Day 1",
-                date: "April 16, 2020"
+                date: "April 16, 2021"
             }
         }
     },
@@ -53,7 +53,7 @@ export default {
             this.$emit("transfer-click", choice);
             if (this.click === 1) {
                 this.day.daynum = "Day 1";
-                this.day.date = "April 16, 2020";
+                this.day.date = "April 16, 2021";
 
                 //unclick styling for unclicked buttons
                 first_unclicked[0].style.display = "none";
@@ -67,7 +67,7 @@ export default {
             }
             else if (this.click === 2) {
                 this.day.daynum = "Day 2";
-                this.day.date = "April 17, 2020";
+                this.day.date = "April 17, 2021";
 
                 //unclick styling for unclicked buttons
                 second_unclicked[0].style.display = "none";
@@ -81,7 +81,7 @@ export default {
             }
             else if (this.click === 3) {
                 this.day.daynum = "Day 3";
-                this.day.date = "April 18, 2020";
+                this.day.date = "April 18, 2021";
 
                 //unclick styling for unclicked buttons
                 third_unclicked[0].style.display = "none";
@@ -146,7 +146,7 @@ export default {
     font-size: 28px;
     margin-bottom: 24px;
 }
-.event_schedule .day_buttons .container1, .container2, .container3 {
+.container1, .container2, .container3{
     padding: 0;
     margin: 0;
 }
@@ -156,7 +156,7 @@ export default {
     font-weight: bold;
     border-radius: 4px;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     width: 96px;
     height: 42px;
 }
@@ -167,7 +167,7 @@ export default {
     font-weight: bold;
     border-radius: 4px;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     width: 96px;
     height: 42px;
 }
@@ -177,7 +177,7 @@ export default {
     font-size: 16px;
     font-weight: bold;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     border-radius: 4px;
     width: 96px;
     height: 42px;
@@ -187,7 +187,7 @@ export default {
     font-size: 16px;
     font-weight: bold;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     border-radius: 4px;
     width: 96px;
     height: 42px;
