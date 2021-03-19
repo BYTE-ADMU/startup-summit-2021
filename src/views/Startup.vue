@@ -1,7 +1,7 @@
 <template>
 <div id="app">
     <div class="page-container">
-        <div data-aos="fade-right">
+        <div data-aos="fade-up">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
                 <center><div class="vid"><video controls><source src="../assets/videos/What_Are_Startups_[FINAL].mp4" type="video/mp4"></video></div></center>
@@ -10,7 +10,7 @@
             </div>
             </div>
         </center></div>
-        <div data-aos="fade-right">
+        <div data-aos="fade-up">
         <center><div class="second-container">
             <div class="text-wrapper">
                 <p id="header">Exhibitorsʼ showcase</p>
@@ -355,7 +355,7 @@ height: 472.56px;
 .search-wrapper{
     position: relative;
     width: 624px;
-    /* height: 56px; */
+    height: 56px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     background-color: #f8f8f8;
     display: flex;

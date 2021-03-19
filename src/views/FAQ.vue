@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+  <div data-aos="fade-up">
     <div class="page-container">
         <center><div class="first-container">
             <p id="header">Got Questions?</p>
@@ -100,18 +101,39 @@
           </div>
         </center>
     </div>
+    </div>
 </div>
 </template>
 
 <script>
 import PrimaryBtn from '../components/PrimaryBtn.vue'
 import SecondaryBtn from '../components/SecondaryBtn.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
     name: 'FAQ',
     components:{
       PrimaryBtn,
       SecondaryBtn
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     },
     data(){
       return{
