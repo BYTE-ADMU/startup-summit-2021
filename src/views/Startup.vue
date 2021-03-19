@@ -213,8 +213,8 @@
 </template>
 
 <script>
-import PrimaryBtn from './PrimaryBtn.vue'
-import Filter from '@/Filter.vue'
+import PrimaryBtn from '../components/PrimaryBtn.vue'
+import Filter from '../components/Filter.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
