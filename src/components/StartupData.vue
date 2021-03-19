@@ -12,6 +12,7 @@
   :secondpic=startup.secondpic
   :aboutus=startup.aboutus
   :ourproduct=startup.ourproduct
+  :job_check=startup.job_check
   :job=startup.job
   :gallery1=startup.gallery1
   :gallery2=startup.gallery2
@@ -39,10 +40,10 @@ export default {
     return{
       startupList:[
         {
-        name: "StartUp Village",
-        cover: require('@/assets/'),
+        name: "",
+        cover: require('@/assets/startups/'),
         coverAlt: "cover",
-        icon: require('@/assets/'),
+        icon: require('@/assets/startups/'),
         iconAlt: "logo",
         website: "",
         linkedin: "",
@@ -53,12 +54,13 @@ export default {
         iglink: "",
         twitter: "",
         twitterlink: "",
-        firstpic: require('@/assets/'),
+        firstpic: require('@/assets/startups/'),
         firstpicAlt: "",
         aboutus: "",
-        secondpic: require('@/assets'),
+        secondpic: require('@/assets/startups/'),
         secondpicAlt: "",
         ourproduct: "",
+        job_check:
         job: [
           {
             jobClass:"",
@@ -95,13 +97,80 @@ export default {
             ],
           }
         ],
-        gallery1: require('@/assets/'),
+        gallery1: require('@/assets/startups/'),
         gallery1Alt: "",
-        gallery2: require('@/assets/'),
+        gallery2: require('@/assets/startups/'),
         gallery2Alt: "",
-        gallery3: require('@/assets/'),
+        gallery3: require('@/assets/startups/'),
         gallery3Alt: "",
-        gallery4: require('@/assets/'),
+        gallery4: require('@/assets/startups/'),
+        gallery4Alt: "",
+        },
+        {
+        name: "StartUp Village",
+        cover: require('@/assets/startups/startupvillage/cover.png'),
+        coverAlt: "StartUp Villag cover",
+        icon: rrequire('@/assets/startups/startupvillage/icon.png'),
+        iconAlt: "StartUp Village logo",
+        website: "http://startupvillage.ph/",
+        linkedin: "startupvillageph",
+        linkedinlink: "https://www.linkedin.com/in/startupvillageph/",
+        facebook: "startupvillageph",
+        facebooklink: "https://www.facebook.com/startupvillageph",
+        ig: "startupvillageph",
+        iglink: "https://www.instagram.com/startupvillageph/",
+        twitter: "suv_ph",
+        twitterlink: "https://twitter.com/suv_ph",
+        firstpic: require('@/assets/startups/startupvillage/firstpic'),
+        firstpicAlt: "",
+        aboutus: "StartUp Village is a one-stop startup enabler that enables startups to bring their unique ideas to reality. Its desire is to bring a Filipino startup to the global stage. The goal of StartUp Village is to help start-ups build disruptive technology that displaces an established technology and shakes up the industry or introduces a groundbreaking product that creates a completely new industry.",
+        secondpic: require('@/assets/startups/startupvillage/secondpic'),
+        secondpicAlt: "",
+        ourproduct: "StartUp Village provides startups with all the support it needs to grow and succeed. We execute different programs including training and mentoring startups as they traverse this entrepreneurial path. We also provide other support activities including mentoring, shared services (HR, Accounting/Bookkeeping, Legal), linkage to customers and investors, actual working space, and more.",
+        job_check: ""
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              }
+            ],
+          },
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              },
+              {
+                jobName: '',
+                jobType: ""
+              }
+            ],
+          }
+        ],
+        gallery1: require('@/assets/startups/startupvillage/gallery1'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/startupvillage/gallery2'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/startupvillage/gallery3'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/startupvillage/gallery4'),
         gallery4Alt: "",
         },
         {
@@ -125,6 +194,7 @@ export default {
         secondpic: require('@/assets/edukasyon/secondpic.png'),
         secondpicAlt: "Second Pic",
         ourproduct: "Students use our website to gain access to courses, schools, scholarships, online education, and other resources and opportunities that enable them to find and take the paths best suited to their own interests, skills and priorities.<br><br>We’ve worked with hundreds of partners - schools, corporations and foundations - to enable them to reach and engage with our student community along the journey from education to career.",
+        job_check: ""
         job: [
           {
             jobClass:"Social Development",
