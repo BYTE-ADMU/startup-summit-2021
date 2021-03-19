@@ -1,11 +1,14 @@
 <template>
 <div id="app">
     <div class="about-page">
+        <div data-aos="fade-up">
         <div class="vid_container">
             <video controls width="960px" height="536px" class="about_video">
                 <source src="../assets/videos/about_sus.mp4" type="video/mp4">
             </video>
         </div>
+        </div>
+        <div data-aos="fade-right">
         <div class="about_startup-summit">
             <div class="design"></div>
             <div class="text">
@@ -19,6 +22,8 @@ our innovative partners.</p>
                 <p>In a time of shifting paradigms, Startup Summit invites everyone to take part in building a brighter and bolder tomorrow by stepping up for the future. The event challenges participants to seek opportunities amidst adversity and gear up for a future that reflects the positive change we all vie to be a part of.</p>
             </div>
         </div>
+        <div>
+        <div data-aos="fade-left">
         <div class="about_byte">
             <div class="text">
                 <h1>About BYTE: Building Young Tech Entrepreneurs</h1>
@@ -28,13 +33,36 @@ our innovative partners.</p>
             </div>
             <img src="../assets/about_picture.png" class=byte_picture img draggable="false">
         </div>
+        </div>
     </div>
+</div>
+</div>
 </div>
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
-    name: "AboutPage"
+    name: "AboutPage",
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
+    }
 }
 </script>
 
