@@ -124,8 +124,9 @@ h1 {
     align-self: center;
     border-color: black;
     border-style: solid;
-    width: 66.667vw;
-    min-height: 70%;
+    width: 680px;
+    /* min-height: 70%; */
+    height: 510px;
     margin: 0 auto 0 auto;
 }
 
@@ -218,11 +219,11 @@ h1 {
         padding: 0;
     }
     /*Video element*/
-    .about_video {
+    /* .about_video {
         z-index: 5;
         width: 90vw;
         height: 50vw;
-    }
+    } */
     
     /*About start up summit portion*/
     /*hard coded positioning of the design element*/
@@ -264,6 +265,14 @@ h1 {
     .about_byte .text {
         margin: 90px 0 0 22px;
         width: 85vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .about_video {
+        z-index: 5;
+        width: 90vw;
+        height: 50vw;
     }
 }
 </style>
