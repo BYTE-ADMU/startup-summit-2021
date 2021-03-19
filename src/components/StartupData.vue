@@ -67,43 +67,18 @@ export default {
             jobPosition:[
               {
                 jobName:"",
-                jobType:"internship"
-              },
-              {
-                jobName: '',
-                jobType: "full-time"
+                jobType:""
               }
-            ],
-          },
-          {
-            jobClass:"",
-            jobPosition:[
-              {
-                jobName:"",
-                jobType:"internship"
-              },
-              {
-                jobName: '',
-                jobType: "part-time"
-              },
-              {
-                jobName: '',
-                jobType: "full-time"
-              },
-              {
-                jobName: '',
-                jobType: "internship"
-              }
-            ],
+            ]
           }
         ],
-        gallery1: require('@/assets/startups/'),
+        gallery1: require('@/assets/startups/startAPPPP/gallery1'),
         gallery1Alt: "",
-        gallery2: require('@/assets/startups/'),
+        gallery2: require('@/assets/startups/startAPPPP/gallery2'),
         gallery2Alt: "",
-        gallery3: require('@/assets/startups/'),
+        gallery3: require('@/assets/startups/startAPPPP/gallery3'),
         gallery3Alt: "",
-        gallery4: require('@/assets/startups/'),
+        gallery4: require('@/assets/startups/startAPPPP/gallery4'),
         gallery4Alt: "",
         },
         {
@@ -135,33 +110,8 @@ export default {
               {
                 jobName:"",
                 jobType:""
-              },
-              {
-                jobName: '',
-                jobType: ""
               }
-            ],
-          },
-          {
-            jobClass:"",
-            jobPosition:[
-              {
-                jobName:"",
-                jobType:""
-              },
-              {
-                jobName: '',
-                jobType: ""
-              },
-              {
-                jobName: '',
-                jobType: ""
-              },
-              {
-                jobName: '',
-                jobType: ""
-              }
-            ],
+            ]
           }
         ],
         gallery1: require('@/assets/startups/startupvillage/gallery1'),
@@ -202,33 +152,8 @@ export default {
               {
                 jobName:"",
                 jobType:""
-              },
-              {
-                jobName: '',
-                jobType: ""
               }
-            ],
-          },
-          {
-            jobClass:"",
-            jobPosition:[
-              {
-                jobName:"",
-                jobType:""
-              },
-              {
-                jobName: '',
-                jobType: ""
-              },
-              {
-                jobName: '',
-                jobType: ""
-              },
-              {
-                jobName: '',
-                jobType: ""
-              }
-            ],
+            ]
           }
         ],
         gallery1: require('@/assets/startups/mosaic/gallery1.png'),
@@ -242,9 +167,93 @@ export default {
         },
         {
         name: "QBO Innovation Hub",
-        cover: require('@/assets/startups/'),
+        cover: require('@/assets/startups/qbo/cover.png'),
+        coverAlt: "QBO Innovation Hub cover",
+        icon: require('@/assets/startups/qbo/icon.png'),
+        iconAlt: "QBO Innovation Hub logo",
+        website: "https://www.qbo.com.ph/",
+        linkedin: "qbophilippines",
+        linkedinlink: "https://www.linkedin.com/company/qbophilippines/",
+        facebook: "QBOphilippines",
+        facebooklink: "https://www.facebook.com/QBOphilippines",
+        ig: "qbophilippines",
+        iglink: "https://www.instagram.com/qbophilippines/",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/qbo/'),
+        firstpicAlt: "",
+        aboutus: "QBO (‘ku-bo’) is an innovation hub, or a platform for the startup community to collaborate, develop talent, and grow. We provide startups with support and resources through events and capacity building programs as well as focused interventions designed to improve access to markets, knowledge, capital, and talent.  We are the country’s first public-private initiative for startups, created through a partnership  between IdeaSpace, J.P. Morgan, DOST, and DTI. Spurred on by the vision of Filipinos startups changing the world, our mission is to create a globally competitive startup ecosystem in the Philippines.",
+        secondpic: require('@/assets/startups/qbo/'),
+        secondpicAlt: "",
+        ourproduct: "",
+        job_check: "yes"
+        job: [
+          {
+            jobClass:"Programs",
+            jobPosition:[
+              {
+                jobName:"Programs Intern",
+                jobType:"internship"
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/qbo/'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/qbo/'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/qbo/'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/qbo/'),
+        gallery4Alt: "",
+        },
+        {
+        name: "Technology Application and Promotion Institute",
+        cover: require('@/assets/startups/technoapp/'),
+        coverAlt: "Technology Application and Promotion Institute cover",
+        icon: require('@/assets/startups/technoapp/logo.png'),
+        iconAlt: "Technology Application and Promotion Institute logo",
+        website: "http://www.tapi.dost.gov.ph/",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "DOST.TAPI",
+        facebooklink: "https://www.facebook.com/DOST.TAPI",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/technoapp/firstpic.png'),
+        firstpicAlt: "About TAPI",
+        aboutus: "The Technology Application and Promotion Institute (TAPI) created by virtue of Executive Order No. 128 on 30 January 1987, is one of DOST's service agencies whose primary responsibility is to promote the commercialization of technologies and market the services of other operating units of the Department.<br><br>On 28 April 1992, TAPI's function was expanded by virtue of RA 7459 otherwise known as the 'Inventors and Invention Incentives Act of the Philippines'. Among others, TAPI administers the Invention Development Assistance Fund for the initial experiments and prototype development and other invention-development related activities.",
+        secondpic: require('@/assets/startups/technoapp/'),
+        secondpicAlt: "",
+        ourproduct: "MANDATED FUNCTIONS:<br><br>- Serve as the implementing arm of the DOST in promoting the commercialization of technologies and in marketing the services of the other operating units of the Department<br><br>- Undertake contract research, particularly at pilot plant and semi-commercial stage<br><br>- Provide technical consultancy including engineering design services, patenting and licensing services<br><br>- Provide grants and venture financing for new and emerging projects<br><br>- Administer the Invention Development Assistance Fund (IDAF) for the initial experiments and prototype development and other invention development-related activities<br><br>- Assist technology generators, inventors, and researchers avail of the laboratories and other facilities of the Research and Development Institutes including DOST Regional Offices and other government agencies, offices, and instrumentalities<br><br>- Accredit and recognize inventors' associations throughout their activities.",
+        job_check: ""
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/technoapp/gallery1'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/technoapp/gallery2'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/technoapp/gallery3'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/technoapp/gallery4'),
+        gallery4Alt: "",
+        },
+        {
+        name: "Ideaspace Foundation Inc.",
+        cover: require('@/assets/startups/ideas/'),
         coverAlt: "cover",
-        icon: require('@/assets/startups/'),
+        icon: require('@/assets/startups/ideas/'),
         iconAlt: "logo",
         website: "",
         linkedin: "",
@@ -255,10 +264,10 @@ export default {
         iglink: "",
         twitter: "",
         twitterlink: "",
-        firstpic: require('@/assets/startups/'),
+        firstpic: require('@/assets/startups/ideas/firstpic'),
         firstpicAlt: "",
         aboutus: "",
-        secondpic: require('@/assets/startups/'),
+        secondpic: require('@/assets/startups/ideas/secondpic'),
         secondpicAlt: "",
         ourproduct: "",
         job_check: ""
@@ -268,43 +277,18 @@ export default {
             jobPosition:[
               {
                 jobName:"",
-                jobType:"internship"
-              },
-              {
-                jobName: '',
-                jobType: "full-time"
+                jobType:""
               }
-            ],
-          },
-          {
-            jobClass:"",
-            jobPosition:[
-              {
-                jobName:"",
-                jobType:"internship"
-              },
-              {
-                jobName: '',
-                jobType: "part-time"
-              },
-              {
-                jobName: '',
-                jobType: "full-time"
-              },
-              {
-                jobName: '',
-                jobType: "internship"
-              }
-            ],
+            ]
           }
         ],
-        gallery1: require('@/assets/startups/'),
+        gallery1: require('@/assets/startups/ideas/gallery1'),
         gallery1Alt: "",
-        gallery2: require('@/assets/startups/'),
+        gallery2: require('@/assets/startups/ideas/gallery2'),
         gallery2Alt: "",
-        gallery3: require('@/assets/startups/'),
+        gallery3: require('@/assets/startups/ideas/gallery3'),
         gallery3Alt: "",
-        gallery4: require('@/assets/startups/'),
+        gallery4: require('@/assets/startups/ideas/gallery4'),
         gallery4Alt: "",
         },
         {

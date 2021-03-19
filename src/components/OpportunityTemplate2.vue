@@ -25,54 +25,36 @@ export default {
     return{
       opportunityList:[
         {
-          name: 'Kumu',
-          cover: require('@/assets/kumu/template_cover.png'),
-          coverAlt: "Kumu cover",
-          icon: require('@/assets/kumu/template_icon.png'),
-          iconAlt: "Kumu logo",
-          jobPosition: "Graphic Design Intern",
+          name: 'QBO Innovation Hub',
+          cover: require('@/assets/startups/qbo/cover.png'),
+          coverAlt: "QBO Innovation Hub cover",
+          icon: require('@/assets/startups/qbo/icon.png'),
+          iconAlt: "QBO Innovation Hub logo",
+          jobPosition: "Programs Intern",
           responsibilities: [
             {
-              responsibility: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
-            },
-            {
-              responsibility: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
-            },
-            {
-              responsibility: "Edit and adjust existing online marketing materials"
-            },
-            {
-              responsibility: "Create and/or source additional graphical elements (illustrations or editing of existing icons/screenshots) as needed"
+              responsibility: "Assist the Programs team in: a. liaising with Ideaspace-QBO partners; b.conducting research;"
             }
           ],
           requirements: [
             {
-              requirement: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+              requirement: "Excellent in MS applications"
             },
             {
-              requirement: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
-            },
-            {
-              requirement: "Edit and adjust existing online marketing materials"
-            },
-            {
-              requirement: "Create and/or source additional graphical elements (illustrations or editing of existing icons/screenshots) as needed"
+              requirement: "Good project management skills"
             }
           ],
           addtlInfo: [
             {
-              info: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
-            },
-            {
-              info: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
+              info: ""
             }
           ],
           appProcess: [
             {
-              process: "Execute digital visual materials such as online banners and social media posts, according to the specifications and direction of the Art Director and/or Marketing Head"
+              process: "Send a PDF attachment of your CV as well as a link to your LinkedIn profile via email to hello@qbo.com.ph"
             },
             {
-              process: "Assist in creating internal and external graphical elements for pitch decks and internal reports"
+              process: "Use “Intern - <Last Name>” for your subject line."
             }
           ]
         }
