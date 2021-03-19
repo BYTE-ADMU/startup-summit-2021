@@ -27,11 +27,12 @@ export default {
     line-height: 26px;
 }
 #primary{
-    background-color: #F46E26;
+    background: #F46E26;
     color: #f8f8f8;
     box-shadow: black!important;
     box-shadow: 50px black;
     box-shadow: 0px 4px 20px rgba(244, 110, 38, 0.5);
+    transition: background 500ms ease-in-out;
 }
 #primary:hover:not([disabled]){
     background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);

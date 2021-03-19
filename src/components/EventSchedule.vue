@@ -146,7 +146,8 @@ export default {
     font-size: 28px;
     margin-bottom: 24px;
 }
-.container1, .container2, .container3{
+.event_schedule .day_buttons .container1, .container2, .container3 {
+    background-color: #fcfcfc;
     padding: 0;
     margin: 0;
 }
@@ -216,7 +217,7 @@ export default {
 .event_schedule .day_buttons div {
     border: none;
     padding: 0;
-    background-color: white;
+    background-color: #fcfcfc;
     margin: 0 16px 0 16px;
     border-radius: 4px;
 }
@@ -255,31 +256,38 @@ export default {
     .event_schedule .day_buttons .day1_clicked {
         margin-left: auto;
         margin-right: -10px;
-        width: 94px;
+        font-size: 15px;
+        width: 95px;
     }
     .event_schedule .day_buttons .day1_unclicked {
         margin-left: auto;
         margin-right: -10px;
-        width: 94px;
+        font-size: 15px;
+        width: 95px;
     }
     .event_schedule .day_buttons .day2_clicked {
         margin-right: auto;
         margin-left: 2px;
-        width: 94px;
+        font-size: 15px;
+        width: 95px;
     }
     .event_schedule .day_buttons .day2_unclicked {
         margin-left: auto;
         margin-left: 2px;
-        width: 94px;
+        font-size: 15px;
+        padding: 8px 23px;
+        width: 95px;
     }
     .event_schedule .day_buttons .day3_clicked {
         margin: 24px auto 0 auto;
-        width: 94px;
+        width: 95px;
+        font-size: 15px;
         padding: 7px 23px;
     }
     .event_schedule .day_buttons .day3_unclicked {
         margin: 24px auto 0 auto;
-        width: 94px;
+        width: 95px;
+        font-size: 15px;
         padding: 7px 23px;
     }
     /*Fix font*/
