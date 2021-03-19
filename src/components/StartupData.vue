@@ -39,6 +39,72 @@ export default {
     return{
       startupList:[
         {
+        name: "StartUp Village",
+        cover: require('@/assets/'),
+        coverAlt: "cover",
+        icon: require('@/assets/'),
+        iconAlt: "logo",
+        website: "",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "",
+        facebooklink: "",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/'),
+        firstpicAlt: "",
+        aboutus: "",
+        secondpic: require('@/assets'),
+        secondpicAlt: "",
+        ourproduct: "",
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:"internship"
+              },
+              {
+                jobName: '',
+                jobType: "full-time"
+              }
+            ],
+          },
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:"internship"
+              },
+              {
+                jobName: '',
+                jobType: "part-time"
+              },
+              {
+                jobName: '',
+                jobType: "full-time"
+              },
+              {
+                jobName: '',
+                jobType: "internship"
+              }
+            ],
+          }
+        ],
+        gallery1: require('@/assets/'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/'),
+        gallery4Alt: "",
+        },
+        {
         name: "Edukasyon.ph",
         cover: require('@/assets/edukasyon/template_cover.png'),
         coverAlt: "Edukasyon.ph cover",
