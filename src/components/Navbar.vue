@@ -366,7 +366,7 @@ export default {
     padding-top: 30px;
   }
 
-  #tayo-logo {
+  #sus-logo {
     display: none;
   }
 
