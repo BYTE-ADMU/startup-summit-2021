@@ -335,6 +335,51 @@ export default {
         gallery4: require('@/assets/startups/clink/gallery4.jpg'),
         gallery4Alt: "",
         },
+        name: "ARPACORP",
+        cover: require('@/assets/startups/arpacorp/cover'),
+        coverAlt: "ARPACORP cover",
+        icon: require('@/assets/arpacorp/logo.png'),
+        iconAlt: "ARPACORP logo",
+        website: "https://arpa.ph",
+        linkedin: "arpacorp",
+        linkedinlink: "https://www.linkedin.com/company/arpacorp",
+        facebook: "arpacorporation",
+        facebooklink: "https://www.facebook.com/arpacorporation",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/arpacorp/firstpic.jpg'),
+        firstpicAlt: "",
+        aboutus: "ARPACORP (ARPA), is a Philippine based, government registered corporation providing cost-effective Information Technology integrations, solutions and consulting. Founded in 2010 as Arpa Information Technology Solutions, we have moved and evolved into a mature business that caters different technology-based solutions to our portfolio. Our goal is to provide each customer a professional level of service through our expertise.",
+        secondpic: require('@/assets/startups/arpacorp/secondpic.jpg'),
+        secondpicAlt: "",
+        ourproduct: "To continuously drive innovative solutions that will focus in the area of decentralized application development using Blockchain technology and maintaining or exceeding existing customers’ satisfaction towards business success.",
+        job_check: "yes",
+        job: [
+          {
+            jobClass:"Communications",
+            jobPosition:[
+              {
+                jobName:"Social Media Manager Intern",
+                jobType:"internship"
+              },
+              {
+                jobName:"Social Media Specialist",
+                jobType:"part-time"
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/arpacorp/gallery1.png'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/arpacorp/gallery2.png'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/arpacorp/gallery3.png'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/arpacorp/gallery4.png'),
+        gallery4Alt: "",
+        },
         {
         name: "Edukasyon.ph",
         cover: require('@/assets/edukasyon/template_cover.png'),

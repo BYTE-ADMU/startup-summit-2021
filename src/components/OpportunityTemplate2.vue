@@ -189,6 +189,80 @@ export default {
             }
           ]
         }
+        {
+          name: "ARPACORP",
+          cover: require('@/assets/startups/arpacorp/cover'),
+          coverAlt: "ARPACORP cover",
+          icon: require('@/assets/arpacorp/logo.png'),
+          iconAlt: "ARPACORP logo",
+          jobPosition: "Social Media Manager Intern",
+          responsibilities: [
+            {
+              responsibility: "Assist the Social Media Specialist in developing and managing overall social media strategy for the product"
+              responsibility: "Perform creative writing and ensure that content is informative and appealing"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Computer an Internet/Social Media Savvy",
+              requirement: "Good written, oral and visual communication skills",
+              requirement: "Excellent time-management skills",
+              requirement: "Flexibility and ability to multi-task",
+              requirement: "Keen attention to details"
+            }
+          ],
+          addtlInfo: [
+            {
+              info: "Arpacorp is looking for three (3) Social Media Marketing Interns to be part of our social media community team.",
+              info: "We are an equal opportunity employer. This position requires no experience.",
+              info: "Open to currently enrolled university students.",
+              info: "A minimum allowance of ₱5,000/month will be given to successful interns until you finish your internship hours."
+            }
+          ],
+          appProcess: [
+            {
+              process: "Send your resume at info@arpa.ph"
+            }
+          ]
+        },
+        {
+          name: "ARPACORP",
+          cover: require('@/assets/startups/arpacorp/cover'),
+          coverAlt: "ARPACORP cover",
+          icon: require('@/assets/arpacorp/logo.png'),
+          iconAlt: "ARPACORP logo",
+          jobPosition: "Social Media Specialist",
+          responsibilities: [
+            {
+              responsibility: "Developing and managing overall social media strategy for the product",
+              responsibility: "Planning, designing, and implementing campaigns on social media to boost brand awareness",
+              responsibility: "Monitoring, analyzing and reporting on website performance and marketing metrics",
+              responsibility: "Tapping into online platforms such as Facebook, LinkedIn and Google",
+              responsibility: "Performs creative writing and ensure that content is informative and appealing"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Extensive experience in a social medial marketing or related role",
+              requirement: "Deep understanding of social media marketing and production",
+              requirement: "Knowledge on social media campaigns and other social media marketing tools",
+              requirement: "Good written, oral and visual communication skills",
+              requirement: "Excellent time-management skills",
+              requirement: "Flexibility and ability to multi-task",
+              requirement: "Keen attention to detail"
+            }
+          ],
+          addtlInfo: [
+            {
+              info: "Arpacorp is looking for a part-time Social Media Specialist to be part of marketing team for its portfolio of leading software solutions. This position will be Work at Home. "
+            }
+          ],
+          appProcess: [
+            {
+              process: "Send your resume at info@arpa.ph"
+            }
+          ]
+        },
       ]
     }
   }
