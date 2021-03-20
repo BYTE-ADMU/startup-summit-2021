@@ -193,6 +193,7 @@ export default {
     border-radius: 40px;
     border: solid 1px;
     margin: 12px 16px 12px 0;
+    object-fit: contain;
 }
 .startup_name {
     position: relative;

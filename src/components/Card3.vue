@@ -144,6 +144,7 @@ export default {
     border: solid;
     border-radius: 25px;
     margin: 6px 10px 0 0;
+    object-fit: contain;
 }
 .talk_details .speaker .picture6 {
     overflow: hidden;
