@@ -316,6 +316,9 @@ export default {
     /* background-color: #fcfcfc; */
     margin: 0px!important;
 }
+#app {
+    display: none;
+}
 .page-container{
     display: flex;
     flex-direction: column;
