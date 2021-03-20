@@ -1,5 +1,5 @@
 <template>
-    <div class="event_schedule">
+    <div class="event_schedule" id="event_schedule">
         <h1 class="title">Event Schedule</h1>
         <div class="day_buttons">
             <!--The div was made to center the button yusing flex wrap-->
