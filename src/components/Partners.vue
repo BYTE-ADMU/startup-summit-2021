@@ -2,13 +2,17 @@
 <div data-aos="fade-up">
     <center><div class="page-container">
         <div class="text">
-            <p>Our Major Partners</p>
+            <p>Our Media Partners</p>
         </div>
         <div class="img-rows">
             <div class="img-row">
-                <img alt="Major Partner logo" src="../assets/partners/DLSU-englicom-logo.png">
-                <img alt="Major Partner logo" src="../assets/partners/BCG-logo.png">
-                <img alt="Major Partner logo" src="../assets/partners/tungkodph-logo.png">
+                <img alt="Media Partner logo" src="../assets/media-partners/inquirer.png">
+                <img alt="Media Partner logo" src="../assets/media-partners/pop.png">
+                <img alt="Media Partner logo" src="../assets/media-partners/when-in-manila.png">
+            </div>
+            <div class="img-row">
+                <img alt="Media Partner logo" src="../assets/media-partners/hustle.png">
+                <img alt="Media Partner logo" src="../assets/media-partners/tech-shake.png">
             </div>
         </div>
     </div></center>
@@ -71,12 +75,13 @@ export default {
     padding-top: 32px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .img-row img{
     width: 175px;
     height: 174px;
     object-fit: contain;
+    padding: 0 60px 50px 60px;
 }
 #second-imgrow{
     padding-top: 48px;

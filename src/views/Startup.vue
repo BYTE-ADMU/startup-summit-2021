@@ -11,6 +11,7 @@
             </div>
         </center></div>
         <div data-aos="fade-up">
+        <center><h1 id="coming-soon">Coming soon.</h1></center>
         <center><div class="second-container">
             <div class="text-wrapper">
                 <p id="header">Exhibitorsʼ showcase</p>
@@ -316,9 +317,9 @@ export default {
     /* background-color: #fcfcfc; */
     margin: 0px!important;
 }
-#app {
+/* #app {
     display: none;
-}
+} */zzzzzzz
 .page-container{
     display: flex;
     flex-direction: column;
@@ -328,6 +329,12 @@ export default {
 }
 .first-container{
     padding-top: 5%;
+}
+.second-container{
+    display:none;
+}
+#coming-soon{
+    margin-bottom: 160px !important;
 }
 .vid video{
     position: relative;
