@@ -431,71 +431,88 @@ export default {
         gallery4Alt: "",
         },
         {
-        name: "Edukasyon.ph",
-        cover: require('@/assets/edukasyon/template_cover.png'),
-        coverAlt: "Edukasyon.ph cover",
-        icon: require('@/assets/edukasyon/template_icon.png'),
-        iconAlt: "Edukasyon.ph logo",
-        website: "www.nextpay.ph",
-        linkedin: "username",
-        linkedinlink: "#",
-        facebook: "facebookhandle",
-        facebooklink: "#",
-        ig: "ighandle",
-        iglink: "#",
-        twitter: "twitterhandle",
-        twitterlink: "#",
-        firstpic: require('@/assets/edukasyon/firstpic.png'),
-        firstpicAlt: "First Pic",
-        aboutus: "Edukasyon.ph is the largest edtech platform in the Philippines empowering millions of Gen Z students aged 13 to 24 to make self-aware education decisions that lead to a fulfilling career and life. Students use the website to gain access to schools, scholarships, online courses, and other resources that enable them to find and take the paths best suited to their own interests, skills and priorities. Edukasyon.ph has worked with hundreds of partners - schools, corporations and foundations - to enable them to reach and engage with its student community along the journey from education to career.",
-        secondpic: require('@/assets/edukasyon/secondpic.png'),
-        secondpicAlt: "Second Pic",
-        ourproduct: "Students use our website to gain access to courses, schools, scholarships, online education, and other resources and opportunities that enable them to find and take the paths best suited to their own interests, skills and priorities.<br><br>We’ve worked with hundreds of partners - schools, corporations and foundations - to enable them to reach and engage with our student community along the journey from education to career.",
+        name: "maker academy",
+        cover: require('@/assets/startups/makeracademy/cover'),
+        coverAlt: "maker academy cover",
+        icon: require('@/assets/startups/makeracademy/logo.png'),
+        iconAlt: "maker academy logo",
+        website: "https://www.maker-academy.com/",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "",
+        facebooklink: "",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/makeracademy/firstpic.jpg'),
+        firstpicAlt: "",
+        aboutus: "We provide STEM education resources and solutions to educational institutions through our robotics and development products.",
+        secondpic: require('@/assets/startups/makeracademy/secondpic.jpg'),
+        secondpicAlt: "",
+        ourproduct: "Adding value in a form of system integration that was defined in engineering as the process of bringing together the component of sub-systems and ensuring that it function as one.",
         job_check: "",
         job: [
           {
-            jobClass:"Social Development",
+            jobClass:"",
             jobPosition:[
               {
-                jobName:"Partnerships-Manager",
-                jobType:"internship"
-              },
-              {
-                jobName: 'Partnerships Project Manager',
-                jobType: "full-time"
+                jobName:"",
+                jobType:""
               }
-            ],
-          },
-          {
-            jobClass:"Design",
-            jobPosition:[
-              {
-                jobName:"Digital Marketing Associate",
-                jobType:"internship"
-              },
-              {
-                jobName: 'Multimedia Artist',
-                jobType: "part-time"
-              },
-              {
-                jobName: 'Creative Consultant',
-                jobType: "full-time"
-              },
-              {
-                jobName: 'Web Designer',
-                jobType: "internship"
-              }
-            ],
+            ]
           }
         ],
-        gallery1: require('@/assets/edukasyon/gallery1.png'),
-        gallery1Alt: "Gallery 1 pic",
-        gallery2: require('@/assets/edukasyon/gallery2.png'),
-        gallery2Alt: "Gallery 1 pic",
-        gallery3: require('@/assets/edukasyon/gallery3.png'),
-        gallery3Alt: "Gallery 1 pic",
-        gallery4: require('@/assets/edukasyon/gallery4.png'),
-        gallery4Alt: "Gallery 1 pic",
+        gallery1: require('@/assets/startups/makeracademy/gallery1.jpeg'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/makeracademy/gallery2.jpeg'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/makeracademy/gallery3.jpeg'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/makeracademy/gallery4.jpeg'),
+        gallery4Alt: "",
+        },
+        {
+        name: "Pick.A.Roo",
+        cover: require('@/assets/startups/pickaroo/cover.png'),
+        coverAlt: "Pick.A.Roo cover",
+        icon: require('@/assets/startups/pickaroo/logo.png'),
+        iconAlt: "Pick.A.Roo logo",
+        website: "https://www.pickaroo.com",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "pickarooph",
+        facebooklink: "https://www.facebook.com/pickarooph",
+        ig: "pickarooapp",
+        iglink: "https://www.instagram.com/pickarooapp/",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/pickaroo/firstpic'),
+        firstpicAlt: "",
+        aboutus: "PICK.A.ROO is your all-in-one on-demand delivery app. We are more than just food and grocery. We are more affordable, more reliable, and—with over 800 trusted brands—we have more options to choose from. Browse, shop, and checkout in one go.",
+        secondpic: require('@/assets/startups/pickaroo/secondpic'),
+        secondpicAlt: "",
+        ourproduct: "",
+        job_check: "",
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/pickaroo/gallery1'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/pickaroo/gallery2'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/pickaroo/gallery3'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/pickaroo/gallery4'),
+        gallery4Alt: "",
         }
       ]
     }
