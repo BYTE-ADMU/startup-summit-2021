@@ -256,8 +256,8 @@ export default {
         icon: require('@/assets/startups/ideas/logo.png'),
         iconAlt: "Ideaspace Foundation Inc. logo",
         website: "https://ideaspacefoundation.org/",
-        linkedin: "",
-        linkedinlink: "",
+        linkedin: "ideaspace-foundation-inc-",
+        linkedinlink: "https://www.linkedin.com/company/ideaspace-foundation-inc-/",
         facebook: "ideaspaceph",
         facebooklink: "https://www.facebook.com/ideaspaceph",
         ig: "",
@@ -293,33 +293,33 @@ export default {
         },
         {
         name: "ClinkIT Solutions",
-        cover: require('@/assets/startups/clink/cover'),
+        cover: require('@/assets/startups/clink/cover.png'),
         coverAlt: "ClinkIT Solutions cover",
-        icon: require('@/assets/clink/logo'),
+        icon: require('@/assets/clink/logo.png'),
         iconAlt: "ClinkIT Solutions logo",
-        website: "",
-        linkedin: "",
-        linkedinlink: "",
-        facebook: "",
-        facebooklink: "",
-        ig: "",
-        iglink: "",
-        twitter: "",
-        twitterlink: "",
+        website: "https://www.clinkitsolutions.com/ ",
+        linkedin: "clinkitsolutions",
+        linkedinlink: "https://www.linkedin.com/company/clinkitsolutions/",
+        facebook: "ClinkITsolutions",
+        facebooklink: "https://www.facebook.com/ClinkITsolutions/",
+        ig: "clinkitsolutions",
+        iglink: "https://www.instagram.com/clinkitsolutions/",
+        twitter: "ClinkITph",
+        twitterlink: "https://twitter.com/clinkitph",
         firstpic: require('@/assets/startups/clink/firstpic'),
         firstpicAlt: "",
         aboutus: "ClinkIT Solutions is a Software Consulting Services Company and Microsoft Solutions Partner that is in the business of delivering top-of-the-line I.T. solutions to businesses across the globe. We boast 20 years of experience in the I.T. industry, offering expertise on a wide range of implementations from simple web design to sophisticated software solutions.<br><br>Our company is a part of the Microsoft Partner Network. We have a stellar team of software engineers, developers and technical specialists who have solid years of experience and backed with impressive credentials and globally recognized certifications. With our competent and talented engineers, ClinkIT Solutions offers fresh and creative ideas that transcend mundane implementations and haphazardly designed I.T. solutions.",
         secondpic: require('@/assets/startups/clink/secondpic'),
         secondpicAlt: "",
         ourproduct: "ClinkIT creates proven business solutions by providing software, hardware, and services to more than 100 startups and multinational clients worldwide.",
-        job_check: ""
+        job_check: "yes"
         job: [
           {
-            jobClass:"",
+            jobClass:"Operations",
             jobPosition:[
               {
-                jobName:"",
-                jobType:""
+                jobName:"Operations and Project Management Intern",
+                jobType:"internship"
               }
             ]
           }
