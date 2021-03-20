@@ -8,24 +8,26 @@
             </div>
             <div class="img-rows">
                 <div class="img-row">
-                    <img alt="Featured Startup logo" src="#">
-                    <img alt="Featured Startup logo" src="#">
-                    <img alt="Featured Startup logo" src="#">
-                    <img alt="Featured Startup logo" src="#">
-                    <img alt="Featured Startup logo" src="#">
-                    <img alt="Featured Startup logo" class="sixth-img" src="#">
-                    <img alt="Featured Startup logo" class="seventh-img" src="#">
-                    <img alt="Featured Startup logo" class="eight-img" src="#">
+                    <img alt="Featured Startup logo" src="@/assets/startups/arpacorp/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/clink/logo1.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/ideas/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/mosaic/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/qbo/icon.png">
+                    <img alt="Featured Startup logo" class="sixth-img" src="@/assets/startups/startupvillage/icon.png">
+                    <img alt="Featured Startup logo" class="seventh-img" src="@/assets/startups/technoapp/logo.png">
+                    <img alt="Featured Startup logo" class="eight-img" src="@/assets/startups/makeracademy/logo.png">
                 </div>
                 <div class="img-row" id="second-imgrow">
-                    <img alt="Featured Startup logo" src="#">
-                    <img alt="Featured Startup logo" src="#">
-                    <img alt="Featured Startup logo" src="#">
+                    <img alt="Featured Startup logo" src="@/assets/startups/pickaroo/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/xperto/logo2.png">
+                    <!--
+                    <img alt="alt" src="#">
                     <img alt="Featured Startup logo" src="#">
                     <img alt="Featured Startup logo" src="#">
                     <img alt="Featured Startup logo" class="sixth-img" src="#">
                     <img alt="Featured Startup logo" class="seventh-img" src="#">
                     <img alt="Featured Startup logo" class="eight-img" src="#">
+                    -->
                 </div>
             </div>
             <div class="and-more">
@@ -137,12 +139,12 @@ export default {
     padding-top: 32px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .img-row img{
-    background-color: #C4C4C4;
+    object-fit: contain;
     width: 80px;
-    height: 80px;
+    height: auto;
 }
 #second-imgrow{
     padding-top: 16px;

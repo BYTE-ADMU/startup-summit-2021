@@ -6,14 +6,9 @@
         </div>
         <div class="img-rows">
             <div class="img-row">
-                <img alt="Major Partner logo" src="#">
-                <img alt="Major Partner logo" src="#">
-                <img alt="Major Partner logo" src="#">
-            </div>
-            <div class="img-row" id="second-imgrow">
-                <img alt="Major Partner logo" src="#">
-                <img alt="Major Partner logo" src="#">
-                <img alt="Major Partner logo" src="#">
+                <img alt="Major Partner logo" src="../assets/partners/DLSU-englicom-logo.png">
+                <img alt="Major Partner logo" src="../assets/partners/BCG-logo.png">
+                <img alt="Major Partner logo" src="../assets/partners/tungkodph-logo.png">
             </div>
         </div>
     </div></center>
@@ -79,9 +74,9 @@ export default {
     justify-content: space-between;
 }
 .img-row img{
-    background-color: #C4C4C4;
     width: 175px;
     height: 174px;
+    object-fit: contain;
 }
 #second-imgrow{
     padding-top: 48px;
@@ -101,7 +96,6 @@ font-size: 24px;
 line-height: 40px;
 }
 .img-row img{
-    background-color: #C4C4C4;
     width: 127px;
     height: 127px;
 }
@@ -125,7 +119,6 @@ font-size: 22px;
 line-height: 40px;
 }
 .img-row img{
-    background-color: #C4C4C4;
     width: 103.5px;
     height: 103.5px;
 }
@@ -144,7 +137,6 @@ font-size: 20px;
 line-height: 40px;
 }
 .img-row img{
-    background-color: #C4C4C4;
     width: 80px;
     height: 80px;
 }
@@ -158,7 +150,6 @@ font-size: 18px;
 line-height: 40px;
 }
 .img-row img{
-    background-color: #C4C4C4;
     width: 60px;
     height: 60px;
 }
