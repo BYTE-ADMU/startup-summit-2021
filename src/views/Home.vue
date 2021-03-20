@@ -15,7 +15,9 @@
 
   <!--1st day-->
   <div class="row1">
+    <ComingSoon class="card1"/>
     <Card class="card1"
+    v-if="day1.card1===true"
     @toggle-modal1="showTalkModal"
     v-bind:time="first_day[0].time"
     v-bind:talk="first_day[0].talk"
@@ -41,7 +43,9 @@
     v-bind:speaker="first_day[2].speaker"
     :pic_url=first_day[2].pic_url
     />
+    <ComingSoon class="card4"/>
     <Card class="card4"
+    v-if="day1.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="first_day[3].time"
     v-bind:talk="first_day[3].talk"
@@ -61,7 +65,9 @@
     :pic_url3=first_day[2].pic_url
     :pic_url4=first_day[3].pic_url
     />
+    <ComingSoon class="card6"/>
     <Card3 class="card6"
+    v-if="day1.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="first_day[5].time"
     v-bind:exhibit="first_day[5].exhibit"
@@ -224,7 +230,9 @@
 
   <!--2nd day-->
   <div class="row1">
+    <ComingSoon class="card1"/>
     <Card class="card1"
+    v-if="day2.card1===true"
     @toggle-modal1="showTalkModal"
     v-bind:time="second_day[0].time"
     v-bind:talk="second_day[0].talk"
@@ -232,7 +240,9 @@
     v-bind:speaker="second_day[0].speaker"
     :pic_url=second_day[0].pic_url
     />
+    <ComingSoon class="card2"/>
     <Card class="card2"
+    v-if="day2.card2===true"
     @toggle-modal2="showTalkModal"
     v-bind:time="second_day[1].time"
     v-bind:talk="second_day[1].talk"
@@ -250,7 +260,9 @@
     v-bind:speaker="second_day[2].speaker"
     :pic_url=second_day[2].pic_url
     />
+    <ComingSoon class="card4"/>
     <Card class="card4"
+    v-if="day2.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="second_day[3].time"
     v-bind:talk="second_day[3].talk"
@@ -270,7 +282,9 @@
     :pic_url3=second_day[2].pic_url
     :pic_url4=second_day[3].pic_url
     />
+    <ComingSoon class="card6"/>
     <Card3 class="card6"
+    v-if="day2.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="second_day[5].time"
     v-bind:exhibit="second_day[5].exhibit"
@@ -431,7 +445,9 @@
 
   <!--3rd day-->
   <div class="row1">
+    <ComingSoon class="card1"/>
     <Card class="card1"
+    v-if="day3.card1===true"
     @toggle-modal1="showTalkModal"
     v-bind:time="third_day[0].time"
     v-bind:talk="third_day[0].talk"
@@ -449,7 +465,9 @@
     />
   </div>
   <div class="row2">
+    <ComingSoon class="card3"/>
     <Card class="card3"
+    v-if="day3.card3===true"
     @toggle-modal3="showTalkModal"
     v-bind:time="third_day[2].time"
     v-bind:talk="third_day[2].talk"
@@ -477,7 +495,9 @@
     :pic_url3=third_day[2].pic_url
     :pic_url4=third_day[3].pic_url
     />
+    <ComingSoon class="card6"/>
     <Card3 class="card6"
+    v-if="day3.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="third_day[5].time"
     v-bind:exhibit="third_day[5].exhibit"
@@ -662,6 +682,7 @@ import Hero from '../components/Hero.vue'
 import Opportunities from '../components/Opportunities.vue'
 import Partners from '../components/Partners.vue'
 import WhatIsSus from '../components/WhatIsSus.vue'
+import ComingSoon from '../components/ComingSoon.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -678,13 +699,31 @@ export default {
     Hero,
     Opportunities,
     Partners,
-    WhatIsSus
+    WhatIsSus,
+    ComingSoon
   },
   data() {
     return {
       choice: 1,
       show_talk_modal: 0,
       date: "April 16, 2021",
+      coming_soon: true,
+      day1: {
+        card1: false,
+        card4: false,
+        card6: false
+      },
+      day2: {
+        card1: false,
+        card2: false,
+        card4: false,
+        card6: false
+      },
+      day3: {
+        card1: false,
+        card3: false,
+        card6: false
+      },
 
       //All card info for first day
       first_day: [
@@ -751,12 +790,12 @@ export default {
         },
         {
           class: "card5",
-          time: "5:00",
-          panel: "1 Name of panel",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of ",
+          time: "11:55",
+          panel: "Reimagining Possibilities with Tech Panel Discussion",
+          description: "Got more questions on how technology challenges the limits of possibilities? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind.",
           modal: {
-            time: "7-8pm",
-            description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            time: "11:55am",
+            description: "Got more questions on how technology challenges the limits of possibilities? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind."
           }
         },
         {
@@ -865,12 +904,12 @@ export default {
         },
         {
           class: "card5",
-          time: "8:00",
-          panel: "2 Name of panel",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          time: "11:40",
+          panel: "Breaking Barriers with Women in Startups Panel Discussion",
+          description: "Wanna know more about the journeys of powerful women in the startup scene? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind.",
           modal: {
-            time: "7-8pm",
-            description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            time: "11:40am",
+            description: "Wanna know more about the journeys of powerful women in the startup scene? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind."
           }
         },
         {
@@ -986,12 +1025,12 @@ export default {
         },
         {
           class: "card5",
-          time: "12:00",
-          panel: "3 Name of panel",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          time: "11:20",
+          panel: "Social Entrepreneurship for a Better Tomorrow Panel Discussion",
+          description: "Got more questions about social entrepreneurship in the startup scene, and how they're building a better tomorrow? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees might have in mind.",
           modal: {
-            time: "7-8pm",
-            description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            time: "11:20am",
+            description: "Got more questions about social entrepreneurship in the startup scene, and how they're building a better tomorrow? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees might have in mind."
           }
         },
         {
