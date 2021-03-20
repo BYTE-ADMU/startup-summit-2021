@@ -219,7 +219,7 @@ export default {
     visibility: hidden;
 }
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
 .aos-animated {
         /*CSS transitions*/
         -o-transition-property: none !important;
