@@ -263,6 +263,94 @@ export default {
             }
           ]
         },
+        {
+          name: "XPERTO",
+          cover: require('@/assets/startups/xperto/cover.jpg'),
+          coverAlt: "XPERTO cover",
+          icon: require('@/assets/startups/xperto/logo.png'),
+          iconAlt: "XPERTO logo",
+          jobPosition: "Marketing Intern",
+          responsibilities: [
+            {
+              responsibility: "Support marketing campaign planning and execution",
+              responsibility: "Write copy for social media posts, promotional emails, and other marketing collateral",
+              responsibility: "Create written, video, and image content for marketing channels",
+              responsibility: "Support in managing website SEO",
+              responsibility: "Take part in formal and informal training opportunities",
+              responsibility: "Measure and report the results of marketing initiatives",
+              responsibility: "Build and manage XPERTO Facebook and LinkedIn Ads Manager accounts",
+              responsibility: "Assist in customer support activities"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Self-starter, motivated, and able to take initiative and work independently",
+              requirement: "Solid understanding of different marketing techniques",
+              requirement: "Excellent verbal and written communication skills",
+              requirement: "Attention to detail is essential",
+              requirement: "Familiarity with marketing computer software and online applications (e.g. CRM tools, Online analytics, and Google Adwords)",
+              requirement: "Passion for the marketing industry and its best practices",
+              requirement: "Current enrollment in a related BS or Masters degree",
+              requirement: "Experience working with Facebook Advertising is a plus",
+              requirement: "Experience in basic design platforms (i.e. Canva) is a plus",
+              requirement: "Be able to openly communicate the produced designs in Tagalog, English, or Taglish to a small team of web developers"
+            }
+          ],
+          addtlInfo: [
+            {
+              info: "Allowance: P5000++"
+            }
+          ],
+          appProcess: [
+            {
+              process: "Send resume to support@xperto.ph"
+            }
+          ]
+        },
+        {
+          name: "XPERTO",
+          cover: require('@/assets/startups/xperto/cover.jpg'),
+          coverAlt: "XPERTO cover",
+          icon: require('@/assets/startups/xperto/logo.png'),
+          iconAlt: "XPERTO logo",
+          jobPosition: "Research Intern",
+          responsibilities: [
+            {
+              responsibility: "Conduct user research and is comfortable with ideation and user-centered design",
+              responsibility: "Conduct interviews and surveys, customer journey maps, service blueprints, wireframes, and prototypes",
+              responsibility: "Participate in team brainstorming sessions",
+              responsibility: "Take part in formal and informal training opportunities",
+              responsibility: "Assist in customer support activities"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Passion for user experience research and human-computer interaction to help us understand user needs, workflows, and pain points",
+              requirement: "Self-starter, motivated, and able to take initiative and work independently",
+              requirement: "Knowledgeable in user research methodology, qualitative and quantitative",
+              requirement: "Ability to identify stakeholder needs and pain points",
+              requirement: "Experience translating user needs and developing empathy for the user thru a deep understanding of user-centered design methods and applications",
+              requirement: "Have software development skills",
+              requirement: "Familiarity with REST or GraphQL APIs and JSON",
+              requirement: "Strong verbal and written communication skills",
+              requirement: "Attention to detail is essential",
+              requirement: "Familiarity with prototyping platforms is a plus",
+              requirement: "Comfortable in a fast-paced environment with tight deadlines",
+              requirement: "Be able to openly communicate user insights in to diverse teams",
+              requirement: "Current enrollment in a related BS or Masters degree"
+            }
+          ],
+          addtlInfo: [
+            {
+              info: "Allowance: P5,000++"
+            }
+          ],
+          appProcess: [
+            {
+              process: "Send resume to support@xperto.ph"
+            }
+          ]
+        },
       ]
     }
   }

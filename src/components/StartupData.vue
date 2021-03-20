@@ -43,7 +43,7 @@ export default {
         name: "",
         cover: require('@/assets/startups/startapppp/cover'),
         coverAlt: "cover",
-        icon: require('@/assets/startups/logo'),
+        icon: require('@/assets/startups/startapp/logo'),
         iconAlt: "logo",
         website: "",
         linkedin: "",
@@ -251,7 +251,7 @@ export default {
         },
         {
         name: "Ideaspace Foundation Inc.",
-        cover: require('@/assets/startups/ideas/'),
+        cover: require('@/assets/startups/ideas/cover'),
         coverAlt: "cover",
         icon: require('@/assets/startups/ideas/logo.png'),
         iconAlt: "Ideaspace Foundation Inc. logo",
@@ -295,7 +295,7 @@ export default {
         name: "ClinkIT Solutions",
         cover: require('@/assets/startups/clink/cover.png'),
         coverAlt: "ClinkIT Solutions cover",
-        icon: require('@/assets/clink/logo.png'),
+        icon: require('@/assets/startups/clink/logo.png'),
         iconAlt: "ClinkIT Solutions logo",
         website: "https://www.clinkitsolutions.com/ ",
         linkedin: "clinkitsolutions",
@@ -338,7 +338,7 @@ export default {
         name: "ARPACORP",
         cover: require('@/assets/startups/arpacorp/cover'),
         coverAlt: "ARPACORP cover",
-        icon: require('@/assets/arpacorp/logo.png'),
+        icon: require('@/assets/startups/arpacorp/logo.png'),
         iconAlt: "ARPACORP logo",
         website: "https://arpa.ph",
         linkedin: "arpacorp",
@@ -358,7 +358,7 @@ export default {
         job_check: "yes",
         job: [
           {
-            jobClass:"Communications",
+            jobClass:"Social Media",
             jobPosition:[
               {
                 jobName:"Social Media Manager Intern",
@@ -378,6 +378,56 @@ export default {
         gallery3: require('@/assets/startups/arpacorp/gallery3.png'),
         gallery3Alt: "",
         gallery4: require('@/assets/startups/arpacorp/gallery4.png'),
+        gallery4Alt: "",
+        },
+        name: "XPERTO",
+        cover: require('@/assets/startups/xperto/cover.jpg'),
+        coverAlt: "XPERTO cover",
+        icon: require('@/assets/startups/xperto/logo.png'),
+        iconAlt: "XPERTO logo",
+        website: "https://www.xperto.ph",
+        linkedin: "",
+        linkedinlink: "",
+        facebook: "XPERTOPH",
+        facebooklink: "https://www.facebook.com/XPERTOPH",
+        ig: "",
+        iglink: "",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/xperto/firstpic.jpg'),
+        firstpicAlt: "",
+        aboutus: "XPERTO is a startup company registered as Wayvent Innovations, Inc. under the Securities and Exchange Commission (SEC) and incorporated on June 11, 2019. It is founded to empower professionals who aspire to create paths for career advancement and self-improvement. By linking professionals to relevant opportunities for professional growth and development, XPERTO aims to provide mechanisms for career progression and enhance the competence of the professions.",
+        secondpic: require('@/assets/startups/xperto/secondpic.jpg'),
+        secondpicAlt: "",
+        ourproduct: "XPERTO provides online platforms that enable entirely new ways of serving professionals and creating value. We help professional organizations take care of all the nitty-gritty freeing them to focus more on important tasks such developing and delivering the program and doing assessment for professional development. We provide end-to-end services which includes registrations up to sending out certificate emails to the credential earners. By doing this, we aim to unlock the potential of the professional network as dynamic sources and providers of relevant professional development and life-long learning.",
+        job_check: "yes",
+        job: [
+          {
+            jobClass:"Marketing",
+            jobPosition:[
+              {
+                jobName:"Marketing Intern",
+                jobType:"internship"
+              }
+            ]
+          },
+          {
+            jobClass:"Research and Development",
+            jobPosition:[
+              {
+                jobName:"Research Intern",
+                jobType:"internship"
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/xperto/gallery1.jpg'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/xperto/gallery2'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/xperto/gallery3'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/xperto/gallery4'),
         gallery4Alt: "",
         },
         {
