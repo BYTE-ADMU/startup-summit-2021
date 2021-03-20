@@ -546,15 +546,17 @@ export default {
     },
     computed: {
         startup_list() {
-            // var listed_startups = this.startupList;
-            // for(var i=0;i<listed_startups.length();i++){
-            //     if(this.name==listed_startups[i]['name']){
-            //         this.aboutus=listed_startups[i]['aboutus']
-            //     }
-            // }
+            var listed_startups = this.startupList;
+            for(var i=0;i<listed_startups.length();i++){
+                if(this.name==listed_startups[i]['name']){
+                    var list_out = listed_startups[i]
+                    return list_out
+                }
+            }
             console.log("DEBUG")
-            console.log(this.startupList.filter(name => name === this.name))
-            return this.startupList.filter(name => name === this.name)
+            console.log(list_out)
+            // return this.startupList.filter(name => name === this.name)
+            return []
         }
     },
     name: 'Startup-Template',
