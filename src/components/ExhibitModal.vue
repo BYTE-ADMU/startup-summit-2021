@@ -137,7 +137,6 @@ export default {
     flex-direction: column;
     width: 864px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-    margin: 0 auto 100px auto;
     border: none;
     border-radius: 3px;
     overflow: hidden;

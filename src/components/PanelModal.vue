@@ -105,18 +105,19 @@ export default {
 .card3 {
     display: flex;
     flex-direction: row;
-    margin: 100px auto 100px auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border: 0.5px solid;
     border-radius: 3px;
     background-color: #fcfcfc;
     width: 864px;
     overflow: hidden;
+    max-height: 624px;
 }
 .card3 .talk_details {
     display: flex;
     flex-direction: column;
     margin: 30px 64px 60px 0;
+    overflow-y: auto;
 }
 .talk_details .row1, .talk_details .row2{
     display: flex;
@@ -281,13 +282,16 @@ export default {
 }
 
 /*Tablet view*/
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
     .card3 {
         width: 89.58vw;
-        max-height: 700px;
     }
     .card3 .talk_details {
         margin-left: -50px;
+    }
+    .card3 .talk_details .exit {
+        position: absolute;
+        left: 55.176vw;
     }
 }
 
@@ -295,7 +299,6 @@ export default {
 @media (max-width: 767px) {
     .card3 {
         width: 82.5vw;
-        max-height: 1000px;
     }
     .card3 .speaker_img1 {
         display: none;
@@ -307,4 +310,10 @@ export default {
         margin-right: 0px;
     }
 }
+/*
+@media (max-height: 950px) and (max-width: 768px) {
+    .card3 .talk_details{
+        overflow-y: auto;
+    }
+}*/
 </style>

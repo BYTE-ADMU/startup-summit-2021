@@ -854,7 +854,7 @@ export default {
           time: "7:00",
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Dr. Chari",
+          speaker: "Dr. Chari Cheng",
           pic_url: require('@/assets/speakers/DrChari.png'),
           modal: {
             time: "6-7pm",
@@ -1050,14 +1050,16 @@ export default {
     },
     exitModal(value) {
       this.show_talk_modal = value;
+      document.getElementsByTagName("BODY")[0].style.overflow = "auto";
     },
     showTalkModal(value) {
       this.show_talk_modal = value;
+      document.getElementsByTagName("BODY")[0].style.overflow = "hidden";
     }
   },
   computed: {
     modal_date: function() {
-      return this.date.replace(", 2020", "")
+      return this.date.replace(", 2021", "")
     }
   },
   created(){
@@ -1112,18 +1114,26 @@ export default {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 5!important;
-  margin: 0;
-  overflow: auto;
+  z-index: 1000!important;
+  overflow-y: hidden;
 }
 .card_container .modal_container .talk_modal {
-  transform: translateY(25%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .card_container .modal_container .panel_modal {
-  transform: translateY(25%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .card_container .modal_container .exhibit_modal {
-  transform: translateY(25%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*Cards*/
@@ -1189,11 +1199,6 @@ export default {
   top: 2800px;
   background-color: transparent;
   z-index: 0;
-}
-@media (max-height: 900px) {
-  .card_container .modal_container .talk_modal {
-    transform: translateY(10vh);
-  }
 }
 @media (max-width: 1153px) {
   .ellipse1, .ellipse2, .ellipse3, .ellipse4, .ellipse5 {

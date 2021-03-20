@@ -162,6 +162,7 @@ export default {
     margin: 0;
     width: 96px;
     height: 42px;
+    outline: none;
 }
 .event_schedule .day_buttons .day1_unclicked {
     display: none;

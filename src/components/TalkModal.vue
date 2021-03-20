@@ -164,12 +164,12 @@ export default {
 .card2 {
     display: flex;
     flex-direction: row;
-    margin: 0 auto 100px auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border: 0.5px solid;
     border-radius: 3px;
     background-color: #fcfcfc;
     width: 60vw;
+    height: 624px;
     overflow: hidden;
     z-index: 5!important;
 }
@@ -180,7 +180,7 @@ export default {
 }
 .card2 .talk_details .icons {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /*General styling*/
@@ -208,7 +208,8 @@ export default {
 
 /*Talk details*/
 .card2 .talk_details .exit {
-    align-self: flex-end;
+    position: absolute;
+    left: 55.176vw;
     width: 24px;
     height: 24px;
     border: none;
@@ -259,6 +260,7 @@ export default {
     line-height: 26px;
     margin: 0 0 40px 0;
     white-space: pre-line;
+    overflow-y: auto;
 }
 .talk_details .watch_now {
     width: 162px;
@@ -281,7 +283,7 @@ export default {
 /*wide screen*/
 @media (min-width: 1450px) {
     .card2 {
-        width: 80vw;
+        width: 864px;
         margin: auto;
     }
     .card2 .container1 .container2 {
@@ -289,19 +291,24 @@ export default {
         width: 400px;
         height: 400px;
     }
+    .card2 .talk_details .exit {
+        left: 800px;
+    }
     .card2 .container1 .container2 .picture {
         width: 360px;
         top: 136.8px;
     }
 }
 
-/*Tablet view*/
+
 @media (min-width: 768px) and (max-width: 1024px){
-    .card2 {
-        width: 89.58vw;
+    .card2 .talk_details .description {
+        overflow-y: visible;
+    }
+    .card2 .talk_details{
+        overflow: auto;
     }
 }
-
 /*Mobile view*/
 @media (max-width: 767px) {
     .card2 {
@@ -314,7 +321,12 @@ export default {
         margin: 33px 20px 33px 21px;
     }
     .card2 .talk_details .exit {
-        margin-right: 0;
+        left: 70.833vw;
     }
 }
+@media (max-width: 434px) {
+    .card2 {
+        overflow: auto;
+    }
+} 
 </style>
