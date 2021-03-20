@@ -1,10 +1,10 @@
 <template>
     <div id="app">
     <div class="footer-wrapper">
+        <center>
             <div class="logo-wrapper">
                 <img alt="Startup Summit Logo" src="@/assets/suslogo.png">
             </div>
-        <center>
             <div class="footer-menu">
                 <a href="/">Home</a>
                 <a href="/startups">Startups</a>

@@ -33,7 +33,6 @@ export default {
     background: linear-gradient(93.62deg, #F2B430,#F46E26 33%, #F2B430);
     background-size: 300% auto;
     text-decoration: none;
-    margin-right: 1.25rem;
     transition: background-position .2s ease-in-out;
     transition-property: background-position;
     transition-duration: 0.2s;
