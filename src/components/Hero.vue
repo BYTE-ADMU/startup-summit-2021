@@ -219,28 +219,6 @@ export default {
     visibility: hidden;
 }
 }
-@media screen and (max-width: 1023px){
-.aos-animated {
-        /*CSS transitions*/
-        -o-transition-property: none !important;
-        -moz-transition-property: none !important;
-        -ms-transition-property: none !important;
-        -webkit-transition-property: none !important;
-        transition-property: none !important;
-        /*CSS transforms*/
-        -o-transform: none !important;
-        -moz-transform: none !important;
-        -ms-transform: none !important;
-        -webkit-transform: none !important;
-        transform: none !important;
-        /*CSS animations*/
-        -webkit-animation: none !important;
-        -moz-animation: none !important;
-        -o-animation: none !important;
-        -ms-animation: none !important;
-        animation: none !important;
-    }
-}
 @media screen and (max-width: 950px){
     .first-container{
         transform: translate(40%,-73%);
