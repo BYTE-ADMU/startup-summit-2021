@@ -75,7 +75,6 @@ export default {
     margin: 0;
     bottom: 0;
     background-color: #f8f8f8;
-    padding-bottom: 16%;
 }
 .logo-wrapper{
     padding-top: 5%;
@@ -132,6 +131,7 @@ export default {
 .footer-wrapper{
     width: 100%;
     height: 350px;
+    padding-bottom: 16%;
 }
 .footer-menu{
     padding-top: 24px;
