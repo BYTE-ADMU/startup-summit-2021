@@ -103,48 +103,6 @@ export default {
         return {
             startupList:[
         {
-        name: "",
-        cover: require('@/assets/startups/startapppp/cover'),
-        coverAlt: "cover",
-        icon: require('@/assets/startups/startapp/logo'),
-        iconAlt: "logo",
-        website: "",
-        linkedin: "",
-        linkedinlink: "",
-        facebook: "",
-        facebooklink: "",
-        ig: "",
-        iglink: "",
-        twitter: "",
-        twitterlink: "",
-        firstpic: require('@/assets/startups/startappppp/firstpic'),
-        firstpicAlt: "",
-        aboutus: "",
-        secondpic: require('@/assets/startups/startappppp/secondpic'),
-        secondpicAlt: "",
-        ourproduct: "",
-        job_check: "",
-        job: [
-          {
-            jobClass:"",
-            jobPosition:[
-              {
-                jobName:"",
-                jobType:""
-              }
-            ]
-          }
-        ],
-        gallery1: require('@/assets/startups/startAPPPP/gallery1'),
-        gallery1Alt: "",
-        gallery2: require('@/assets/startups/startAPPPP/gallery2'),
-        gallery2Alt: "",
-        gallery3: require('@/assets/startups/startAPPPP/gallery3'),
-        gallery3Alt: "",
-        gallery4: require('@/assets/startups/startAPPPP/gallery4'),
-        gallery4Alt: "",
-        },
-        {
         name: "StartUp Village",
         cover: require('@/assets/startups/startupvillage/cover.png'),
         coverAlt: "StartUp Villag cover",
@@ -159,10 +117,10 @@ export default {
         iglink: "https://www.instagram.com/startupvillageph/",
         twitter: "suv_ph",
         twitterlink: "https://twitter.com/suv_ph",
-        firstpic: require('@/assets/startups/startupvillage/firstpic'),
+        firstpic: require('@/assets/startups/startupvillage/firstpic.jpg'),
         firstpicAlt: "",
         aboutus: "StartUp Village is a one-stop startup enabler that enables startups to bring their unique ideas to reality. Its desire is to bring a Filipino startup to the global stage. The goal of StartUp Village is to help start-ups build disruptive technology that displaces an established technology and shakes up the industry or introduces a groundbreaking product that creates a completely new industry.",
-        secondpic: require('@/assets/startups/startupvillage/secondpic'),
+        secondpic: require('@/assets/startups/startupvillage/gallery3.jpg'),
         secondpicAlt: "",
         ourproduct: "StartUp Village provides startups with all the support it needs to grow and succeed. We execute different programs including training and mentoring startups as they traverse this entrepreneurial path. We also provide other support activities including mentoring, shared services (HR, Accounting/Bookkeeping, Legal), linkage to customers and investors, actual working space, and more.",
         job_check: "",
@@ -177,13 +135,13 @@ export default {
             ]
           }
         ],
-        gallery1: require('@/assets/startups/startupvillage/gallery1'),
+        gallery1: require('@/assets/startups/startupvillage/gallery3.jpg'),
         gallery1Alt: "",
-        gallery2: require('@/assets/startups/startupvillage/gallery2'),
+        gallery2: require('@/assets/startups/startupvillage/gallery3.jpg'),
         gallery2Alt: "",
-        gallery3: require('@/assets/startups/startupvillage/gallery3'),
+        gallery3: require('@/assets/startups/startupvillage/gallery3.jpg'),
         gallery3Alt: "",
-        gallery4: require('@/assets/startups/startupvillage/gallery4'),
+        gallery4: require('@/assets/startups/startupvillage/gallery3.jpg'),
         gallery4Alt: "",
         },
         {
@@ -272,7 +230,7 @@ export default {
         },
         {
         name: "Technology Application and Promotion Institute",
-        cover: require('@/assets/startups/technoapp/'),
+        cover: require('@/assets/startups/technoapp/firstpic.png'),
         coverAlt: "Technology Application and Promotion Institute cover",
         icon: require('@/assets/startups/technoapp/logo.png'),
         iconAlt: "Technology Application and Promotion Institute logo",
@@ -288,7 +246,7 @@ export default {
         firstpic: require('@/assets/startups/technoapp/firstpic.png'),
         firstpicAlt: "About TAPI",
         aboutus: "The Technology Application and Promotion Institute (TAPI) created by virtue of Executive Order No. 128 on 30 January 1987, is one of DOST's service agencies whose primary responsibility is to promote the commercialization of technologies and market the services of other operating units of the Department.<br><br>On 28 April 1992, TAPI's function was expanded by virtue of RA 7459 otherwise known as the 'Inventors and Invention Incentives Act of the Philippines'. Among others, TAPI administers the Invention Development Assistance Fund for the initial experiments and prototype development and other invention-development related activities.",
-        secondpic: require('@/assets/startups/technoapp/'),
+        secondpic: require('@/assets/startups/technoapp/firstpic.png'),
         secondpicAlt: "",
         ourproduct: "MANDATED FUNCTIONS:<br><br>- Serve as the implementing arm of the DOST in promoting the commercialization of technologies and in marketing the services of the other operating units of the Department<br><br>- Undertake contract research, particularly at pilot plant and semi-commercial stage<br><br>- Provide technical consultancy including engineering design services, patenting and licensing services<br><br>- Provide grants and venture financing for new and emerging projects<br><br>- Administer the Invention Development Assistance Fund (IDAF) for the initial experiments and prototype development and other invention development-related activities<br><br>- Assist technology generators, inventors, and researchers avail of the laboratories and other facilities of the Research and Development Institutes including DOST Regional Offices and other government agencies, offices, and instrumentalities<br><br>- Accredit and recognize inventors' associations throughout their activities.",
         job_check: "",
@@ -490,11 +448,11 @@ export default {
         ],
         gallery1: require('@/assets/startups/xperto/gallery1.jpg'),
         gallery1Alt: "",
-        gallery2: require('@/assets/startups/xperto/gallery2'),
+        gallery2: require('@/assets/startups/xperto/gallery1.jpg'),
         gallery2Alt: "",
-        gallery3: require('@/assets/startups/xperto/gallery3'),
+        gallery3: require('@/assets/startups/xperto/gallery1.jpg'),
         gallery3Alt: "",
-        gallery4: require('@/assets/startups/xperto/gallery4'),
+        gallery4: require('@/assets/startups/xperto/gallery1.jpg'),
         gallery4Alt: "",
         },
         {
@@ -583,7 +541,8 @@ export default {
                 return window.innerWidth < maxWidth;
             }
             }
-        )
+        ),
+        this.startup_list()
     },
     computed: {
         startup_list() {
@@ -593,7 +552,9 @@ export default {
             //         this.aboutus=listed_startups[i]['aboutus']
             //     }
             // }
-            return this.startupList.filter(name => name ===this.name)
+            console.log("DEBUG")
+            console.log(this.startupList.filter(name => name === this.name))
+            return this.startupList.filter(name => name === this.name)
         }
     },
     name: 'Startup-Template',
