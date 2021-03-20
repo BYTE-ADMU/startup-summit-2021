@@ -75,6 +75,7 @@ export default {
     margin: 0;
     bottom: 0;
     background-color: #f8f8f8;
+    padding-bottom: 16%;
 }
 .logo-wrapper{
     padding-top: 5%;
@@ -123,9 +124,10 @@ export default {
 }
 @media screen and (max-width: 768px){
 .logo-wrapper{
-    padding-top: 7%;
+    padding-top: 0%;
     width: 234px;
     height: 59px;
+    padding-top: 159px;
 }
 .footer-wrapper{
     width: 100%;
@@ -142,7 +144,6 @@ export default {
 
 @media screen and (max-width: 577px){
 .logo-wrapper{
-    padding-top: 10%;
     width: 234px;
     height: 59px;
 }
@@ -168,9 +169,6 @@ export default {
 }
 
 @media screen and (max-width: 450px){
-.logo-wrapper{
-    padding-top: 13%;
-}
 .footer-wrapper{
     width: 100%;
     height: 334px;
@@ -196,25 +194,12 @@ export default {
 }
 }
 
-@media screen and (max-width: 380px){
-.logo-wrapper{
-    padding-top: 15%;
-}
-}
-
-@media screen and (max-width: 350px){
-.logo-wrapper{
-    padding-top: 17%;
-}
-}
-
 @media screen and (max-width: 320px){
 .footer-wrapper{
     width: 100%;
     height: 320px;
 }
 .logo-wrapper{
-    padding-top: 17%;
     width: 198px;
     height: 49px;
 }
