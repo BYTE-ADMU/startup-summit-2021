@@ -2,16 +2,17 @@
 
 <!-- nav -->
 
-<div class="wrapper">
-  <div class="whole-container">
+<div class="wrapper1">
     <div class="header">
       <h2 class="title">Community Partners</h2>
     </div> 
     <!--Terabyte -->
   <div class="container">
     <div class="container-items">
+      <div class="container-header">
       <li class="container-title">TeraByte</li>
       <li class="title-body">We would like to thank:</li>
+      </div>
       <div class="company-logo-block">
         <div class="company-logo-row">
           <img src="../assets/kumu-logo.png" id="terabyte-logo">
@@ -29,8 +30,10 @@
 <!-- Gigabyte -->
   <div class="container">
     <div class="container-items">
+      <div class="container-header">
       <li class="container-title">GigaByte</li>
       <li class="title-body">We would like to thank:</li>
+      </div>
       <div class="company-logo-block">
         <div class="company-logo-row">
           <img src="../assets/kumu-logo.png" id="gigabyte-logo">
@@ -50,10 +53,10 @@
 <!-- Megabyte -->
   <div class="container">
     <div class="container-items">
-      <br>
-      <br>
+      <div class="container-header">
       <li class="container-title">MegaByte</li>
       <li class="title-body">We would like to thank:</li>
+      </div>
       <div class="company-logo-block">
         <div class="company-logo-row">
           <img src="../assets/kumu-logo.png" id="megabyte-logo">
@@ -86,24 +89,28 @@
      </div>
     </div>  
   </div>
-
-<!--bg-->
+    <img src="../assets/circle1.jpg" id="circle1">
+    <img src="../assets/circle2.jpg" id="circle2">
+    <img src="../assets/circle3.jpg" id="circle3">
+    <img src="../assets/circle4.jpg" id="circle4">
+    <img src="../assets/circle5.jpg" id="circle5"> 
+<!--bg
   <div class="bg">
     <img src="../assets/top-right-bg.jpg" id="top-right-bg">
     <img src="../assets/top-left-bg.jpg" id="top-left-bg">
     <img src="../assets/bottom-right-bg.jpg" id="bottom-right-bg">
     <img src="../assets/bottom-left-bg.jpg" id="bottom-left-bg">
 
-<!--circles-->
+ circles 
   <img src="../assets/circle1.jpg" id="circle1">
   <img src="../assets/circle2.jpg" id="circle2">
   <img src="../assets/circle3.jpg" id="circle3">
   <img src="../assets/circle4.jpg" id="circle4">
-  <img src="../assets/circle5.jpg" id="circle5">
+  <img src="../assets/circle5.jpg" id="circle5"> 
 
-  </div>
+  </div> -->
 <!-- footer -->
- </div>
+  
 </div>
 </template>
 
@@ -127,26 +134,21 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  overflow:hidden;
 }
 
 @media screen and (min-width: 1068px) {
-
 /* Big divs */
-.wrapper {
+.wrapper1 {
   width: 100vw;
   height: 100%;
   margin: 0;
   display: flex;
+  background:none;
+  background-color: transparent;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.whole-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 .header {
   display: flex;
@@ -162,28 +164,34 @@ html, body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: #f8f8f8;
-  max-height: 760px;
+  background-color: #f8f8f8;
   max-width: 1100px;
   margin-top: 96px;
   width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-
 .container-items {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  background-color: #f8f8f8;
 }
-
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
 .company-logo-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0vh 10vw 4vh 10vw;
+  background-color: #f8f8f8;
 }
 
 .company-logo-row {
@@ -193,7 +201,7 @@ html, body {
   justify-content: space-between;
   width: 95%;
   padding: 3vh;
-
+  background-color: #f8f8f8;
 }
 
 /* texts */
@@ -215,6 +223,7 @@ html, body {
   line-height: 25px;
   padding-top: 56px;
   color: #000000;
+  background-color: #f8f8f8;
 }
 .title-body {
   list-style: none;
@@ -226,27 +235,25 @@ html, body {
   padding-top: 16px;
   padding-bottom: 32px;
   color: #000000;
+  background-color: #f8f8f8;
 }
 /*company logos */
 #terabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 160px;
-  max-height: 160px;
+  width: 160px;
+  height: 160px;
+  background-color: #f8f8f8;
 }
 #gigabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px;
+  height: 120px;
   padding-bottom: 10px;
+  background-color: #f8f8f8;
 }
 #megabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
   padding-bottom: 10px;
+  background-color: #f8f8f8;
 }
 
 /*bg*/
@@ -316,13 +323,7 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-.whole-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -345,11 +346,19 @@ html, body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
 .container-items {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 95%;
+  background-color: #f8f8f8;
 }
 .company-logo-block {
   display: flex;
@@ -357,12 +366,14 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 0vh 6vw 4vh 6vw;
+  background-color: #f8f8f8;
 }
 .company-logo-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background-color: #f8f8f8;
   width: 100%;
   padding: 2.5vh;
 }
@@ -385,6 +396,7 @@ html, body {
   line-height: 25px;
   padding-top: 56px;
   color: #000000;
+  background-color: #f8f8f8;
 }
 .title-body {
   list-style: none;
@@ -396,6 +408,7 @@ html, body {
   padding-top: 16px;
   padding-bottom: 32px;
   color: #000000;
+  background-color: #f8f8f8;
 }
 /*company logos */
 #terabyte-logo {
@@ -403,20 +416,19 @@ html, body {
   height: auto;
   max-width: 30%;
   max-height: 30%;
+  background-color: #f8f8f8;
 }
 #gigabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px;
+  height: 120px;
   padding-bottom: 10px;
+  background-color: #f8f8f8;
 }
 #megabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
   padding-bottom: 10px;
+  background-color: #f8f8f8;
 }
 
 /*bg*/
@@ -507,7 +519,7 @@ html, body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: #FFF;
+  background-color: #f8f8f8;
   max-height: 760px;
   max-width: 1100px;
   margin-top: 96px;
@@ -520,6 +532,14 @@ html, body {
   flex-direction: column;
   justify-content: center;
   width: 95%;
+  background-color: #f8f8f8;
+}
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
 }
 .company-logo-block {
   display: flex;
@@ -527,6 +547,7 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 0vh 6vw 4vh 6vw;
+  background-color: #f8f8f8;
 }
 .company-logo-row {
   display: flex;
@@ -535,6 +556,7 @@ html, body {
   justify-content: space-between;
   width: 100%;
   padding: 2.5vh;
+  background-color: #f8f8f8;
 }
 /* texts */
 .title {
@@ -555,6 +577,7 @@ html, body {
   line-height: 25px;
   padding-top: 56px;
   color: #000000;
+  background-color: #f8f8f8;
 }
 .title-body {
   list-style: none;
@@ -566,27 +589,25 @@ html, body {
   padding-top: 16px;
   padding-bottom: 32px;
   color: #000000;
+  background-color: #f8f8f8;
 }
 /*company logos */
 #terabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 30%;
-  max-height: 30%;
+  width: 30%;
+  height: 30%;
+  background-color: #f8f8f8;
 }
 #gigabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 20%;
-  max-height: 20%;
+  width: 20%;
+  height: 20%;
   padding-bottom: 0px;
+  background-color: #f8f8f8;
 }
 #megabyte-logo {
-  width: auto;
-  height: auto;
-  max-width: 15%;
-  max-height: 15%;
+  width: 15%;
+  height: 15%;
   padding-bottom: 40px;
+  background-color: #f8f8f8;
 }
 
 /*bg*/
