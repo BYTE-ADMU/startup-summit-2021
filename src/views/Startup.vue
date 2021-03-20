@@ -751,7 +751,7 @@ height: 48px;
 }
 .vid video{
     width: 288px;
-height: 162px;
+    height: 162px;
 }
 .second-container{
     margin-top: -400px!important;

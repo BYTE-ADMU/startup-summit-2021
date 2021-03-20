@@ -80,6 +80,7 @@ export default {
     padding: 0;
     background-color: #f8f8f8;
     z-index: 1;
+    height: 400px;
 }
 .card .time {
     display: flex;
@@ -96,12 +97,13 @@ export default {
 .card .talk_details .speaker {
     display: flex;
     flex-direction: row;
-    margin: 0 24px 23px 0 0;
+    margin: auto 24px auto 0;
     padding: 0;
 }
 .card .talk_details .speaker .speaker_details {
     display: flex;
     flex-direction: row;
+    margin: auto 15px auto 0;
 }
 
 /*general styling*/
@@ -109,13 +111,13 @@ export default {
 .time h1{
     font-family: "objectivity";
     color: rgba(244, 110, 38, 1);
-    margin: 105px auto 0px auto;
+    margin: auto auto 0 auto;
 }
 .time p {
     font-family: "inter_bold";
     font-size: 14px;
     font-weight: bold;
-    margin: 0 auto 122px auto;
+    margin: 0 auto auto auto;
 }
 
 /*talk details*/
@@ -129,23 +131,29 @@ export default {
     font-family: "inter";
     line-height: 26px;
     font-size: 16px;
-    margin: 0 0 19px 0;
+    margin: auto 0 19px 0;
 } 
 .picture1, .picture2, .picture3 {
     overflow: hidden;
     width: 48px;
     height: 48px;
     border: solid;
-    border-radius: 25px;
-    margin: 0 16px 0 0;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    margin: auto 16px auto 0;
 }
 .talk_details .speaker .picture4 {
     overflow: hidden;
     width: 48px;
     height: 48px;
     border: solid;
-    border-radius: 25px;
-    margin: 0 0 0 0;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    margin: auto 0 auto 0;
 }
 .talk_details .speaker .button {
     margin: 9px 0 0 auto;
@@ -164,6 +172,7 @@ export default {
         display: flex;
         flex-direction: column;
         width: 100vw;
+        height: auto;
     }
     .card .time {
         margin: 30.64px 25px 16px 24px;
@@ -183,7 +192,7 @@ export default {
     .card .time p {
         margin: 0 219px 0 0;
     }
-    .card .talk_details .speaker_details {
+    .card .talk_details .speaker .speaker_details {
         margin: 0 0 16px 0;
     }
     .card .talk_details .talk_description {
