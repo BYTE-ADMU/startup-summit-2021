@@ -224,7 +224,8 @@ export default {
 
 /*text portion*/
 .card3 .talk_details .exit {
-    align-self: flex-end;
+    position: absolute;
+    left: 800px;
     width: 24px;
     height: 24px;
     border: none;
@@ -291,7 +292,7 @@ export default {
     }
     .card3 .talk_details .exit {
         position: absolute;
-        left: 55.176vw;
+        left: 82.176vw;
     }
 }
 
@@ -307,7 +308,7 @@ export default {
         margin: 33px 20px 33px 21px;
     }
     .card3 .talk_details .exit {
-        margin-right: 0px;
+        left: 74.324vw;
     }
 }
 /*
