@@ -31,7 +31,7 @@ export default {
     border: 1px solid #F46E26;
     color: #F46E26;
     background: #fcfcfc;
-    transition: background 500ms ease-in-out;
+    transition: background 200ms ease-in-out;
     transition: color 200ms ease-in-out;
 }
 #secondary:hover:not([disabled]){
