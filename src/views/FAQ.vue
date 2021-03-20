@@ -150,8 +150,8 @@ export default {
         genQuestions: [
           {
             question: 'What is Startup Summit?',
-            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>",
-            answer2: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>"
+            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='/about' style='text-decoration: none; color:#F46E26'>here.</a>",
+            answer2: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='/about' style='text-decoration: none; color:#F46E26'>here.</a>"
           },
           {
             question: 'How will I know which speaker/s will be present for what day?',
