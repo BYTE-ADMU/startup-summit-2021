@@ -15,7 +15,7 @@
                 <p id="date">April 16-18, 2021</p>
             </div>
             <div class="btn-wrapper">
-                <span id="primary-btn"><PrimaryBtn>Register Now</PrimaryBtn></span><span id="secondary-btn"><SecondaryBtn>View Schedule</SecondaryBtn></span>
+                <span id="primary-btn"><a href="https://airtable.com/shrVSQ9HN8MwPq5ls" target="_blank" rel="noreferrer noopenner"><PrimaryBtn>Register Now</PrimaryBtn></a></span><span id="secondary-btn"><a href="#event_schedule"><SecondaryBtn>View Schedule</SecondaryBtn></a></span>
             </div>
         </div>
         </div>

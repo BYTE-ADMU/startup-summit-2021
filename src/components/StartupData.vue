@@ -60,7 +60,7 @@ export default {
         secondpic: require('@/assets/startups/startappppp/secondpic'),
         secondpicAlt: "",
         ourproduct: "",
-        job_check: ""
+        job_check: "",
         job: [
           {
             jobClass:"",
@@ -85,7 +85,7 @@ export default {
         name: "StartUp Village",
         cover: require('@/assets/startups/startupvillage/cover.png'),
         coverAlt: "StartUp Villag cover",
-        icon: rrequire('@/assets/startups/startupvillage/icon.png'),
+        icon: require('@/assets/startups/startupvillage/icon.png'),
         iconAlt: "StartUp Village logo",
         website: "http://startupvillage.ph/",
         linkedin: "startupvillageph",
@@ -102,7 +102,7 @@ export default {
         secondpic: require('@/assets/startups/startupvillage/secondpic'),
         secondpicAlt: "",
         ourproduct: "StartUp Village provides startups with all the support it needs to grow and succeed. We execute different programs including training and mentoring startups as they traverse this entrepreneurial path. We also provide other support activities including mentoring, shared services (HR, Accounting/Bookkeeping, Legal), linkage to customers and investors, actual working space, and more.",
-        job_check: ""
+        job_check: "",
         job: [
           {
             jobClass:"",
@@ -144,7 +144,7 @@ export default {
         secondpic: require('@/assets/startups/mosaic/secondpic.png'),
         secondpicAlt: "Mosaic Solutions Sales Report Enterprise",
         ourproduct: "Find the best answer to every challenge.<br><br>Day-to-day F&B management is a constant opportunity to streamline and optimise.  Operators are presented with challenges based on dozens of moving factors.  Using Mosaics products will help you get a handle on which cash flow levers to pull to improve the bottom line.<br><br>You may need to analyse what changes you can make to your menus, your supply chain, your staff and your operations.  Or it may be time to reduce your inventory waste or over-spending on over-stocking.  Maybe your whole business model has changed as sales have shifted from dine-in to takeaway and delivery.<br><br>It’s all happening now and you need the accurate information to make informed decisions in real-time.  That’s where Mosaic Solutions come in.<br><br>You need all the information right at your fingertips. Our reports offer a combination of high-level insights and in-depth analysis at the outlet level. This provides a comprehensive and real-time view of your key cost and revenue drivers that help you make data-driven decisions to optimize profitability.<br><br>Our solution features an analytics dashboard with insights that help you confidently take action and make necessary changes to streamline operations. You will have remote access to sales trends, direct costs and inventory levels all in one place. You can engineer and optimise menus based on margin analysis.  You can create smarter targets using predictive analytics.  You can monitor performance versus targets at the outlet and brand level.<br><br>Our solutions are built specifically for today’s hospitality market by people who have real-life industry experience, this means our products are built to provide clarity and solve our clients’ challenges simply. Because we understand the needs of our clients, these cloud-based solutions allow remote monitoring of multiple units anytime and anywhere.  And you do not need to be a data geek to get simple but effective insights.",
-        job_check: "yes"
+        job_check: "yes",
         job: [
           {
             jobClass:"",
@@ -186,7 +186,7 @@ export default {
         secondpic: require('@/assets/startups/qbo/'),
         secondpicAlt: "",
         ourproduct: "",
-        job_check: "yes"
+        job_check: "yes",
         job: [
           {
             jobClass:"Programs",
@@ -228,7 +228,7 @@ export default {
         secondpic: require('@/assets/startups/technoapp/'),
         secondpicAlt: "",
         ourproduct: "MANDATED FUNCTIONS:<br><br>- Serve as the implementing arm of the DOST in promoting the commercialization of technologies and in marketing the services of the other operating units of the Department<br><br>- Undertake contract research, particularly at pilot plant and semi-commercial stage<br><br>- Provide technical consultancy including engineering design services, patenting and licensing services<br><br>- Provide grants and venture financing for new and emerging projects<br><br>- Administer the Invention Development Assistance Fund (IDAF) for the initial experiments and prototype development and other invention development-related activities<br><br>- Assist technology generators, inventors, and researchers avail of the laboratories and other facilities of the Research and Development Institutes including DOST Regional Offices and other government agencies, offices, and instrumentalities<br><br>- Accredit and recognize inventors' associations throughout their activities.",
-        job_check: ""
+        job_check: "",
         job: [
           {
             jobClass:"",
@@ -270,7 +270,7 @@ export default {
         secondpic: require('@/assets/startups/ideas/secondpic'),
         secondpicAlt: "",
         ourproduct: "",
-        job_check: ""
+        job_check: "",
         job: [
           {
             jobClass:"",
@@ -354,7 +354,7 @@ export default {
         secondpic: require('@/assets/edukasyon/secondpic.png'),
         secondpicAlt: "Second Pic",
         ourproduct: "Students use our website to gain access to courses, schools, scholarships, online education, and other resources and opportunities that enable them to find and take the paths best suited to their own interests, skills and priorities.<br><br>We’ve worked with hundreds of partners - schools, corporations and foundations - to enable them to reach and engage with our student community along the journey from education to career.",
-        job_check: ""
+        job_check: "",
         job: [
           {
             jobClass:"Social Development",

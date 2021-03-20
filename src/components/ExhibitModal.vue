@@ -141,6 +141,7 @@ export default {
     border: none;
     border-radius: 3px;
     overflow: hidden;
+    background-color: #fcfcfc;
 }
 .sus_exhibit .startups {
     display: flex;

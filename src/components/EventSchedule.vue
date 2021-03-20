@@ -1,5 +1,5 @@
 <template>
-    <div class="event_schedule">
+    <div class="event_schedule" id="event_schedule">
         <h1 class="title">Event Schedule</h1>
         <div class="day_buttons">
             <!--The div was made to center the button yusing flex wrap-->
@@ -37,7 +37,7 @@ export default {
             click: 1,
             day: {
                 daynum: "Day 1",
-                date: "April 16, 2020"
+                date: "April 16, 2021"
             }
         }
     },
@@ -53,7 +53,7 @@ export default {
             this.$emit("transfer-click", choice);
             if (this.click === 1) {
                 this.day.daynum = "Day 1";
-                this.day.date = "April 16, 2020";
+                this.day.date = "April 16, 2021";
 
                 //unclick styling for unclicked buttons
                 first_unclicked[0].style.display = "none";
@@ -67,7 +67,7 @@ export default {
             }
             else if (this.click === 2) {
                 this.day.daynum = "Day 2";
-                this.day.date = "April 17, 2020";
+                this.day.date = "April 17, 2021";
 
                 //unclick styling for unclicked buttons
                 second_unclicked[0].style.display = "none";
@@ -81,7 +81,7 @@ export default {
             }
             else if (this.click === 3) {
                 this.day.daynum = "Day 3";
-                this.day.date = "April 18, 2020";
+                this.day.date = "April 18, 2021";
 
                 //unclick styling for unclicked buttons
                 third_unclicked[0].style.display = "none";
@@ -146,18 +146,20 @@ export default {
     font-size: 28px;
     margin-bottom: 24px;
 }
-.event_schedule .day_buttons .container1, .container2, .container3 {
+.event_schedule .day_buttons .container1, .event_schedule .day_buttons .container2, .event_schedule .day_buttons .container3 {
     background-color: #fcfcfc;
     padding: 0;
-    margin: 0;
+    margin-right: 15px;
 }
 .event_schedule .day_buttons .day1_clicked {
+    background: #E75E25!important;
+    box-shadow: none!important;
     font-family: "inter_bold";
     font-size: 16px;
     font-weight: bold;
     border-radius: 4px;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     width: 96px;
     height: 42px;
 }
@@ -168,17 +170,19 @@ export default {
     font-weight: bold;
     border-radius: 4px;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     width: 96px;
     height: 42px;
 }
 .event_schedule .day_buttons .day2_clicked {
+    background: #E75E25!important;
+    box-shadow: none!important;
     display: none;
     font-family: "inter_bold";
     font-size: 16px;
     font-weight: bold;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     border-radius: 4px;
     width: 96px;
     height: 42px;
@@ -188,12 +192,14 @@ export default {
     font-size: 16px;
     font-weight: bold;
     padding: 8px 24px;
-    margin: 0 16px 0 16px;
+    margin: 0;
     border-radius: 4px;
     width: 96px;
     height: 42px;
 }
 .event_schedule .day_buttons .day3_clicked {
+    background: #E75E25!important;
+    box-shadow: none!important;
     display: none;
     font-family: "inter_bold";
     font-size: 16px;
@@ -235,21 +241,31 @@ export default {
 /*I have to start styling here because the 3rd day button goes the to the 1st column*/
 @media (max-width: 464px) {
     /*Styling containers of day buttons*/
+    .event_schedule .day_buttons .day1_clicked {
+        margin-right: 0!important;
+    }
+    .event_schedule .day_buttons .day1_unclicked {
+        margin-right: 0!important;
+    }
     .event_schedule .day_buttons .container1 {
         width: 40%;
         display: flex;
         align-items: flex-end;
         padding: 0;
+        margin-right: 0;
     }
     .event_schedule .day_buttons .container2 {
         width: 40%;
         display: flex;
         align-items: flex-start;
         padding: 0;
+        margin-left: 0;
     }
     .event_schedule .day_buttons .container3 {
         width: 100%;
         display: flex;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /*fixing positioning of buttons*/

@@ -194,19 +194,19 @@
                 </div>
             </div>
             <div class="startups-wrapper" @click="focused=false">
-            <div class="startup-card" v-for="startup in filteredList" :key="startup">
-                <div class="cover">
-                    <img :alt="startup.coverAlt" :src="startup.cover">
+                <div class="startup-card" v-for="startup in filteredList" :key="startup">
+                    <div class="cover">
+                        <img :alt="startup.coverAlt" :src="startup.cover">
+                    </div>
+                    <div class="icon">
+                        <img :alt="startup.iconAlt" :src="startup.icon">
+                    </div>
+                    <div class="startup-content">
+                        <p class="startup-name" v-html="startup.name"></p>
+                        <p class="startup-industry">{{startup.industry}}</p>
+                        <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
+                    </div>
                 </div>
-                <div class="icon">
-                    <img :alt="startup.iconAlt" :src="startup.icon">
-                </div>
-                <div class="startup-content">
-                    <p class="startup-name" v-html="startup.name"></p>
-                    <p class="startup-industry">{{startup.industry}}</p>
-                    <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
-                </div>
-            </div>
             </div>
     </div></center></div>
     </div>
@@ -751,7 +751,7 @@ height: 48px;
 }
 .vid video{
     width: 288px;
-height: 162px;
+    height: 162px;
 }
 .second-container{
     margin-top: -400px!important;
