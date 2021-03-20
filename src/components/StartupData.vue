@@ -306,7 +306,7 @@ export default {
         iglink: "https://www.instagram.com/clinkitsolutions/",
         twitter: "ClinkITph",
         twitterlink: "https://twitter.com/clinkitph",
-        firstpic: require('@/assets/startups/clink/firstpic'),
+        firstpic: require('@/assets/startups/clink/firstpic.jpg'),
         firstpicAlt: "",
         aboutus: "ClinkIT Solutions is a Software Consulting Services Company and Microsoft Solutions Partner that is in the business of delivering top-of-the-line I.T. solutions to businesses across the globe. We boast 20 years of experience in the I.T. industry, offering expertise on a wide range of implementations from simple web design to sophisticated software solutions.<br><br>Our company is a part of the Microsoft Partner Network. We have a stellar team of software engineers, developers and technical specialists who have solid years of experience and backed with impressive credentials and globally recognized certifications. With our competent and talented engineers, ClinkIT Solutions offers fresh and creative ideas that transcend mundane implementations and haphazardly designed I.T. solutions.",
         secondpic: require('@/assets/startups/clink/secondpic'),
@@ -319,18 +319,20 @@ export default {
             jobPosition:[
               {
                 jobName:"Operations and Project Management Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobName:"Junior Software Developer",
+                jobType:"internship",
               }
             ]
           }
         ],
-        gallery1: require('@/assets/startups/clink/gallery1'),
+        gallery1: require('@/assets/startups/clink/gallery1.jpg'),
         gallery1Alt: "",
-        gallery2: require('@/assets/startups/clink/gallery2'),
+        gallery2: require('@/assets/startups/clink/gallery2.jpg'),
         gallery2Alt: "",
-        gallery3: require('@/assets/startups/clink/gallery3'),
+        gallery3: require('@/assets/startups/clink/gallery3.jpg'),
         gallery3Alt: "",
-        gallery4: require('@/assets/startups/clink/gallery4'),
+        gallery4: require('@/assets/startups/clink/gallery4.jpg'),
         gallery4Alt: "",
         },
         {

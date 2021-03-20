@@ -130,6 +130,64 @@ export default {
               process: ""
             }
           ]
+        },
+        {
+          name: 'ClinkIT Solutions',
+          cover: require('@/assets/startups/clink/cover'),
+          coverAlt: "ClinkIT Solutions cover",
+          icon: require('@/assets/startups/clink/icon.png'),
+          iconAlt: "ClinkIT Solutions logo",
+          jobPosition: "Junior Software Developer",
+          responsibilities: [
+            {
+              responsibility: "Support software design process based on functional requirements",
+              responsibility: "Consult with project teams and end users to identify application requirements",
+              responsibility: "Design, develop, implement new software or modifications to existing software",
+              responsibility: "Troubleshoot and identify bugs in existing software, design and release fixes",
+              responsibility: "Create development environment for efficient testing and integration",
+              responsibility: "Properly evaluate, assess and recommend software solutions",
+              responsibility: "Design and model solutions that fit the problem domain",
+              responsibility: "Liaise and develop long-term relationship with clients",
+              responsibility: "Conduct sales presentations and provide technical assistance to clients",
+              responsibility: "Collaborate with the Sales team in understanding clients’ requirements and provide sales support",
+              responsibility: "Assist the sales team with developing sales proposals and strategies",
+              responsibility: "Assist project managers in daily operations such as creating project plans and monitoring progress of projects",
+              responsibility: "Attend technical trainings as well as study for technical exams and certifications as required"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Candidate must possess at least Bachelor's/College Degree in Computer Science/Information Technology or equivalent",
+              requirement: "At most 1 year of working experience in the related field, but fresh grads are welcome to apply",
+              requirement: "Exposure to Microsoft .NET development using C# and with AngularJS",
+              requirement: "Exposure to web development using HTML5, CSS and JavaScript",
+              requirement: "Attending and actively contributing in internal team and client meetings as required",
+              requirement: "Problem solving and ability to think laterally as part of a team, or individually, to meet the needs of the project",
+              requirement: "Ability to attend and actively contribute in internal and client meetings",
+              requirement: "Ability to self-learn, positively adapt to changes, and work under pressure"
+            }
+          ],
+          addtlInfo: [
+            {
+              info: "Work remotely, but ready to work in our Makati office occasionally as required",
+              info: "Reliable and stable internet at home and backup for remote set-up",
+              info: "Bring your own device (BYOD)",
+              info: "Guaranteed monthly salary",
+              info: "SSS, PHIC, HMDF still covered",
+              info: "Can commit to full-time, long-term employment",
+              info: "HMO upon regularization"
+            }
+          ],
+          appProcess: [
+            {
+              process: "Learn the qualifications and review your skills if you embody the qualities of a sidekick.",
+              process: "Send us your most updated resume and show us that you have what it takes to be a sidekick.",
+              process: "Test your technical strength. Shortlisted candidates will be notified on taking the short exam to gauge your technical skills.",
+              process: "After passing the test, you will be scheduled for an interview with our ClinkIT Superheroes. Inspire us with stories of your triumphs and ordeals.",
+              process: "At the final stage, you will meet our ace engineers and impress everyone with a final project.",
+              process: "After persevering and overcoming these trials, the finals day will close with an invitation to join forces with our ClinkIT superheroes."
+            }
+          ]
         }
       ]
     }
