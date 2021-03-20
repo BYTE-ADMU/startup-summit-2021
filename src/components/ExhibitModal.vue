@@ -65,19 +65,19 @@
                 </div>
             </div>
         </div>
-        <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
+        <!-- <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn> -->
     </div>
 </template>
 
 <script>
-import PrimaryBtn from "./PrimaryBtn.vue"
-import Chevron from "./Chevron.vue"
+// import PrimaryBtn from "./PrimaryBtn.vue"
+// import Chevron from "./Chevron.vue"
 
 export default {
     name: "ExhibitModal",
     components: {
-        PrimaryBtn,
-        Chevron
+        // PrimaryBtn,
+        // Chevron
     },
     props: {
         exhibit: String,

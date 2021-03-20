@@ -5,7 +5,7 @@
         <div class="text">
             <h1>What is Startup Summit?</h1>
             <p>The Startup Summit is a 3-day online tech conference that amasses a community of diverse personalities creating groundbreaking innovations. Students, storytellers, and startups cross paths and gather together in this event to build on each other’s futures and become catalysts for impactful change.</p>
-            <a href="" class="learn-more"><PrimaryBtn>Learn more<Chevron id="primary-svg"/></PrimaryBtn></a>
+            <a href="/about" class="learn-more"><PrimaryBtn>Learn more<Chevron id="primary-svg"/></PrimaryBtn></a>
         </div>
         </div>
         <div data-aos="fade-left">

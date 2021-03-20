@@ -312,7 +312,7 @@ export default {
         secondpic: require('@/assets/startups/clink/secondpic'),
         secondpicAlt: "",
         ourproduct: "ClinkIT creates proven business solutions by providing software, hardware, and services to more than 100 startups and multinational clients worldwide.",
-        job_check: "yes"
+        job_check: "yes",
         job: [
           {
             jobClass:"Operations",
@@ -320,6 +320,8 @@ export default {
               {
                 jobName:"Operations and Project Management Intern",
                 jobType:"internship",
+              },
+              {
                 jobName:"Junior Software Developer",
                 jobType:"internship",
               }
@@ -335,6 +337,7 @@ export default {
         gallery4: require('@/assets/startups/clink/gallery4.jpg'),
         gallery4Alt: "",
         },
+        {
         name: "ARPACORP",
         cover: require('@/assets/startups/arpacorp/cover'),
         coverAlt: "ARPACORP cover",
@@ -380,6 +383,7 @@ export default {
         gallery4: require('@/assets/startups/arpacorp/gallery4.png'),
         gallery4Alt: "",
         },
+        {
         name: "XPERTO",
         cover: require('@/assets/startups/xperto/cover.jpg'),
         coverAlt: "XPERTO cover",
