@@ -195,33 +195,6 @@ html, body {
 }
 /*company logos */
 #terabyte-logo {
-  max-width: 15rem;
-  max-height: 15rem;
-  padding: 4rem 0;
-  background-color: #f8f8f8;
-}
-#gigabyte-logo {
-  max-width: 9rem;
-  max-height: 9rem;
-  padding: 6rem 0;
-  background-color: #f8f8f8;
-}
-#dsc-gigabyte-logo {
-  max-width: 13rem;
-  max-height: 13rem;
-  padding: 6rem 0;
-  background-color: #f8f8f8;
-}
-#usx-gigabyte-logo {
-  max-width: 13rem;
-  max-height: 8rem;
-  padding: 6rem 0;
-  background-color: #f8f8f8;
-}
-#megabyte-logo {
-  max-width: 10rem;
-  max-height: 5rem;
-  padding: 1.5rem 0;
   background-color: #f8f8f8;
 }
 
@@ -298,6 +271,13 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+}
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
 }
 .container-items {
   display: flex;
