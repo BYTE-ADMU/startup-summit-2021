@@ -48,18 +48,12 @@ export default {
     created(){
         AOS.init(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         ),
         AOS.refresh(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         )
     }
@@ -119,6 +113,7 @@ h1 {
     border: none;
     margin: 0;
     padding: 0;
+    padding-top: 5%;
 }
 .about_video {
     align-self: center;
@@ -231,6 +226,7 @@ h1 {
         padding: 0;
     }
     .about_startup-summit .design {
+        display: none;
         position: absolute;
         width: 100vw;
         height: 1425.384px;

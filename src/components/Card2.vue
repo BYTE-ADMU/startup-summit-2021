@@ -143,6 +143,7 @@ export default {
     border-bottom-right-radius: 50% 50%;
     border-bottom-left-radius: 50% 50%;
     margin: auto 16px auto 0;
+    object-fit: cover;
 }
 .talk_details .speaker .picture4 {
     overflow: hidden;
@@ -153,6 +154,7 @@ export default {
     border-top-right-radius: 50% 50%;
     border-bottom-right-radius: 50% 50%;
     border-bottom-left-radius: 50% 50%;
+    object-fit: cover;
     margin: auto 0 auto 0;
 }
 .talk_details .speaker .button {

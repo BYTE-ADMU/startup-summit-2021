@@ -1,5 +1,6 @@
 <template>
 <div class="wrapper1">
+  <div data-aos="fade-up">
     <div class="header">
       <h2 class="title">Community Partners</h2>
     </div> 
@@ -60,20 +61,35 @@
      </div>
     </div>  
   </div>
+  </div>
     <img src="../assets/partners/partner-background/circle1.svg" id="circle1">
     <img src="../assets/partners/partner-background/circle2.svg" id="circle2">
     <img src="../assets/partners/partner-background/circle3.svg" id="circle3">
     <img src="../assets/partners/partner-background/circle4.svg" id="circle4">
-    <img src="../assets/partners/partner-background/circle4.svg" id="circle5"> 
+    <img src="../assets/partners/partner-background/circle4.svg" id="circle5">
 </div>
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  created(){
+         AOS.init(
+            {
+                disable: 'tablet' & 'mobile'
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: 'tablet' & 'mobile'
+            }
+        )
+    },
 }
 </script>
 
@@ -195,7 +211,7 @@ html, body {
 }
 /*company logos */
 #terabyte-logo {
-  max-width: 15rem;
+    max-width: 15rem;
   max-height: 15rem;
   padding: 4rem 0;
   background-color: #f8f8f8;
@@ -230,31 +246,31 @@ html, body {
   position: absolute;
   left: 85%;
   top: 194px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle2 {
   position: absolute;
   left: 20%;
   top: 165px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle3 {
   position: absolute;
   left: 90%;
   top: 1000px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle4 {
   position: absolute;
   left: 5%;
   top: 1432px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle5 {
   position: absolute;
   left: 90%;
   top: 1692px;
-  z-index: 1;
+  z-index: -1;
 }
 }
 @media screen and (min-width: 768px) and (max-width: 1067px) {
@@ -298,6 +314,13 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+}
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
 }
 .container-items {
   display: flex;
@@ -395,31 +418,31 @@ html, body {
   position: absolute;
   left: 85%;
   top: 184px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle2 {
   position: absolute;
   left: 10%;
   top: 205px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle3 {
   position: absolute;
   left: 85%;
   top: 1340px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle4 {
   position: absolute;
   left: 0;
   top: 1860px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle5 {
   position: absolute;
   right: 0;
   top: 1960px;
-  z-index: 1;
+  z-index: -1;
 }
 }
 @media screen and (max-width: 768px) {
@@ -567,35 +590,35 @@ html, body {
   position: absolute;
   left: 1105px;
   top: 224px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle2 {
   display: none;
   position: absolute;
   left: 164px;
   top: 265px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle3 {
   display: none;
   position: absolute;
   left: 1150px;
   top: 1112px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle4 {
   display: none;
   position: absolute;
   left: 88px;
   top: 1832px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle5 {
   display: none;
   position: absolute;
   left: 88px;
   top: 1832px;
-  z-index: 1;
+  z-index: -1;
 }
 @media screen and (max-width: 768px) {
 /* Big divs */
@@ -742,35 +765,35 @@ html, body {
   position: absolute;
   left: 1105px;
   top: 224px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle2 {
   display: none;
   position: absolute;
   left: 164px;
   top: 265px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle3 {
   display: none;
   position: absolute;
   left: 1150px;
   top: 1112px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle4 {
   display: none;
   position: absolute;
   left: 88px;
   top: 1832px;
-  z-index: 1;
+  z-index: -1;
 }
 #circle5 {
   display: none;
   position: absolute;
   left: 88px;
   top: 1832px;
-  z-index: 1;
+  z-index: -1;
 }
 }
 }

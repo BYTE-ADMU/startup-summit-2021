@@ -33,7 +33,9 @@
     />
   </div>
   <div class="row2">
+    <ComingSoon class="card3"/>
     <Card class="card3"
+    v-if="day1.card3===true"
     @toggle-modal3="showTalkModal"
     v-bind:time="first_day[2].time"
     v-bind:talk="first_day[2].talk"
@@ -41,7 +43,9 @@
     v-bind:speaker="first_day[2].speaker"
     :pic_url=first_day[2].pic_url
     />
+    <ComingSoon class="card4"/>
     <Card class="card4"
+    v-if="day1.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="first_day[3].time"
     v-bind:talk="first_day[3].talk"
@@ -61,7 +65,9 @@
     :pic_url3=first_day[2].pic_url
     :pic_url4=first_day[3].pic_url
     />
+    <ComingSoon class="card6"/>
     <Card3 class="card6"
+    v-if="day1.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="first_day[5].time"
     v-bind:exhibit="first_day[5].exhibit"
@@ -88,7 +94,11 @@
       v-bind:creds="first_day[0].modal.creds"
       v-bind:description="first_day[0].modal.description"
       :linkedin1=true
+      :linkedin2=true
+      :website1=true
       :linked1=first_day[0].modal.linked1
+      :linked2=first_day[0].modal.linked2
+      :web1=first_day[0].modal.web1
       :image=first_day[0].pic_url
       />
     </div>
@@ -105,11 +115,11 @@
       v-bind:creds="first_day[1].modal.creds"
       v-bind:description="first_day[1].modal.description"
       :linkedin1=true
-      :linkedin2=true
       :website1=true
+      :facebook1=true
       :linked1=first_day[1].modal.linked1
-      :linked2=first_day[1].modal.linked2
       :web1=first_day[1].modal.web1
+      :face1=first_day[1].modal.face1
       :image=first_day[1].pic_url
       />
     </div>
@@ -126,11 +136,9 @@
       v-bind:creds="first_day[2].modal.creds"
       v-bind:description="first_day[2].modal.description"
       :linkedin1=true
-      :facebook1=true
-      :website1=true
-      :linked1=first_day[2].modal.linked1
-      :face1=first_day[2].modal.face1
-      :web1=first_day[2].modal.web1
+      :instagram1=true
+      :linked1=first_day[2].linked1
+      :insta1=first_day[2].insta1
       :image=first_day[2].pic_url
       />
     </div>
@@ -147,9 +155,7 @@
       v-bind:creds="first_day[3].modal.creds"
       v-bind:description="first_day[3].modal.description"
       :linkedin1=true
-      :instagram1=true
-      :linked1=first_day[3].modal.linked1
-      :insta1=first_day[3].modal.insta1
+      :linked1=first_day[3].linked1
       :image=first_day[3].pic_url
       />
     </div>
@@ -224,7 +230,9 @@
 
   <!--2nd day-->
   <div class="row1">
+    <ComingSoon class="card1"/>
     <Card class="card1"
+    v-if="day2.card1===true"
     @toggle-modal1="showTalkModal"
     v-bind:time="second_day[0].time"
     v-bind:talk="second_day[0].talk"
@@ -242,7 +250,9 @@
     />
   </div>
   <div class="row2">
+    <ComingSoon class="card3"/>
     <Card class="card3"
+    v-if="day2.card3===true"
     @toggle-modal3="showTalkModal"
     v-bind:time="second_day[2].time"
     v-bind:talk="second_day[2].talk"
@@ -250,7 +260,9 @@
     v-bind:speaker="second_day[2].speaker"
     :pic_url=second_day[2].pic_url
     />
+    <ComingSoon class="card4"/>
     <Card class="card4"
+    v-if="day2.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="second_day[3].time"
     v-bind:talk="second_day[3].talk"
@@ -270,7 +282,9 @@
     :pic_url3=second_day[2].pic_url
     :pic_url4=second_day[3].pic_url
     />
+    <ComingSoon class="card6"/>
     <Card3 class="card6"
+    v-if="day2.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="second_day[5].time"
     v-bind:exhibit="second_day[5].exhibit"
@@ -321,8 +335,8 @@
       v-bind:speaker="second_day[1].speaker"
       v-bind:creds="second_day[1].modal.creds"
       v-bind:description="second_day[1].modal.description"
-      :website1=true
-      :web1=second_day[1].modal.web1
+      :twitter1=true
+      :twit1=second_day[1].modal.twit1
       :image=second_day[1].pic_url
       />
     </div>
@@ -338,8 +352,8 @@
       v-bind:speaker="second_day[2].speaker"
       v-bind:creds="second_day[2].modal.creds"
       v-bind:description="second_day[2].modal.description"
-      :twitter1=true
-      :twt1=second_day[2].modal.twt1
+      :facebook1=true
+      :face1=second_day[2].modal.face1
       :image=second_day[2].pic_url
       />
     </div>
@@ -355,8 +369,8 @@
       v-bind:speaker="second_day[3].speaker"
       v-bind:creds="second_day[3].modal.creds"
       v-bind:description="second_day[3].modal.description"
-      :facebook1=true
-      :face1=second_day[3].modal.face1
+      :website1=true
+      :web1=second_day[3].modal.web1
       :image=second_day[3].pic_url
       />
     </div>
@@ -439,7 +453,9 @@
     v-bind:speaker="third_day[0].speaker"
     :pic_url=third_day[0].pic_url
     />
+    <ComingSoon class="card2"/>
     <Card class="card2"
+    v-if="day3.card2===true"
     @toggle-modal2="showTalkModal"
     v-bind:time="third_day[1].time"
     v-bind:talk="third_day[1].talk"
@@ -457,7 +473,9 @@
     v-bind:speaker="third_day[2].speaker"
     :pic_url=third_day[2].pic_url
     />
-    <Card class="card4"
+    <ComingSoon class="card4"/>
+    <Card clas="card4"
+    v-if="day3.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="third_day[3].time"
     v-bind:talk="third_day[3].talk"
@@ -477,7 +495,9 @@
     :pic_url3=third_day[2].pic_url
     :pic_url4=third_day[3].pic_url
     />
+    <ComingSoon class="card6"/>
     <Card3 class="card6"
+    v-if="day3.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="third_day[5].time"
     v-bind:exhibit="third_day[5].exhibit"
@@ -504,11 +524,23 @@
       v-bind:creds="third_day[0].modal.creds"
       v-bind:description="third_day[0].modal.description"
       :linkedin1=true
+      :linkedin2=true
+      :facebook1=true
+      :facebook2=true
+      :instagram1=true
+      :instagram2=true
+      :twitter1=true
+      :twitter2=true
       :website1=true
-      :website2=true
       :linked1=third_day[0].modal.linked1
+      :linked2=third_day[0].modal.linked2
+      :face1=third_day[0].modal.face1
+      :face2=third_day[0].modal.face2
+      :insta1=third_day[0].modal.insta1
+      :insta2=third_day[0].modal.insta2
+      :twit1=third_day[0].modal.twt1
+      :twit2=third_day[0].modal.twt2
       :web1=third_day[0].modal.web1
-      :web2=third_day[1].modal.web2
       :image=third_day[0].pic_url
       />
     </div>
@@ -525,6 +557,8 @@
       v-bind:creds="third_day[1].modal.creds"
       v-bind:description="third_day[1].modal.description"
       :linkedin1=true
+      :website1=true
+      :web1=third_day[1].modal.web1
       :linked1=third_day[1].modal.linked1
       :image=third_day[1].pic_url
       />
@@ -542,8 +576,6 @@
       v-bind:creds="third_day[2].modal.creds"
       v-bind:description="third_day[2].modal.description"
       :linkedin1=true
-      :website1=true
-      :web1=third_day[2].modal.web1
       :linked1=third_day[2].modal.linked1
       :image=third_day[2].pic_url
       />
@@ -561,23 +593,11 @@
       v-bind:creds="third_day[3].modal.creds"
       v-bind:description="third_day[3].modal.description"
       :linkedin1=true
-      :linkedin2=true
-      :facebook1=true
-      :facebook2=true
-      :instagram1=true
-      :instagram2=true
-      :twitter1=true
-      :twitter2=true
       :website1=true
+      :website2=true
       :linked1=third_day[3].modal.linked1
-      :linked2=third_day[3].modal.linked2
-      :face1=third_day[3].modal.face1
-      :face2=third_day[3].modal.face2
-      :insta1=third_day[3].modal.insta1
-      :insta2=third_day[3].modal.insta2
-      :twit1=third_day[3].modal.twt1
-      :twit2=third_day[3].modal.twt2
       :web1=third_day[3].modal.web1
+      :web2=third_day[3].modal.web2
       :image=third_day[3].pic_url
       />
     </div>
@@ -662,6 +682,7 @@ import Hero from '../components/Hero.vue'
 import Opportunities from '../components/Opportunities.vue'
 import Partners from '../components/Partners.vue'
 import WhatIsSus from '../components/WhatIsSus.vue'
+import ComingSoon from '../components/ComingSoon.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -678,39 +699,43 @@ export default {
     Hero,
     Opportunities,
     Partners,
-    WhatIsSus
+    WhatIsSus,
+    ComingSoon
   },
   data() {
     return {
       choice: 1,
       show_talk_modal: 0,
       date: "April 16, 2021",
+      coming_soon: true,
+      day1: {
+        card3: false,
+        card4: false,
+        card6: false
+      },
+      day2: {
+        card1: false,
+        card3: false,
+        card4: false,
+        card6: false
+      },
+      day3: {
+        card2: false,
+        card4: false,
+        card6: false
+      },
 
       //All card info for first day
       first_day: [
-        {
-          class: "card1",
-          time: "1:00",
-          talk: "1 Name of talk",
-          description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Serban Mogos",
-          pic_url: require('@/assets/speakers/SerbanMogos.jpeg'),
-          modal: {
-            time: "1-2pm",
-            creds: "Co-founder and COO of Eyeware Tech",
-            linked1: "https://www.linkedin.com/in/mogos/?originalSubdomain=ch",
-            description: "Serban is the Co-founder & COO of Eyeware, a Swiss startup that develops eye tracking solutions for consumer applications. With a background in computer science, his startup experience involves strategy, fundraising, and product management. Serban also founded two NGOs in Romania for promoting entrepreneurship education and obtained a PhD in Strategy & Entrepreneurship from Carnegie Mellon University."
-          }
-        },
         { 
-          class: "card2",
-          time: "2:00",
+          class: "card1",
+          time: "10:15",
           talk: "Bots and Brains",
           description: "No matter how high tech your bots are, you need to understand where the human aspect comes in.",
           speaker: "Gian dela Rama",
           pic_url: require('@/assets/speakers/GiandelaRama.jpeg'),
           modal: {
-            time: "2-4pm",
+            time: "10:15am",
             creds: "Co-founder and CEO of Aiah.Ai",
             linked1: "https://www.linkedin.com/in/giandlr/",
             linked2: "https://www.linkedin.com/company/aiah-automation/",
@@ -719,14 +744,14 @@ export default {
           }
         },
         { 
-          class: "card3",
-          time: "3:00",
+          class: "card2",
+          time: "10:35",
           talk: "New Knowledge about the Brain and how it is Shaping Tech",
           description: "New knowledge about the nature of the brain in the last two decades has turned many things on its head. This talk attempts to highlight how this is impacting the tech world. In particular, it speaks about the journey of SynPhNe, the world’s first wearable technology that re-integrates brain and body after brain damage, childhood disability and the challenges of aging.",
           speaker: "Dr. Subhasis Banerji",
           pic_url: require('@/assets/speakers/SubhasisBanerji.png'),
           modal: {
-            time: "5-6pm",
+            time: "10:35am",
             creds: "Founder and Managing Director of SynPhNe",
             linked1: "https://www.linkedin.com/in/subhasisbanerji/",
             web1: "https://www.synphne.com",
@@ -735,14 +760,14 @@ export default {
           }
         },
         { 
-          class: "card4",
-          time: "4:00",
+          class: "card3",
+          time: "11:15",
           talk: "1 Name of talk",
           description: "Rama earned Master of Science from Management Information Technology of Strayer University, Washington DC in 2007 before returning back to Jakarta in the same year. He then worked as IT auditor and advisor in various companies such as PWC (Pricewaterhouse Coopers), Ernst & Young, and PT Geoteq Integrasi Semesta.",
           speaker: "Rama Raditya",
           pic_url: require('@/assets/speakers/RamaRaditya.jpg'),
           modal: {
-            time: "5-6pm",
+            time: "11:15am",
             creds: "Founder and CEO of Qlue",
             linked1: "https://www.linkedin.com/in/rama-raditya-2039ba39/",
             insta1: "https://www.instagram.com/ramaqlue/",
@@ -750,18 +775,32 @@ export default {
           }
         },
         {
-          class: "card5",
-          time: "5:00",
-          panel: "1 Name of panel",
-          description: "1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of ",
+          class: "card4",
+          time: "11:35",
+          talk: "1 Name of talk",
+          description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Serban Mogos",
+          pic_url: require('@/assets/speakers/SerbanMogos.jpeg'),
           modal: {
-            time: "7-8pm",
-            description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            time: "11:35m",
+            creds: "Co-founder and COO of Eyeware Tech",
+            linked1: "https://www.linkedin.com/in/mogos/?originalSubdomain=ch",
+            description: "Serban is the Co-founder & COO of Eyeware, a Swiss startup that develops eye tracking solutions for consumer applications. With a background in computer science, his startup experience involves strategy, fundraising, and product management. Serban also founded two NGOs in Romania for promoting entrepreneurship education and obtained a PhD in Strategy & Entrepreneurship from Carnegie Mellon University."
+          }
+        },
+        {
+          class: "card5",
+          time: "11:55",
+          panel: "Reimagining Possibilities with Tech Panel Discussion",
+          description: "Got more questions on how technology challenges the limits of possibilities? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind.",
+          modal: {
+            time: "11:55am",
+            description: "Got more questions on how technology challenges the limits of possibilities? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind."
           }
         },
         {
           class: "card6",
-          time: "6:00",
+          time: "13:00",
           exhibit: "Startup Exhibitors' Showcase",
           description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
           pic_url1: require("@/assets/startups/arpacorp/logo.png"),
@@ -772,7 +811,7 @@ export default {
           pic_url6: require("@/assets/startups/startupvillage/icon.png"),
           modal: {
             exhibit: "Startup Exhibit",
-            time: "1-6 PM",
+            time: "1:00pm",
             img1: require("@/assets/startups/arpacorp/logo.png"),
             img2: require("@/assets/startups/clink/logo1.png"),
             img3: require("@/assets/startups/ideas/logo.png"),
@@ -805,13 +844,13 @@ export default {
       second_day: [
         {
           class: "card1",
-          time: "5:00",
+          time: "10:10",
           talk: "Inclusive Innovation: Upskilling Women for the Future of Work",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Gina Romero",
           pic_url: require('@/assets/speakers/GinaRomero.jpg'),
           modal: {
-            time: "1-2pm",
+            time: "10:10am",
             creds: "Co-founder and CEO of Connected Women",
             linked1: "https://www.linkedin.com/in/iamginaromero",
             web1: "https://www.connectedwomen.com/",
@@ -823,54 +862,54 @@ export default {
         },
         {
           class: "card2",
-          time: "6:00",
-          talk: "2 Name of talk",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Teresa Condicion",
-          pic_url: require('@/assets/speakers/TeresaCondicion.jpg'),
-          modal: {
-            time: "3-4pm",
-            creds: "Co-founder and CEO for Shoplinks Singapore",
-            web1: "https://www.pageexecutive.com/asia-pacific/leading-women/a-journey-from-poverty-to-empowerment",
-            description: "Teresa Condicion spent the last 20 years doing what she loves – building data capabilities and starting businesses and organisations across Asia, from her long tenure at P&G as head of ASEAN consumer and retail analytics to founding and building two data-driven tech startups. Teresa strongly advocates for bringing a broader economic impact towards even the smallest retailers out there, to have the capabilities of data and technology to compete in an increasingly digitised world."
-          }
-        },
-        {
-          class: "card3",
-          time: "7:00",
+          time: "10:30",
           talk: "Tech for Social Impact",
-          description: "How Notion leverages its people, product, and community for good. How Notion leverages its people, product, and community for good. How Notion leverages its people, product, and community for good. 2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          description: "How Notion leverages its people, product, and community for good.",
           speaker: "Andy Rapista",
           pic_url: require('@/assets/speakers/AndyRapista.jpg'),
           modal: {
-            time: "5-6pm",
+            time: "10:30am",
             creds: "Program Manager of Notion",
-            twt1: "https://twitter.com/andyrapista",
+            twit1: "https://twitter.com/andyrapista",
             description: "Andy is currently a Program Manager at Notion building Notion for Good - the corporate social justice program that is dedicated to inclusion, diversity, equity, and anti-racism (IDEA) and sustainability. Andy believes that we can create a more equitable world if we dedicate our time, energy, creativity, and talent towards eliminating barriers for people to thrive. She'd like to see a world where everyone is able to live with dignity and reach their fullest potential. Her hope is that her work is the highest expression of that belief."
           }
         },
         {
-          class: "card4",
-          time: "7:00",
+          class: "card3",
+          time: "11:00",
           talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Dr. Chari Cheng",
           pic_url: require('@/assets/speakers/DrChari.png'),
           modal: {
-            time: "6-7pm",
+            time: "11:00am",
             creds: "Co-founder and CRO of Senti AI",
             face1: "https://facebook.com/SentiPH",
             description: "Charibeth Cheng is Senti AI’s co-founder and Head of Research and an Associate Dean and Assistant Professor at De La Salle University, where she has received multiple awards as an outstanding teacher. Additionally, Chari is one of the pioneer researchers of the university’s Center for Language Technologies (DLSU-CELT). Having specialized in the area of Natural Language Processing and Machine Learning, she works with her students to develop computation models, tools, and electronic resources that help process, understand, and generate text written in local languages. She also received her Master’s Degree and Ph.D. in Computer Science and published numerous papers on AI, NLP, information systems, and related interdisciplinary venues. "
           }
         },
         {
-          class: "card5",
-          time: "8:00",
-          panel: "2 Name of panel",
+          class: "card4",
+          time: "11:20",
+          talk: "2 Name of talk",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Teresa Condicion",
+          pic_url: require('@/assets/speakers/TeresaCondicion.jpg'),
           modal: {
-            time: "7-8pm",
-            description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            time: "11:20am",
+            creds: "Co-founder and CEO for Shoplinks Singapore",
+            web1: "https://www.pageexecutive.com/asia-pacific/leading-women/a-journey-from-poverty-to-empowerment",
+            description: "Teresa Condicion spent the last 20 years doing what she loves – building data capabilities and starting businesses and organisations across Asia, from her long tenure at P&G as head of ASEAN consumer and retail analytics to founding and building two data-driven tech startups. Teresa strongly advocates for bringing a broader economic impact towards even the smallest retailers out there, to have the capabilities of data and technology to compete in an increasingly digitised world."
+          }
+        },
+        {
+          class: "card5",
+          time: "11:40",
+          panel: "Breaking Barriers with Women in Startups Panel Discussion",
+          description: "Wanna know more about the journeys of powerful women in the startup scene? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind.",
+          modal: {
+            time: "11:40am",
+            description: "Wanna know more about the journeys of powerful women in the startup scene? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees have in mind."
           }
         },
         {
@@ -917,60 +956,15 @@ export default {
 
       //All card info for third day
       third_day: [
-      {
+        {
           class: "card1",
-          time: "9:00",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Rene “Butch” Meily",
-          pic_url: require('@/assets/speakers/ReneMeily.jpg'),
-          modal: {
-            time: "1-2pm",
-            creds: "President of IdeaSpace Foundation, QBO Innovation Hub, and Philippine Disaster Resilience Foundation",
-            linked1: "https://www.linkedin.com/in/rene-butch-meily-7a87224/",
-            web1: "https://drive.google.com/file/d/18YXNdu9zk4ejbYTYuSOx5ZoWn1bJWxe6/view?usp=sharing",
-            web2: "https://www.philstar.com/lifestyle/business-life/2014/06/02/1329490/business-lessons-three-ceos",
-            description: "Butch has made a massive impact on the local startup community through IdeaSpace Foundation, a technology accelerator for early-stage startups, and QBO Innovation Hub, a public-private partnership launched to mentor startups. Aside from carrying a presidential role in both of these organizations, Butch is also the President of the Philippine Disaster Resilience Foundation, a private sector disaster management organization that is dedicated to the sustainable development and general welfare of the Filipino people."
-          }
-        },
-        {
-          class: "card2",
-          time: "10:00",
-          talk: "Building a Fintech Company that is both Filipino and Global",
-          description: "Mikko Perez, Founder & CEO of Ayannah will tell us about Ayannah's journey.  Why he started it and the roller coaster ride of starting a tech company in the Philippines and how Ayannah has grown from being a Filipino company to a global fintech company",
-          speaker: "Miguel (Mikko) Perez",
-          pic_url: require('@/assets/speakers/MikoPerez.jpg'),
-          modal: {
-            time: "3-4pm",
-            creds: "Founder and CEO of Ayannah",
-            linked1: "https://www.linkedin.com/in/mperez5/?originalSubdomain=ph",
-            description: "Mikko is the Founder & CEO of Ayannah, an award-winning fintech start up providing affordable and accessible digital financial services to the world's emerging middle class. Prior to this, Mikko was part of the founding team of Chikka, a mobile instant messaging start up where he helped in expanding to China, India, Japan and the US prior to Chikka's acquisition by PLDT (NYSE: PHI).  He has also worked as a private equity investment manager in Singapore and an investment banker at JP Morgan in San Francisco.\n\nHaving begun his career as a community organizer helping build social enterprises in rural Philippines, Mikko remains actively involved in initiatives that support social entrepreneurship and sustainable development. Mikko holds a BSc in Management (with Honors) and a BA in Development Studies (with Honors & Award for Excellence) from the Ateneo de Manila University, and an MBA from the Harvard Business School."
-          }
-        },
-        {
-          class: "card3",
-          time: "11:00",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Ruel Amparo",
-          pic_url: require('@/assets/speakers/RuelAmparo.jpg'),
-          modal: {
-            time: "5-6pm",
-            creds: "Founder and CEO of Cropital",
-            web1: "https://events.development.asia/author/ruel-amparo",
-            linked1: "https://ph.linkedin.com/in/ruelamparo",
-            description: "Ruel Amparo is the Chief Executive Officer and Founder of Cropital, the largest peer to peer lending platform for smallholder farmers in the Philippines. He is an industrial engineer who previously worked for different companies in the oil and gas industry and an active volunteer who has led several socio civic project initiatives in the past. Recognized for student leadership, data analytics, and community development, Ruel also graduated Cum Laude and was awarded with Garrick Yao Student Excellence Award for Service."
-          }
-        },
-        {
-          class: "card4",
-          time: "11:00",
+          time: "10:10",
           talk: "Systems Change in Diversity and Inclusion",
           description: "Starting a business doesn’t just require wanting to help people and working in a silo. Solving a problem involves understanding the various underlying systems that surround the issue. ",
           speaker: "Ryan Gersava",
           pic_url: require('@/assets/speakers/RyanGersava.jpeg'),
           modal: {
-            time: "5-6pm",
+            time: "10:10am",
             creds: "Founder and President of Virtualahan",
             linked1: "https://www.linkedin.com/in/rdgersava/",
             linked2: "https://www.linkedin.com/company/virtualahan/",
@@ -985,13 +979,58 @@ export default {
           }
         },
         {
-          class: "card5",
-          time: "12:00",
-          panel: "3 Name of panel",
+          class: "card2",
+          time: "10:30",
+          talk: "3 Name of talk",
           description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Ruel Amparo",
+          pic_url: require('@/assets/speakers/RuelAmparo.jpg'),
           modal: {
-            time: "7-8pm",
-            description: "Panel description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            time: "10:30am",
+            creds: "Founder and CEO of Cropital",
+            web1: "https://events.development.asia/author/ruel-amparo",
+            linked1: "https://ph.linkedin.com/in/ruelamparo",
+            description: "Ruel Amparo is the Chief Executive Officer and Founder of Cropital, the largest peer to peer lending platform for smallholder farmers in the Philippines. He is an industrial engineer who previously worked for different companies in the oil and gas industry and an active volunteer who has led several socio civic project initiatives in the past. Recognized for student leadership, data analytics, and community development, Ruel also graduated Cum Laude and was awarded with Garrick Yao Student Excellence Award for Service."
+          }
+        },
+        {
+          class: "card3",
+          time: "11:00",
+          talk: "Building a Fintech Company that is both Filipino and Global",
+          description: "Mikko Perez, Founder & CEO of Ayannah will tell us about Ayannah's journey.  Why he started it and the roller coaster ride of starting a tech company in the Philippines and how Ayannah has grown from being a Filipino company to a global fintech company",
+          speaker: "Miguel (Mikko) Perez",
+          pic_url: require('@/assets/speakers/MikoPerez.jpg'),
+          modal: {
+            time: "11:00am",
+            creds: "Founder and CEO of Ayannah",
+            linked1: "https://www.linkedin.com/in/mperez5/?originalSubdomain=ph",
+            description: "Mikko is the Founder & CEO of Ayannah, an award-winning fintech start up providing affordable and accessible digital financial services to the world's emerging middle class. Prior to this, Mikko was part of the founding team of Chikka, a mobile instant messaging start up where he helped in expanding to China, India, Japan and the US prior to Chikka's acquisition by PLDT (NYSE: PHI).  He has also worked as a private equity investment manager in Singapore and an investment banker at JP Morgan in San Francisco.\n\nHaving begun his career as a community organizer helping build social enterprises in rural Philippines, Mikko remains actively involved in initiatives that support social entrepreneurship and sustainable development. Mikko holds a BSc in Management (with Honors) and a BA in Development Studies (with Honors & Award for Excellence) from the Ateneo de Manila University, and an MBA from the Harvard Business School."
+          }
+        },
+        {
+          class: "card4",
+          time: "11:40",
+          talk: "3 Name of talk",
+          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          speaker: "Rene “Butch” Meily",
+          pic_url: require('@/assets/speakers/ReneMeily.jpg'),
+          modal: {
+            time: "11:40am",
+            creds: "President of IdeaSpace Foundation, QBO Innovation Hub, and Philippine Disaster Resilience Foundation",
+            linked1: "https://www.linkedin.com/in/rene-butch-meily-7a87224/",
+            web1: "https://drive.google.com/file/d/18YXNdu9zk4ejbYTYuSOx5ZoWn1bJWxe6/view?usp=sharing",
+            web2: "https://www.philstar.com/lifestyle/business-life/2014/06/02/1329490/business-lessons-three-ceos",
+            description: "Butch has made a massive impact on the local startup community through IdeaSpace Foundation, a technology accelerator for early-stage startups, and QBO Innovation Hub, a public-private partnership launched to mentor startups. Aside from carrying a presidential role in both of these organizations, Butch is also the President of the Philippine Disaster Resilience Foundation, a private sector disaster management organization that is dedicated to the sustainable development and general welfare of the Filipino people."
+          }
+        },
+        {
+          class: "card5",
+          time: "11:20",
+          panel: "Social Entrepreneurship for a Better Tomorrow Panel Discussion",
+          description: "Got more questions about social entrepreneurship in the startup scene, and how they're building a better tomorrow? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees might have in mind.",
+          modal: {
+            time: "11:20am",
+            description: "Got more questions about social entrepreneurship in the startup scene, and how they're building a better tomorrow? Ask the professionals themselves! This panel discussion will be a question and answer segment between the attendees and speakers, where it focuses on getting insights from experienced professionals on any specific question attendees might have in mind."
           }
         },
         {
@@ -1059,20 +1098,14 @@ export default {
     }
   },
   created(){
-        AOS.init(
+         AOS.init(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         ),
         AOS.refresh(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         )
     }

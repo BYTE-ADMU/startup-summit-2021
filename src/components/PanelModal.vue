@@ -21,30 +21,32 @@
         </div>
         </div>
         <div class="talk_details">
-            <button class="exit" v-on:click="exitButton"></button>
-            <h1 class="talk_title">{{ panel }}</h1>
-            <p class="date">{{ date }}, {{ time }} GMT+8</p>
-            <div class="row1">
-                <div class="col">
-                    <p class="speaker1">{{ speaker_1 }}</p>
-                    <p class="speaker_creds1">{{ creds1 }}</p>
+            <div class="scroll">
+                <button class="exit" v-on:click="exitButton"></button>
+                <h1 class="talk_title">{{ panel }}</h1>
+                <p class="date">{{ date }}, {{ time }} GMT+8</p>
+                <div class="row1">
+                    <div class="col">
+                        <p class="speaker1">{{ speaker_1 }}</p>
+                        <p class="speaker_creds1">{{ creds1 }}</p>
+                    </div>
+                    <div class="col">
+                        <p class="speaker2">{{ speaker_2 }}</p>
+                        <p class="speaker_creds2">{{ creds2 }}</p>
+                    </div>
                 </div>
-                <div class="col">
-                    <p class="speaker2">{{ speaker_2 }}</p>
-                    <p class="speaker_creds2">{{ creds2 }}</p>
+                <div class="row2">    
+                    <div class="col">
+                        <p class="speaker3">{{ speaker_3 }}</p>
+                        <p class="speaker_creds3">{{ creds3 }}</p>
+                    </div>
+                    <div class="col">
+                        <p class="speaker4">{{ speaker_4 }}</p>
+                        <p class="speaker_creds4">{{ creds4 }}</p>
+                    </div>
                 </div>
+                <p class="description">{{ description }}</p>
             </div>
-            <div class="row2">    
-                <div class="col">
-                    <p class="speaker3">{{ speaker_3 }}</p>
-                    <p class="speaker_creds3">{{ creds3 }}</p>
-                </div>
-                <div class="col">
-                    <p class="speaker4">{{ speaker_4 }}</p>
-                    <p class="speaker_creds4">{{ creds4 }}</p>
-                </div>
-            </div>
-            <p class="description">{{ description }}</p>
             <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
         </div>
     </div>
@@ -117,18 +119,17 @@ export default {
     display: flex;
     flex-direction: column;
     margin: 30px 64px 60px 0;
-    overflow-y: auto;
 }
-.card3 .talk_details::-webkit-scrollbar {
+.card3 .scroll::-webkit-scrollbar {
     width: 5px;
 }
-.card3 .talk_details::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+.card3 .scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
 }
-.card3 .talk_details::-webkit-scrollbar-thumb {
+.card3 .scroll::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 .talk_details .row1, .talk_details .row2{
     display: flex;
@@ -143,6 +144,9 @@ export default {
 
 /*General styling*/
 /*images*/
+.scroll {
+    overflow-y: auto;
+}
 .card3 .speaker_img1 {
     margin-right: 133.92px;
     z-index: 3;
@@ -205,9 +209,9 @@ export default {
 }
 .card3 .speaker_img3 .container .picture {
     position: absolute;
-    left: -75px;
+    left: -40px;
     top: -10px;
-    width: 360px;
+    width: 300px;
     z-index: inherit;
 }
 .card3 .speaker_img4 {

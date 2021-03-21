@@ -233,20 +233,14 @@ export default {
         // Filter
     },
     created(){
-        AOS.init(
+         AOS.init(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         ),
         AOS.refresh(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         )
     },
@@ -664,6 +658,12 @@ line-height: 26px;
 @media screen and (max-width: 1194px){
     .startups-wrapper{
         max-width: 784px;
+    }
+    .circle-design{
+        display: none !important;
+    }
+    #coming-soon{
+        margin: 180px 0 !important;
     }
 }
 @media screen and (max-width: 1024px){
