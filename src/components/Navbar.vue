@@ -278,6 +278,7 @@ export default {
   #desktop-nav li > a:hover,
   #desktop-nav li > a.router-link-active {
     color: #F46E26;
+    transition: color 200ms ease-in-out;
   }
 
   .nav-content {
@@ -335,6 +336,7 @@ export default {
     color: #EAA200;
     font-weight: 700;
     line-height: 24px;
+    transition: color 200ms ease-in-out;
   }
 
   #burger-bg {
