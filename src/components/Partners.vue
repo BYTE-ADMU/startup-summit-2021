@@ -94,6 +94,14 @@ export default {
     transform: translate(0px,144px);
     padding-bottom: 35%;
 }
+.img-row img{
+    width: 127px;
+    height: 127px;
+    padding: 0 20px 25px 20px;
+}
+center{
+        margin-top: 48px;
+    }
 }
 @media screen and (max-width: 700px){
 .text p{
@@ -103,6 +111,7 @@ line-height: 40px;
 .img-row img{
     width: 127px;
     height: 127px;
+    padding: 0 20px 25px 20px;
 }
 .img-rows{
     width: 466.5px;
@@ -126,6 +135,7 @@ line-height: 40px;
 .img-row img{
     width: 103.5px;
     height: 103.5px;
+    padding: 0 10px 15px 10px;
 }
 .img-rows{
     width: 377.25px;
@@ -136,6 +146,10 @@ line-height: 40px;
         transform: translate(0px,110px);
         padding-top: 0px;
         padding-bottom: 50%;
+        margin-top: 12px;
+    }
+    center{
+        margin-top: 24px;
     }
 .text p{
 font-size: 20px;

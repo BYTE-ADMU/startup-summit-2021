@@ -66,34 +66,34 @@
           />
         </li> -->
         <li>
-          <router-link :style="(isHome) ? navLink : {}" to="/" v-on:click="showBurger(), handleScroll()">
+          <router-link to="/" v-on:click="showBurger(), handleScroll()">
             <span>Home</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome) ? navLink : {}" to="/startups" v-on:click="showBurger(), handleScroll()">
+          <router-link to="/startups" v-on:click="showBurger(), handleScroll()">
             <span>Startups</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome)  ? navLink : {}" to="/about" v-on:click="showBurger(), handleScroll()">
+          <router-link to="/about" v-on:click="showBurger(), handleScroll()">
             <span>About</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome)  ? navLink : {}" to="/partners" v-on:click="showBurger(), handleScroll()">
+          <router-link to="/partners" v-on:click="showBurger(), handleScroll()">
             <span>Partners</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome)  ? navLink : {}" to="/faqs" v-on:click="showBurger(), handleScroll()">
+          <router-link to="/faqs" v-on:click="showBurger(), handleScroll()">
             <span>FAQs</span>
           </router-link>
         </li>
         <li>
-           <router-link :style="(isHome)  ? navLink : {}" to="https://airtable.com/shrVSQ9HN8MwPq5ls" v-on:click="showBurger(), handleScroll()">
+           <a href="https://airtable.com/shrVSQ9HN8MwPq5ls">
                 <PrimaryBtn>Register</PrimaryBtn>
-            </router-link>
+            </a>
             
         </li>
       </ul>
@@ -138,7 +138,7 @@ export default {
     showBurger() {
       const mobileNav = document.querySelector("#mobile-nav");
       const burgerBtn = document.querySelector(".burger-button");
-      if(mobileNav.style.top == '-420px'){
+      if(mobileNav.style.top == '-100vh'){
         mobileNav.style.top = '0';
         burgerBtn.classList.add("open");
         document.querySelector(".black-overlay").style.display = "inline-block";
@@ -146,7 +146,7 @@ export default {
         document.querySelector("body").style.overflow = "hidden";
       } 
       else {
-        mobileNav.style.top = '-420px';
+        mobileNav.style.top = '-100vh';
         burgerBtn.classList.remove("open");
         document.querySelector(".black-overlay").style.display = "none";
         document.querySelector("html").style.overflow = "initial";
@@ -303,17 +303,17 @@ export default {
   #mobile-nav {
     display: block;
     position: fixed;
-    top: -420px;
+    top: -100vh;
     width: 100%;
     left: 0;
-    height: 420px;
+    height: 100vh;
     background: #fcfcfc;
     transition: top 0.5s;
     /* transition: bottom 0.5s; */
   }
   #mobile-nav > ul {
     margin: 0;
-    padding: 12px 0;
+    padding: 30px 0;
   }
   #mobile-nav li > a {
     display: flex;
@@ -323,7 +323,7 @@ export default {
   }
   #mobile-nav a > span {
     font-size: 16px;
-    margin-bottom: 24px;
+    margin: 30px 0;
     font-weight: 700px;
   }
   #mobile-nav a > i,

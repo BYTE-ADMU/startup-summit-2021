@@ -118,20 +118,14 @@ export default {
       SecondaryBtn
     },
     created(){
-        AOS.init(
+         AOS.init(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         ),
         AOS.refresh(
             {
-                disable: function() {
-                var maxWidth = 1025;
-                return window.innerWidth < maxWidth;
-            }
+                disable: 'tablet' & 'mobile'
             }
         )
     },
