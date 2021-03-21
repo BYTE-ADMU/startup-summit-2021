@@ -139,7 +139,7 @@ export default {
     padding-top: 32px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 .img-row img{
     object-fit: contain;
@@ -274,6 +274,11 @@ export default {
 .img-row{
     width: 656px;
 }
+.im-row img {
+    width: 64px;
+    height: auto;
+    padding-right: 12px;
+}
 .and-more{
     transform: translate(74.5%,0%);
 }
@@ -374,7 +379,7 @@ display: inline-block;
 }
 .img-row img{
     width: 60px;
-    height: 60px;
+    /* height: 60px; */
 }
 .img-row{
     width: 508px;
@@ -410,8 +415,9 @@ display: inline-block;
         width: 57%;
     }
 .img-row img{
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: auto;
+    padding-right: 16px;
 }
 .img-row{
     width: 264px;
