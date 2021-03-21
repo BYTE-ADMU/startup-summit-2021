@@ -154,7 +154,7 @@ export default {
       }
     },
     handleResizeNav() {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 1024) {
         this.isDesktop = false;
       } 
       else {
@@ -362,7 +362,7 @@ export default {
       transition: .5s ease-in-out;
   }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   nav {
     padding-top: 30px;
   }

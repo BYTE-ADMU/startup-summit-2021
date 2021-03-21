@@ -145,8 +145,12 @@ export default {
 @media screen and (max-width: 577px){
 .logo-wrapper{
     width: 234px;
-    height: 59px;
+    /* height: 59px; */
 }
+/* .logo-wrapper img {
+    width: 120px;
+    height: 59px;
+} */
 .footer-wrapper{
     width: 100%;
     height: 350px;
