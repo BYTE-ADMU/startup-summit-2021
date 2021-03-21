@@ -113,6 +113,7 @@ h1 {
     border: none;
     margin: 0;
     padding: 0;
+    padding-top: 5%;
 }
 .about_video {
     align-self: center;
