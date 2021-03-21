@@ -490,14 +490,14 @@ margin-top: 30px!important;
     margin-top: 24px!important;
   }
 }
-@media screen and (max-width: 380px) {
+/* @media screen and (max-width: 380px) {
   #answer{
     display: none;
   }
   #answer2{
     display: inline-block;
   }
-}
+} */
 @media screen and (max-width: 286px) {
   .reg-btn{
     margin-top: 24px!important;
