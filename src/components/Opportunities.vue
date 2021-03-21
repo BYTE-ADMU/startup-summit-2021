@@ -155,7 +155,6 @@ export default {
 .img-row img{
     object-fit: contain;
     width: 80px;
-    height: auto;
     margin-right: 16px !important;
 }
 #second-imgrow{
@@ -163,7 +162,7 @@ export default {
 }
 .and-more{
     padding-top: 12px;
-    transform: translate(69%,0%);
+    transform: translate(79%,0%);
 }
 .and-more p{
     font-family: "Inter-SemiBold";
@@ -278,15 +277,12 @@ export default {
     transform: translate(6.5%,0%);
 }
 .img-row{
-    width: 559px;
+    width: 576px;
 }
 .im-row img {
     width: 64px;
     height: auto;
     padding-right: 12px;
-}
-.and-more{
-    transform: translate(61.5%,0%);
 }
 }
 @media screen and (max-width: 736px){
@@ -323,7 +319,7 @@ export default {
     visibility: hidden;
 }
 .and-more{
-    transform: translate(62%,0%);
+    transform: translate(72%,0%);
 }
 .view-btn .primary-btn {
   display: none;
@@ -392,9 +388,10 @@ display: inline-block;
     width: 0%!important;
     height: 0%!important;
     visibility: hidden;
+    display: none;
 }
 .view-btn{
-    padding-top: 25px;
+    padding-top: 40px;
 }
 }
 @media screen and (max-width: 540px){
