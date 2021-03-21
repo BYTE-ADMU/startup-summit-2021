@@ -56,10 +56,24 @@ export default {
     margin-right: 8px;
 }
 .text {
+    display: flex;
     font-family: "objectivity_ebold";
     margin: auto;
     text-align: center;
     font-size: 28px;
     width: 363px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+    .text {
+    font-family: "objectivity_ebold";
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    max-width: 300px;
+}
 }
 </style>

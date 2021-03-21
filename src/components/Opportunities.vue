@@ -279,6 +279,11 @@ export default {
 .img-row{
     width: 559px;
 }
+.im-row img {
+    width: 64px;
+    height: auto;
+    padding-right: 12px;
+}
 .and-more{
     transform: translate(61.5%,0%);
 }
@@ -376,7 +381,7 @@ display: inline-block;
 }
 .img-row img{
     width: 60px;
-    height: 60px;
+    /* height: 60px; */
 }
 .img-row{
     width: 479px;
@@ -412,8 +417,9 @@ display: inline-block;
         width: 57%;
     }
 .img-row img{
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: auto;
+    padding-right: 16px;
 }
 .img-row{
     width: 319px;
