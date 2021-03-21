@@ -205,9 +205,9 @@ export default {
 }
 .card3 .speaker_img3 .container .picture {
     position: absolute;
-    left: -75px;
+    left: -40px;
     top: -10px;
-    width: 360px;
+    width: 300px;
     z-index: inherit;
 }
 .card3 .speaker_img4 {
