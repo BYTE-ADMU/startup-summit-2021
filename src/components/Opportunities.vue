@@ -8,27 +8,36 @@
             </div>
             <div class="img-rows">
                 <div class="img-row">
-                    <img alt="Featured Startup logo" src="@/assets/startups/arpacorp/logo.png">
-                    <img alt="Featured Startup logo" src="@/assets/startups/clink/logo1.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/ideas/logo.png">
-                    <img alt="Featured Startup logo" src="@/assets/startups/mosaic/logo.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/qbo/icon.png">
-                    <img alt="Featured Startup logo" class="sixth-img" src="@/assets/startups/startupvillage/icon.png">
-                    <img alt="Featured Startup logo" class="seventh-img" src="@/assets/startups/technoapp/logo.png">
-                    <img alt="Featured Startup logo" class="eight-img" src="@/assets/startups/makeracademy/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/startupvillage/icon.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/technoapp/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/arpacorp/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/notion/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/clink/logo1.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/mosaic/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/datacamp/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/makeracademy/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/pickaroo/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/xperto/logo2.png">
                 </div>
+                <!--
+                    class="sixth-img"
+                    class="seventh-img"
+                    class="eighth-img"
                 <div class="img-row" id="second-imgrow">
                     <img alt="Featured Startup logo" src="@/assets/startups/pickaroo/logo.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/xperto/logo2.png">
-                    <!--
+                    
                     <img alt="alt" src="#">
                     <img alt="Featured Startup logo" src="#">
                     <img alt="Featured Startup logo" src="#">
                     <img alt="Featured Startup logo" class="sixth-img" src="#">
                     <img alt="Featured Startup logo" class="seventh-img" src="#">
                     <img alt="Featured Startup logo" class="eight-img" src="#">
-                    -->
+                    
                 </div>
+                -->
             </div>
             <div class="and-more">
                 <p>...AND MORE!</p>
@@ -140,6 +149,8 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 615px;
 }
 .img-row img{
     object-fit: contain;
@@ -151,7 +162,7 @@ export default {
 }
 .and-more{
     padding-top: 12px;
-    transform: translate(88%,0%);
+    transform: translate(69%,0%);
 }
 .and-more p{
     font-family: "Inter-SemiBold";
@@ -210,9 +221,6 @@ export default {
 .first-container{
     transform: translate(10%,19%);
 }
-.and-more{
-    transform: translate(89%,0%);
-}
 .img-wrapper{
     transform: translate(22%,0%);
 }
@@ -253,9 +261,6 @@ export default {
     height: 0%!important;
     visibility: hidden;
 }
-.and-more{
-    transform: translate(85.5%,0%);
-}
 }
 @media screen and (max-width: 924px){
 .first-container{
@@ -272,10 +277,10 @@ export default {
     transform: translate(6.5%,0%);
 }
 .img-row{
-    width: 656px;
+    width: 559px;
 }
 .and-more{
-    transform: translate(74.5%,0%);
+    transform: translate(61.5%,0%);
 }
 }
 @media screen and (max-width: 736px){
@@ -312,7 +317,7 @@ export default {
     visibility: hidden;
 }
 .and-more{
-    transform: translate(69.7%,0%);
+    transform: translate(62%,0%);
 }
 .view-btn .primary-btn {
   display: none;
@@ -333,9 +338,6 @@ display: inline-block;
 @media screen and (max-width: 640px){
 .sixth-img{
     visibility: hidden;
-}
-.and-more{
-    transform: translate(56%,0%);
 }
 }
 .text-wrapper #content{
@@ -377,7 +379,7 @@ display: inline-block;
     height: 60px;
 }
 .img-row{
-    width: 508px;
+    width: 479px;
 }
 .and-more{
     transform: translate(20.7%,0%);
@@ -414,7 +416,7 @@ display: inline-block;
     height: 40px;
 }
 .img-row{
-    width: 264px;
+    width: 319px;
 }
 }
 @media screen and (max-width: 450px){
