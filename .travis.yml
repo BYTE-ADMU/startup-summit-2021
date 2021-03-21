@@ -10,7 +10,3 @@ install:
 script:
   - echo "skipping tests"
   - yarn run build
-  - echo "deploying"
-
-after_success: 
-  - firebase deploy --token $FIREBASE_TOKEN
