@@ -148,7 +148,7 @@ export default {
     padding-top: 32px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 615px;
 }
@@ -156,6 +156,7 @@ export default {
     object-fit: contain;
     width: 80px;
     height: auto;
+    margin-right: 16px !important;
 }
 #second-imgrow{
     padding-top: 16px;

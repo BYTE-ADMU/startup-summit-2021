@@ -170,7 +170,7 @@ export default {
           {
             question: 'Who do I contact for further questions?',
             answer: "If you have any questions, you may send them to our email <a href='mailto:byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26'> byte.startupsummit2021@gmail.com</a>.",
-            answer2: "If you have any questions, you may send them to our <a href='mailto:byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26'>email.</a>"
+            answer2: "If you have any questions, you may send them to our <a href='mailto:byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26' target='_blank' rel='noreferrer noopenner'>email.</a>"
           }
         ],
         regQuestions: [
@@ -188,7 +188,7 @@ export default {
           },
           {
             question: 'When will I receive the second phase details after accomplishing the registration form?',
-            answer: "The Phase 2 registration link will be sent via email a few weeks before the event proper. You can like our <a href='' style='text-decoration: none; color:#F46E26'>Official Facebook Page</a> to stay updated on announcements regarding the event."
+            answer: "The Phase 2 registration link will be sent via email a few weeks before the event proper. You can like our <a href='https://www.facebook.com/startupsummit2021' style='text-decoration: none; color:#F46E26' target='_blank' rel='noreferrer noopenner'>Official Facebook Page</a> to stay updated on announcements regarding the event."
           }
         ],
         partQuestions: [
