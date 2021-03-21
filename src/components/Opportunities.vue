@@ -155,7 +155,6 @@ export default {
 .img-row img{
     object-fit: contain;
     width: 80px;
-    height: auto;
     margin-right: 16px !important;
 }
 #second-imgrow{
