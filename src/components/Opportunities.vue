@@ -34,7 +34,7 @@
                 <p>...AND MORE!</p>
             </div>
             <div class="view-btn">
-                <span class="primary-btn"><PrimaryBtn>View featured startups<Chevron id="chevron"/></PrimaryBtn></span>
+                <router-link to="/startups" class="primary-btn"><PrimaryBtn>View featured startups<Chevron id="chevron"/></PrimaryBtn></router-link>
                 <span class="primary-btn2"><PrimaryBtn>View startups<Chevron id="chevron"/></PrimaryBtn></span>
             </div>
         </div>
