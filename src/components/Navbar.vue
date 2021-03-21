@@ -397,7 +397,8 @@ export default {
   .burger-button {
     z-index: 4000;
     position: absolute;
-    transform: translateY(10px);
+    margin-top: 16px;
+    transform: translateY(2px);
   }
 
 
