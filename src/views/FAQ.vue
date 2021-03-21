@@ -51,8 +51,8 @@
               speakers_unclicked=false,
               speakers_clicked=true,
               plat_unclicked=true,
-              plat_clicked=false"><PrimaryBtn id="btn" v-if="speakers_clicked">Speakers</PrimaryBtn>
-              <SecondaryBtn v-if="speakers_unclicked">Speakers</SecondaryBtn></span>
+              plat_clicked=false"><PrimaryBtn id="btn" v-if="speakers_clicked">Startups</PrimaryBtn>
+              <SecondaryBtn v-if="speakers_unclicked">Startups</SecondaryBtn></span>
               <span class="plat-btn" @click="
               general_clicked=false,
               general_unclicked=true,
