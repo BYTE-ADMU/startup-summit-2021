@@ -47,20 +47,20 @@
                 </div>
                 <p class="description">{{ description }}</p>
             </div>
-            <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
+            <!-- <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn> -->
         </div>
     </div>
 </template>
 
 <script>
-import PrimaryBtn from "./PrimaryBtn.vue"
-import Chevron from "./Chevron.vue"
+// import PrimaryBtn from "./PrimaryBtn.vue"
+// import Chevron from "./Chevron.vue"
 
 export default {
     name: "PanelModal",
     components: {
-        PrimaryBtn,
-        Chevron
+        // PrimaryBtn,
+        // Chevron
     },
     props: {
         img1: String,

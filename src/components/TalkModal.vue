@@ -91,20 +91,20 @@
                 </a>
             </div>
             <p class="description">{{ description }}</p>
-            <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
+            <!-- <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn> -->
         </div>
     </div>
 </template>
 
 <script>
-import PrimaryBtn from "./PrimaryBtn.vue"
-import Chevron from "./Chevron.vue"
+// import PrimaryBtn from "./PrimaryBtn.vue"
+// import Chevron from "./Chevron.vue"
 
 export default {
     name: "TalkModal",
     components: {
-        PrimaryBtn,
-        Chevron
+        // PrimaryBtn,
+        // Chevron
     },
     props: {
         talk: String,
