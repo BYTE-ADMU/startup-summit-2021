@@ -71,27 +71,27 @@
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome) ? navLink : {}" to="/services" v-on:click="showBurger(), handleScroll()">
+          <router-link :style="(isHome) ? navLink : {}" to="/startups" v-on:click="showBurger(), handleScroll()">
             <span>Startups</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome)  ? navLink : {}" to="/projects" v-on:click="showBurger(), handleScroll()">
+          <router-link :style="(isHome)  ? navLink : {}" to="/about" v-on:click="showBurger(), handleScroll()">
             <span>About</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome)  ? navLink : {}" to="/about" v-on:click="showBurger(), handleScroll()">
+          <router-link :style="(isHome)  ? navLink : {}" to="/partners" v-on:click="showBurger(), handleScroll()">
             <span>Partners</span>
           </router-link>
         </li>
         <li>
-          <router-link :style="(isHome)  ? navLink : {}" to="/contactus" v-on:click="showBurger(), handleScroll()">
+          <router-link :style="(isHome)  ? navLink : {}" to="/faqs" v-on:click="showBurger(), handleScroll()">
             <span>FAQs</span>
           </router-link>
         </li>
         <li>
-           <router-link :style="(isHome)  ? navLink : {}" to="/contactus" v-on:click="showBurger(), handleScroll()">
+           <router-link :style="(isHome)  ? navLink : {}" to="https://airtable.com/shrVSQ9HN8MwPq5ls" v-on:click="showBurger(), handleScroll()">
                 <PrimaryBtn>Register</PrimaryBtn>
             </router-link>
             
@@ -343,6 +343,7 @@ export default {
     border-radius: 50%;
     height: 48px;
     width: 48px;
+    margin-top: 16px;
     transform: translateX(-8px);
     background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -396,8 +397,9 @@ export default {
   .burger-button {
     z-index: 4000;
     position: absolute;
-    transform: translateY(2px);
+    transform: translateY(10px);
   }
+
 
   .burger-button div {
     width: 32px;
