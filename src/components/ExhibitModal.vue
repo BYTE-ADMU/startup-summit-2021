@@ -137,10 +137,10 @@ export default {
     flex-direction: column;
     width: 864px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-    margin: 0 auto 100px auto;
     border: none;
     border-radius: 3px;
     overflow: hidden;
+    background-color: #fcfcfc;
 }
 .sus_exhibit .startups {
     display: flex;
@@ -193,6 +193,7 @@ export default {
     border-radius: 40px;
     border: solid 1px;
     margin: 12px 16px 12px 0;
+    object-fit: contain;
 }
 .startup_name {
     position: relative;

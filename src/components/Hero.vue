@@ -15,7 +15,7 @@
                 <p id="date">April 16-18, 2021</p>
             </div>
             <div class="btn-wrapper">
-                <span id="primary-btn"><PrimaryBtn>Register Now</PrimaryBtn></span><span id="secondary-btn"><SecondaryBtn>View Schedule</SecondaryBtn></span>
+                <span id="primary-btn"><a href="https://airtable.com/shrVSQ9HN8MwPq5ls" target="_blank" rel="noreferrer noopenner"><PrimaryBtn>Register Now</PrimaryBtn></a></span><span id="secondary-btn"><a href="#event_schedule"><SecondaryBtn>View Schedule</SecondaryBtn></a></span>
             </div>
         </div>
         </div>
@@ -26,12 +26,32 @@
 <script>
 import PrimaryBtn from './PrimaryBtn'
 import SecondaryBtn from './SecondaryBtn'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
     name: 'Hero',
     components:{
     PrimaryBtn,
     SecondaryBtn
+    },
+    created(){
+        AOS.init(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: function() {
+                var maxWidth = 1025;
+                return window.innerWidth < maxWidth;
+            }
+            }
+        )
     }
 }
 </script>

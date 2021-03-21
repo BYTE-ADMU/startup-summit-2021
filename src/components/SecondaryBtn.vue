@@ -30,10 +30,12 @@ export default {
 #secondary{
     border: 1px solid #F46E26;
     color: #F46E26;
-    background-color: #fcfcfc;
+    background: #fcfcfc;
+    transition: background 200ms ease-in-out;
+    transition: color 200ms ease-in-out;
 }
 #secondary:hover:not([disabled]){
-    background: linear-gradient(93.62deg, #F2B430 0%, #F46E26 99.35%);
+    background: #F46E26;
     color: #f8f8f8;
 }
 #secondary:active:not([disabled]){

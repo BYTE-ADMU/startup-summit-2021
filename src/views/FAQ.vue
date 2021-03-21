@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+  <div data-aos="fade-up">
     <div class="page-container">
         <center><div class="first-container">
             <p id="header">Got Questions?</p>
@@ -50,8 +51,8 @@
               speakers_unclicked=false,
               speakers_clicked=true,
               plat_unclicked=true,
-              plat_clicked=false"><PrimaryBtn id="btn" v-if="speakers_clicked">Speakers</PrimaryBtn>
-              <SecondaryBtn v-if="speakers_unclicked">Speakers</SecondaryBtn></span>
+              plat_clicked=false"><PrimaryBtn id="btn" v-if="speakers_clicked">Startups</PrimaryBtn>
+              <SecondaryBtn v-if="speakers_unclicked">Startups</SecondaryBtn></span>
               <span class="plat-btn" @click="
               general_clicked=false,
               general_unclicked=true,
@@ -100,18 +101,33 @@
           </div>
         </center>
     </div>
+    </div>
 </div>
 </template>
 
 <script>
 import PrimaryBtn from '../components/PrimaryBtn.vue'
 import SecondaryBtn from '../components/SecondaryBtn.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
     name: 'FAQ',
     components:{
       PrimaryBtn,
       SecondaryBtn
+    },
+    created(){
+         AOS.init(
+            {
+                disable: 'tablet' & 'mobile'
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: 'tablet' & 'mobile'
+            }
+        )
     },
     data(){
       return{
@@ -128,8 +144,8 @@ export default {
         genQuestions: [
           {
             question: 'What is Startup Summit?',
-            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>",
-            answer2: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2020. You can read more about it <a href='' style='text-decoration: none; color:#F46E26'>here.</a>"
+            answer: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='/about' style='text-decoration: none; color:#F46E26'>here.</a>",
+            answer2: "Startup Summit 2021 is a flagship event by BYTE where a series of talks and an exhibit of startups will take place on April 16-18, 2021. You can read more about it <a href='/about' style='text-decoration: none; color:#F46E26'>here.</a>"
           },
           {
             question: 'How will I know which speaker/s will be present for what day?',
@@ -153,7 +169,7 @@ export default {
           },
           {
             question: 'Who do I contact for further questions?',
-            answer: "If you have any questions, you may send them to byte.startupsummit2021@gmail.com.",
+            answer: "If you have any questions, you may send them to our email <a href='mailto:byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26'> byte.startupsummit2021@gmail.com</a>.",
             answer2: "If you have any questions, you may send them to our <a href='mailto:byte.startupsummit2021@gmail.com' style='text-decoration: none; color:#F46E26'>email.</a>"
           }
         ],

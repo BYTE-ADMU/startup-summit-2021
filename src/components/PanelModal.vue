@@ -28,12 +28,18 @@
                 <div class="col">
                     <p class="speaker1">{{ speaker_1 }}</p>
                     <p class="speaker_creds1">{{ creds1 }}</p>
+                </div>
+                <div class="col">
                     <p class="speaker2">{{ speaker_2 }}</p>
                     <p class="speaker_creds2">{{ creds2 }}</p>
                 </div>
+            </div>
+            <div class="row2">    
                 <div class="col">
                     <p class="speaker3">{{ speaker_3 }}</p>
                     <p class="speaker_creds3">{{ creds3 }}</p>
+                </div>
+                <div class="col">
                     <p class="speaker4">{{ speaker_4 }}</p>
                     <p class="speaker_creds4">{{ creds4 }}</p>
                 </div>
@@ -99,25 +105,38 @@ export default {
 .card3 {
     display: flex;
     flex-direction: row;
-    margin: 0 auto 100px auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border: 0.5px solid;
     border-radius: 3px;
+    background-color: #fcfcfc;
     width: 864px;
-    max-height: 650px;
     overflow: hidden;
+    max-height: 624px;
 }
 .card3 .talk_details {
     display: flex;
     flex-direction: column;
     margin: 30px 64px 60px 0;
+    overflow-y: auto;
 }
-.card3 .talk_details .row1, .row2 {
+.card3 .talk_details::-webkit-scrollbar {
+    width: 5px;
+}
+.card3 .talk_details::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+.card3 .talk_details::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.talk_details .row1, .talk_details .row2{
     display: flex;
     flex-direction: row;
     margin-left: 0;
 }
 .col {
+    width: 200px;
     display: flex;
     flex-direction: column;
 }
@@ -142,9 +161,9 @@ export default {
 }
 .card3 .speaker_img1 .container .picture {
     position: absolute;
-    left: 50px;
-    top: 40px;
-    width: 144px;
+    left: -50px;
+    top: -10px;
+    width: 340px;
     z-index: inherit;
 }
 .card3 .speaker_img2 {
@@ -164,8 +183,9 @@ export default {
 }
 .card3 .speaker_img2 .container .picture {
     position: absolute;
-    left: 29px;
-    width: 144px;
+    left: -80px;
+    top: -10px;
+    width: 360px;
     z-index: inherit;
 }
 .card3 .speaker_img3 {
@@ -185,12 +205,14 @@ export default {
 }
 .card3 .speaker_img3 .container .picture {
     position: absolute;
-    left: 29px;
-    width: 144px;
+    left: -40px;
+    top: -10px;
+    width: 300px;
     z-index: inherit;
 }
 .card3 .speaker_img4 {
     z-index: 2;
+    position: absolute;
 }
 .card3 .speaker_img4 .container {
     position: relative;
@@ -206,14 +228,15 @@ export default {
 }
 .card3 .speaker_img4 .container .picture {
     position: absolute;
-    left: 29px;
-    width: 144px;
+    left: -5px;
+    width: 215px;
     z-index: inherit;
 }
 
 /*text portion*/
 .card3 .talk_details .exit {
-    align-self: flex-end;
+    position: absolute;
+    left: 800px;
     width: 24px;
     height: 24px;
     border: none;
@@ -271,13 +294,16 @@ export default {
 }
 
 /*Tablet view*/
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
     .card3 {
         width: 89.58vw;
-        max-height: 700px;
     }
     .card3 .talk_details {
         margin-left: -50px;
+    }
+    .card3 .talk_details .exit {
+        position: absolute;
+        left: 82.176vw;
     }
 }
 
@@ -285,7 +311,6 @@ export default {
 @media (max-width: 767px) {
     .card3 {
         width: 82.5vw;
-        max-height: 1000px;
     }
     .card3 .speaker_img1 {
         display: none;
@@ -294,7 +319,13 @@ export default {
         margin: 33px 20px 33px 21px;
     }
     .card3 .talk_details .exit {
-        margin-right: 0px;
+        left: 74.324vw;
     }
 }
+/*
+@media (max-height: 950px) and (max-width: 768px) {
+    .card3 .talk_details{
+        overflow-y: auto;
+    }
+}*/
 </style>

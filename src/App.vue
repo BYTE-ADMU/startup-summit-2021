@@ -7,6 +7,7 @@
     </router-view> -->
     <router-view/>
     <Footer />
+
 </template>
 <script>
 import Navbar from './components/Navbar.vue'
@@ -23,7 +24,7 @@ export default {
 
 <style scoped>
 * {
-  background-color: #fcfcfc;
+  /* background-color: #fcfcfc; */
   margin: 0;
 }
 </style>

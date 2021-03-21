@@ -5,11 +5,11 @@
         <div class="text">
             <h1>What is Startup Summit?</h1>
             <p>The Startup Summit is a 3-day online tech conference that amasses a community of diverse personalities creating groundbreaking innovations. Students, storytellers, and startups cross paths and gather together in this event to build on each other’s futures and become catalysts for impactful change.</p>
-            <a href="" class="learn-more"><PrimaryBtn>Learn more<Chevron id="primary-svg"/></PrimaryBtn></a>
+            <router-link to="/about" class="learn-more"><PrimaryBtn>Learn more<Chevron id="primary-svg"/></PrimaryBtn></router-link>
         </div>
         </div>
         <div data-aos="fade-left">
-        <img src="../assets/what_is_sus_poster.svg" class="picture" alt="start up summit poster">
+        <img src="../assets/what_is_sus_poster.png" class="picture" alt="start up summit poster">
         </div>
     </div>
 </div>

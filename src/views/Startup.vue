@@ -1,13 +1,17 @@
 <template>
+<div id="app">
     <div class="page-container">
+        <div data-aos="fade-up">
         <center><div class="first-container" @click="focused=false">
             <div class="big-img-wrapper">
-                <center><div class="vid"><video><source src="#" type="video/mp4"></video></div></center>
+                <center><div class="vid"><video controls><source src="../assets/videos/What_Are_Startups_[FINAL].mp4" type="video/mp4"></video></div></center>
                 <div class="circle-design"><img id="big-circle" src="@/assets/circledesign.png"><img id="small-circle1" src="@/assets/circledesign.png"><img id="small-circle2" src="@/assets/circledesign.png">
                 <img id="weird-circle" src="@/assets/weirdcircle.png"></div>
             </div>
             </div>
-        </center>
+        </center></div>
+        <div data-aos="fade-up">
+        <center><h1 id="coming-soon">Coming soon.</h1></center>
         <center><div class="second-container">
             <div class="text-wrapper">
                 <p id="header">Exhibitorsʼ showcase</p>
@@ -16,7 +20,8 @@
                     <input @click="focused=true" type="text" v-model="search" placeholder="Looking for anything specific? (Startups, jobs)" class="search-txt" />
                     <input type="text" v-model="search" placeholder="Looking for anything specific?" class="search-txt2" />
                 </div>
-                <span class="primary" @click="focused=false"><PrimaryBtn @click="modalShow = true"><Filter id="primary-svg"/>Filter</PrimaryBtn></span>
+                <!-- Removed for now due to small number of cards, and vue error if not commented out, display="none" was having issues due to use of components -->
+                <!-- <span class="primary" @click="focused=false"><PrimaryBtn @click="modalShow = true" ><Filter id="primary-svg"/>Filter</PrimaryBtn></span> -->
             </div>
             <div id="filter-modal" class="modal" v-if="modalShow">
                 <div class="modal-content">
@@ -190,40 +195,66 @@
                 </div>
             </div>
             <div class="startups-wrapper" @click="focused=false">
-            <div class="startup-card" v-for="startup in filteredList" :key="startup">
-                <div class="cover">
-                    <img :alt="startup.coverAlt" :src="startup.cover">
-                </div>
-                <div class="icon">
-                    <img :alt="startup.iconAlt" :src="startup.icon">
-                </div>
-                <div class="startup-content">
-                    <p class="startup-name">{{startup.name}}</p>
-                    <p class="startup-industry">{{startup.industry}}</p>
-                    <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
+                <div class="startup-card" v-for="startup in filteredList" :key="startup">
+                    <div class="cover">
+                        <img :alt="startup.coverAlt" :src="startup.cover">
+                    </div>
+                    <div class="icon">
+                        <img :alt="startup.iconAlt" :src="startup.icon">
+                    </div>
+                    <div class="startup-content">
+                        <p class="startup-name" v-html="startup.name"></p>
+                        <p class="startup-industry">{{startup.industry}}</p>
+                        <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
+                    </div>
                 </div>
             </div>
-            </div>
-    </div></center>
+    </div></center></div>
     </div>
+</div>
 </template>
 
 <script>
 import PrimaryBtn from '../components/PrimaryBtn.vue'
-import Filter from '../components/Filter.vue'
+// Removed for now due to small number of cards, and vue error if not commented out
+// import Filter from '../components/Filter.vue'
+// import StartupTemplate from '../components/StartupTemplate.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
     name: 'Start-Up',
     components:{
         PrimaryBtn,
-        Filter
+        // StartupTemplate,
+        // Removed for now due to small number of cards, and vue error if not commented out
+        // Filter
+    },
+    created(){
+         AOS.init(
+            {
+                disable: 'tablet' & 'mobile'
+            }
+        ),
+        AOS.refresh(
+            {
+                disable: 'tablet' & 'mobile'
+            }
+        )
     },
     data() {
   return {
     startupList: [
-      {name: 'Kumu', industry: 'Entertainment', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
-      {name: 'NextPay', industry: 'FinTech', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay logo', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: false},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
-      {name: 'Edukasyon.ph', industry: 'EduTech', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false}
+      {name: 'StartUp Village', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
+      {name: 'Mosaic Solutions', industry: '', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay logo', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: true},
+      {name: 'QBO Innovation Hub', industry: '', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
+      {name: 'Technology Application</br>and Promotion Institute', industry: '', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false},
+      {name: 'Ideaspace Foundation Inc.', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
+      {name: 'ClinkIT Solutions', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'ARPACORP', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'XPERTO', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
+      {name: 'maker academy', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
+      {name: 'Pick.A.Roo', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false}
     ],
     search: '',
     modalShow: false,
@@ -277,24 +308,33 @@ export default {
   src: url('./../fonts/Inter-Light.ttf') format("truetype");
 }
 *{
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
     margin: 0px!important;
 }
+/* #app {
+    display: none;
+} */
 .page-container{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin: 0px!important;
+    margin: 80px 0px 200px 0px!important;
     overflow-x: hidden;
 }
 .first-container{
     padding-top: 5%;
 }
+.second-container{
+    display:none;
+}
+#coming-soon{
+    margin-bottom: 160px !important;
+}
 .vid video{
     position: relative;
     z-index: 1!important;
     background-color: #C4C4C4;
-    width: 906px;
+    width: 680px;
     height: 510px;
 }
 .circle-design img{
@@ -392,7 +432,7 @@ height: 472.56px;
 }
 .startups-wrapper{
     max-width: 1176px;
-    height: 288px;
+    /* height: 288px; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -401,7 +441,8 @@ height: 472.56px;
 }
 .startup-card{
     width: 368px;
-    height: 100%;
+    /* height: 100%; */
+    height: 284px;
     background-color: #F8F8F8;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border-radius: 3px;
@@ -616,11 +657,20 @@ line-height: 26px;
     .startups-wrapper{
         max-width: 784px;
     }
+    .circle-design{
+        display: none !important;
+    }
+    #coming-soon{
+        margin: 180px 0 !important;
+    }
 }
 @media screen and (max-width: 1024px){
 .vid video{
 width: 688px;
 height: 384px;
+}
+.startup-card{
+    height: 290px;
 }
 #small-circle2{
     transform: translate(-485%,-465%);
@@ -640,6 +690,7 @@ height: 384px;
 @media screen and (max-width: 823px){
     .startup-card{
         width: 320px;
+        height: 280px;
     }
 .startups-wrapper{
     max-width: 688px;
@@ -710,7 +761,7 @@ height: 48px;
 }
 .vid video{
     width: 288px;
-height: 162px;
+    height: 162px;
 }
 .second-container{
     margin-top: -400px!important;
