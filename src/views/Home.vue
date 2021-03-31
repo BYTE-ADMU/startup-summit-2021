@@ -493,7 +493,7 @@
     :pic_url1=third_day[0].pic_url
     :pic_url2=third_day[1].pic_url
     :pic_url3=third_day[2].pic_url
-    :pic_url4=third_day[3].pic_url
+    :hide=hide
     />
     <ComingSoon class="card6"/>
     <Card3 class="card6"
@@ -614,15 +614,13 @@
       :speaker_1="third_day[0].speaker"
       :speaker_2="third_day[1].speaker"
       :speaker_3="third_day[2].speaker"
-      :speaker_4="third_day[3].speaker"
       :creds1="third_day[0].modal.creds"
       :creds2="third_day[1].modal.creds"
       :creds3="third_day[2].modal.creds"
-      :creds4="third_day[3].modal.creds"
       :img1=third_day[0].pic_url
       :img2=third_day[1].pic_url
       :img3=third_day[2].pic_url
-      :img4=third_day[3].pic_url
+      :hide=hide 
       />
     </div>
   </transition>
@@ -708,6 +706,7 @@ export default {
       show_talk_modal: 0,
       date: "April 16, 2021",
       coming_soon: true,
+      hide: "display: none;",
       day1: {
         card3: false,
         card4: false,
