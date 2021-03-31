@@ -33,9 +33,7 @@
     />
   </div>
   <div class="row2">
-    <ComingSoon class="card3"/>
     <Card class="card3"
-    v-if="day1.card3===true"
     @toggle-modal3="showTalkModal"
     v-bind:time="first_day[2].time"
     v-bind:talk="first_day[2].talk"
@@ -43,9 +41,7 @@
     v-bind:speaker="first_day[2].speaker"
     :pic_url=first_day[2].pic_url
     />
-    <ComingSoon class="card4"/>
     <Card class="card4"
-    v-if="day1.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="first_day[3].time"
     v-bind:talk="first_day[3].talk"
@@ -453,9 +449,7 @@
     v-bind:speaker="third_day[0].speaker"
     :pic_url=third_day[0].pic_url
     />
-    <ComingSoon class="card2"/>
     <Card class="card2"
-    v-if="day3.card2===true"
     @toggle-modal2="showTalkModal"
     v-bind:time="third_day[1].time"
     v-bind:talk="third_day[1].talk"
@@ -473,9 +467,7 @@
     v-bind:speaker="third_day[2].speaker"
     :pic_url=third_day[2].pic_url
     />
-    <ComingSoon class="card4"/>
-    <Card clas="card4"
-    v-if="day3.card4===true"
+    <Card class="card4"
     @toggle-modal4="showTalkModal"
     v-bind:time="third_day[3].time"
     v-bind:talk="third_day[3].talk"
@@ -708,8 +700,6 @@ export default {
       coming_soon: true,
       hide: "display: none;",
       day1: {
-        card3: false,
-        card4: false,
         card6: false
       },
       day2: {
@@ -719,8 +709,6 @@ export default {
         card6: false
       },
       day3: {
-        card2: false,
-        card4: false,
         card6: false
       },
 
@@ -729,8 +717,8 @@ export default {
         { 
           class: "card1",
           time: "10:15",
-          talk: "Bots and Brains",
-          description: "No matter how high tech your bots are, you need to understand where the human aspect comes in.",
+          talk: "The Future of Bots and Brains",
+          description: "AI and Automation are being adopted at a very rapid pace. However, companies and organizations have to understand that bots will not have the desired impact unless the brains (humans) are involved in the processes that are automated. Understand how a startup like Aiah helps companies transform through human-enhanced automated processes.",
           speaker: "Gian dela Rama",
           pic_url: require('@/assets/speakers/GiandelaRama.jpeg'),
           modal: {
@@ -761,8 +749,8 @@ export default {
         { 
           class: "card3",
           time: "11:15",
-          talk: "1 Name of talk",
-          description: "Rama earned Master of Science from Management Information Technology of Strayer University, Washington DC in 2007 before returning back to Jakarta in the same year. He then worked as IT auditor and advisor in various companies such as PWC (Pricewaterhouse Coopers), Ernst & Young, and PT Geoteq Integrasi Semesta.",
+          talk: "Technology Innovation and Its Impacts on Society",
+          description: "In the age of digital transformation, technology is seen as the cultivator for changes. It opens up many possibilities for Positive impacts, not only for Businesses or economy, but also for the citizenry. Technology needs to be put as the enabler for better urban recondition and enhance city's resiliency towards the impact of urbanization.",
           speaker: "Rama Raditya",
           pic_url: require('@/assets/speakers/RamaRaditya.jpg'),
           modal: {
@@ -776,8 +764,8 @@ export default {
         {
           class: "card4",
           time: "11:35",
-          talk: "1 Name of talk",
-          description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: "When computers start to see us",
+          description: "Rapid developments in computer vision are enabling computers and machines around us to develop human-like, and even superhuman sensing capabilities. In this talk we will discover what the future holds in this new age of human-machine interaction.",
           speaker: "Serban Mogos",
           pic_url: require('@/assets/speakers/SerbanMogos.jpeg'),
           modal: {
@@ -980,8 +968,8 @@ export default {
         {
           class: "card2",
           time: "10:30",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: "Starting young: The good and the bad of going to social entrepreneurship immediately after college",
+          description: "The 15-minute talk will give the audience a glimpse of what to expect when starting out young. I will be sharing my personal journey in Cropital and highlight stories, reflections, and key learnings. I will provide practical tips and guidance for those who aspire to start young in their social entrepreneurship/start-up journey.",
           speaker: "Ruel Amparo",
           pic_url: require('@/assets/speakers/RuelAmparo.jpg'),
           modal: {
@@ -1009,8 +997,8 @@ export default {
         {
           class: "card4",
           time: "11:40",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: "The role of digital natives in developing a robust PH economy through innovative and sustainable startups.",
+          description: "The Culminating session will cover the current career landscape for the youth which has been significantly affected by the pandemic. ",
           speaker: "Rene “Butch” Meily",
           pic_url: require('@/assets/speakers/ReneMeily.jpg'),
           modal: {
@@ -1181,7 +1169,7 @@ export default {
 .card_container .row2 {
   display: flex;
   flex-wrap: wrap;
-  margin: 16px auto 0 auto;
+  margin: 16px auto 0 auto!important;
 }
 .card_container .row3 {
   display: flex;
