@@ -151,7 +151,7 @@ export default {
     border-bottom-right-radius: 50% 50%;
     border-bottom-left-radius: 50% 50%;
     margin: 0 16px 0 0;
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
 }
 .talk_details .speaker .name {
