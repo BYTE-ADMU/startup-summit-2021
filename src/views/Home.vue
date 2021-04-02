@@ -226,14 +226,13 @@
 
   <!--2nd day-->
   <div class="row1">
-    <ComingSoon class="card1"/>
     <Card class="card1"
-    v-if="day2.card1===true"
     @toggle-modal1="showTalkModal"
     v-bind:time="second_day[0].time"
     v-bind:talk="second_day[0].talk"
-    v-bind:description="second_day[0].description"
     v-bind:speaker="second_day[0].speaker"
+    v-bind:description="desc_comingsoon"
+    :center=center
     :pic_url=second_day[0].pic_url
     />
     <Card class="card2"
@@ -246,24 +245,22 @@
     />
   </div>
   <div class="row2">
-    <ComingSoon class="card3"/>
     <Card class="card3"
-    v-if="day2.card3===true"
     @toggle-modal3="showTalkModal"
     v-bind:time="second_day[2].time"
     v-bind:talk="second_day[2].talk"
-    v-bind:description="second_day[2].description"
     v-bind:speaker="second_day[2].speaker"
+    v-bind:description="desc_comingsoon"
+    :center=center
     :pic_url=second_day[2].pic_url
     />
-    <ComingSoon class="card4"/>
     <Card class="card4"
-    v-if="day2.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="second_day[3].time"
     v-bind:talk="second_day[3].talk"
-    v-bind:description="second_day[3].description"
     v-bind:speaker="second_day[3].speaker"
+    v-bind:description="desc_comingsoon"
+    :center=center
     :pic_url=second_day[3].pic_url
     />
   </div>
@@ -703,14 +700,15 @@ export default {
         card6: false
       },
       day2: {
-        card1: false,
-        card3: false,
-        card4: false,
         card6: false
       },
       day3: {
         card6: false
       },
+      center: {
+        "text-align":"center"
+      },
+      desc_comingsoon: "Coming Soon",
 
       //All card info for first day
       first_day: [
@@ -864,7 +862,7 @@ export default {
         {
           class: "card3",
           time: "11:00",
-          talk: "2 Name of talk",
+          talk: "Talk with Dr. Chari Cheng",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Dr. Chari Cheng",
           pic_url: require('@/assets/speakers/DrChari.png'),
@@ -878,7 +876,7 @@ export default {
         {
           class: "card4",
           time: "11:20",
-          talk: "2 Name of talk",
+          talk: "Talk with Teresa Condicion",
           description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
           speaker: "Teresa Condicion",
           pic_url: require('@/assets/speakers/TeresaCondicion.jpg'),
