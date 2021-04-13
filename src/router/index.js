@@ -5,6 +5,7 @@ import Startups from '../views/Startup.vue'
 import Partners from '../views/PartnersPage.vue'
 import FAQs from '../views/FAQ.vue'
 import StartupTemplate from '../components/StartupTemplate.vue'
+import OpportunityTemplate from '../components/OpportunityTemplate.vue'
 // import Register from '../views/Register.vue'
 
 const routes = [
@@ -37,6 +38,11 @@ const routes = [
     path: '/startups/:name',
     name: 'StartupTemplate',
     component: StartupTemplate
+  },
+  {
+    path: '/startups/:name/:JNid',
+    name: 'OpportunityTemplate',
+    component: OpportunityTemplate
   }
 ]
 

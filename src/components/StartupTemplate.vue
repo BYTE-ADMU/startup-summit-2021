@@ -65,7 +65,7 @@
         <div class="job-class" v-for="job in startup_list.job" :key="job">
             <p>{{job.jobClass}}</p>
             <div class="jobs-container">
-                <div class="job-card" v-for="jobPosition in job.jobPosition" :key="jobPosition">
+                <div @click="goToOpportunity(jobPosition.jobId,jobPosition.company,jobPosition.jobName)" class="job-card" v-for="jobPosition in job.jobPosition" :key="jobPosition">
                     <p id="job-position">{{jobPosition.jobName}}</p>
                     <div v-if="jobPosition.jobType == 'internship'" class="job-type" id="internship"><p>INTERNSHIP</p></div>
                     <div v-if="jobPosition.jobType == 'part-time'" class="job-type" id="part-time"><p>PART-TIME</p></div>
@@ -101,6 +101,15 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 // import startupList from '../data.js'
 export default {
+    methods:{
+  goToOpportunity(jobId, companyId, jobnameId) {
+    let jbId=jobId
+    let cId=companyId
+    let jbnId=jobnameId
+    var test = this.$router
+    test.push({name:'OpportunityTemplate',params:{Jid:jbId,name:cId,JNid:jbnId}})
+  }
+  },
     data() {
         return {
             proId:this.$route.params.Pid,
@@ -131,11 +140,13 @@ export default {
         job_check: "",
         job: [
           {
-            jobClass:"",
+            jobClass:"yeye",
             jobPosition:[
               {
-                jobName:"",
-                jobType:""
+                company:"StartUp Village",
+                jobName:"yeye",
+                jobType:"internship",
+                jobId: 1
               }
             ]
           }
@@ -177,8 +188,10 @@ export default {
             jobClass:"",
             jobPosition:[
               {
+                company:"Mosaic Solutions",
                 jobName:"",
-                jobType:""
+                jobType:"",
+                jobId: 2
               }
             ]
           }
@@ -220,8 +233,10 @@ export default {
             jobClass:"Programs",
             jobPosition:[
               {
+                company:"QBO Innovation Hub",
                 jobName:"Programs Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 3
               }
             ]
           }
@@ -348,13 +363,16 @@ export default {
           {
             jobClass:"Operations",
             jobPosition:[
-              {
+              {company: "ClinkIT Solutions",
                 jobName:"Operations and Project Management Intern",
                 jobType:"internship",
+                jobId: 4
               },
               {
+                  company: "ClinkIT Solutions",
                 jobName:"Junior Software Developer",
                 jobType:"internship",
+                jobId: 5
               }
             ]
           }
@@ -395,13 +413,16 @@ export default {
           {
             jobClass:"Social Media",
             jobPosition:[
-              {
+              {company: "ARPACORP",
                 jobName:"Social Media Manager Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 6
               },
               {
+                  company: "ARPACORP",
                 jobName:"Social Media Specialist",
-                jobType:"part-time"
+                jobType:"part-time",
+                jobId: 7
               }
             ]
           }
@@ -442,18 +463,20 @@ export default {
           {
             jobClass:"Marketing",
             jobPosition:[
-              {
+              {company: "XPERTO",
                 jobName:"Marketing Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 8
               }
             ]
           },
           {
             jobClass:"Research and Development",
             jobPosition:[
-              {
+              {company: "XPERTO",
                 jobName:"Research Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 9
               }
             ]
           }
@@ -581,8 +604,10 @@ export default {
             jobClass:"Marketing",
             jobPosition:[
               {
+                company: "InterLeukin Innovations, Inc.",
                 jobName:"Digital Marketing Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 10
               }
             ]
           }
@@ -666,13 +691,16 @@ export default {
           {
             jobClass:"Promotions",
             jobPosition:[
-              {
+              {company: "Kumu Inc.",
                 jobName:"Social Media Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 11
               },
               {
+                  company: "Kumu Inc.",
                 jobName:"Graphic Design Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 12
               }
             ]
           },
