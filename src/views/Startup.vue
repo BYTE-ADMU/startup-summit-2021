@@ -195,8 +195,7 @@
                 </div>
             </div>
             <div class="startups-wrapper" @click="focused=false">
-                <div class="startup-card" v-for="startup in filteredList" :key="startup">
-                    <router-link :to="{name: 'StartupTemplate', params:{name: startup.name}}">
+                <div @click="goTostartup(startup.productId)" class="startup-card" v-for="startup in filteredList" :key="startup">
                         <div class="cover">
                             <img :alt="startup.coverAlt" :src="startup.cover">
                         </div>
@@ -208,7 +207,6 @@
                             <p class="startup-industry">{{startup.industry}}</p>
                             <p v-if="startup.opportunity" v-bind:style="{visibility: visible}" class="opportunities">OPPORTUNITIES AVAILABLE!</p>
                         </div>
-                    </router-link>
                 </div>
             </div>
     </div></center></div>
@@ -247,16 +245,16 @@ export default {
     data() {
   return {
     startupList: [
-      {name: 'StartUp Village', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
-      {name: 'Mosaic Solutions', industry: '', icon: require('../assets/icons/nextpay.png'), iconAlt: 'NextPay logo', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: true},
-      {name: 'QBO Innovation Hub', industry: '', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true},
-      {name: 'Technology Application</br>and Promotion Institute', industry: '', icon: require('../assets/icons/edukasyon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false},
-      {name: 'Ideaspace Foundation Inc.', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
-      {name: 'ClinkIT Solutions', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
-      {name: 'ARPACORP', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
-      {name: 'XPERTO', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true},
-      {name: 'maker academy', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false},
-      {name: 'Pick.A.Roo', industry: '', icon: require('../assets/icons/kumu.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false}
+      {name: 'StartUp Village', industry: '', icon: require('../assets/startups/startupvillage/icon.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false, productId: 1},
+      {name: 'Mosaic Solutions', industry: '', icon: require('../assets/startups/mosaic/logo.png'), iconAlt: 'NextPay logo', cover: require('../assets/covers/nextpay.png'), coverAlt: 'Nextpay cover', opportunity: true, productId: 2},
+      {name: 'QBO Innovation Hub', industry: '', icon: require('../assets/startups/qbo/icon.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: true, productId: 3},
+      {name: 'Technology Application</br>and Promotion Institute', industry: '', icon: require('../assets/startups/technoapp/logo.png'), iconAlt: 'Edukasyon.ph logo', cover: require('../assets/covers/edukasyon.png'), coverAlt: 'Edukasyon.ph cover', opportunity: false, productId: 4},
+      {name: 'Ideaspace Foundation Inc.', industry: '', icon: require('../assets/startups/ideas/logo.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false, productId: 5},
+      {name: 'ClinkIT Solutions', industry: '', icon: require('../assets/startups/clink/logo1.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true, productId: 6},
+      {name: 'ARPACORP', industry: '', icon: require('../assets/startups/arpacorp/logo.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true, productId: 7},
+      {name: 'XPERTO', industry: '', icon: require('../assets/startups/xperto/logo.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: true, productId: 8},
+      {name: 'maker academy', industry: '', icon: require('../assets/startups/makeracademy/logo.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false, productId: 9},
+      {name: 'Pick.A.Roo', industry: '', icon: require('../assets/startups/pickaroo/logo.png'), iconAlt: 'Kumu logo', cover: require('../assets/covers/kumu.png'), coverAlt: 'Kumu cover', opportunity: false, productId: 10}
     ],
     search: '',
     modalShow: false,
@@ -283,6 +281,13 @@ export default {
     else {
       return '';
     }
+  }
+    },
+  methods:{
+  goTostartup(prodId) {
+    let proId=prodId
+    var test = this.$router
+    test.push({name:'StartupTemplate',params:{Pid:proId}})
   }
   }
 }
@@ -474,6 +479,7 @@ height: 472.56px;
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     transform: translate(0px,-65px);
+    background-color: #F8F8F8;
 
 }
 .startup-content{
