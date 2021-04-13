@@ -34,7 +34,7 @@ const routes = [
     component: FAQs
   },
   {
-    path: '/startups/:Pid',
+    path: '/startups/:name',
     name: 'StartupTemplate',
     component: StartupTemplate
   }

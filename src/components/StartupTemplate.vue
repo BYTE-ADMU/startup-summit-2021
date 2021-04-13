@@ -44,7 +44,7 @@
         </div>
         <div class="content">
             <p>About Us</p>
-            <p id="content-header">{{startup_list.aboutus}}</p>
+            <p id="content-header" v-html="startup_list.aboutus"></p>
         </div>
     </div>
     </div>
@@ -104,6 +104,7 @@ export default {
     data() {
         return {
             proId:this.$route.params.Pid,
+            nId:this.$route.params.name,
             title:"Startups",
             startupList:[
         {
@@ -281,7 +282,7 @@ export default {
         {
         name: "Ideaspace Foundation Inc.",
         cover: require('@/assets/startups/ideas/logo.png'),
-        coverAlt: "cover",
+        coverAlt: "Ideaspace Foundation Inc. cover",
         icon: require('@/assets/startups/ideas/logo.png'),
         iconAlt: "Ideaspace Foundation Inc. logo",
         website: "https://ideaspacefoundation.org/",
@@ -552,7 +553,153 @@ export default {
         gallery4: require('@/assets/startups/pickaroo/cover.png'),
         gallery4Alt: "",
         productId:10
-        }
+        },
+        {
+        name: "InterLeukin Innovations, Inc.",
+        cover: require('@/assets/startups/inter/cover.png'),
+        coverAlt: "InterLeukin Innovations, Inc. cover",
+        icon: require('@/assets/startups/inter/logo.png'),
+        iconAlt: "InterLeukin Innovations, Inc. logo",
+        website: "https://interleukin.co",
+        linkedin: "interleukin",
+        linkedinlink: "https://www.linkedin.com/company/interleukin/",
+        facebook: "interleukinco",
+        facebooklink: "https://www.facebook.com/interleukinco",
+        ig: "",
+        iglink: "",
+        twitter: "Interleukinco",
+        twitterlink: "https://twitter.com/Interleukinco",
+        firstpic: require('@/assets/startups/inter/firstpic.png'),
+        firstpicAlt: "",
+        aboutus: "It all started with our passion to heal.<br><br>Every inspiration starts with a pain. Countless lives lost we have seen everyday in the hospitals especially when the coronavirus pandemic hit our country, the Philippines. The pandemic unveils the vulnerability of the procurement practices of our country and up-to-date there is no advanced, reliable way to link purchasers and medical suppliers in the country. Many scams, unsafe, ineffective and unregulated supplies were being used to survive and it creates more pit holes in losing more people. Efficiency in the healthcare industry is crucial to save more lives. Every time a medical supply fails to arrive in a health facility, safety and quality of the health system are compromised.<br><br>The scream for help from our dear healthcare workers to provide their medical supply needs to save more patients and themselves inspire us to create a solution that will seamlessly integrate reliable suppliers and different healthcare institutions supply chains to efficiently deliver the needs of the life savers and their patients.<br><br>And with that - interLeukin was born.<br><br>We believe that procurement process automation will save more patients and medical professionals like us in the hospitals.<br><br>Just like the role of interleukins in a person’s body - a group naturally occurring proteins that mediate communication between cells. By becoming the mediator to convert the manual and traditional processes of a buyer-supplier transaction, we’re able to provide confidence, convenience and cost-savings to a quality healthcare system.",
+        secondpic: require('@/assets/startups/inter/secondpic.png'),
+        secondpicAlt: "",
+        ourproduct: "InterLeukin is a B2B e-commerce web platform that provides a seamless service transaction to purchase medical supplies via online by different hospitals, private clinics and pharmacy outlets for the use of their respective facilities. It is a platform connecting all registered medical suppliers and procurement officers of different healthcare institutions in the Philippines whether private or public to transact their medical supply needs in a faster turn-around time by converting the traditional procurement process of medical supplies into a digital solution.",
+        job_check: "yes",
+        job: [
+          {
+            jobClass:"Marketing",
+            jobPosition:[
+              {
+                jobName:"Digital Marketing Intern",
+                jobType:"internship"
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/inter/firstpic.png'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/inter/secondpic.png'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/inter/firstpic.png'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/inter/secondpic.png'),
+        gallery4Alt: "",
+        productId: 11
+        },
+        {
+        name: "Akads PH",
+        cover: require('@/assets/startups/akads/cover.png'),
+        coverAlt: "Akads PH cover",
+        icon: require('@/assets/startups/akads/logo.png'),
+        iconAlt: "Akads PH logo",
+        website: "https://www.akadsph.com",
+        linkedin: "akads-ph",
+        linkedinlink: "https://www.linkedin.com/company/akads-ph",
+        facebook: "LearnWithAkads",
+        facebooklink: "https://www.facebook.com/LearnWithAkads",
+        ig: "akadsph",
+        iglink: "https://www.instagram.com/akadsph/",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/akads/firstpic.png'),
+        firstpicAlt: "",
+        aboutus: "Akads is an evolving all-in-one platform accessible to all parents, tutors, and students that provides opportunities to gain an edge in education. We aim to empower students and educators around the world to achieve more.",
+        secondpic: require('@/assets/startups/akads/secondpic.png'),
+        secondpicAlt: "",
+        ourproduct: "Akads is a tutor-parent matching web app that combines the booking form, online payments, and video calls. Through our algorithm, we make it easy for parents to find online tutors for their kids.",
+        job_check: "",
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/akads/firstpic.png'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/akads/secondpic.png'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/akads/firstpic.png'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/akads/secondpic.png'),
+        gallery4Alt: "",
+        productId: 12
+        },
+        {
+        name: "Kumu Inc.",
+        cover: require('@/assets/startups/kumu/firstpic.jpg'),
+        coverAlt: "Kumu Inc. cover",
+        icon: require('@/assets/startups/kumu/logo.png'),
+        iconAlt: "Kumu Inc. logo",
+        website: "https://kumu.ph/",
+        linkedin: "kumuph",
+        linkedinlink: "https://www.linkedin.com/company/kumuph",
+        facebook: "kumuPH",
+        facebooklink: "https://www.facebook.com/kumuPH",
+        ig: "kumuph",
+        iglink: "https://www.instagram.com/kumuph/",
+        twitter: "",
+        twitterlink: "",
+        firstpic: require('@/assets/startups/kumu/firstpic.jpg'),
+        firstpicAlt: "",
+        aboutus: "KUMU is a powerful social media platform that brings the voices of Filipinos from all over the globe at the forefront. Aside from presenting users real-time earning opportunities as a live streamer, chances to win cash in various game shows, and engagement in campaigns, KUMU also fosters communities that ignite relevant discussions among Filipinos",
+        secondpic: require('@/assets/startups/kumu/firstpic.jpg'),
+        secondpicAlt: "",
+        ourproduct: "Kumu is a pinoy community platform where you can just hang out, explore the many livestreams the Kumunity has to offer, meet and chat with fellow Filipinos all around the world",
+        job_check: "yes",
+        job: [
+          {
+            jobClass:"Promotions",
+            jobPosition:[
+              {
+                jobName:"Social Media Intern",
+                jobType:"internship"
+              },
+              {
+                jobName:"Graphic Design Intern",
+                jobType:"internship"
+              }
+            ]
+          },
+          {
+            jobClass:"Operations",
+            jobPosition:[
+              {
+                jobName:"Marketing Intern",
+                jobType:"internship"
+              },
+              {
+                jobName:"Moderator Intern",
+                jobType:"internship"
+              }
+            ]
+          }
+        ],
+        gallery1: require('@/assets/startups/kumu/gallery1.png'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/kumu/gallery2.png'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/kumu/gallery3.png'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/kumu/firstpic.jpg'),
+        gallery4Alt: "",
+        productId: 13
+        },
       ]
         }
     },

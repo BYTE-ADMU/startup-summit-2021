@@ -80,6 +80,7 @@ export default {
         gallery3Alt: "",
         gallery4: require('@/assets/startups/startAPPPP/gallery4'),
         gallery4Alt: "",
+        productId: 11
         },
         {
         name: "StartUp Village",
