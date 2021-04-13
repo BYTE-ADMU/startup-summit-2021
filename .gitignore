@@ -9,6 +9,7 @@ node_modules
 .env.*.local
 firebase-config.js
 firebase-init.js
+.firebase/
 
 # Log files
 npm-debug.log*

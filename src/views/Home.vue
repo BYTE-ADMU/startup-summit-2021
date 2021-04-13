@@ -231,8 +231,7 @@
     v-bind:time="second_day[0].time"
     v-bind:talk="second_day[0].talk"
     v-bind:speaker="second_day[0].speaker"
-    v-bind:description="desc_comingsoon"
-    :center=center
+    v-bind:description="second_day[0].description"
     :pic_url=second_day[0].pic_url
     />
     <Card class="card2"
@@ -250,8 +249,7 @@
     v-bind:time="second_day[2].time"
     v-bind:talk="second_day[2].talk"
     v-bind:speaker="second_day[2].speaker"
-    v-bind:description="desc_comingsoon"
-    :center=center
+    v-bind:description="second_day[2].description"
     :pic_url=second_day[2].pic_url
     />
     <Card class="card4"
@@ -259,8 +257,7 @@
     v-bind:time="second_day[3].time"
     v-bind:talk="second_day[3].talk"
     v-bind:speaker="second_day[3].speaker"
-    v-bind:description="desc_comingsoon"
-    :center=center
+    v-bind:description="second_day[3].description"
     :pic_url=second_day[3].pic_url
     />
   </div>
@@ -705,10 +702,6 @@ export default {
       day3: {
         card6: false
       },
-      center: {
-        "text-align":"center"
-      },
-      desc_comingsoon: "Coming Soon",
 
       //All card info for first day
       first_day: [
@@ -831,7 +824,7 @@ export default {
           class: "card1",
           time: "10:10",
           talk: "Inclusive Innovation: Upskilling Women for the Future of Work",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          description: "With news of artificial intelligence, robotics, and machine learning advancements popping up left and right, Gina is compelled to make sure that no woman is left behind in the age of digital disruption. Through Connected Women, Gina lives out her vision of passing on this knowledge to the least prioritized sector of society–underserved women, through tech literacy, training, and education.",
           speaker: "Gina Romero",
           pic_url: require('@/assets/speakers/GinaRomero.jpg'),
           modal: {
@@ -862,9 +855,9 @@ export default {
         {
           class: "card3",
           time: "11:00",
-          talk: "Talk with Dr. Chari Cheng",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Dr. Chari Cheng",
+          talk: "Combining Passion with Your Career",
+          description: "Despite the male-dominated nature of the tech and AI industry, women should not be afraid to venture into the field. Whatever is needed to be in the area, women have it.",
+          speaker: "Dr. Charibeth Cheng",
           pic_url: require('@/assets/speakers/DrChari.png'),
           modal: {
             time: "11:00am",
@@ -876,8 +869,8 @@ export default {
         {
           class: "card4",
           time: "11:20",
-          talk: "Talk with Teresa Condicion",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: " Are Leaders Born or Made? A True Story",
+          description: "In this talk, Teresa highlights the professional challenges and career aspirations of women like herself. She shares how overcoming abject poverty and her workplace’s patriarchal mindset has given her the sense of confidence she carries in all aspects of her womanhood– as a leader, a mother, a lifelong learner, and a startup-pioneer. ",
           speaker: "Teresa Condicion",
           pic_url: require('@/assets/speakers/TeresaCondicion.jpg'),
           modal: {
