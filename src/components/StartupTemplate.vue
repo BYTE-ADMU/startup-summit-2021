@@ -430,13 +430,13 @@ export default {
               {company: "ARPACORP",
                 jobName:"Social Media Manager Intern",
                 jobType:"internship",
-                jobId: 6
+                jobId: 4
               },
               {
                   company: "ARPACORP",
                 jobName:"Social Media Specialist",
                 jobType:"part-time",
-                jobId: 7
+                jobId: 5
               }
             ]
           }
@@ -482,7 +482,7 @@ export default {
               {company: "XPERTO",
                 jobName:"Marketing Intern",
                 jobType:"internship",
-                jobId: 8
+                jobId: 6
               }
             ]
           },
@@ -492,7 +492,7 @@ export default {
               {company: "XPERTO",
                 jobName:"Research Intern",
                 jobType:"internship",
-                jobId: 9
+                jobId: 7
               }
             ]
           }
@@ -629,7 +629,7 @@ export default {
                 company: "InterLeukin Innovations, Inc.",
                 jobName:"Digital Marketing Intern",
                 jobType:"internship",
-                jobId: 10
+                jobId: 8
               }
             ]
           }
@@ -720,13 +720,13 @@ export default {
               {company: "Kumu Inc.",
                 jobName:"Social Media Intern",
                 jobType:"internship",
-                jobId: 11
+                jobId: 9
               },
               {
                   company: "Kumu Inc.",
                 jobName:"Graphic Design Intern",
                 jobType:"internship",
-                jobId: 12
+                jobId: 10
               }
             ]
           },
@@ -735,11 +735,13 @@ export default {
             jobPosition:[
               {
                 jobName:"Marketing Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 11
               },
               {
                 jobName:"Moderator Intern",
-                jobType:"internship"
+                jobType:"internship",
+                jobId: 12
               }
             ]
           }
