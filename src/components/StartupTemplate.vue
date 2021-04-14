@@ -146,7 +146,7 @@ export default {
                 company:"StartUp Village",
                 jobName:"yeye",
                 jobType:"internship",
-                jobId: 1
+                jobId: 0
               }
             ]
           }
@@ -191,7 +191,7 @@ export default {
                 company:"Mosaic Solutions",
                 jobName:"",
                 jobType:"",
-                jobId: 2
+                jobId: 0
               }
             ]
           }
@@ -236,7 +236,7 @@ export default {
                 company:"QBO Innovation Hub",
                 jobName:"Programs Intern",
                 jobType:"internship",
-                jobId: 3
+                jobId: 1
               }
             ]
           }

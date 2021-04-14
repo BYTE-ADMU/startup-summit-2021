@@ -177,7 +177,13 @@ export default {
           jobId: 1,
           responsibilities: [
             {
-              responsibility: "Assist the Programs team in: a. liaising with Ideaspace-QBO partners; b.conducting research;"
+              responsibility: "Assist the Programs team in:"
+            },
+            {
+              responsibility: "a. liaising with Ideaspace-QBO partners;"
+            },
+            {
+              responsibility: "b.conducting research;"
             }
           ],
           requirements: [
