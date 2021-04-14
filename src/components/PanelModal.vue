@@ -14,7 +14,7 @@
                 <img v-bind:src="img3" alt="Speaker image 3" class="picture">
             </div>
         </div>
-        <div class="speaker_img4">
+        <div class="speaker_img4" v-bind:style=hide>
             <div class="container">
                 <img v-bind:src="img4" alt="Speaker image 4" class="picture">
             </div>
@@ -47,20 +47,20 @@
                 </div>
                 <p class="description">{{ description }}</p>
             </div>
-            <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
+            <!-- <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn> -->
         </div>
     </div>
 </template>
 
 <script>
-import PrimaryBtn from "./PrimaryBtn.vue"
-import Chevron from "./Chevron.vue"
+// import PrimaryBtn from "./PrimaryBtn.vue"
+// import Chevron from "./Chevron.vue"
 
 export default {
     name: "PanelModal",
     components: {
-        PrimaryBtn,
-        Chevron
+        // PrimaryBtn,
+        // Chevron
     },
     props: {
         img1: String,
@@ -78,6 +78,7 @@ export default {
         creds2: String,
         creds3: String,
         creds4:String,
+        hide: String,
         description: String
     },
     methods: {

@@ -16,7 +16,7 @@
                     <img alt="Featured Startup logo" src="@/assets/startups/notion/logo.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/clink/logo1.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/mosaic/logo.png">
-                    <img alt="Featured Startup logo" src="@/assets/startups/datacamp/logo.png">
+                    <img alt="Featured Startup logo" src="@/assets/startups/datacamp/logo1.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/makeracademy/logo.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/pickaroo/logo.png">
                     <img alt="Featured Startup logo" src="@/assets/startups/xperto/logo2.png">

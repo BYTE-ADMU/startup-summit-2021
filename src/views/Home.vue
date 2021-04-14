@@ -33,9 +33,7 @@
     />
   </div>
   <div class="row2">
-    <ComingSoon class="card3"/>
     <Card class="card3"
-    v-if="day1.card3===true"
     @toggle-modal3="showTalkModal"
     v-bind:time="first_day[2].time"
     v-bind:talk="first_day[2].talk"
@@ -43,9 +41,7 @@
     v-bind:speaker="first_day[2].speaker"
     :pic_url=first_day[2].pic_url
     />
-    <ComingSoon class="card4"/>
     <Card class="card4"
-    v-if="day1.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="first_day[3].time"
     v-bind:talk="first_day[3].talk"
@@ -65,9 +61,7 @@
     :pic_url3=first_day[2].pic_url
     :pic_url4=first_day[3].pic_url
     />
-    <ComingSoon class="card6"/>
     <Card3 class="card6"
-    v-if="day1.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="first_day[5].time"
     v-bind:exhibit="first_day[5].exhibit"
@@ -76,8 +70,8 @@
     :pic_url2=first_day[5].pic_url2
     :pic_url3=first_day[5].pic_url3
     :pic_url4=first_day[5].pic_url4
-    :pic_url5=first_day[5].pic_url5
-    :pic_url6=first_day[5].pic_url6
+    :hide5=hide
+    :hide6=hide
     />
   </div>
 
@@ -196,26 +190,18 @@
       :startup2=first_day[5].modal.startup2
       :startup3=first_day[5].modal.startup3
       :startup4=first_day[5].modal.startup4
-      :startup5=first_day[5].modal.startup5
-      :startup6=first_day[5].modal.startup6
-      :startup7=first_day[5].modal.startup7
-      :startup8=first_day[5].modal.startup8
       :sched1=first_day[5].modal.sched1
       :sched2=first_day[5].modal.sched2
       :sched3=first_day[5].modal.sched3
       :sched4=first_day[5].modal.sched4
-      :sched5=first_day[5].modal.sched5
-      :sched6=first_day[5].modal.sched6
-      :sched7=first_day[5].modal.sched7
-      :sched8=first_day[5].modal.sched8
       :img1=first_day[5].modal.img1
       :img2=first_day[5].modal.img2
       :img3=first_day[5].modal.img3
       :img4=first_day[5].modal.img4
-      :img5=first_day[5].modal.img5
-      :img6=first_day[5].modal.img6
-      :img7=first_day[5].modal.img7
-      :img8=first_day[5].modal.img8
+      :hide5=hide
+      :hide6=hide
+      :hide7=hide
+      :hide8=hide
       />
     </div>
   </transition>
@@ -230,14 +216,12 @@
 
   <!--2nd day-->
   <div class="row1">
-    <ComingSoon class="card1"/>
     <Card class="card1"
-    v-if="day2.card1===true"
     @toggle-modal1="showTalkModal"
     v-bind:time="second_day[0].time"
     v-bind:talk="second_day[0].talk"
-    v-bind:description="second_day[0].description"
     v-bind:speaker="second_day[0].speaker"
+    v-bind:description="second_day[0].description"
     :pic_url=second_day[0].pic_url
     />
     <Card class="card2"
@@ -250,24 +234,20 @@
     />
   </div>
   <div class="row2">
-    <ComingSoon class="card3"/>
     <Card class="card3"
-    v-if="day2.card3===true"
     @toggle-modal3="showTalkModal"
     v-bind:time="second_day[2].time"
     v-bind:talk="second_day[2].talk"
-    v-bind:description="second_day[2].description"
     v-bind:speaker="second_day[2].speaker"
+    v-bind:description="second_day[2].description"
     :pic_url=second_day[2].pic_url
     />
-    <ComingSoon class="card4"/>
     <Card class="card4"
-    v-if="day2.card4===true"
     @toggle-modal4="showTalkModal"
     v-bind:time="second_day[3].time"
     v-bind:talk="second_day[3].talk"
-    v-bind:description="second_day[3].description"
     v-bind:speaker="second_day[3].speaker"
+    v-bind:description="second_day[3].description"
     :pic_url=second_day[3].pic_url
     />
   </div>
@@ -282,9 +262,7 @@
     :pic_url3=second_day[2].pic_url
     :pic_url4=second_day[3].pic_url
     />
-    <ComingSoon class="card6"/>
     <Card3 class="card6"
-    v-if="day2.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="second_day[5].time"
     v-bind:exhibit="second_day[5].exhibit"
@@ -293,8 +271,8 @@
     :pic_url2=second_day[5].pic_url2
     :pic_url3=second_day[5].pic_url3
     :pic_url4=second_day[5].pic_url4
-    :pic_url5=second_day[5].pic_url5
-    :pic_url6=second_day[5].pic_url6
+    :hide5=hide
+    :hide6=hide
     />
   </div>
 
@@ -411,26 +389,18 @@
       :startup2=second_day[5].modal.startup2
       :startup3=second_day[5].modal.startup3
       :startup4=second_day[5].modal.startup4
-      :startup5=second_day[5].modal.startup5
-      :startup6=second_day[5].modal.startup6
-      :startup7=second_day[5].modal.startup7
-      :startup8=second_day[5].modal.startup8
       :sched1=second_day[5].modal.sched1
       :sched2=second_day[5].modal.sched2
       :sched3=second_day[5].modal.sched3
       :sched4=second_day[5].modal.sched4
-      :sched5=second_day[5].modal.sched5
-      :sched6=second_day[5].modal.sched6
-      :sched7=second_day[5].modal.sched7
-      :sched8=second_day[5].modal.sched8
       :img1=second_day[5].modal.img1
       :img2=second_day[5].modal.img2
       :img3=second_day[5].modal.img3
       :img4=second_day[5].modal.img4
-      :img5=second_day[5].modal.img5
-      :img6=second_day[5].modal.img6
-      :img7=second_day[5].modal.img7
-      :img8=second_day[5].modal.img8
+      :hide5=hide
+      :hide6=hide
+      :hide7=hide
+      :hide8=hide
       />
     </div>
   </transition>
@@ -453,9 +423,7 @@
     v-bind:speaker="third_day[0].speaker"
     :pic_url=third_day[0].pic_url
     />
-    <ComingSoon class="card2"/>
     <Card class="card2"
-    v-if="day3.card2===true"
     @toggle-modal2="showTalkModal"
     v-bind:time="third_day[1].time"
     v-bind:talk="third_day[1].talk"
@@ -473,9 +441,7 @@
     v-bind:speaker="third_day[2].speaker"
     :pic_url=third_day[2].pic_url
     />
-    <ComingSoon class="card4"/>
-    <Card clas="card4"
-    v-if="day3.card4===true"
+    <Card class="card4"
     @toggle-modal4="showTalkModal"
     v-bind:time="third_day[3].time"
     v-bind:talk="third_day[3].talk"
@@ -493,21 +459,19 @@
     :pic_url1=third_day[0].pic_url
     :pic_url2=third_day[1].pic_url
     :pic_url3=third_day[2].pic_url
-    :pic_url4=third_day[3].pic_url
+    :hide=hide
     />
-    <ComingSoon class="card6"/>
     <Card3 class="card6"
-    v-if="day3.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="third_day[5].time"
     v-bind:exhibit="third_day[5].exhibit"
     v-bind:description="third_day[5].description"
     :pic_url1=third_day[5].pic_url1
-    :pic_url2=third_day[5].pic_url2
-    :pic_url3=third_day[5].pic_url3
-    :pic_url4=third_day[5].pic_url4
-    :pic_url5=third_day[5].pic_url5
-    :pic_url6=third_day[5].pic_url6
+    :hide2=hide
+    :hide3=hide
+    :hide4=hide
+    :hide5=hide
+    :hide6=hide
     />
   </div>
 
@@ -614,15 +578,13 @@
       :speaker_1="third_day[0].speaker"
       :speaker_2="third_day[1].speaker"
       :speaker_3="third_day[2].speaker"
-      :speaker_4="third_day[3].speaker"
       :creds1="third_day[0].modal.creds"
       :creds2="third_day[1].modal.creds"
       :creds3="third_day[2].modal.creds"
-      :creds4="third_day[3].modal.creds"
       :img1=third_day[0].pic_url
       :img2=third_day[1].pic_url
       :img3=third_day[2].pic_url
-      :img4=third_day[3].pic_url
+      :hide=hide 
       />
     </div>
   </transition>
@@ -635,29 +597,15 @@
       v-bind:date="modal_date"
       v-bind:time="third_day[5].modal.time"
       :startup1=third_day[5].modal.startup1
-      :startup2=third_day[5].modal.startup2
-      :startup3=third_day[5].modal.startup3
-      :startup4=third_day[5].modal.startup4
-      :startup5=third_day[5].modal.startup5
-      :startup6=third_day[5].modal.startup6
-      :startup7=third_day[5].modal.startup7
-      :startup8=third_day[5].modal.startup8
       :sched1=third_day[5].modal.sched1
-      :sched2=third_day[5].modal.sched2
-      :sched3=third_day[5].modal.sched3
-      :sched4=third_day[5].modal.sched4
-      :sched5=third_day[5].modal.sched5
-      :sched6=third_day[5].modal.sched6
-      :sched7=third_day[5].modal.sched7
-      :sched8=third_day[5].modal.sched8
       :img1=third_day[5].modal.img1
-      :img2=third_day[5].modal.img2
-      :img3=third_day[5].modal.img3
-      :img4=third_day[5].modal.img4
-      :img5=third_day[5].modal.img5
-      :img6=third_day[5].modal.img6
-      :img7=third_day[5].modal.img7
-      :img8=third_day[5].modal.img8
+      :hide2=hide
+      :hide3=hide
+      :hide4=hide
+      :hide5=hide
+      :hide6=hide
+      :hide7=hide
+      :hide8=hide
       />
     </div>
   </transition>
@@ -682,7 +630,6 @@ import Hero from '../components/Hero.vue'
 import Opportunities from '../components/Opportunities.vue'
 import Partners from '../components/Partners.vue'
 import WhatIsSus from '../components/WhatIsSus.vue'
-import ComingSoon from '../components/ComingSoon.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -699,8 +646,7 @@ export default {
     Hero,
     Opportunities,
     Partners,
-    WhatIsSus,
-    ComingSoon
+    WhatIsSus
   },
   data() {
     return {
@@ -708,20 +654,14 @@ export default {
       show_talk_modal: 0,
       date: "April 16, 2021",
       coming_soon: true,
+      hide: "display: none;",
       day1: {
-        card3: false,
-        card4: false,
         card6: false
       },
       day2: {
-        card1: false,
-        card3: false,
-        card4: false,
         card6: false
       },
       day3: {
-        card2: false,
-        card4: false,
         card6: false
       },
 
@@ -730,8 +670,8 @@ export default {
         { 
           class: "card1",
           time: "10:15",
-          talk: "Bots and Brains",
-          description: "No matter how high tech your bots are, you need to understand where the human aspect comes in.",
+          talk: "The Future of Bots and Brains",
+          description: "AI and Automation are being adopted at a very rapid pace. However, companies and organizations have to understand that bots will not have the desired impact unless the brains (humans) are involved in the processes that are automated. Understand how a startup like Aiah helps companies transform through human-enhanced automated processes.",
           speaker: "Gian dela Rama",
           pic_url: require('@/assets/speakers/GiandelaRama.jpeg'),
           modal: {
@@ -762,8 +702,8 @@ export default {
         { 
           class: "card3",
           time: "11:15",
-          talk: "1 Name of talk",
-          description: "Rama earned Master of Science from Management Information Technology of Strayer University, Washington DC in 2007 before returning back to Jakarta in the same year. He then worked as IT auditor and advisor in various companies such as PWC (Pricewaterhouse Coopers), Ernst & Young, and PT Geoteq Integrasi Semesta.",
+          talk: "Technology Innovation and Its Impacts on Society",
+          description: "In the age of digital transformation, technology is seen as the cultivator for changes. It opens up many possibilities for Positive impacts, not only for Businesses or economy, but also for the citizenry. Technology needs to be put as the enabler for better urban recondition and enhance city's resiliency towards the impact of urbanization.",
           speaker: "Rama Raditya",
           pic_url: require('@/assets/speakers/RamaRaditya.jpg'),
           modal: {
@@ -777,8 +717,8 @@ export default {
         {
           class: "card4",
           time: "11:35",
-          talk: "1 Name of talk",
-          description: "Talk description will go here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: "When computers start to see us",
+          description: "Rapid developments in computer vision are enabling computers and machines around us to develop human-like, and even superhuman sensing capabilities. In this talk we will discover what the future holds in this new age of human-machine interaction.",
           speaker: "Serban Mogos",
           pic_url: require('@/assets/speakers/SerbanMogos.jpeg'),
           modal: {
@@ -800,42 +740,28 @@ export default {
         },
         {
           class: "card6",
-          time: "13:00",
+          time: "14:00",
           exhibit: "Startup Exhibitors' Showcase",
-          description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-          pic_url1: require("@/assets/startups/arpacorp/logo.png"),
-          pic_url2: require("@/assets/startups/clink/logo1.png"),
-          pic_url3: require("@/assets/startups/ideas/logo.png"),
-          pic_url4: require("@/assets/startups/mosaic/logo.png"),
-          pic_url5: require("@/assets/startups/qbo/icon.png"),
-          pic_url6: require("@/assets/startups/startupvillage/icon.png"),
+          description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!",
+          pic_url1: require("@/assets/startups/startupvillage/icon2.png"),
+          pic_url2: require("@/assets/startups/makeracademy/cover.png"),
+          pic_url3: require("@/assets/startups/kumu/logo.png"),
+          pic_url4: require("@/assets/startups/clink/logo1.png"),
           modal: {
             exhibit: "Startup Exhibit",
-            time: "1:00pm",
-            img1: require("@/assets/startups/arpacorp/logo.png"),
-            img2: require("@/assets/startups/clink/logo1.png"),
-            img3: require("@/assets/startups/ideas/logo.png"),
-            img4: require("@/assets/startups/mosaic/logo.png"),
-            img5: require("@/assets/startups/qbo/icon.png"),
-            img6: require("@/assets/startups/startupvillage/icon.png"),
-            img7: require("@/assets/startups/technoapp/logo.png"),
-            img8: require("@/assets/startups/makeracademy/logo.png"),
-            sched1: "Schedule",
-            sched2: "Schedule",
-            sched3: "Schedule",
-            sched4: "Schedule",
-            sched5: "Schedule",
-            sched6: "Schedule",
-            sched7: "Schedule",
-            sched8: "Schedule",
-            startup1: "Startup name",
-            startup2: "Startup name",
-            startup3: "Startup name",
-            startup4: "Startup name",
-            startup5: "Startup name",
-            startup6: "Startup name",
-            startup7: "Startup name",
-            startup8: "Startup name",
+            time: "2 - 6 PM",
+            img1: require("@/assets/startups/startupvillage/icon2.png"),
+            img2: require("@/assets/startups/makeracademy/cover.png"),
+            img3: require("@/assets/startups/kumu/logo.png"),
+            img4: require("@/assets/startups/clink/logo1.png"),
+            sched1: "2:00pm - 2:30pm",
+            sched2: "2:00pm - 3:00pm",
+            sched3: "2:00pm - 4:00pm",
+            sched4: "4:00pm - 6:00pm",
+            startup1: "Startup Village",
+            startup2: "Maker Academy",
+            startup3: "Kumu",
+            startup4: "ClinkIT"
           }
         }
       ],
@@ -846,7 +772,7 @@ export default {
           class: "card1",
           time: "10:10",
           talk: "Inclusive Innovation: Upskilling Women for the Future of Work",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          description: "With news of artificial intelligence, robotics, and machine learning advancements popping up left and right, Gina is compelled to make sure that no woman is left behind in the age of digital disruption. Through Connected Women, Gina lives out her vision of passing on this knowledge to the least prioritized sector of society–underserved women, through tech literacy, training, and education.",
           speaker: "Gina Romero",
           pic_url: require('@/assets/speakers/GinaRomero.jpg'),
           modal: {
@@ -877,9 +803,9 @@ export default {
         {
           class: "card3",
           time: "11:00",
-          talk: "2 Name of talk",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-          speaker: "Dr. Chari Cheng",
+          talk: "Combining Passion with Your Career",
+          description: "Despite the male-dominated nature of the tech and AI industry, women should not be afraid to venture into the field. Whatever is needed to be in the area, women have it.",
+          speaker: "Dr. Charibeth Cheng",
           pic_url: require('@/assets/speakers/DrChari.png'),
           modal: {
             time: "11:00am",
@@ -891,8 +817,8 @@ export default {
         {
           class: "card4",
           time: "11:20",
-          talk: "2 Name of talk",
-          description: "2 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: " Are Leaders Born or Made? A True Story",
+          description: "In this talk, Teresa highlights the professional challenges and career aspirations of women like herself. She shares how overcoming abject poverty and her workplace’s patriarchal mindset has given her the sense of confidence she carries in all aspects of her womanhood– as a leader, a mother, a lifelong learner, and a startup-pioneer. ",
           speaker: "Teresa Condicion",
           pic_url: require('@/assets/speakers/TeresaCondicion.jpg'),
           modal: {
@@ -914,42 +840,28 @@ export default {
         },
         {
           class: "card6",
-          time: "7:00",
+          time: "14:00",
           exhibit: "Startup Exhibitors' Showcase",
           description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!",
-          pic_url1: require("@/assets/kumu-logo.png"),
-          pic_url2: require("@/assets/kumu-logo.png"),
-          pic_url3: require("@/assets/kumu-logo.png"),
-          pic_url4: require("@/assets/kumu-logo.png"),
-          pic_url5: require("@/assets/kumu-logo.png"),
-          pic_url6: require("@/assets/kumu-logo.png"),
+          pic_url1: require("@/assets/startups/clink/logo1.png"),
+          pic_url2: require("@/assets/startups/startupvillage/icon2.png"),
+          pic_url3: require("@/assets/startups/makeracademy/cover.png"),
+          pic_url4: require("@/assets/startups/arpacorp/logo2.png"),
           modal: {
             exhibit: "Startup Exhibit",
-            time: "2-4 PM",
-            img1: require("@/assets/kumu-logo.png"),
-            img2: require("@/assets/kumu-logo.png"),
-            img3: require("@/assets/kumu-logo.png"),
-            img4: require("@/assets/kumu-logo.png"),
-            img5: require("@/assets/kumu-logo.png"),
-            img6: require("@/assets/kumu-logo.png"),
-            img7: require("@/assets/kumu-logo.png"),
-            img8: require("@/assets/kumu-logo.png"),
-            sched1: "Schedule",
-            sched2: "Schedule",
-            sched3: "Schedule",
-            sched4: "Schedule",
-            sched5: "Schedule",
-            sched6: "Schedule",
-            sched7: "Schedule",
-            sched8: "Schedule",
-            startup1: "Startup name",
-            startup2: "Startup name",
-            startup3: "Startup name",
-            startup4: "Startup name",
-            startup5: "Startup name",
-            startup6: "Startup name",
-            startup7: "Startup name",
-            startup8: "Startup name"
+            time: "2-3 PM",
+            img1: require("@/assets/startups/clink/logo1.png"),
+            img2: require("@/assets/startups/startupvillage/icon2.png"),
+            img3: require("@/assets/startups/makeracademy/cover.png"),
+            img4: require("@/assets/startups/arpacorp/logo2.png"),
+            sched1: "1:00pm - 3:00pm",
+            sched2: "2:00pm - 2:30pm",
+            sched3: "2:00pm - 3:00pm",
+            sched4: "2:00pm - 3:00pm",
+            startup1: "ClinkIT",
+            startup2: "Startup Village",
+            startup3: "Maker Academy",
+            startup4: "Arpa Corp",
           }
         }
       ],
@@ -981,8 +893,8 @@ export default {
         {
           class: "card2",
           time: "10:30",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: "Starting young: The good and the bad of going to social entrepreneurship immediately after college",
+          description: "The 15-minute talk will give the audience a glimpse of what to expect when starting out young. I will be sharing my personal journey in Cropital and highlight stories, reflections, and key learnings. I will provide practical tips and guidance for those who aspire to start young in their social entrepreneurship/start-up journey.",
           speaker: "Ruel Amparo",
           pic_url: require('@/assets/speakers/RuelAmparo.jpg'),
           modal: {
@@ -1010,8 +922,8 @@ export default {
         {
           class: "card4",
           time: "11:40",
-          talk: "3 Name of talk",
-          description: "3 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+          talk: "The role of digital natives in developing a robust PH economy through innovative and sustainable startups.",
+          description: "The Culminating session will cover the current career landscape for the youth which has been significantly affected by the pandemic. ",
           speaker: "Rene “Butch” Meily",
           pic_url: require('@/assets/speakers/ReneMeily.jpg'),
           modal: {
@@ -1035,42 +947,16 @@ export default {
         },
         {
           class: "card6",
-          time: "7:00",
+          time: "14:00",
           exhibit: "Startup Exhibitors' Showcase",
           description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!",
-          pic_url1: require("@/assets/startups/technoapp/logo.png"),
-          pic_url2: require("@/assets/startups/makeracademy/logo.png"),
-          pic_url3: require("@/assets/startups/pickaroo/logo.png"),
-          pic_url4: require("@/assets/startups/xperto/logo2.png"),
-          pic_url5: require("@/assets/kumu-logo.png"),
-          pic_url6: require("@/assets/kumu-logo.png"),
+          pic_url1: require("@/assets/startups/arpacorp/logo2.png"),
           modal: {
             exhibit: "Startup Exhibit",
-            time: "2-4 PM",
-            img1: require("@/assets/kumu-logo.png"),
-            img2: require("@/assets/kumu-logo.png"),
-            img3: require("@/assets/kumu-logo.png"),
-            img4: require("@/assets/kumu-logo.png"),
-            img5: require("@/assets/kumu-logo.png"),
-            img6: require("@/assets/kumu-logo.png"),
-            img7: require("@/assets/kumu-logo.png"),
-            img8: require("@/assets/kumu-logo.png"),
-            sched1: "Schedule",
-            sched2: "Schedule",
-            sched3: "Schedule",
-            sched4: "Schedule",
-            sched5: "Schedule",
-            sched6: "Schedule",
-            sched7: "Schedule",
-            sched8: "Schedule",
-            startup1: "Startup name",
-            startup2: "Startup name",
-            startup3: "Startup name",
-            startup4: "Startup name",
-            startup5: "Startup name",
-            startup6: "Startup name",
-            startup7: "Startup name",
-            startup8: "Startup name"
+            time: "2-3 PM",
+            img1: require("@/assets/startups/arpacorp/logo2.png"),
+            sched1: "2:00pm - 3:00pm",
+            startup1: "Arpa Corp",
           }
         }
       ]
@@ -1182,7 +1068,7 @@ export default {
 .card_container .row2 {
   display: flex;
   flex-wrap: wrap;
-  margin: 16px auto 0 auto;
+  margin: 16px auto 0 auto!important;
 }
 .card_container .row3 {
   display: flex;

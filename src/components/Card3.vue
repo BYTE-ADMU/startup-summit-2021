@@ -9,12 +9,12 @@
             <p class="talk_description">{{ description }}</p>
             <div class="speaker">
                 <div class="speaker_details">
-                    <img v-bind:src="pic_url1" class="picture1" alt="speaker img">
-                    <img v-bind:src="pic_url2" class="picture2" alt="speaker img">
-                    <img v-bind:src="pic_url3" class="picture3" alt="speaker img">
-                    <img v-bind:src="pic_url4" class="picture4" alt="speaker img">
-                    <img v-bind:src="pic_url5" class="picture5" alt="speaker img">
-                    <img v-bind:src="pic_url6" class="picture6" alt="speaker img">
+                    <img v-bind:src="pic_url1" v-bind:style="hide1" class="picture1" alt="speaker img">
+                    <img v-bind:src="pic_url2" v-bind:style="hide2" class="picture2" alt="speaker img">
+                    <img v-bind:src="pic_url3" v-bind:style="hide3" class="picture3" alt="speaker img">
+                    <img v-bind:src="pic_url4" v-bind:style="hide4" class="picture4" alt="speaker img">
+                    <img v-bind:src="pic_url5" v-bind:style="hide5" class="picture5" alt="speaker img">
+                    <img v-bind:src="pic_url6" v-bind:style="hide6" class="picture6" alt="speaker img">
                 </div>
                 <SecondaryBtn class="button" v-on:click="showModal()"><Chevron id="svg"/></SecondaryBtn>
             </div>
@@ -42,7 +42,13 @@ export default {
         pic_url4: String,
         pic_url5: String,
         pic_url6: String,
-        time: String
+        time: String,
+        hide1: String,
+        hide2: String,
+        hide3: String,
+        hide4: String,
+        hide5: String,
+        hide6: String
     },
     methods: {
         showModal(toggle_modal) {
@@ -139,11 +145,11 @@ export default {
 } 
 .picture1, .picture2, .picture3, .picture4, .picture5 {
     overflow: hidden;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     border: solid;
     border-radius: 25px;
-    margin: 6px 10px 0 0;
+    margin: -10px 10px 0 0;
     object-fit: contain;
 }
 .talk_details .speaker .picture6 {
@@ -156,7 +162,7 @@ export default {
 }
 .talk_details .speaker .button {
     background-color: transparent!important;
-    margin: 9px 0 0 auto;
+    margin: 0 0 0 auto;
     height: 32px;
     width: 64px;
     border-radius: 4px;

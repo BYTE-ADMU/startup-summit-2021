@@ -6,7 +6,7 @@
         </div>
         <div class="talk_details">
             <h3 class="talk_name">{{ talk }}</h3>
-            <p class="talk_description">{{ description }}</p>
+            <p class="talk_description" v-bind:style="center">{{ description }}</p>
             <div class="speaker">
                 <div class="speaker_details">
                     <img v-bind:src="pic_url" alt="Speaker image" class="picture">
@@ -34,7 +34,8 @@ export default {
         description: String,
         talk: String,
         pic_url: String,
-        time: String
+        time: String,
+        center: String
     },
     methods: {
         toggleModal1(show_modal) {
@@ -102,6 +103,7 @@ export default {
     flex-direction: column;
     padding: 0;
     margin: 26px 39px 19px 37px;
+    width: 363.28px;
 }
 .card .talk_details .speaker {
     display: flex;
@@ -151,7 +153,7 @@ export default {
     border-bottom-right-radius: 50% 50%;
     border-bottom-left-radius: 50% 50%;
     margin: 0 16px 0 0;
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
 }
 .talk_details .speaker .name {
@@ -160,7 +162,7 @@ export default {
     margin: 15px 0 34px 0;
 }
 .talk_details .speaker .button {
-    margin: 9px 0 0 auto;
+    margin: 9px 0 0 auto!important;
     height: 32px;
     width: 64px;
     padding: 8px, 24px, 8px, 24px;
@@ -183,6 +185,7 @@ export default {
     }
     .card .talk_details {
         margin: 0 25px 33.36px 24px; 
+        width: auto;
     }
     .card .talk_details .speaker {
         display: flex;

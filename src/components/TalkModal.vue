@@ -91,20 +91,20 @@
                 </a>
             </div>
             <p class="description">{{ description }}</p>
-            <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn>
+            <!-- <PrimaryBtn class="watch_now">Watch Now <Chevron/></PrimaryBtn> -->
         </div>
     </div>
 </template>
 
 <script>
-import PrimaryBtn from "./PrimaryBtn.vue"
-import Chevron from "./Chevron.vue"
+// import PrimaryBtn from "./PrimaryBtn.vue"
+// import Chevron from "./Chevron.vue"
 
 export default {
     name: "TalkModal",
     components: {
-        PrimaryBtn,
-        Chevron
+        // PrimaryBtn,
+        // Chevron
     },
     props: {
         talk: String,
@@ -177,6 +177,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin: 30px 64px 60px 0;
+    overflow-y: auto;
 }
 .card2 .talk_details .icons {
     display: flex;
@@ -260,16 +261,15 @@ export default {
     line-height: 26px;
     margin: 0 0 40px 0;
     white-space: pre-line;
-    overflow-y: auto;
 }
-.talk_details .description::-webkit-scrollbar {
+.talk_details::-webkit-scrollbar {
     width: 5px;
 }
-.talk_details .description::-webkit-scrollbar-track {
+.talk_details::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
 }
-.talk_details .description::-webkit-scrollbar-thumb {
+.talk_details::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }

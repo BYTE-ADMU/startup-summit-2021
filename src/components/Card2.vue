@@ -12,7 +12,7 @@
                     <img v-bind:src="pic_url1" class="picture1" alt="speaker img">
                     <img v-bind:src="pic_url2" class="picture2" alt="speaker img">
                     <img v-bind:src="pic_url3" class="picture3" alt="speaker img">
-                    <img v-bind:src="pic_url4" class="picture4" alt="speaker img">
+                    <img v-bind:src="pic_url4" v-bind:style="hide" class="picture4" alt="speaker img">
                 </div>
                 <SecondaryBtn class="button" v-on:click="showModal()"><Chevron id="svg"/></SecondaryBtn>
             </div>
@@ -38,6 +38,7 @@ export default {
         pic_url2: String,
         pic_url3: String,
         pic_url4: String,
+        hide: String,
         time: String
     },
     methods: {
