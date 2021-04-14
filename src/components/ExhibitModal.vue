@@ -5,28 +5,28 @@
         <p class="date">{{ date }}, {{ time }} GMT+8</p>
         <div class="startups">
             <div class="col1">
-                <div class="startup_1">
+                <div class="startup_1" v-bind:style="hide1">
                     <img v-bind:src="img1" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup1 }}</p>
                         <p class="sched">{{ sched1 }}</p>
                     </div>
                 </div>
-                <div class="startup_2">
+                <div class="startup_2" v-bind:style="hide2">
                     <img v-bind:src="img2" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup2 }}</p>
                         <p class="sched">{{ sched2 }}</p>
                     </div>
                 </div>
-                <div class="startup_3">
+                <div class="startup_3" v-bind:style="hide3">
                     <img v-bind:src="img3" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup3 }}</p>
                         <p class="sched">{{ sched3 }}</p>
                     </div>
                 </div>
-                <div class="startup_4">
+                <div class="startup_4" v-bind:style="hide4">
                     <img v-bind:src="img4" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup4 }}</p>
@@ -35,28 +35,28 @@
                 </div>
             </div>
             <div class="col2">
-                <div class="startup_5">
+                <div class="startup_5" v-bind:style="hide5">
                     <img v-bind:src="img5" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup5 }}</p>
                         <p class="sched">{{ sched5 }}</p>
                     </div>
                 </div>
-                <div class="startup_6">
+                <div class="startup_6" v-bind:style="hide6">
                     <img v-bind:src="img6" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup6 }}</p>
                         <p class="sched">{{ sched6 }}</p>
                     </div>
                 </div>
-                <div class="startup_7">
+                <div class="startup_7" v-bind:style="hide7">
                     <img v-bind:src="img7" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup7 }}</p>
                         <p class="sched">{{ sched7 }}</p>
                     </div>
                 </div>
-                <div class="startup_8">
+                <div class="startup_8" v-bind:style="hide8">
                     <img v-bind:src="img8" alt="Startup image" class="pic">
                     <div class="details">
                         <p class="startup_name">{{ startup8 }}</p>
@@ -106,7 +106,15 @@ export default {
         sched5: String,
         sched6: String,
         sched7: String,
-        sched8: String
+        sched8: String,
+        hide1: String,
+        hide2: String,
+        hide3: String,
+        hide4: String,
+        hide5: String,
+        hide6: String,
+        hide7: String,
+        hide8: String
     },
     methods: {
         exitButton(exit) {

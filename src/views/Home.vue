@@ -61,9 +61,7 @@
     :pic_url3=first_day[2].pic_url
     :pic_url4=first_day[3].pic_url
     />
-    <ComingSoon class="card6"/>
     <Card3 class="card6"
-    v-if="day1.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="first_day[5].time"
     v-bind:exhibit="first_day[5].exhibit"
@@ -72,8 +70,8 @@
     :pic_url2=first_day[5].pic_url2
     :pic_url3=first_day[5].pic_url3
     :pic_url4=first_day[5].pic_url4
-    :pic_url5=first_day[5].pic_url5
-    :pic_url6=first_day[5].pic_url6
+    :hide5=hide
+    :hide6=hide
     />
   </div>
 
@@ -192,26 +190,18 @@
       :startup2=first_day[5].modal.startup2
       :startup3=first_day[5].modal.startup3
       :startup4=first_day[5].modal.startup4
-      :startup5=first_day[5].modal.startup5
-      :startup6=first_day[5].modal.startup6
-      :startup7=first_day[5].modal.startup7
-      :startup8=first_day[5].modal.startup8
       :sched1=first_day[5].modal.sched1
       :sched2=first_day[5].modal.sched2
       :sched3=first_day[5].modal.sched3
       :sched4=first_day[5].modal.sched4
-      :sched5=first_day[5].modal.sched5
-      :sched6=first_day[5].modal.sched6
-      :sched7=first_day[5].modal.sched7
-      :sched8=first_day[5].modal.sched8
       :img1=first_day[5].modal.img1
       :img2=first_day[5].modal.img2
       :img3=first_day[5].modal.img3
       :img4=first_day[5].modal.img4
-      :img5=first_day[5].modal.img5
-      :img6=first_day[5].modal.img6
-      :img7=first_day[5].modal.img7
-      :img8=first_day[5].modal.img8
+      :hide5=hide
+      :hide6=hide
+      :hide7=hide
+      :hide8=hide
       />
     </div>
   </transition>
@@ -272,9 +262,7 @@
     :pic_url3=second_day[2].pic_url
     :pic_url4=second_day[3].pic_url
     />
-    <ComingSoon class="card6"/>
     <Card3 class="card6"
-    v-if="day2.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="second_day[5].time"
     v-bind:exhibit="second_day[5].exhibit"
@@ -283,8 +271,8 @@
     :pic_url2=second_day[5].pic_url2
     :pic_url3=second_day[5].pic_url3
     :pic_url4=second_day[5].pic_url4
-    :pic_url5=second_day[5].pic_url5
-    :pic_url6=second_day[5].pic_url6
+    :hide5=hide
+    :hide6=hide
     />
   </div>
 
@@ -401,26 +389,18 @@
       :startup2=second_day[5].modal.startup2
       :startup3=second_day[5].modal.startup3
       :startup4=second_day[5].modal.startup4
-      :startup5=second_day[5].modal.startup5
-      :startup6=second_day[5].modal.startup6
-      :startup7=second_day[5].modal.startup7
-      :startup8=second_day[5].modal.startup8
       :sched1=second_day[5].modal.sched1
       :sched2=second_day[5].modal.sched2
       :sched3=second_day[5].modal.sched3
       :sched4=second_day[5].modal.sched4
-      :sched5=second_day[5].modal.sched5
-      :sched6=second_day[5].modal.sched6
-      :sched7=second_day[5].modal.sched7
-      :sched8=second_day[5].modal.sched8
       :img1=second_day[5].modal.img1
       :img2=second_day[5].modal.img2
       :img3=second_day[5].modal.img3
       :img4=second_day[5].modal.img4
-      :img5=second_day[5].modal.img5
-      :img6=second_day[5].modal.img6
-      :img7=second_day[5].modal.img7
-      :img8=second_day[5].modal.img8
+      :hide5=hide
+      :hide6=hide
+      :hide7=hide
+      :hide8=hide
       />
     </div>
   </transition>
@@ -481,19 +461,17 @@
     :pic_url3=third_day[2].pic_url
     :hide=hide
     />
-    <ComingSoon class="card6"/>
     <Card3 class="card6"
-    v-if="day3.card6===true"
     @toggle-modal6="showTalkModal"
     v-bind:time="third_day[5].time"
     v-bind:exhibit="third_day[5].exhibit"
     v-bind:description="third_day[5].description"
     :pic_url1=third_day[5].pic_url1
-    :pic_url2=third_day[5].pic_url2
-    :pic_url3=third_day[5].pic_url3
-    :pic_url4=third_day[5].pic_url4
-    :pic_url5=third_day[5].pic_url5
-    :pic_url6=third_day[5].pic_url6
+    :hide2=hide
+    :hide3=hide
+    :hide4=hide
+    :hide5=hide
+    :hide6=hide
     />
   </div>
 
@@ -619,29 +597,15 @@
       v-bind:date="modal_date"
       v-bind:time="third_day[5].modal.time"
       :startup1=third_day[5].modal.startup1
-      :startup2=third_day[5].modal.startup2
-      :startup3=third_day[5].modal.startup3
-      :startup4=third_day[5].modal.startup4
-      :startup5=third_day[5].modal.startup5
-      :startup6=third_day[5].modal.startup6
-      :startup7=third_day[5].modal.startup7
-      :startup8=third_day[5].modal.startup8
       :sched1=third_day[5].modal.sched1
-      :sched2=third_day[5].modal.sched2
-      :sched3=third_day[5].modal.sched3
-      :sched4=third_day[5].modal.sched4
-      :sched5=third_day[5].modal.sched5
-      :sched6=third_day[5].modal.sched6
-      :sched7=third_day[5].modal.sched7
-      :sched8=third_day[5].modal.sched8
       :img1=third_day[5].modal.img1
-      :img2=third_day[5].modal.img2
-      :img3=third_day[5].modal.img3
-      :img4=third_day[5].modal.img4
-      :img5=third_day[5].modal.img5
-      :img6=third_day[5].modal.img6
-      :img7=third_day[5].modal.img7
-      :img8=third_day[5].modal.img8
+      :hide2=hide
+      :hide3=hide
+      :hide4=hide
+      :hide5=hide
+      :hide6=hide
+      :hide7=hide
+      :hide8=hide
       />
     </div>
   </transition>
@@ -666,7 +630,6 @@ import Hero from '../components/Hero.vue'
 import Opportunities from '../components/Opportunities.vue'
 import Partners from '../components/Partners.vue'
 import WhatIsSus from '../components/WhatIsSus.vue'
-import ComingSoon from '../components/ComingSoon.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -683,8 +646,7 @@ export default {
     Hero,
     Opportunities,
     Partners,
-    WhatIsSus,
-    ComingSoon
+    WhatIsSus
   },
   data() {
     return {
@@ -778,42 +740,28 @@ export default {
         },
         {
           class: "card6",
-          time: "13:00",
+          time: "14:00",
           exhibit: "Startup Exhibitors' Showcase",
-          description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!No matter how high tech your bots are, you need to understand where the human aspect comes in. 1 Talk description will be here Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-          pic_url1: require("@/assets/startups/arpacorp/logo.png"),
-          pic_url2: require("@/assets/startups/clink/logo1.png"),
-          pic_url3: require("@/assets/startups/ideas/logo.png"),
-          pic_url4: require("@/assets/startups/mosaic/logo.png"),
-          pic_url5: require("@/assets/startups/qbo/icon.png"),
-          pic_url6: require("@/assets/startups/startupvillage/icon.png"),
+          description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!",
+          pic_url1: require("@/assets/startups/startupvillage/icon2.png"),
+          pic_url2: require("@/assets/startups/makeracademy/cover.png"),
+          pic_url3: require("@/assets/startups/kumu/logo.png"),
+          pic_url4: require("@/assets/startups/clink/logo1.png"),
           modal: {
             exhibit: "Startup Exhibit",
-            time: "1:00pm",
-            img1: require("@/assets/startups/arpacorp/logo.png"),
-            img2: require("@/assets/startups/clink/logo1.png"),
-            img3: require("@/assets/startups/ideas/logo.png"),
-            img4: require("@/assets/startups/mosaic/logo.png"),
-            img5: require("@/assets/startups/qbo/icon.png"),
-            img6: require("@/assets/startups/startupvillage/icon.png"),
-            img7: require("@/assets/startups/technoapp/logo.png"),
-            img8: require("@/assets/startups/makeracademy/logo.png"),
-            sched1: "Schedule",
-            sched2: "Schedule",
-            sched3: "Schedule",
-            sched4: "Schedule",
-            sched5: "Schedule",
-            sched6: "Schedule",
-            sched7: "Schedule",
-            sched8: "Schedule",
-            startup1: "Startup name",
-            startup2: "Startup name",
-            startup3: "Startup name",
-            startup4: "Startup name",
-            startup5: "Startup name",
-            startup6: "Startup name",
-            startup7: "Startup name",
-            startup8: "Startup name",
+            time: "2 - 6 PM",
+            img1: require("@/assets/startups/startupvillage/icon2.png"),
+            img2: require("@/assets/startups/makeracademy/cover.png"),
+            img3: require("@/assets/startups/kumu/logo.png"),
+            img4: require("@/assets/startups/clink/logo1.png"),
+            sched1: "2:00pm - 2:30pm",
+            sched2: "2:00pm - 3:00pm",
+            sched3: "2:00pm - 4:00pm",
+            sched4: "4:00pm - 6:00pm",
+            startup1: "Startup Village",
+            startup2: "Maker Academy",
+            startup3: "Kumu",
+            startup4: "ClinkIT"
           }
         }
       ],
@@ -892,42 +840,28 @@ export default {
         },
         {
           class: "card6",
-          time: "7:00",
+          time: "14:00",
           exhibit: "Startup Exhibitors' Showcase",
           description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!",
-          pic_url1: require("@/assets/kumu-logo.png"),
-          pic_url2: require("@/assets/kumu-logo.png"),
-          pic_url3: require("@/assets/kumu-logo.png"),
-          pic_url4: require("@/assets/kumu-logo.png"),
-          pic_url5: require("@/assets/kumu-logo.png"),
-          pic_url6: require("@/assets/kumu-logo.png"),
+          pic_url1: require("@/assets/startups/clink/logo1.png"),
+          pic_url2: require("@/assets/startups/startupvillage/icon2.png"),
+          pic_url3: require("@/assets/startups/makeracademy/cover.png"),
+          pic_url4: require("@/assets/startups/arpacorp/logo2.png"),
           modal: {
             exhibit: "Startup Exhibit",
-            time: "2-4 PM",
-            img1: require("@/assets/kumu-logo.png"),
-            img2: require("@/assets/kumu-logo.png"),
-            img3: require("@/assets/kumu-logo.png"),
-            img4: require("@/assets/kumu-logo.png"),
-            img5: require("@/assets/kumu-logo.png"),
-            img6: require("@/assets/kumu-logo.png"),
-            img7: require("@/assets/kumu-logo.png"),
-            img8: require("@/assets/kumu-logo.png"),
-            sched1: "Schedule",
-            sched2: "Schedule",
-            sched3: "Schedule",
-            sched4: "Schedule",
-            sched5: "Schedule",
-            sched6: "Schedule",
-            sched7: "Schedule",
-            sched8: "Schedule",
-            startup1: "Startup name",
-            startup2: "Startup name",
-            startup3: "Startup name",
-            startup4: "Startup name",
-            startup5: "Startup name",
-            startup6: "Startup name",
-            startup7: "Startup name",
-            startup8: "Startup name"
+            time: "2-3 PM",
+            img1: require("@/assets/startups/clink/logo1.png"),
+            img2: require("@/assets/startups/startupvillage/icon2.png"),
+            img3: require("@/assets/startups/makeracademy/cover.png"),
+            img4: require("@/assets/startups/arpacorp/logo2.png"),
+            sched1: "1:00pm - 3:00pm",
+            sched2: "2:00pm - 2:30pm",
+            sched3: "2:00pm - 3:00pm",
+            sched4: "2:00pm - 3:00pm",
+            startup1: "ClinkIT",
+            startup2: "Startup Village",
+            startup3: "Maker Academy",
+            startup4: "Arpa Corp",
           }
         }
       ],
@@ -1013,42 +947,16 @@ export default {
         },
         {
           class: "card6",
-          time: "7:00",
+          time: "14:00",
           exhibit: "Startup Exhibitors' Showcase",
           description: "Learn more about the different startup partners we have as they showcase and present who they are, what they do, and how their startup got to where it is today!",
-          pic_url1: require("@/assets/startups/technoapp/logo.png"),
-          pic_url2: require("@/assets/startups/makeracademy/logo.png"),
-          pic_url3: require("@/assets/startups/pickaroo/logo.png"),
-          pic_url4: require("@/assets/startups/xperto/logo2.png"),
-          pic_url5: require("@/assets/kumu-logo.png"),
-          pic_url6: require("@/assets/kumu-logo.png"),
+          pic_url1: require("@/assets/startups/arpacorp/logo2.png"),
           modal: {
             exhibit: "Startup Exhibit",
-            time: "2-4 PM",
-            img1: require("@/assets/kumu-logo.png"),
-            img2: require("@/assets/kumu-logo.png"),
-            img3: require("@/assets/kumu-logo.png"),
-            img4: require("@/assets/kumu-logo.png"),
-            img5: require("@/assets/kumu-logo.png"),
-            img6: require("@/assets/kumu-logo.png"),
-            img7: require("@/assets/kumu-logo.png"),
-            img8: require("@/assets/kumu-logo.png"),
-            sched1: "Schedule",
-            sched2: "Schedule",
-            sched3: "Schedule",
-            sched4: "Schedule",
-            sched5: "Schedule",
-            sched6: "Schedule",
-            sched7: "Schedule",
-            sched8: "Schedule",
-            startup1: "Startup name",
-            startup2: "Startup name",
-            startup3: "Startup name",
-            startup4: "Startup name",
-            startup5: "Startup name",
-            startup6: "Startup name",
-            startup7: "Startup name",
-            startup8: "Startup name"
+            time: "2-3 PM",
+            img1: require("@/assets/startups/arpacorp/logo2.png"),
+            sched1: "2:00pm - 3:00pm",
+            startup1: "Arpa Corp",
           }
         }
       ]
