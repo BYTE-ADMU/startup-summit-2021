@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <span class="btn" id="btn"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></span>
+            <span class="btn" id="btn"><a :href="opportunity.apply"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></a></span>
         </div>
         </div>
     </div>
@@ -169,6 +169,7 @@ export default {
       opportunityList:[
         {
           name: 'QBO Innovation Hub',
+          apply: 'mailto:hello@qbo.com.ph',
           cover: require('@/assets/startups/qbo/cover.png'),
           coverAlt: "QBO Innovation Hub cover",
           icon: require('@/assets/startups/qbo/icon.png'),
@@ -212,6 +213,7 @@ export default {
         },
         {
           name: 'ClinkIT Solutions',
+          apply: 'mailto:hiring@clinkitsolutions.com',
           cover: require('@/assets/startups/clink/cover.png'),
           coverAlt: "ClinkIT Solutions cover",
           icon: require('@/assets/startups/clink/logo.png'),
@@ -294,6 +296,7 @@ export default {
         },
         {
           name: 'ClinkIT Solutions',
+          apply: 'mailto:hiring@clinkitsolutions.com',
           cover: require('@/assets/startups/clink/cover.png'),
           coverAlt: "ClinkIT Solutions cover",
           icon: require('@/assets/startups/clink/logo.png'),
@@ -415,6 +418,7 @@ export default {
         },
         {
           name: "ARPACORP",
+          apply: 'mailto:info@arpa.ph',
           cover: require('@/assets/startups/arpacorp/logo2.png'),
           coverAlt: "ARPACORP cover",
           icon: require('@/assets/startups/arpacorp/logo.png'),
@@ -470,6 +474,7 @@ export default {
         },
         {
           name: "ARPACORP",
+          apply: 'mailto:info@arpa.ph',
           cover: require('@/assets/startups/arpacorp/logo2.png'),
           coverAlt: "ARPACORP cover",
           icon: require('@/assets/startups/arpacorp/logo.png'),
@@ -531,6 +536,7 @@ export default {
         },
         {
           name: "XPERTO",
+          apply: 'mailto:info@xperto.ph',
           cover: require('@/assets/startups/xperto/cover.jpg'),
           coverAlt: "XPERTO cover",
           icon: require('@/assets/startups/xperto/logo.png'),
@@ -610,6 +616,7 @@ export default {
         },
         {
           name: "XPERTO",
+          apply: 'mailto:info@xperto.ph',
           cover: require('@/assets/startups/xperto/cover.jpg'),
           coverAlt: "XPERTO cover",
           icon: require('@/assets/startups/xperto/logo.png'),
@@ -689,6 +696,7 @@ export default {
         },
         {
           name: "InterLeukin Innovations, Inc.",
+          apply: 'mailto:info@interleukin.co',
           cover: require('@/assets/startups/inter/cover.png'),
           coverAlt: "InterLeukin Innovations, Inc. cover",
           icon: require('@/assets/startups/inter/logo.png'),
@@ -720,6 +728,7 @@ export default {
         },
         {
           name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
           cover: require('@/assets/startups/kumu/firstpic.jpg'),
           coverAlt: "Kumu Inc. cover",
           icon: require('@/assets/startups/kumu/logo.png'),
@@ -769,6 +778,7 @@ export default {
         },
         {
           name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
           cover: require('@/assets/startups/kumu/firstpic.jpg'),
           coverAlt: "Kumu Inc. cover",
           icon: require('@/assets/startups/kumu/logo.png'),
@@ -815,6 +825,7 @@ export default {
         },
         {
           name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
           cover: require('@/assets/startups/kumu/firstpic.jpg'),
           coverAlt: "Kumu Inc. cover",
           icon: require('@/assets/startups/kumu/logo.png'),
@@ -861,6 +872,7 @@ export default {
         },
         {
           name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
           cover: require('@/assets/startups/kumu/firstpic.jpg'),
           coverAlt: "Kumu Inc. cover",
           icon: require('@/assets/startups/kumu/logo.png'),
