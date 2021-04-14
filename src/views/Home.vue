@@ -686,7 +686,7 @@ export default {
         { 
           class: "card2",
           time: "10:35",
-          talk: "New Knowledge about the Brain and how it is Shaping Tech",
+          talk: "New Knowledge About the Brain and How It is Shaping Tech",
           description: "New knowledge about the nature of the brain in the last two decades has turned many things on its head. This talk attempts to highlight how this is impacting the tech world. In particular, it speaks about the journey of SynPhNe, the world’s first wearable technology that re-integrates brain and body after brain damage, childhood disability and the challenges of aging.",
           speaker: "Dr. Subhasis Banerji",
           pic_url: require('@/assets/speakers/SubhasisBanerji.png'),
@@ -717,7 +717,7 @@ export default {
         {
           class: "card4",
           time: "11:35",
-          talk: "When computers start to see us",
+          talk: "When Computers Start to See Us",
           description: "Rapid developments in computer vision are enabling computers and machines around us to develop human-like, and even superhuman sensing capabilities. In this talk we will discover what the future holds in this new age of human-machine interaction.",
           speaker: "Serban Mogos",
           pic_url: require('@/assets/speakers/SerbanMogos.jpeg'),
@@ -893,7 +893,7 @@ export default {
         {
           class: "card2",
           time: "10:30",
-          talk: "Starting young: The good and the bad of going to social entrepreneurship immediately after college",
+          talk: "Starting young: The Good and the Bad of Going to Social Entrepreneurship Immediately After College",
           description: "The 15-minute talk will give the audience a glimpse of what to expect when starting out young. I will be sharing my personal journey in Cropital and highlight stories, reflections, and key learnings. I will provide practical tips and guidance for those who aspire to start young in their social entrepreneurship/start-up journey.",
           speaker: "Ruel Amparo",
           pic_url: require('@/assets/speakers/RuelAmparo.jpg'),
@@ -908,7 +908,7 @@ export default {
         {
           class: "card3",
           time: "11:00",
-          talk: "Building a Fintech Company that is both Filipino and Global",
+          talk: "Building a Fintech Company that is Both Filipino and Global",
           description: "Mikko Perez, Founder & CEO of Ayannah will tell us about Ayannah's journey.  Why he started it and the roller coaster ride of starting a tech company in the Philippines and how Ayannah has grown from being a Filipino company to a global fintech company",
           speaker: "Miguel (Mikko) Perez",
           pic_url: require('@/assets/speakers/MikoPerez.jpg'),
@@ -922,7 +922,7 @@ export default {
         {
           class: "card4",
           time: "11:40",
-          talk: "The role of digital natives in developing a robust PH economy through innovative and sustainable startups.",
+          talk: "The Role of Digital Natives in Developing a Robust PH Economy Through Innovative and Sustainable Startups.",
           description: "The Culminating session will cover the current career landscape for the youth which has been significantly affected by the pandemic. ",
           speaker: "Rene “Butch” Meily",
           pic_url: require('@/assets/speakers/ReneMeily.jpg'),
