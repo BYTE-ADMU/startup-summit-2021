@@ -30,26 +30,29 @@ export default {
           coverAlt: "cover",
           icon: require('@/assets/startups/startapp/icon.png'),
           iconAlt: "logo",
-          jobPosition: "",
+          JobName: "",
+          jobId: 8,
           responsibilities: [
             {
               responsibility: ""
-            }
+            },
           ],
           requirements: [
             {
               requirement: ""
-            }
+            },
           ],
+          check1: "",
           addtlInfo: [
             {
               info: ""
-            }
+            },
           ],
+          check2: "",
           appProcess: [
             {
               process: ""
-            }
+            },
           ]
         },
         {

@@ -1,6 +1,7 @@
 <template>
     <div v-for="opportunity in opportunityList" :key="opportunity" class="page-container">
         <div v-if="jbId == opportunity.jobId">
+        <div class="spacer"></div>
         <center><div class="cover-wrapper"><img :alt="opportunity.coverAlt" :src="opportunity.cover"></div></center>
         <div class="header-container">
             <div class="icon-wrapper"><img :alt="opportunity.iconAlt" :src="opportunity.icon"></div>
@@ -37,8 +38,8 @@
                         <p>Requirements</p>
                     </div>
                 </div>
-                <div class="vl" :style="vlStyle2"></div>
-                <div class="sidenav-container">
+                <div v-if="opportunity.check1 != ''" class="vl" :style="vlStyle2"></div>
+                <div v-if="opportunity.check1 != ''" class="sidenav-container">
                     <div class="nav-icon light-orange" :style="svgStyle2">
                         <svg id="svg3" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14.3166 7.90233L14.3166 7.90242L14.3259 7.90602C14.4247 7.94432 14.5152 8.00109 14.5926 8.07325C14.7433 8.23533 14.829 8.44731 14.8333 8.66871C14.8318 8.80358 14.7977 8.93611 14.7337 9.05491C14.669 9.17508 14.5758 9.27753 14.4622 9.35324C14.3487 9.42895 14.2182 9.4756 14.0824 9.48911C13.9471 9.50256 13.8105 9.48269 13.6846 9.43122C13.5804 9.38746 13.484 9.3269 13.3994 9.25196C13.3264 9.17604 13.2683 9.08692 13.2285 8.98932C13.187 8.88778 13.166 8.77907 13.1666 8.6694L13.1667 8.66151L13.1665 8.65362C13.164 8.5568 13.1842 8.46074 13.2255 8.37315L13.2303 8.36299L13.2346 8.35263C13.2779 8.24919 13.3376 8.15352 13.4115 8.06933C13.488 7.99903 13.5771 7.94362 13.6741 7.90602L13.6741 7.90612L13.6833 7.90233C13.8862 7.81898 14.1137 7.81898 14.3166 7.90233ZM13.4107 13.4106C13.567 13.2543 13.779 13.1665 14 13.1665C14.221 13.1665 14.4329 13.2543 14.5892 13.4106C14.7455 13.5669 14.8333 13.7788 14.8333 13.9998V19.3332C14.8333 19.5542 14.7455 19.7661 14.5892 19.9224C14.4329 20.0787 14.221 20.1665 14 20.1665C13.779 20.1665 13.567 20.0787 13.4107 19.9224C13.2544 19.7661 13.1666 19.5542 13.1666 19.3332V13.9998C13.1666 13.7788 13.2544 13.5669 13.4107 13.4106ZM6.87015 3.32931C8.98058 1.91917 11.4618 1.1665 14 1.1665C15.6853 1.1665 17.3541 1.49845 18.9111 2.14338C20.4681 2.78832 21.8828 3.73361 23.0745 4.9253C24.2662 6.11699 25.2115 7.53172 25.8564 9.08873C26.5014 10.6457 26.8333 12.3145 26.8333 13.9998C26.8333 16.538 26.0806 19.0192 24.6705 21.1297C23.2603 23.2401 21.2561 24.885 18.9111 25.8563C16.5661 26.8276 13.9857 27.0818 11.4963 26.5866C9.00688 26.0914 6.7202 24.8692 4.92543 23.0744C3.13065 21.2796 1.9084 18.9929 1.41322 16.5035C0.918044 14.0141 1.17219 11.4337 2.14351 9.08873C3.11484 6.74375 4.75972 4.73946 6.87015 3.32931ZM7.7961 23.2846C9.63245 24.5116 11.7914 25.1665 14 25.1665C16.9615 25.1665 19.8018 23.99 21.896 21.8959C23.9901 19.8017 25.1666 16.9614 25.1666 13.9998C25.1666 11.7913 24.5117 9.63232 23.2847 7.79597C22.0577 5.95962 20.3137 4.52836 18.2733 3.68318C16.2328 2.838 13.9876 2.61687 11.8215 3.04774C9.65534 3.4786 7.66563 4.54213 6.10394 6.10381C4.54225 7.6655 3.47873 9.65521 3.04786 11.8213C2.617 13.9875 2.83813 16.2327 3.68331 18.2731C4.52849 20.3136 5.95975 22.0576 7.7961 23.2846Z" fill="white" stroke="white"/>
@@ -48,8 +49,8 @@
                         <p>Additional<br>Information</p>
                     </div>
                 </div>
-                <div class="vl third-vl" :style="vlStyle3"></div>
-                <div class="sidenav-container third-vl">
+                <div v-if="opportunity.check2 != ''" class="vl third-vl" :style="vlStyle3"></div>
+                <div v-if="opportunity.check2 != ''" class="sidenav-container third-vl">
                     <div class="nav-icon light-orange" :style="svgStyle3">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -91,7 +92,7 @@
                     </div>
                 </div>
             </div>
-                <div class="other-containers" id="addtl-info">
+                <div v-if="opportunity.check1 != ''" class="other-containers" id="addtl-info">
                 <div class="content-header">
                     <p>Additional Information</p>
                 </div>
@@ -103,7 +104,7 @@
                     </div>
                 </div>
             </div>
-            <div class="app_process" id="application">
+            <div v-if="opportunity.check2 != ''" class="app_process" id="application">
                 <div class="content-header">
                     <p>Application Process</p>
                 </div>
@@ -115,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <span class="btn" id="btn"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></span>
+            <span class="btn" id="btn"><a :href="opportunity.apply"><PrimaryBtn>Apply<Chevron id="chevron" /></PrimaryBtn></a></span>
         </div>
         </div>
     </div>
@@ -169,6 +170,7 @@ export default {
       opportunityList:[
         {
           name: 'QBO Innovation Hub',
+          apply: 'mailto:hello@qbo.com.ph',
           cover: require('@/assets/startups/qbo/cover.png'),
           coverAlt: "QBO Innovation Hub cover",
           icon: require('@/assets/startups/qbo/icon.png'),
@@ -194,11 +196,13 @@ export default {
               requirement: "Good project management skills"
             }
           ],
+          check1: "",
           addtlInfo: [
             {
               info: ""
             }
           ],
+          check2:"",
           appProcess: [
             {
               process: "Send a PDF attachment of your CV as well as a link to your LinkedIn profile via email to hello@qbo.com.ph"
@@ -210,6 +214,7 @@ export default {
         },
         {
           name: 'ClinkIT Solutions',
+          apply: 'mailto:hiring@clinkitsolutions.com',
           cover: require('@/assets/startups/clink/cover.png'),
           coverAlt: "ClinkIT Solutions cover",
           icon: require('@/assets/startups/clink/logo.png'),
@@ -277,11 +282,13 @@ export default {
               requirement: "Can work under pressure"
             }
           ],
+          check1: "",
           addtlInfo: [
             {
               info: ""
             }
           ],
+          check2: "",
           appProcess: [
             {
               process: ""
@@ -290,6 +297,7 @@ export default {
         },
         {
           name: 'ClinkIT Solutions',
+          apply: 'mailto:hiring@clinkitsolutions.com',
           cover: require('@/assets/startups/clink/cover.png'),
           coverAlt: "ClinkIT Solutions cover",
           icon: require('@/assets/startups/clink/logo.png'),
@@ -363,6 +371,7 @@ export default {
               requirement: "Ability to self-learn, positively adapt to changes, and work under pressure"
             }
           ],
+          check1: "yes",
           addtlInfo: [
             {
               info: "Work remotely, but ready to work in our Makati office occasionally as required"
@@ -386,6 +395,7 @@ export default {
               info: "HMO upon regularization"
             }
           ],
+          check2: "yes",
           appProcess: [
             {
               process: "Learn the qualifications and review your skills if you embody the qualities of a sidekick."
@@ -409,6 +419,7 @@ export default {
         },
         {
           name: "ARPACORP",
+          apply: 'mailto:info@arpa.ph',
           cover: require('@/assets/startups/arpacorp/logo2.png'),
           coverAlt: "ARPACORP cover",
           icon: require('@/assets/startups/arpacorp/logo.png'),
@@ -440,6 +451,7 @@ export default {
               requirement: "Keen attention to details"
             }
           ],
+          check1: "yes",
           addtlInfo: [
             {
               info: "Arpacorp is looking for three (3) Social Media Marketing Interns to be part of our social media community team."
@@ -454,6 +466,7 @@ export default {
               info: "A minimum allowance of ₱5,000/month will be given to successful interns until you finish your internship hours."
             }
           ],
+          check2: "yes",
           appProcess: [
             {
               process: "Send your resume at info@arpa.ph"
@@ -462,6 +475,7 @@ export default {
         },
         {
           name: "ARPACORP",
+          apply: 'mailto:info@arpa.ph',
           cover: require('@/assets/startups/arpacorp/logo2.png'),
           coverAlt: "ARPACORP cover",
           icon: require('@/assets/startups/arpacorp/logo.png'),
@@ -508,11 +522,13 @@ export default {
               requirement: "Keen attention to detail"
             }
           ],
+          check1: "yes",
           addtlInfo: [
             {
               info: "Arpacorp is looking for a part-time Social Media Specialist to be part of marketing team for its portfolio of leading software solutions. This position will be Work at Home. "
             }
           ],
+          check2: "yes",
           appProcess: [
             {
               process: "Send your resume at info@arpa.ph"
@@ -521,6 +537,7 @@ export default {
         },
         {
           name: "XPERTO",
+          apply: 'mailto:info@xperto.ph',
           cover: require('@/assets/startups/xperto/cover.jpg'),
           coverAlt: "XPERTO cover",
           icon: require('@/assets/startups/xperto/logo.png'),
@@ -585,11 +602,13 @@ export default {
               requirement: "Be able to openly communicate the produced designs in Tagalog, English, or Taglish to a small team of web developers"
             }
           ],
+          check1: "yes",
           addtlInfo: [
             {
               info: "Allowance: P5000++"
             }
           ],
+          check2: "yes",
           appProcess: [
             {
               process: "Send resume to support@xperto.ph"
@@ -598,6 +617,7 @@ export default {
         },
         {
           name: "XPERTO",
+          apply: 'mailto:info@xperto.ph',
           cover: require('@/assets/startups/xperto/cover.jpg'),
           coverAlt: "XPERTO cover",
           icon: require('@/assets/startups/xperto/logo.png'),
@@ -662,14 +682,242 @@ export default {
               requirement: "Current enrollment in a related BS or Masters degree"
             }
           ],
+          check1: "yes",
           addtlInfo: [
             {
               info: "Allowance: P5,000++"
             }
           ],
+          check2: "yes",
           appProcess: [
             {
               process: "Send resume to support@xperto.ph"
+            }
+          ]
+        },
+        {
+          name: "InterLeukin Innovations, Inc.",
+          apply: 'mailto:info@interleukin.co',
+          cover: require('@/assets/startups/inter/cover.png'),
+          coverAlt: "InterLeukin Innovations, Inc. cover",
+          icon: require('@/assets/startups/inter/logo.png'),
+          iconAlt: "InterLeukin Innovations, Inc. logo",
+          jobName: "Digital Marketing Intern",
+          jobId: 8,
+          responsibilities: [
+            {
+              responsibility: "Design and create creative contents for the social media pages of InterLeukin"
+              }
+          ],
+          requirements: [
+            {
+              requirement: "Experience in handling social media page"
+              }
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Email CV at ceo@interleukin.co"
+            }
+          ]
+        },
+        {
+          name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
+          cover: require('@/assets/startups/kumu/firstpic.jpg'),
+          coverAlt: "Kumu Inc. cover",
+          icon: require('@/assets/startups/kumu/logo.png'),
+          iconAlt: "Kumu Inc. logo",
+          jobName: "Social Media Intern",
+          jobId: 9,
+          responsibilities: [
+            {
+              responsibility: "Brainstorming a growth strategy by creating sound, practical and engaging social media content relevant to the target audience"
+              },
+            {
+              responsibility: "Review and analyze engagement metrics from various channels and use findings to improve future plans"
+            },
+            {
+              responsibility: "Run experiments  to further determine audience preferences for assigned brand channels"
+            },
+            {
+              responsibility: "Help in ensuring the proper execution of strategies by upholding brand guidelines across all social media channels"
+            },
+          ],
+          requirements: [
+            {
+              requirement: "Excellent written and verbal communication skills"
+            },
+            {
+              requirement: "Confident in presenting ideas, pitch decks and reports"
+            },
+            {
+              requirement: "Familiar with social media engagement metrics, where to find them and how to use them to improve performance"
+            },
+            {
+              requirement: "Good eye for detail, both in visual elements and copywriting"
+            },
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Shortlisted candidates will be reached out by the recruitment team"
+            }
+          ]
+        },
+        {
+          name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
+          cover: require('@/assets/startups/kumu/firstpic.jpg'),
+          coverAlt: "Kumu Inc. cover",
+          icon: require('@/assets/startups/kumu/logo.png'),
+          iconAlt: "Kumu Inc. logo",
+          jobName: "Marketing Intern",
+          jobId: 11,
+          responsibilities: [
+            {
+              responsibility: "Assist in our team in maintaining some of our social media accounts such as uploading photos and videos and maybe coming up with the wittiest captions"
+              },
+            {
+              responsibility: "Be part of the team by lending a hand and sharing your ideas for our video and photo shoots. Learn the tools of the trade!"
+            },
+            {
+              responsibility: "Coordinate with our team members and talents regarding merchant samples, etc."
+            },
+            {
+              responsibility: "Scout for more retail suppliers (#SupportLocal)"
+            },
+            {
+              responsibility: "Be the support person with the leg work needed in the branding workflow"
+            },
+            {
+              responsibility: "Assist in the retail and marketing needs of all other departments"
+            },
+          ],
+          requirements: [
+            {
+              requirement: "A go-getter attitude who's ready to learn and grow with us"
+            }
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Shortlisted candidates will be reached out by the recruitment team"
+            }
+          ]
+        },
+        {
+          name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
+          cover: require('@/assets/startups/kumu/firstpic.jpg'),
+          coverAlt: "Kumu Inc. cover",
+          icon: require('@/assets/startups/kumu/logo.png'),
+          iconAlt: "Kumu Inc. logo",
+          jobName: "Graphic Design Intern",
+          jobId: 10,
+          responsibilities: [
+            {
+              responsibility: "Join in on the conceptualizing of online and offline marketing materials with the Art Team"
+              },
+            {
+              responsibility: "Learn how to uphold brand identity standards across all executed visual materials, while maintaining a consistent look and feel that is relevant and attractive to the target audience"
+            },
+            {
+              responsibility: "Apply industry standards and best practices in terms of digital media execution in a consistent manner"
+            },
+            {
+              responsibility: "Help visualize internal and external reports in terms of providing relevant infographics and other illustrations, as needed"
+            },
+            {
+              responsibility: "Collaborate with the Art Team in coming up with unique, catchy and brand-consistent campaigns which may include short videos, gifs, infographics, edited photos and other visual media aids to drive additional traffic and retention to the product"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Energetic, creative, and flexible team players who are not shy to push boundaries when it comes to experimenting and learning various art styles"
+            },
+            {
+                requirement: "Strong eye for modern, clean, and mobile-friendly art"
+            }
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Shortlisted candidates will be reached out by the recruitment team"
+            }
+          ]
+        },
+        {
+          name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
+          cover: require('@/assets/startups/kumu/firstpic.jpg'),
+          coverAlt: "Kumu Inc. cover",
+          icon: require('@/assets/startups/kumu/logo.png'),
+          iconAlt: "Kumu Inc. logo",
+          jobName: "Moderator Intern",
+          jobId: 12,
+          responsibilities: [
+            {
+              responsibility: "Overseeing special projects under Moderation"
+              },
+            {
+              responsibility: "Assist in the hiring and employment of new Kumu Pulis members"
+            },
+            {
+              responsibility: "Keep track of data and statistics for Moderation"
+            },
+            {
+              responsibility: "Coordinate with the Kumu Pulis teams and other departments"
+            },
+            {
+              responsibility: "Be a helping hand in the orientation of new Kumu users"
+            },
+            {
+              responsibility: "Keep the Kumu Pulis Report Sheet updated"
+            },
+            {
+              responsibility: "Organize and file data and statistics"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "A go-getter attitude who's ready to learn and grow with us"
+            }
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Shortlisted candidates will be reached out by the recruitment team"
             }
           ]
         },
@@ -857,6 +1105,11 @@ export default {
 }
 *{
     background-color: #fcfcfc;
+}
+.spacer{
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
 }
 .page-container{
     display: flex;
