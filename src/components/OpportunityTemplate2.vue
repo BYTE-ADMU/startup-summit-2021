@@ -198,7 +198,7 @@ export default {
           jobPosition: "Social Media Manager Intern",
           responsibilities: [
             {
-              responsibility: "Assist the Social Media Specialist in developing and managing overall social media strategy for the product"
+              responsibility: "Assist the Social Media Specialist in developing and managing overall social media strategy for the product",
               responsibility: "Perform creative writing and ensure that content is informative and appealing"
             }
           ],
