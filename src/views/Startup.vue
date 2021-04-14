@@ -246,7 +246,7 @@ export default {
   return {
     startupList: [
       {name: 'StartUp Village', industry: '', icon: require('../assets/startups/startupvillage/icon.png'), iconAlt: 'StartUp Village logo', cover: require('../assets/startups/startupvillage/cover.png'), coverAlt: 'StartUp Village cover', opportunity: false, productId: 1},
-      {name: 'Mosaic Solutions', industry: '', icon: require('../assets/startups/mosaic/logo.png'), iconAlt: 'Mosaic Solutions logo', cover: require('../assets/startups/mosaic/firstpic.jpg'), coverAlt: 'Mosaic Solutions cover', opportunity: true, productId: 2},
+      {name: 'Mosaic Solutions', industry: '', icon: require('../assets/startups/mosaic/logo.png'), iconAlt: 'Mosaic Solutions logo', cover: require('../assets/startups/mosaic/logo3.png'), coverAlt: 'Mosaic Solutions cover', opportunity: false, productId: 2},
       {name: 'QBO Innovation Hub', industry: '', icon: require('../assets/startups/qbo/icon.png'), iconAlt: 'QBO Innovation Hub logo', cover: require('../assets/startups/qbo/cover.png'), coverAlt: 'QBO Innovation Hub cover', opportunity: true, productId: 3},
       {name: 'Technology Application</br>and Promotion Institute', industry: '', icon: require('../assets/startups/technoapp/logo.png'), iconAlt: 'Technology Application and Promotion Institute logo', cover: require('../assets/startups/technoapp/firstpic.png'), coverAlt: 'Technology Application and Promotion Institute cover', opportunity: false, productId: 4},
       {name: 'Ideaspace Foundation Inc.', industry: '', icon: require('../assets/startups/ideas/logo.png'), iconAlt: 'Ideaspace Foundation Inc. logo', cover: require('../assets/startups/ideas/logo.png'), coverAlt: 'Ideaspace Foundation Inc. cover', opportunity: false, productId: 5},
