@@ -1,6 +1,7 @@
 <template>
     <div v-for="startup_list in startupList" :key="startup_list" class="page-container">
         <div v-if="proId == startup_list.productId">
+        <div class="spacer"></div>
         <center><div class="cover-wrapper"><img :alt="startup_list.coverAlt" :src="startup_list.cover"></div></center>
         <div class="header-container">
             <div class="icon-wrapper"><img :alt="startup_list.iconAlt" :src="startup_list.icon"></div>
@@ -812,6 +813,11 @@ img{
 .space{
     margin-bottom: 15%!important;
 }
+.spacer{
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
+}
 .page-container{
     display: flex;
     flex-direction: column;
@@ -820,7 +826,7 @@ img{
     margin: 0px!important;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .cover-wrapper{
 min-width: 100vw!important;
@@ -883,6 +889,11 @@ height: 160px;
     padding-right: 8px;
     padding-top: -2.67px;
     transform: translate(0px, 1px);
+    fill: #757575;
+}
+.link-wrapper path{
+  fill: #757575;
+  transition: fill 500ms ease-in-out;
 }
 #twt-svg{
     transform: translate(0px, 2px);
@@ -895,6 +906,25 @@ height: 160px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+.link-wrapper p:hover {
+  color: #F46E26;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+.link-wrapper path:hover {
+  fill: #F46E26;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  transition: fill 500ms ease-in-out;
 }
 .link-wrapper a{
     text-decoration: none;
@@ -907,7 +937,8 @@ height: 160px;
     flex-direction: row-reverse;
     z-index: 0;
     padding-top: 11px;
-    background-color: #fcfcfc
+    background-color: #fcfcfc;
+    height: 100%;
 }
 .pic-wrapper{
     width: 608px;
@@ -1015,13 +1046,43 @@ height: 160px;
     padding-top: 8px;
 }
 #internship{
-    background: linear-gradient(93.62deg, #F46E26 0%, #F2B430 99.35%);
+    background: linear-gradient(93.62deg, #F2B430,#F46E26 33%, #F2B430);
+    cursor: pointer;
+    background-size: 200% auto;
+    text-decoration: none;
+    transition: background-position .2s ease-in-out;
+    border: 0;
 }
 #part-time{
     background: linear-gradient(93.62deg, #F2B430 0%, #1EACB5 99.35%);
+    cursor: pointer;
+    /* background-size: 300% auto; */
+    text-decoration: none;
+    transition: background-position .2s ease-in-out;
+    border: 0;
 }
 #full-time{
     background: linear-gradient(93.62deg, #F46E26 0%, #1EACB5 99.35%);
+    cursor: pointer;
+    /* background-size: 300% auto; */
+    text-decoration: none;
+    transition: background-position .2s ease-in-out;
+    border: 0;
+}
+#internship:hover{
+    background-position: -66%;
+    background-position-x: -66%;
+    background-position-y: center;
+}
+#part-time:hover{
+    background-position: -66%;
+    background-position-x: -66%;
+    background-position-y: center;
+}
+#full-time:hover{
+    background-position: -66%;
+    background-position-x: -66%;
+    background-position-y: center;
 }
 .fourth-container{
     max-width: 1152px;

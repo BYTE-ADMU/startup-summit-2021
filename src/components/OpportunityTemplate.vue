@@ -1,6 +1,7 @@
 <template>
     <div v-for="opportunity in opportunityList" :key="opportunity" class="page-container">
         <div v-if="jbId == opportunity.jobId">
+        <div class="spacer"></div>
         <center><div class="cover-wrapper"><img :alt="opportunity.coverAlt" :src="opportunity.cover"></div></center>
         <div class="header-container">
             <div class="icon-wrapper"><img :alt="opportunity.iconAlt" :src="opportunity.icon"></div>
@@ -1104,6 +1105,11 @@ export default {
 }
 *{
     background-color: #fcfcfc;
+}
+.spacer{
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
 }
 .page-container{
     display: flex;
