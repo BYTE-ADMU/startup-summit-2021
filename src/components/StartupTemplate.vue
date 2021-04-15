@@ -743,6 +743,26 @@ export default {
                 jobName:"Moderator Intern",
                 jobType:"internship",
                 jobId: 12
+              },
+              {
+                jobName:"Talent Acquisition Intern",
+                jobType:"internship",
+                jobId: 13
+              }
+            ]
+          },
+          {
+            jobClass:"Development",
+            jobPosition:[
+              {
+                jobName:"Business Intelligence Intern",
+                jobType:"internship",
+                jobId: 14
+              },
+              {
+                jobName:"UI/UX Design and Research Intern",
+                jobType:"internship",
+                jobId: 15
               }
             ]
           }
