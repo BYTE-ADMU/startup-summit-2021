@@ -921,6 +921,147 @@ export default {
             }
           ]
         },
+        {
+          name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
+          cover: require('@/assets/startups/kumu/firstpic.jpg'),
+          coverAlt: "Kumu Inc. cover",
+          icon: require('@/assets/startups/kumu/logo.png'),
+          iconAlt: "Kumu Inc. logo",
+          jobName: "Talent Acquisition Intern",
+          jobId: 13,
+          responsibilities: [
+            {
+              responsibility: "Performing leads generation and sourcing (with the available tools and channels available to them)"
+              },
+            {
+              responsibility: "Conducts pre-screening of candidate resumes"
+            },
+            {
+              responsibility: "Callouts and candidate invites to initiate the application steps"
+            },
+            {
+              responsibility: "Helps in interview scheduling and other logistic duties"
+            },
+          ],
+          requirements: [
+            {
+              requirement: "Good English communication skills – written and verbal"
+            },
+            {
+              requirement: "Has knowledge and basic skill in MS Tools such as EXCEL, Word"
+            },
+            {
+              requirement: "Knowledge on Talent Acquisition concepts and procedures is an advantage"
+            },
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Shortlisted candidates will be reached out by the recruitment team"
+            }
+          ]
+        },
+        {
+          name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
+          cover: require('@/assets/startups/kumu/firstpic.jpg'),
+          coverAlt: "Kumu Inc. cover",
+          icon: require('@/assets/startups/kumu/logo.png'),
+          iconAlt: "Kumu Inc. logo",
+          jobName: "Business Intelligence Intern",
+          jobId: 14,
+          responsibilities: [
+            {
+              responsibility: "Translate data into understandable reports"
+              },
+            {
+              responsibility: "Managing master data and designing the reporting environment"
+            },
+            {
+              responsibility: "Supporting the data warehouse in identifying and revising reporting requirements"
+            },
+            {
+              responsibility: "Data storage structures, data mining, and data cleansing"
+            },
+          ],
+          requirements: [
+            {
+              requirement: "Curiosity to bridge and translate stakeholder concerns through data"
+            },
+            {
+              requirement: "Basic competence in SQL & data visualization (using data visualization tools such as Tableau, Google Data Studio, Power BI, etc.)"
+            },
+            {
+              requirement: "Google Sheets/ Excel proficiency"
+            },
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Shortlisted candidates will be reached out by the recruitment team"
+            }
+          ]
+        },
+        {
+          name: "Kumu Inc.",
+          apply: 'mailto:hrd@kumu.ph',
+          cover: require('@/assets/startups/kumu/firstpic.jpg'),
+          coverAlt: "Kumu Inc. cover",
+          icon: require('@/assets/startups/kumu/logo.png'),
+          iconAlt: "Kumu Inc. logo",
+          jobName: "UI/UX Design and Research Intern",
+          jobId: 15,
+          responsibilities: [
+            {
+              responsibility: "Information gathering and organization; conducting research, exploring consumer behavior and motivation, working with other departments in the development of new product features and enhancements"
+              },
+            {
+              responsibility: "Help in providing insights to how the product or feature is designed and implemented"
+            },
+            {
+              responsibility: "Work with the Team to identify points for improvement throughout the user journey"
+            }
+          ],
+          requirements: [
+            {
+              requirement: "Curious about understanding customer needs"
+            },
+            {
+              requirement: "Enjoys finding the root cause to problems and issues"
+            },
+            {
+              requirement: "Empathetic"
+            },
+            {
+              requirement: "Good communicator"
+            }
+          ],
+          check1: "",
+          addtlInfo: [
+            {
+              info: ""
+            }
+          ],
+          check2: "yes",
+          appProcess: [
+            {
+              process: "Shortlisted candidates will be reached out by the recruitment team"
+            }
+          ]
+        },
       ]
     }
     },

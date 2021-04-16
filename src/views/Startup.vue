@@ -245,6 +245,8 @@ export default {
     data() {
   return {
     startupList: [
+    {name: 'Kumu Inc.', industry: '', icon: require('../assets/startups/kumu/logo.png'), iconAlt: 'Kumu Inc. logo', cover: require('../assets/startups/kumu/firstpic.jpg'), coverAlt: 'Kumu Inc. cover', opportunity: true, productId: 13},
+    {name: 'DataCamp', industry: '', icon: require('../assets/startups/datacamp/logo.png'), iconAlt: 'DataCamp logo', cover: require('../assets/startups/datacamp/cover.png'), coverAlt: 'DataCamp cover', opportunity: true, productId: 14},
       {name: 'StartUp Village', industry: '', icon: require('../assets/startups/startupvillage/icon.png'), iconAlt: 'StartUp Village logo', cover: require('../assets/startups/startupvillage/cover.png'), coverAlt: 'StartUp Village cover', opportunity: false, productId: 1},
       {name: 'Mosaic Solutions', industry: '', icon: require('../assets/startups/mosaic/logo.png'), iconAlt: 'Mosaic Solutions logo', cover: require('../assets/startups/mosaic/logo3.png'), coverAlt: 'Mosaic Solutions cover', opportunity: false, productId: 2},
       {name: 'QBO Innovation Hub', industry: '', icon: require('../assets/startups/qbo/icon.png'), iconAlt: 'QBO Innovation Hub logo', cover: require('../assets/startups/qbo/cover.png'), coverAlt: 'QBO Innovation Hub cover', opportunity: true, productId: 3},
@@ -256,8 +258,7 @@ export default {
       {name: 'maker academy', industry: '', icon: require('../assets/startups/makeracademy/logo.png'), iconAlt: 'maker academy logo', cover: require('../assets/startups/makeracademy/cover.png'), coverAlt: 'maker academy cover', opportunity: false, productId: 9},
       {name: 'Pick.A.Roo', industry: '', icon: require('../assets/startups/pickaroo/logo.png'), iconAlt: 'Pick.A.Roo logo', cover: require('../assets/startups/pickaroo/cover.png'), coverAlt: 'Pick.A.Roo cover', opportunity: false, productId: 10},
       {name: 'InterLeukin Innovations, Inc.', industry: '', icon: require('../assets/startups/inter/logo.png'), iconAlt: 'InterLeukin Innovations, Inc. logo', cover: require('../assets/startups/inter/cover.png'), coverAlt: 'InterLeukin Innovations, Inc. cover', opportunity: true, productId: 11},
-      {name: 'Akads PH', industry: '', icon: require('../assets/startups/akads/logo.png'), iconAlt: 'Akads PH logo', cover: require('../assets/startups/akads/cover.png'), coverAlt: 'Akads PH cover', opportunity: false, productId: 12},
-      {name: 'Kumu Inc.', industry: '', icon: require('../assets/startups/kumu/logo.png'), iconAlt: 'Kumu Inc. logo', cover: require('../assets/startups/kumu/firstpic.jpg'), coverAlt: 'Kumu Inc. cover', opportunity: true, productId: 13}
+      {name: 'Akads PH', industry: '', icon: require('../assets/startups/akads/logo.png'), iconAlt: 'Akads PH logo', cover: require('../assets/startups/akads/cover.png'), coverAlt: 'Akads PH cover', opportunity: false, productId: 12}
     ],
     search: '',
     modalShow: false,
