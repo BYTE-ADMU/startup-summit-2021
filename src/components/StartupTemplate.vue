@@ -778,6 +778,51 @@ export default {
         gallery4Alt: "",
         productId: 13
         },
+        {
+        name: "DataCamp",
+        cover: require('@/assets/startups/datacamp/cover.png'),
+        coverAlt: "DataCamp cover",
+        icon: require('@/assets/startups/datacamp/logo.png'),
+        iconAlt: "DataCamp logo",
+        website: "https://www.datacamp.com/",
+        linkedin: "datacampinc",
+        linkedinlink: "https://www.linkedin.com/company/datacampinc/",
+        facebook: "datacampinc",
+        facebooklink: "https://www.facebook.com/datacampinc/",
+        ig: "datacamp",
+        iglink: "https://www.instagram.com/datacamp/",
+        twitter: "DataCamp",
+        twitterlink: "https://twitter.com/DataCamp",
+        firstpic: require('@/assets/startups/datacamp/firstpic.png'),
+        firstpicAlt: "",
+        aboutus: "DataCamp provides flexible online data training for every role, from non-coding essentials for business to data science and machine learning, all taught by leading experts in the field. Best of all, there’s no installation or download required—all learning and interactive exercises run in your browser. That means you can grow your skills through hands-on exercises, anytime, anywhere.<br><br>We’ve already educated 7 million people around the world and more than 1,600 companies such as Credit Suisse, Deloitte, Intel, Uber, and more—and we’re just getting started. We were just named the second fastest-growing education company in America by the Financial times.",
+        secondpic: require('@/assets/startups/datacamp/secondpic.png'),
+        secondpicAlt: "",
+        op_check: "yes",
+        ourproduct: "DataCamp's mission is to democratize data skills for everyone. We are achieving that by creating the world's best online platform for data education and making it easily accessible all over the world. DataCamp Donates is our newest initiative to provide 25,000 Premium DataCamp subscriptions to people in need all over the world, and they are so excited to partner with BYTE to support the next generation of data professionals.",
+        job_check: "",
+        job: [
+          {
+            jobClass:"",
+            jobPosition:[
+              {
+                jobName:"",
+                jobType:""
+              }
+            ]
+          }
+        ],
+        gallery_check: "yes",
+        gallery1: require('@/assets/startups/datacamp/gallery1.png'),
+        gallery1Alt: "",
+        gallery2: require('@/assets/startups/datacamp/gallery2.png'),
+        gallery2Alt: "",
+        gallery3: require('@/assets/startups/datacamp/firstpic.png'),
+        gallery3Alt: "",
+        gallery4: require('@/assets/startups/datacamp/cover.png'),
+        gallery4Alt: "",
+        productId: 14
+        },
       ]
         }
     },

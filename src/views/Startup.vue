@@ -246,6 +246,7 @@ export default {
   return {
     startupList: [
     {name: 'Kumu Inc.', industry: '', icon: require('../assets/startups/kumu/logo.png'), iconAlt: 'Kumu Inc. logo', cover: require('../assets/startups/kumu/firstpic.jpg'), coverAlt: 'Kumu Inc. cover', opportunity: true, productId: 13},
+    {name: 'DataCamp', industry: '', icon: require('../assets/startups/datacamp/logo.png'), iconAlt: 'DataCamp logo', cover: require('../assets/startups/datacamp/cover.png'), coverAlt: 'DataCamp cover', opportunity: true, productId: 14},
       {name: 'StartUp Village', industry: '', icon: require('../assets/startups/startupvillage/icon.png'), iconAlt: 'StartUp Village logo', cover: require('../assets/startups/startupvillage/cover.png'), coverAlt: 'StartUp Village cover', opportunity: false, productId: 1},
       {name: 'Mosaic Solutions', industry: '', icon: require('../assets/startups/mosaic/logo.png'), iconAlt: 'Mosaic Solutions logo', cover: require('../assets/startups/mosaic/logo3.png'), coverAlt: 'Mosaic Solutions cover', opportunity: false, productId: 2},
       {name: 'QBO Innovation Hub', industry: '', icon: require('../assets/startups/qbo/icon.png'), iconAlt: 'QBO Innovation Hub logo', cover: require('../assets/startups/qbo/cover.png'), coverAlt: 'QBO Innovation Hub cover', opportunity: true, productId: 3},
